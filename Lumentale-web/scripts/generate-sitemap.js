@@ -74,18 +74,26 @@ function urlNode(loc, lastmod, changefreq, priority) {
 
 function generate() {
   const lastmod = new Date().toISOString().split('T')[0]
+  const seen = new Set()
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `
 
+  function appendUrl(loc, lastmodValue, changefreq, priority) {
+    const key = loc === '/' ? '/' : `/${String(loc).replace(/^\/+|\/+$/g, '')}`
+    if (seen.has(key)) return
+    seen.add(key)
+    xml += `\n${urlNode(key, lastmodValue, changefreq, priority)}`
+  }
+
   for (const r of staticRoutes) {
-    xml += `\n${urlNode(r.path, lastmod, getChangefreq(r.name), getPriority(r.name))}`
+    appendUrl(r.path, lastmod, getChangefreq(r.name), getPriority(r.name))
   }
 
   for (const entry of animon) {
     if (!entry?.slug) continue
-    xml += `\n${urlNode(`/animon/${entry.slug}`, lastmod, getChangefreq('animon-detail'), getPriority('animon-detail'))}`
+    appendUrl(`/animon/${entry.slug}`, lastmod, getChangefreq('animon-detail'), getPriority('animon-detail'))
   }
 
   const guideList = Array.isArray(guides) ? guides : guides.default || []
@@ -94,17 +102,17 @@ function generate() {
     const slug = String(g.addressBar).replace(/^\/+|\/+$/g, '')
     const guidePath = `/guides/${slug}`
     const date = coerceSitemapLastmod(g.publishDate, lastmod)
-    xml += `\n${urlNode(guidePath, date, getChangefreq('guide-detail'), getPriority('guide-detail'))}`
+    appendUrl(guidePath, date, getChangefreq('guide-detail'), getPriority('guide-detail'))
   }
 
   for (const recipe of recipes) {
     if (!recipe?.slug) continue
-    xml += `\n${urlNode(`/wiki/recipes/${recipe.slug}`, lastmod, getChangefreq('wiki-recipe-detail'), getPriority('wiki-recipe-detail'))}`
+    appendUrl(`/wiki/recipes/${recipe.slug}`, lastmod, getChangefreq('wiki-recipe-detail'), getPriority('wiki-recipe-detail'))
   }
 
   for (const item of items) {
     if (!item?.slug) continue
-    xml += `\n${urlNode(`/wiki/items/${item.slug}`, lastmod, getChangefreq('wiki-item-detail'), getPriority('wiki-item-detail'))}`
+    appendUrl(`/wiki/items/${item.slug}`, lastmod, getChangefreq('wiki-item-detail'), getPriority('wiki-item-detail'))
   }
 
   xml += '\n</urlset>'

@@ -9,6 +9,7 @@
     "copy-type-icons": "node scripts/copy-type-icons.js",
     "prebuild": "npm run copy-type-icons && npm run generate-sitemap",
     "build": "vite build",
+    "postbuild": "node scripts/generate-seo-html.js",
     "preview": "vite preview",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
