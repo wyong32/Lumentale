@@ -52,7 +52,7 @@
               <div class="nav-dropdown-menu" role="menu">
                 <RouterLink class="dropdown-link" to="/wiki" active-class="is-active" @click="closeMenus">
                   <span class="dropdown-link-label">Wiki Home</span>
-                  <small>Skills, items, recipes &amp; bosses</small>
+                  <small>Skills, items, cooking &amp; bosses</small>
                 </RouterLink>
                 <div class="dropdown-divider"></div>
                 <RouterLink class="dropdown-link" to="/wiki/skills" active-class="is-active" @click="closeMenus">
@@ -63,9 +63,13 @@
                   <span class="dropdown-link-label">Items</span>
                   <small>Bilias &amp; materials</small>
                 </RouterLink>
-                <RouterLink class="dropdown-link" to="/wiki/recipes" active-class="is-active" @click="closeMenus">
-                  <span class="dropdown-link-label">Recipes</span>
-                  <small>Cooking &amp; crafting</small>
+                <RouterLink class="dropdown-link" to="/wiki/cooking" active-class="is-active" @click="closeMenus">
+                  <span class="dropdown-link-label">Cooking</span>
+                  <small>Fountain dishes</small>
+                </RouterLink>
+                <RouterLink class="dropdown-link" to="/wiki/crafting" active-class="is-active" @click="closeMenus">
+                  <span class="dropdown-link-label">Crafting</span>
+                  <small>Workshop upgrades</small>
                 </RouterLink>
                 <RouterLink class="dropdown-link" to="/wiki/bosses" active-class="is-active" @click="closeMenus">
                   <span class="dropdown-link-label">Bosses</span>

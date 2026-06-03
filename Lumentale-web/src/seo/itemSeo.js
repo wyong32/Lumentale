@@ -1,4 +1,4 @@
-import { itemDerivedProse } from '@/lib/data.js'
+import { itemDerivedProse, itemFlavorText } from '@/lib/data.js'
 import { seoConfig } from './config.js'
 import { fitDescription, fitTitle, formatSeoType } from './utils.js'
 
@@ -10,8 +10,7 @@ export function itemDetailSeo(item) {
 
   const derived = itemDerivedProse(item)
   const descBit =
-    item.localizedDescription ||
-    item.description ||
+    itemFlavorText(item) ||
     derived ||
     `Shop price ${item.price || '—'}, stacks to ${item.maxStack}.`
 

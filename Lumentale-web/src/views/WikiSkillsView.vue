@@ -6,12 +6,12 @@
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <RouterLink to="/">Home</RouterLink>
             <span aria-hidden="true">›</span>
-            <RouterLink to="/wiki">Wiki</RouterLink>
+            <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
             <span aria-hidden="true">›</span>
             <span>Skills</span>
           </nav>
-          <p class="eyebrow">Move list</p>
-          <h1 id="skills-title">LumenTale Skills List – All Moves for Memories of Trey</h1>
+          <p class="eyebrow">LumenTale Wiki</p>
+          <h1 id="skills-title">LumenTale Wiki – Skills &amp; Move List</h1>
           <p class="lead lead-center">
             Every move we list in Memories of Trey — power, SP cost, accuracy, cooldown, category, and target type.
             Use filters to plan STAB coverage and SP budgets for 4v4 teams.
@@ -89,10 +89,9 @@
         </div>
 
         <div class="wiki-skill-grid">
-          <article v-for="skill in filtered" :key="skill.slug" class="wiki-skill-card">
+          <article v-for="skill in visible" :key="skill.slug" class="wiki-skill-card">
             <div class="wiki-skill-top">
               <strong>{{ skill.name }}</strong>
-              <small v-if="skill.localizedName">{{ skill.localizedName }}</small>
             </div>
             <div class="wiki-skill-tags">
               <span :class="tagClass(skill.type)">{{ skill.type }}</span>
@@ -119,7 +118,11 @@
             <p v-if="skill.targetType" class="wiki-skill-target">{{ skill.targetType }} · {{ skill.aoeType }}</p>
           </article>
         </div>
-        <p class="result-note">Showing {{ filtered.length }} of {{ skills.length }} skills</p>
+        <div v-if="hasMore" ref="sentinel" class="list-load-sentinel" aria-hidden="true"></div>
+        <p v-if="hasMore" class="result-note">
+          <button type="button" class="btn-secondary btn-load-more" @click="loadMore">Load more skills</button>
+        </p>
+        <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} skills ({{ skills.length }} total)</p>
       </div>
     </section>
 
@@ -163,14 +166,23 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { computed, onMounted, ref, toRef, watch } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { skillTypes, skills, tagClass } from '@/lib/data'
 
+const route = useRoute()
 const query = ref('')
 const typeFilter = ref('')
 const catFilter = ref('')
 const categories = [...new Set(skills.map((s) => s.category))].sort()
+
+function applyRouteQuery() {
+  query.value = route.query.q ? String(route.query.q) : ''
+}
+
+onMounted(applyRouteQuery)
+watch(() => route.query.q, applyRouteQuery)
 
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
@@ -178,9 +190,11 @@ const filtered = computed(() => {
     if (typeFilter.value && s.type !== typeFilter.value) return false
     if (catFilter.value && s.category !== catFilter.value) return false
     if (!q) return true
-    return s.name.toLowerCase().includes(q) || (s.localizedName && s.localizedName.includes(q))
+    return s.name.toLowerCase().includes(q)
   })
 })
+
+const { visible, hasMore, sentinel, loadMore } = useInfiniteList(toRef(filtered))
 
 const skillTips = [
   { label: 'SP budget', text: 'High-power finishers look great on paper — ensure your rotation can afford them twice per fight.' },

@@ -9,7 +9,7 @@
             <span>Wiki</span>
           </nav>
           <p class="eyebrow">LumenTale Wiki</p>
-          <h1 id="wiki-title">LumenTale Guides &amp; Talea Lookup Hub</h1>
+          <h1 id="wiki-title">LumenTale Wiki – Skills, Items, Recipes &amp; Bosses</h1>
           <p class="lead lead-center">
             Walkthroughs, dex pages, and quick lookups for Memories of Trey — find Animon stats, move lists, shop
             prices, and boss levels while you play, without digging through scattered notes mid-fight.
@@ -46,7 +46,7 @@
         <div class="wiki-layout">
           <aside class="wiki-intro">
             <p class="eyebrow">In-game lookups</p>
-            <h2 id="wiki-db-title">Skills, Items, Recipes &amp; Bosses</h2>
+            <h2 id="wiki-db-title">LumenTale Wiki – Lookups</h2>
             <p>
               Filter skills by element, items by category, recipes by cooking or crafting, or bosses by name — then jump
               to the Animon dex or evolution page when you are planning typings for a fight.
@@ -70,11 +70,19 @@
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
             </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/recipes">
-              <div class="wiki-row-badge">{{ summary.counts.recipes }}</div>
+            <RouterLink class="wiki-row wiki-row-items" to="/wiki/cooking">
+              <div class="wiki-row-badge">{{ cookingCount }}</div>
               <div class="wiki-row-body">
-                <h3>Recipes</h3>
-                <p>Fountain cooking and workshop crafting — ingredient amounts, success rates, and links to each material.</p>
+                <h3>Cooking</h3>
+                <p>Fountain cooking — ingredient amounts, success rates, and links to each material.</p>
+              </div>
+              <span class="wiki-row-arrow" aria-hidden="true">→</span>
+            </RouterLink>
+            <RouterLink class="wiki-row wiki-row-items" to="/wiki/crafting">
+              <div class="wiki-row-badge">{{ craftingCount }}</div>
+              <div class="wiki-row-body">
+                <h3>Crafting</h3>
+                <p>Workshop crafting — Bilia upgrades, tools, and material requirements.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
             </RouterLink>
@@ -95,7 +103,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Player Guides</p>
-          <h2 id="wiki-guides-title">Core LumenTale Guide Pages</h2>
+          <h2 id="wiki-guides-title">From the LumenTale Wiki – Player Routes</h2>
           <p>Start here if you are new — or jump to the dex and type chart when team-building.</p>
         </div>
         <div class="guides-content">
@@ -180,7 +188,10 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
-import { bosses, summary } from '@/lib/data'
+import { bosses, recipes, summary } from '@/lib/data'
+
+const cookingCount = recipes.filter((r) => r.projectLabel === 'Cooking').length
+const craftingCount = recipes.filter((r) => r.projectLabel === 'Crafting').length
 
 const wikiTips = [
   { label: 'Skills page', text: 'Filter by element type or category when planning STAB coverage on your core four.' },

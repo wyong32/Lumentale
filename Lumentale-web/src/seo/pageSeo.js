@@ -179,7 +179,10 @@ export function applyNavigationSeo(to) {
         }),
         buildBreadcrumbJsonLd([
           { name: 'Home', url: `${siteUrl}/` },
-          { name: 'Recipes', url: `${siteUrl}/wiki/recipes` },
+          {
+            name: recipe.projectLabel === 'Crafting' ? 'Crafting' : 'Cooking',
+            url: `${siteUrl}${recipe.projectLabel === 'Crafting' ? '/wiki/crafting' : '/wiki/cooking'}`,
+          },
           { name: displayName, url },
         ]),
       ),

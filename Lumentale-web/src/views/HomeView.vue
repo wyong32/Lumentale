@@ -17,22 +17,23 @@
             <RouterLink class="btn-secondary" to="/beginner">Beginner Route</RouterLink>
           </div>
         </div>
-        <div class="hero-showcase" aria-label="Featured starter Animon">
-          <RouterLink
-            v-for="(entry, i) in featured"
-            :key="entry.slug"
-            class="hero-card"
-            :to="`/animon/${entry.slug}`"
-          >
-            <img
-              :src="imgSrc(entry.image, entry.name)"
-              :alt="`${entry.name} starter Animon in LumenTale`"
-              width="96"
-              height="96"
-              :loading="i === 0 ? 'eager' : 'lazy'"
+        <form class="hero-search" role="search" aria-label="Search LumenTale wiki" @submit.prevent="goSearch">
+          <label class="filter-search filter-search--hero">
+            <svg class="filter-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M20 20L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <input
+              v-model="searchQuery"
+              type="search"
+              name="q"
+              placeholder="Search Animon, items, skills, recipes…"
+              aria-label="Search LumenTale"
+              autocomplete="off"
             />
-          </RouterLink>
-        </div>
+          </label>
+          <button type="submit" class="btn-primary">Search</button>
+        </form>
       </div>
     </section>
 
@@ -67,7 +68,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">About the Game</p>
-          <h2 id="about-game">What Is LumenTale: Memories of Trey?</h2>
+          <h2 id="about-game">About Memories of Trey</h2>
           <p>
             A turn-based monster-collector RPG set in the enchanted world of Talea, where memories and emotions shape
             every battle.
@@ -109,7 +110,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Start Here</p>
-          <h2 id="guides-title">LumenTale Guide Pages for Memories of Trey</h2>
+          <h2 id="guides-title">Essential Guide Pages</h2>
           <p>Essential pages for new and returning players — open what you need for your current route or boss fight.</p>
         </div>
         <div class="guides-content">
@@ -174,7 +175,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Starter Animon</p>
-          <h2 id="starters-title">Choose Your LumenTale Starter Animon</h2>
+          <h2 id="starters-title">Compare Starting Animon</h2>
           <p>
             Five Animon can begin your journey in Talea. Each belongs to a unique element and emotional affinity line with
             its own evolution branch at level 40.
@@ -214,7 +215,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Combat System</p>
-          <h2 id="combat-title">How LumenTale Battles Work in Memories of Trey</h2>
+          <h2 id="combat-title">Core Combat Mechanics</h2>
           <p>Key mechanics every player should understand before building teams or reading boss guides.</p>
         </div>
         <div class="combat-content">
@@ -237,10 +238,9 @@
               team-wide effects.
             </p>
             <ul>
-              <li><strong>Felicis</strong> — team healing sustain</li>
-              <li><strong>Furor</strong> — raw damage boost</li>
-              <li><strong>Horrens</strong> — resistance bypass</li>
-              <li><strong>Sereum</strong> — critical hits &amp; TP gain</li>
+              <li v-for="row in emotionalAffinities" :key="row.key">
+                <strong>{{ row.name }}</strong> — {{ row.desc }}
+              </li>
             </ul>
           </article>
           <article class="combat-card">
@@ -264,7 +264,7 @@
         <div class="elements-layout">
           <aside class="elements-intro">
             <p class="eyebrow">Element Distribution</p>
-            <h2 id="elements-title">LumenTale Element Types in Talea</h2>
+            <h2 id="elements-title">Element Types in Talea</h2>
             <p>
               Every LumenTale Animon carries one of 13 element types in Memories of Trey. Browse by type below or open
               the full affinities type chart for Talea team building.
@@ -325,11 +325,19 @@
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
             </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/recipes">
-              <div class="wiki-row-badge">{{ summary.counts.recipes }}</div>
+            <RouterLink class="wiki-row wiki-row-items" to="/wiki/cooking">
+              <div class="wiki-row-badge">{{ cookingCount }}</div>
               <div class="wiki-row-body">
-                <h3>Recipes</h3>
-                <p>Cooking at the Fountain and Bilia crafting — full ingredient lists and success rates per recipe.</p>
+                <h3>Cooking</h3>
+                <p>Fountain dishes — ingredient lists and success rates for food before long routes.</p>
+              </div>
+              <span class="wiki-row-arrow" aria-hidden="true">→</span>
+            </RouterLink>
+            <RouterLink class="wiki-row wiki-row-items" to="/wiki/crafting">
+              <div class="wiki-row-badge">{{ craftingCount }}</div>
+              <div class="wiki-row-body">
+                <h3>Crafting</h3>
+                <p>Workshop Bilia upgrades and tools — materials, success rates, and item links.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
             </RouterLink>
@@ -375,12 +383,37 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
-import { bosses, distribution, imgSrc, starters, summary, tagClass } from '@/lib/data'
+import { computed, ref } from 'vue'
+import { RouterLink, useRouter } from 'vue-router'
+import { bosses, distribution, emotionLabels, imgSrc, recipes, summary, tagClass } from '@/lib/data'
+
+const EMOTION_ORDER = ['FELICIS', 'FUROR', 'HORRENS', 'MESTUS', 'SEREUM']
+
+/** Home combat card — short labels aligned with Affinities page */
+const emotionalAffinityHomeCopy = {
+  FELICIS: 'team healing sustain',
+  FUROR: 'raw damage boost',
+  HORRENS: 'resistance bypass',
+  MESTUS: 'bonus damage by target HP',
+  SEREUM: 'critical hits & TP gain',
+}
+
+const emotionalAffinities = EMOTION_ORDER.map((key) => ({
+  key,
+  name: key.charAt(0) + key.slice(1).toLowerCase(),
+  desc: emotionalAffinityHomeCopy[key] || emotionLabels[key],
+}))
 import { getHomeFaqs } from '@/seo/homeSchema.js'
 
-const featured = computed(() => starters().slice(0, 5))
+const router = useRouter()
+const searchQuery = ref('')
+const cookingCount = computed(() => recipes.filter((r) => r.projectLabel === 'Cooking').length)
+const craftingCount = computed(() => recipes.filter((r) => r.projectLabel === 'Crafting').length)
+
+function goSearch() {
+  const q = searchQuery.value.trim()
+  router.push({ path: '/search', query: q ? { q } : {} })
+}
 const elements = distribution('elementType')
 const sortedElements = computed(() => {
   const total = summary.counts.animon || 1

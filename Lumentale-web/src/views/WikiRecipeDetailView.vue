@@ -5,9 +5,9 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <RouterLink to="/">Home</RouterLink>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki">Wiki</RouterLink>
+          <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki/recipes">Recipes</RouterLink>
+          <RouterLink :to="recipeListPath">{{ recipe.projectLabel }}</RouterLink>
           <span aria-hidden="true">›</span>
           <span>{{ displayName }}</span>
         </nav>
@@ -123,10 +123,6 @@
               </header>
               <div class="detail-panel-body">
                 <div class="detail-glance-grid detail-glance-grid--compact">
-                  <div v-if="resultItem.localizedName" class="detail-glance-tile">
-                    <span>In-game name</span>
-                    <strong>{{ resultItem.localizedName }}</strong>
-                  </div>
                   <div class="detail-glance-tile">
                     <span>Max stack</span>
                     <strong>×{{ resultItem.maxStack }}</strong>
@@ -241,7 +237,7 @@
             <nav class="detail-explore" aria-label="Related wiki pages">
               <p class="detail-explore-title">Keep exploring</p>
               <div class="detail-explore-links">
-                <RouterLink class="detail-explore-link" to="/wiki/recipes">All Recipes</RouterLink>
+                <RouterLink class="detail-explore-link" :to="recipeListPath">All {{ recipe.projectLabel }} Recipes</RouterLink>
                 <RouterLink class="detail-explore-link" to="/wiki/items">All Items</RouterLink>
                 <RouterLink v-if="recipe.projectLabel === 'Cooking'" class="detail-explore-link" to="/beginner">
                   Beginner Guide
@@ -250,7 +246,7 @@
             </nav>
 
             <div class="btn-row detail-main-actions">
-              <RouterLink class="btn-secondary" to="/wiki/recipes">← All Recipes</RouterLink>
+              <RouterLink class="btn-secondary" :to="recipeListPath">← All {{ recipe.projectLabel }}</RouterLink>
               <RouterLink v-if="resultItem" class="btn-primary" :to="itemDetailLink(resultItem.slug)">
                 View {{ displayName }} Item
               </RouterLink>
@@ -267,13 +263,16 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <RouterLink to="/">Home</RouterLink>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki/recipes">Recipes</RouterLink>
+          <RouterLink to="/wiki/cooking">Cooking</RouterLink>
           <span aria-hidden="true">›</span>
           <span>Not found</span>
         </nav>
         <h1>Recipe Not Found</h1>
-        <p class="lead">We do not have this recipe in our list yet — browse all cooking and crafting entries.</p>
-        <RouterLink class="btn-primary" to="/wiki/recipes">Browse Recipes</RouterLink>
+        <p class="lead">We do not have this recipe in our list yet — browse cooking or crafting lists.</p>
+        <div class="btn-row">
+          <RouterLink class="btn-primary" to="/wiki/cooking">Cooking Recipes</RouterLink>
+          <RouterLink class="btn-secondary" to="/wiki/crafting">Crafting Recipes</RouterLink>
+        </div>
       </div>
     </section>
   </main>
@@ -287,6 +286,7 @@ import {
   itemBySlug,
   itemDerivedProse,
   itemDetailLink,
+  itemFlavorText,
   itemEffectDisplayEntries,
   imgSrc,
   recipeBySlug,
@@ -301,10 +301,11 @@ const resultItem = computed(() => {
   const slug = recipe.value?.result?.slug
   return slug ? itemBySlug(slug) : null
 })
-const resultDescription = computed(() => {
-  if (!resultItem.value) return ''
-  return resultItem.value.localizedDescription || resultItem.value.description || ''
-})
+const recipeListPath = computed(() =>
+  recipe.value?.projectLabel === 'Crafting' ? '/wiki/crafting' : '/wiki/cooking',
+)
+
+const resultDescription = computed(() => (resultItem.value ? itemFlavorText(resultItem.value) : ''))
 const resultDerivedProse = computed(() => (resultItem.value ? itemDerivedProse(resultItem.value) : ''))
 const resultEffectEntries = computed(() => (resultItem.value ? itemEffectDisplayEntries(resultItem.value) : []))
 

@@ -3,7 +3,7 @@
     <span class="brand-logo-wrap" aria-hidden="true">
       <img class="brand-logo" :src="seoConfig.defaultOgImage" width="40" height="40" alt="" />
     </span>
-    <span class="brand-wordmark">LumenTale</span>
+    <span class="brand-wordmark">LumenTale: Memories of Trey</span>
   </span>
 </template>
 

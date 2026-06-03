@@ -119,7 +119,7 @@ const router = createRouter({
       name: 'wiki',
       component: () => import('@/views/WikiIndexView.vue'),
       meta: {
-        title: 'LumenTale | Wiki, Skills, Items, Recipes & Bosses',
+        title: 'LumenTale Wiki | Skills, Items, Cooking & Bosses',
         description:
           'LumenTale wiki hub for Memories of Trey — look up skills, items, Fountain recipes, boss levels, and links to the Animon dex plus walkthroughs for your current chapter in Talea.',
         keywords:
@@ -131,7 +131,7 @@ const router = createRouter({
       name: 'wiki-skills',
       component: () => import('@/views/WikiSkillsView.vue'),
       meta: {
-        title: 'LumenTale | Skills List, Moves, SP Costs & Power',
+        title: 'LumenTale Skills List | Moves, SP Costs & Power',
         description:
           'Every LumenTale move in Memories of Trey — power, SP cost, accuracy, cooldown, category, and target type so you can plan STAB coverage and SP rotation for 4v4 team fights.',
         keywords:
@@ -143,7 +143,7 @@ const router = createRouter({
       name: 'wiki-items',
       component: () => import('@/views/WikiItemsView.vue'),
       meta: {
-        title: 'LumenTale | Items List, Bilias, Prices & Crafting',
+        title: 'LumenTale Items List | Bilias, Prices & Crafting',
         description:
           'LumenTale items in Memories of Trey — Bilias, medicines, ingredients, and materials with shop prices, stack sizes, effects, and links to recipes that craft or consume each item.',
         keywords:
@@ -160,7 +160,7 @@ const router = createRouter({
       name: 'wiki-bosses',
       component: () => import('@/views/WikiBossesView.vue'),
       meta: {
-        title: 'LumenTale | Boss Guide, Levels, HP Bars & Teams',
+        title: 'LumenTale Boss Guide | Levels, HP Bars & Teams',
         description:
           'LumenTale boss guide for Memories of Trey — encounter levels, HP bars, typings, affinities, and team ideas so you know what you face before spending medicine on a long fight.',
         keywords:
@@ -168,15 +168,43 @@ const router = createRouter({
       },
     },
     {
-      path: '/wiki/recipes',
-      name: 'wiki-recipes',
-      component: () => import('@/views/WikiRecipesView.vue'),
+      path: '/search',
+      name: 'search',
+      component: () => import('@/views/SearchView.vue'),
       meta: {
-        title: 'LumenTale | Recipes, Fountain Cooking & Crafting',
+        title: 'LumenTale | Search Wiki, Animon Dex & Items',
         description:
-          'All LumenTale recipes in Memories of Trey — Fountain cooking and workshop crafting with ingredient amounts, success rates, and station details for every dish and upgrade we list.',
+          'Search LumenTale: Memories of Trey — find Animon, skills, items, Fountain recipes, bosses, and guide pages across the wiki and dex from one search box.',
         keywords:
-          'LumenTale recipes, Memories of Trey cooking, LumenTale crafting, Fountain recipes, Talea food',
+          'LumenTale search, Memories of Trey wiki, LumenTale Animon search, LumenTale items, Talea lookup',
+      },
+    },
+    {
+      path: '/wiki/recipes',
+      redirect: '/wiki/cooking',
+    },
+    {
+      path: '/wiki/cooking',
+      name: 'wiki-cooking',
+      component: () => import('@/views/WikiCookingView.vue'),
+      meta: {
+        title: 'LumenTale Wiki | Fountain Cooking Recipes',
+        description:
+          'LumenTale Wiki cooking recipes for Memories of Trey — every Fountain dish with ingredient amounts, success rates, and links to materials on the items list.',
+        keywords:
+          'LumenTale cooking, Memories of Trey recipes, Fountain cooking, LumenTale Wiki food, Talea dishes',
+      },
+    },
+    {
+      path: '/wiki/crafting',
+      name: 'wiki-crafting',
+      component: () => import('@/views/WikiCraftingView.vue'),
+      meta: {
+        title: 'LumenTale Wiki | Workshop Crafting Recipes',
+        description:
+          'LumenTale Wiki crafting recipes for Memories of Trey — workshop Bilia upgrades and tools with materials, success rates, and item detail links.',
+        keywords:
+          'LumenTale crafting, Memories of Trey workshop, Bilia crafting, LumenTale Wiki recipes, Talea upgrades',
       },
     },
     {
@@ -189,7 +217,7 @@ const router = createRouter({
       name: 'legal-privacy',
       component: () => import('@/views/legal/PrivacyPolicyView.vue'),
       meta: {
-        title: 'LumenTale | Privacy Policy for lumentale.org',
+        title: 'LumenTale Privacy Policy | lumentale.org',
         description:
           'Privacy Policy for lumentale.org, the unofficial LumenTale: Memories of Trey community site — how we collect, use, store, and protect information when you browse our guides and dex pages.',
         keywords:
@@ -201,7 +229,7 @@ const router = createRouter({
       name: 'legal-terms',
       component: () => import('@/views/legal/TermsOfServiceView.vue'),
       meta: {
-        title: 'LumenTale | Terms of Service, lumentale.org',
+        title: 'LumenTale Terms of Service | lumentale.org',
         description:
           'Terms of Service for lumentale.org — rules for using this unofficial LumenTale: Memories of Trey community site, including guides, Animon dex pages, items, recipes, and user content.',
         keywords:
@@ -213,7 +241,7 @@ const router = createRouter({
       name: 'legal-copyright',
       component: () => import('@/views/legal/CopyrightView.vue'),
       meta: {
-        title: 'LumenTale | Copyright Notice, lumentale.org',
+        title: 'LumenTale Copyright Notice | lumentale.org',
         description:
           'Copyright notice for lumentale.org — how LumenTale: Memories of Trey trademarks, game assets, and original guide content on this unofficial community site are handled and credited.',
         keywords:
@@ -225,7 +253,7 @@ const router = createRouter({
       name: 'legal-about',
       component: () => import('@/views/legal/AboutUsView.vue'),
       meta: {
-        title: 'LumenTale | About Us, Community Guides Site',
+        title: 'LumenTale About Us | Community Guides Site',
         description:
           'About lumentale.org — who runs this unofficial LumenTale: Memories of Trey guides site, how we verify Animon and item pages in-game, and how to report mistakes or suggest guide updates.',
         keywords:
@@ -237,7 +265,7 @@ const router = createRouter({
       name: 'legal-contact',
       component: () => import('@/views/legal/ContactUsView.vue'),
       meta: {
-        title: 'LumenTale | Contact Us, lumentale.org Support',
+        title: 'LumenTale Contact Us | lumentale.org Support',
         description:
           'Contact lumentale.org for LumenTale: Memories of Trey stat corrections, guide suggestions, copyright notices, and feedback about this unofficial community guides and dex site.',
         keywords:

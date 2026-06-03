@@ -7,12 +7,12 @@
             <nav class="breadcrumb" aria-label="Breadcrumb">
               <RouterLink to="/">Home</RouterLink>
               <span aria-hidden="true">›</span>
-              <RouterLink to="/wiki">Wiki</RouterLink>
+              <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
               <span aria-hidden="true">›</span>
               <span>Items</span>
             </nav>
-            <p class="eyebrow">Item guide</p>
-            <h1 id="items-title">LumenTale Items List – Bilias, Materials &amp; Consumables</h1>
+            <p class="eyebrow">LumenTale Wiki</p>
+            <h1 id="items-title">LumenTale Wiki – Items List</h1>
             <p class="lead">
               Every item we track in Memories of Trey — search {{ items.length }} Bilias, medicines, ingredients,
               materials, and key items. Open any row for shop price, effects, and linked cooking or crafting recipes.
@@ -66,7 +66,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in filtered" :key="item.slug">
+                <tr v-for="item in visible" :key="item.slug">
                   <td>
                     <RouterLink class="row-link" :to="`/wiki/items/${item.slug}`">
                       <img
@@ -79,7 +79,6 @@
                       />
                       <div>
                         <strong>{{ item.name }}</strong>
-                        <small v-if="item.localizedName" style="display: block; color: var(--text-dim)">{{ item.localizedName }}</small>
                       </div>
                     </RouterLink>
                   </td>
@@ -92,15 +91,20 @@
             </table>
           </div>
         </div>
-        <p class="result-note">Showing {{ filtered.length }} of {{ items.length }} items</p>
+        <div v-if="hasMore" ref="sentinel" class="list-load-sentinel" aria-hidden="true"></div>
+        <p v-if="hasMore" class="result-note">
+          <button type="button" class="btn-secondary btn-load-more" @click="loadMore">Load more items</button>
+        </p>
+        <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} items ({{ items.length }} total)</p>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref, toRef, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { imgSrc, itemBySlug, itemRoleLabel, itemTypes, items } from '@/lib/data'
 
 const route = useRoute()
@@ -129,8 +133,10 @@ const filtered = computed(() => {
   return items.filter((item) => {
     if (typeFilter.value && item.type !== typeFilter.value) return false
     if (!q) return true
-    const haystack = [item.name, item.localizedName, item.type, itemRoleLabel(item)].filter(Boolean).join(' ').toLowerCase()
+    const haystack = [item.name, item.type, itemRoleLabel(item)].filter(Boolean).join(' ').toLowerCase()
     return haystack.includes(q)
   })
 })
+
+const { visible, hasMore, sentinel, loadMore } = useInfiniteList(toRef(filtered))
 </script>

@@ -74,7 +74,19 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://lumentale.org/wiki/recipes</loc>
+    <loc>https://lumentale.org/search</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lumentale.org/wiki/cooking</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://lumentale.org/wiki/crafting</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>

@@ -7,12 +7,12 @@
             <nav class="breadcrumb" aria-label="Breadcrumb">
               <RouterLink to="/">Home</RouterLink>
               <span aria-hidden="true">›</span>
-              <RouterLink to="/wiki">Wiki</RouterLink>
+              <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
               <span aria-hidden="true">›</span>
               <span>Bosses</span>
             </nav>
-            <p class="eyebrow">Boss guide</p>
-            <h1 id="bosses-title">LumenTale Boss Guide – Stats, HP Bars &amp; Teams</h1>
+            <p class="eyebrow">LumenTale Wiki</p>
+            <h1 id="bosses-title">LumenTale Wiki – Boss Encounters</h1>
             <p class="lead">
               Boss fights in Memories of Trey — {{ bosses.counts.bossAnimon }} boss Animon and
               {{ bosses.counts.campBosses }} camp teams with levels, HP bars, typings, and affinities so you know what
@@ -42,7 +42,7 @@
         </div>
         <div class="grid-cards">
           <article
-            v-for="boss in filtered"
+            v-for="boss in visible"
             :id="`boss-${boss.slug}`"
             :key="boss.slug"
             class="info-card boss-info-card"
@@ -91,15 +91,20 @@
             </div>
           </article>
         </div>
-        <p class="result-note">Showing {{ filtered.length }} of {{ bossList.length }} bosses</p>
+        <div v-if="hasMore" ref="sentinel" class="list-load-sentinel" aria-hidden="true"></div>
+        <p v-if="hasMore" class="result-note">
+          <button type="button" class="btn-secondary btn-load-more" @click="loadMore">Load more bosses</button>
+        </p>
+        <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} bosses ({{ bossList.length }} total)</p>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, toRef, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { bosses, evolutionLinkForAnimon, imgSrc, tagClass } from '@/lib/data'
 
 const route = useRoute()
@@ -119,6 +124,8 @@ const filtered = computed(() => {
     )
   })
 })
+
+const { visible, hasMore, sentinel, loadMore } = useInfiniteList(toRef(filtered))
 
 function scrollToTarget() {
   const hash = route.hash?.replace('#', '')

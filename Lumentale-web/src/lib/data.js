@@ -6,6 +6,30 @@ import recipesJson from '@/data/recipes.json'
 import skillsJson from '@/data/skills.json'
 import summaryJson from '@/data/summary.json'
 
+const CJK_RE = /[\u4e00-\u9fff\u3040-\u30ff]/
+const ITALIAN_RE =
+  /\b(che|della|delle|perché|è|sono|una|del|con|questa|quando|tramite|può|abbassare|portatore|struttura|conserva|sviluppata|difficile|estrarre|frammentarsi|anivis|anivite|capsula|quando il)\b/i
+const SPANISH_RE = /\b(el|la|los|las|esta|puede|más|nadie|alcanzado|potencia)\b/i
+
+/** True when text is safe to show on the English site (no CJK / IT / ES flavor). */
+export function isEnglishDisplayText(text) {
+  if (!text || typeof text !== 'string') return false
+  const t = text.trim()
+  if (!t || CJK_RE.test(t)) return false
+  if (ITALIAN_RE.test(t)) return false
+  if (SPANISH_RE.test(t) && /[áéíóúñ]/i.test(t)) return false
+  if (/[àèìòù]/i.test(t) && ITALIAN_RE.test(t)) return false
+  return true
+}
+
+/** Player-facing flavor: English description, else derived effect copy. */
+export function itemFlavorText(item) {
+  if (!item) return ''
+  const desc = item.description?.trim()
+  if (isEnglishDisplayText(desc)) return desc
+  return itemDerivedProse(item) || ''
+}
+
 export const animon = animonJson
 export const skills = skillsJson
 export const items = itemsJson
@@ -62,7 +86,7 @@ export function displayableItemEffects(item) {
 export function itemEffectPlayerNote(item) {
   if (!item) return ''
   if (displayableItemEffects(item).length) return ''
-  if (item.localizedDescription || item.description) return ''
+  if (itemFlavorText(item)) return ''
   const isFoodLike = item.type === 'MEDICINES' && item.material === 'Organic'
   if (item.effects?.length || item.battleEffectType === 'ItemBattleEffectType') {
     return isFoodLike

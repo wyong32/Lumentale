@@ -42,7 +42,8 @@
             <RouterLink to="/wiki">Wiki Home</RouterLink>
             <RouterLink to="/wiki/skills">Skills</RouterLink>
             <RouterLink to="/wiki/items">Items</RouterLink>
-            <RouterLink to="/wiki/recipes">Recipes</RouterLink>
+            <RouterLink to="/wiki/cooking">Cooking</RouterLink>
+            <RouterLink to="/wiki/crafting">Crafting</RouterLink>
             <RouterLink to="/wiki/bosses">Bosses</RouterLink>
           </div>
           <div class="footer-col">

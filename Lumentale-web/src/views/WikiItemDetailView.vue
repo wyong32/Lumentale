@@ -12,10 +12,7 @@
           <span>{{ item.name }}</span>
         </nav>
         <p class="eyebrow">Item guide · {{ typeLabel }}</p>
-        <h1 id="item-detail-title">
-          {{ item.name }}
-          <span v-if="item.localizedName" class="wiki-detail-localized">（{{ item.localizedName }}）</span>
-        </h1>
+        <h1 id="item-detail-title">{{ item.name }}</h1>
         <p class="lead wiki-detail-lead">
           <template v-if="glanceEffectLine">{{ glanceEffectLine }}</template>
           <template v-else>
@@ -104,24 +101,15 @@
                   </li>
                 </ul>
 
-                <p v-if="item.description" class="prose">{{ item.description }}</p>
-                <p v-if="item.localizedDescription" class="prose">
-                  <strong>中文：</strong>{{ item.localizedDescription }}
-                </p>
-                <p
-                  v-if="!effectEntries.length && derivedProse && !item.description && !item.localizedDescription"
-                  class="prose"
-                >
-                  {{ derivedProse }}
-                </p>
-                <p v-if="recipeDescLink && !item.description && !item.localizedDescription" class="prose detail-note">
+                <p v-if="flavorText" class="prose">{{ flavorText }}</p>
+                <p v-if="recipeDescLink && !flavorText" class="prose detail-note">
                   In-game flavor text comes from the
                   <RouterLink :to="`/wiki/recipes/${recipeDescLink.slug}`">Fountain recipe</RouterLink>
                   when you craft {{ item.name }}.
                 </p>
                 <p v-if="playerNote" class="prose detail-note">{{ playerNote }}</p>
                 <p
-                  v-if="!effectEntries.length && !item.description && !item.localizedDescription && !derivedProse && !recipeDescLink && !playerNote"
+                  v-if="!effectEntries.length && !flavorText && !recipeDescLink && !playerNote"
                   class="prose detail-note"
                 >
                   No flavor text on this page yet — check crafting below or read the item in Talea after you make one.
@@ -259,7 +247,8 @@
               <p class="detail-explore-title">Keep exploring</p>
               <div class="detail-explore-links">
                 <RouterLink class="detail-explore-link" to="/wiki/items">All Items</RouterLink>
-                <RouterLink class="detail-explore-link" to="/wiki/recipes">All Recipes</RouterLink>
+                <RouterLink class="detail-explore-link" to="/wiki/cooking">Cooking</RouterLink>
+                <RouterLink class="detail-explore-link" to="/wiki/crafting">Crafting</RouterLink>
                 <RouterLink class="detail-explore-link" to="/beginner">Beginner Guide</RouterLink>
               </div>
             </nav>
@@ -301,6 +290,7 @@ import {
   formatDataLabel,
   itemBySlug,
   itemDerivedProse,
+  itemFlavorText,
   itemEffectDisplayEntries,
   itemEffectPlayerNote,
   itemRecipeDescriptionLink,
@@ -316,6 +306,7 @@ const item = computed(() => itemBySlug(route.params.slug))
 const typeLabel = computed(() => formatDataLabel(item.value?.type) || 'Item')
 const roleLabel = computed(() => (item.value ? itemRoleLabel(item.value) : ''))
 const derivedProse = computed(() => (item.value ? itemDerivedProse(item.value) : ''))
+const flavorText = computed(() => (item.value ? itemFlavorText(item.value) : ''))
 const effectEntries = computed(() => (item.value ? itemEffectDisplayEntries(item.value) : []))
 const playerNote = computed(() => (item.value ? itemEffectPlayerNote(item.value) : ''))
 const recipeDescLink = computed(() => (item.value ? itemRecipeDescriptionLink(item.value) : null))
@@ -335,6 +326,7 @@ const glanceEffectLine = computed(() => {
     const tail = first.playerDetail ? ` ${first.playerDetail}` : ''
     return `${first.playerTitle}.${tail}`.replace(/\.\s+\./g, '.').slice(0, 220)
   }
+  if (flavorText.value) return flavorText.value.slice(0, 220)
   if (derivedProse.value) return derivedProse.value.slice(0, 220)
   return ''
 })

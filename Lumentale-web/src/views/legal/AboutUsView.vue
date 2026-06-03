@@ -27,8 +27,8 @@
           </p>
           <p>
             We write guides the way we wish we had on day one: plain steps, honest caveats, and cross-links back to dex
-            pages when you need numbers mid-fight. The site is maintained by fans who play the game and update pages after
-            patches and route discoveries.
+            pages when you need numbers mid-fight. The site is maintained by a small team of fans, led by content architect
+            Frontline Pathfinder, who play the game and update pages after patches and route discoveries.
           </p>
 
           <h2>What We Are — and Are Not</h2>
@@ -88,7 +88,11 @@
 
           <h2>Contact the Team</h2>
           <p>
-            General questions, partnerships, or press inquiries:
+            <strong>Corrections &amp; Guide Feedback:</strong> Contact Frontline Pathfinder directly at
+            <a href="mailto:wyong@lumentale.org">wyong@lumentale.org</a>.
+          </p>
+          <p>
+            <strong>Partnerships &amp; Press:</strong> Reach out to the team at
             <a href="mailto:wyong@lumentale.org">wyong@lumentale.org</a>.
           </p>
           <p>

@@ -113,7 +113,7 @@
 
         <div class="dex-content">
           <RouterLink
-            v-for="entry in filtered"
+            v-for="entry in visible"
             :key="entry.slug"
             class="dex-item"
             :to="`/animon/${entry.slug}`"
@@ -138,15 +138,20 @@
             </div>
           </RouterLink>
         </div>
-        <p class="result-note">Showing {{ filtered.length }} of {{ animon.length }} Animon</p>
+        <div v-if="hasMore" ref="sentinel" class="list-load-sentinel" aria-hidden="true"></div>
+        <p v-if="hasMore" class="result-note">
+          <button type="button" class="btn-secondary btn-load-more" @click="loadMore">Load more Animon</button>
+        </p>
+        <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} Animon ({{ animon.length }} total)</p>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, toRef, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { animon, elementTypes, emotionalTypes, imgSrc, rarityTypes, tagClass } from '@/lib/data'
 
 const route = useRoute()
@@ -181,4 +186,6 @@ const filtered = computed(() => {
     )
   })
 })
+
+const { visible, hasMore, sentinel, loadMore } = useInfiniteList(toRef(filtered))
 </script>
