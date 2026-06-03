@@ -1,0 +1,5428 @@
+{
+  "generatedAt": "2026-06-01T08:22:52.660Z",
+  "counts": {
+    "bossAnimon": 51,
+    "campBosses": 10
+  },
+  "bossAnimon": [
+    {
+      "slug": "blanco-anizord-boss",
+      "name": "BLANCO Anizord Boss",
+      "sourceFile": "BLANCO_AnizordBoss.asset",
+      "category": "Boss Animon",
+      "originName": "Anizord",
+      "originSlug": "anizord",
+      "image": "/images/animon/anizord.webp",
+      "formName": "Base Form",
+      "level": 61,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "DATA",
+      "hiddenType": "ELECTRIC",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 243
+        },
+        {
+          "name": "Attack",
+          "value": 220
+        },
+        {
+          "name": "Defense",
+          "value": 143
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 91
+        },
+        {
+          "name": "Sp. Def",
+          "value": 184
+        },
+        {
+          "name": "Speed",
+          "value": 137
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blanco-babalure-boss",
+      "name": "BLANCO Babalure Boss",
+      "sourceFile": "BLANCO_BabalureBoss.asset",
+      "category": "Boss Animon",
+      "originName": "Babalure",
+      "originSlug": "babalure",
+      "image": "/images/animon/babalure.webp",
+      "formName": "Base Form",
+      "level": 61,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "NONE",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 217
+        },
+        {
+          "name": "Attack",
+          "value": 172
+        },
+        {
+          "name": "Defense",
+          "value": 124
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 188
+        },
+        {
+          "name": "Sp. Def",
+          "value": 124
+        },
+        {
+          "name": "Speed",
+          "value": 150
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blanco-chromaura-boss",
+      "name": "BLANCO Chromaura Boss",
+      "sourceFile": "BLANCO_ChromauraBoss.asset",
+      "category": "Boss Animon",
+      "originName": "Chromaura",
+      "originSlug": "chromaura",
+      "image": "/images/animon/chromaura.webp",
+      "formName": "Base Form",
+      "level": 61,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "AURA",
+      "hiddenType": "WATER",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 250
+        },
+        {
+          "name": "Attack",
+          "value": 130
+        },
+        {
+          "name": "Defense",
+          "value": 125
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 220
+        },
+        {
+          "name": "Sp. Def",
+          "value": 143
+        },
+        {
+          "name": "Speed",
+          "value": 148
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blanco-garbasilisk-boss",
+      "name": "BLANCO Garbasilisk Boss",
+      "sourceFile": "BLANCO_GarbasiliskBoss.asset",
+      "category": "Boss Animon",
+      "originName": "Garbasilisk",
+      "originSlug": "garbasilisk",
+      "image": "/images/animon/garbasilisk.webp",
+      "formName": "Base Form",
+      "level": 61,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "VIRUS",
+      "hiddenType": "DEMON",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 221
+        },
+        {
+          "name": "Attack",
+          "value": 168
+        },
+        {
+          "name": "Defense",
+          "value": 123
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 138
+        },
+        {
+          "name": "Sp. Def",
+          "value": 121
+        },
+        {
+          "name": "Speed",
+          "value": 140
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blanco-ghorious-boss",
+      "name": "BLANCO Ghorious Boss",
+      "sourceFile": "BLANCO_GhoriousBoss.asset",
+      "category": "Boss Animon",
+      "originName": "Ghorious",
+      "originSlug": "ghorious",
+      "image": "/images/animon/ghorious.webp",
+      "formName": "Base Form",
+      "level": 61,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "FIRE",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 215
+        },
+        {
+          "name": "Attack",
+          "value": 219
+        },
+        {
+          "name": "Defense",
+          "value": 139
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 180
+        },
+        {
+          "name": "Sp. Def",
+          "value": 144
+        },
+        {
+          "name": "Speed",
+          "value": 132
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blanco-impetoad-boss",
+      "name": "BLANCO Impetoad Boss",
+      "sourceFile": "BLANCO_ImpetoadBoss.asset",
+      "category": "Boss Animon",
+      "originName": "Impetoad",
+      "originSlug": "impetoad",
+      "image": "/images/animon/impetoad.webp",
+      "formName": "Base Form",
+      "level": 61,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "FIRE",
+      "hiddenType": "DEMON",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 262
+        },
+        {
+          "name": "Attack",
+          "value": 167
+        },
+        {
+          "name": "Defense",
+          "value": 110
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 152
+        },
+        {
+          "name": "Sp. Def",
+          "value": 125
+        },
+        {
+          "name": "Speed",
+          "value": 141
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blumestern-postgame",
+      "name": "BlumesterN POSTGAME",
+      "sourceFile": "BlumesterN_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Blumester",
+      "originSlug": "blumester-settentrionale",
+      "image": "/images/animon/blumester-settentrionale.webp",
+      "formName": "Horrens",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "ELECTRIC",
+      "hiddenType": "FIRE",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "ce4f3fd2-3eb4-4311-88f0-10a3bffe202c",
+          "name": "Laser Zettavolt",
+          "slug": "laser-zettavolt",
+          "type": "ELECTRIC",
+          "power": 125,
+          "cost": 3
+        },
+        {
+          "guid": "d7a7b691-5e18-42c7-b219-6cebba5e63c4",
+          "name": "Esplosione Bruciante",
+          "slug": "esplosione-bruciante",
+          "type": "FIRE",
+          "power": 75,
+          "cost": 4
+        },
+        {
+          "guid": "dce452c8-e3b2-4624-8c96-d0bb8bd5e2ec",
+          "name": "Bagliore Solare",
+          "slug": "bagliore-solare",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "d74c5163-ebcc-4b74-adc2-535b308b4c6a",
+          "name": "Affinatura",
+          "slug": "affinatura",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "275f0d2a-0986-4a20-b15e-0b8a4cf79cc5",
+          "name": "Carbone Ardente",
+          "slug": "carbone-ardente",
+          "type": "FIRE",
+          "power": 45,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1330
+        },
+        {
+          "name": "Attack",
+          "value": 382
+        },
+        {
+          "name": "Defense",
+          "value": 237
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 303
+        },
+        {
+          "name": "Sp. Def",
+          "value": 201
+        },
+        {
+          "name": "Speed",
+          "value": 272
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "blumesters-postgame",
+      "name": "BlumesterS POSTGAME",
+      "sourceFile": "BlumesterS_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Blumester",
+      "originSlug": "blumester-settentrionale",
+      "image": "/images/animon/blumester-settentrionale.webp",
+      "formName": "MestusClosed",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "WATER",
+      "hiddenType": "ANOMALOUS",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "45507a04-ade7-4156-ae79-b73f35f19e8e",
+          "name": "Marea",
+          "slug": "marea",
+          "type": "WATER",
+          "power": 10,
+          "cost": 3
+        },
+        {
+          "guid": "fea8f88b-01ca-4cca-8ff0-245d2dd22763",
+          "name": "Pioggialama",
+          "slug": "pioggialama",
+          "type": "WATER",
+          "power": 50,
+          "cost": 4
+        },
+        {
+          "guid": "6f552b67-89a1-40ec-b4b9-eceaa1d9fda4",
+          "name": "Esperaggio",
+          "slug": "esperaggio",
+          "type": "ANOMALOUS",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "7d4d442e-3a15-4d6f-a8a5-f00f8fdc6f39",
+          "name": "Rancorabbia",
+          "slug": "rancorabbia",
+          "type": "ANOMALOUS",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "bf2537af-3497-493f-94f1-016c54ec1660",
+          "name": "Gelosfera",
+          "slug": "gelosfera",
+          "type": "ICE",
+          "power": 50,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1435
+        },
+        {
+          "name": "Attack",
+          "value": 252
+        },
+        {
+          "name": "Defense",
+          "value": 219
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 353
+        },
+        {
+          "name": "Sp. Def",
+          "value": 207
+        },
+        {
+          "name": "Speed",
+          "value": 275
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "doryogun-boss",
+      "name": "Doryogun Boss",
+      "sourceFile": "Doryogun_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Doryogun",
+      "originSlug": "doryogun",
+      "image": "/images/animon/doryogun.webp",
+      "formName": "Base Form",
+      "level": 20,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "GEO",
+      "hiddenType": "FIRE",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 348
+        },
+        {
+          "name": "Attack",
+          "value": 0
+        },
+        {
+          "name": "Defense",
+          "value": 58
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 0
+        },
+        {
+          "name": "Sp. Def",
+          "value": 0
+        },
+        {
+          "name": "Speed",
+          "value": 0
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "dualine-postgame",
+      "name": "Dualine POSTGAME",
+      "sourceFile": "Dualine_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Dualine",
+      "originSlug": "dualine-forma-incarnata",
+      "image": "/images/animon/dualine-forma-incarnata.webp",
+      "formName": "Free Form",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "GRASS",
+      "hiddenType": "GEO",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 30
+      },
+      "skills": [
+        {
+          "guid": "be30715f-4c07-4b41-be53-b905256c174d",
+          "name": "Fangotrappola",
+          "slug": "fangotrappola",
+          "type": "GEO",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "36a9545b-0566-4171-9139-e8c34da3ac13",
+          "name": "Assimilazione",
+          "slug": "assimilazione",
+          "type": "GRASS",
+          "power": 40,
+          "cost": 2
+        },
+        {
+          "guid": "f11da85d-b684-4f66-9cd2-88cef9ec9083",
+          "name": "Falcenatura",
+          "slug": "falcenatura",
+          "type": "GRASS",
+          "power": 75,
+          "cost": 3
+        },
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "a02450ec-48ab-4607-89ef-41896af9e506",
+          "name": "Furia del Pianeta",
+          "slug": "furia-del-pianeta",
+          "type": "GRASS",
+          "power": 45,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1460
+        },
+        {
+          "name": "Attack",
+          "value": 212
+        },
+        {
+          "name": "Defense",
+          "value": 240
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 220
+        },
+        {
+          "name": "Sp. Def",
+          "value": 240
+        },
+        {
+          "name": "Speed",
+          "value": 214
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "emdraquin-secretboss",
+      "name": "Emdraquin SECRETBOSS",
+      "sourceFile": "Emdraquin_SECRETBOSS.asset",
+      "category": "Boss Animon",
+      "originName": "Emdraquin",
+      "originSlug": "emdraquin",
+      "image": "/images/animon/emdraquin.webp",
+      "formName": "Base Form",
+      "level": 65,
+      "targetBst": 600,
+      "extraHealthBars": 4,
+      "expGiven": 10000,
+      "elementType": "ANCIENT",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 90
+      },
+      "skills": [
+        {
+          "guid": "2d10940a-3deb-411c-a986-35f632f50781",
+          "name": "Tuonosfera",
+          "slug": "tuonosfera",
+          "type": "ELECTRIC",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "e3e94b47-3887-465d-be3f-3ae4a5162fbf",
+          "name": "Cor Draconis",
+          "slug": "cor-draconis",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "aaf81fba-736d-47bf-9333-1b9989b11479",
+          "name": "Lama Reliquia",
+          "slug": "lama-reliquia",
+          "type": "ANCIENT",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "eff60d5e-a910-41d3-b21c-c6ae9c8bb39a",
+          "name": "Egida",
+          "slug": "egida",
+          "type": "NONE",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "0de8b1e3-e0bb-47f1-9e93-0f2739a04405",
+          "name": "Elettrobolt",
+          "slug": "elettrobolt",
+          "type": "ELECTRIC",
+          "power": 60,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 980
+        },
+        {
+          "name": "Attack",
+          "value": 283
+        },
+        {
+          "name": "Defense",
+          "value": 183
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 276
+        },
+        {
+          "name": "Sp. Def",
+          "value": 172
+        },
+        {
+          "name": "Speed",
+          "value": 209
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "eterjian-finale",
+      "name": "Eterjian FINALE",
+      "sourceFile": "Eterjian_FINALE.asset",
+      "category": "Boss Animon",
+      "originName": "Eterjian",
+      "originSlug": "eterjian",
+      "image": "/images/animon/eterjian.webp",
+      "formName": "Base Form",
+      "level": 63,
+      "targetBst": 780,
+      "extraHealthBars": 5,
+      "expGiven": 5000,
+      "elementType": "ANCIENT",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "99d6c97e-07ce-4925-948d-af021e433502",
+          "name": "Fiammofrecce",
+          "slug": "fiammofrecce",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "203e24bd-be40-418d-b223-993fa9b27681",
+          "name": "Turbovortex",
+          "slug": "turbovortex",
+          "type": "ANCIENT",
+          "power": 80,
+          "cost": 3
+        },
+        {
+          "guid": "6f552b67-89a1-40ec-b4b9-eceaa1d9fda4",
+          "name": "Esperaggio",
+          "slug": "esperaggio",
+          "type": "ANOMALOUS",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "4cc9bc14-b4c5-43d1-8a74-410fe995be11",
+          "name": "Draco Flatus",
+          "slug": "draco-flatus",
+          "type": "ANCIENT",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "606bc730-3bc6-4643-b2aa-596b11a565d1",
+          "name": "Vis Bolidis",
+          "slug": "vis-bolidis",
+          "type": "ANCIENT",
+          "power": 140,
+          "cost": 4
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 846
+        },
+        {
+          "name": "Attack",
+          "value": 261
+        },
+        {
+          "name": "Defense",
+          "value": 200
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 284
+        },
+        {
+          "name": "Sp. Def",
+          "value": 187
+        },
+        {
+          "name": "Speed",
+          "value": 215
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "iotamor-boss",
+      "name": "Iotamor Boss",
+      "sourceFile": "Iotamor_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Iotamor",
+      "originSlug": "iotamor",
+      "image": "/images/animon/iotamor.webp",
+      "formName": "Base Form",
+      "level": 11,
+      "targetBst": 400,
+      "extraHealthBars": 1,
+      "expGiven": 100,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "ICE",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        },
+        {
+          "guid": "d4bd977b-ab64-44fd-9dc6-a2b16a2303f3",
+          "name": "Spavento",
+          "slug": "spavento",
+          "type": "ANOMALOUS",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "dd82e6c7-862b-42d1-affa-e938c0ecc616",
+          "name": "Gentilbrezza",
+          "slug": "gentilbrezza",
+          "type": "AURA",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "ccf12943-b5b9-47c3-b506-a872ce9b7586",
+          "name": "Libbra",
+          "slug": "libbra",
+          "type": "NONE",
+          "power": 50,
+          "cost": 1
+        },
+        {
+          "guid": "c2c50f5b-3f37-4948-8f8a-6c33b9fe51bf",
+          "name": "Nostalgia",
+          "slug": "nostalgia",
+          "type": "NONE",
+          "power": 0,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 224
+        },
+        {
+          "name": "Attack",
+          "value": 18
+        },
+        {
+          "name": "Defense",
+          "value": 24
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 19
+        },
+        {
+          "name": "Sp. Def",
+          "value": 20
+        },
+        {
+          "name": "Speed",
+          "value": 19
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "iotamor-postgame",
+      "name": "Iotamor POSTGAME",
+      "sourceFile": "Iotamor_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Iotamor",
+      "originSlug": "iotamor",
+      "image": "/images/animon/iotamor.webp",
+      "formName": "Base Form",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "DEMON",
+      "hiddenType": "ICE",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "c2c50f5b-3f37-4948-8f8a-6c33b9fe51bf",
+          "name": "Nostalgia",
+          "slug": "nostalgia",
+          "type": "NONE",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "8546faf8-7515-4089-af18-8a85da179736",
+          "name": "Maledizione",
+          "slug": "maledizione",
+          "type": "DEMON",
+          "power": 0,
+          "cost": 5
+        },
+        {
+          "guid": "f3c1b9e9-348e-4cce-8e88-5139f40449c9",
+          "name": "Bufera",
+          "slug": "bufera",
+          "type": "ICE",
+          "power": 75,
+          "cost": 4
+        },
+        {
+          "guid": "bf2537af-3497-493f-94f1-016c54ec1660",
+          "name": "Gelosfera",
+          "slug": "gelosfera",
+          "type": "ICE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1535
+        },
+        {
+          "name": "Attack",
+          "value": 213
+        },
+        {
+          "name": "Defense",
+          "value": 268
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 432
+        },
+        {
+          "name": "Sp. Def",
+          "value": 201
+        },
+        {
+          "name": "Speed",
+          "value": 225
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "kentaress-postgame",
+      "name": "Kentaress POSTGAME",
+      "sourceFile": "Kentaress_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Kentaress",
+      "originSlug": "kentaress",
+      "image": "/images/animon/kentaress.webp",
+      "formName": "Base Form",
+      "level": 100,
+      "targetBst": 1000,
+      "extraHealthBars": 7,
+      "expGiven": 15000,
+      "elementType": "DATA",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "bd78a6c6-1e04-449d-a8ec-20de4cea9f79",
+          "name": "Scatto Fulmineo",
+          "slug": "scatto-fulmineo",
+          "type": "ELECTRIC",
+          "power": 40,
+          "cost": 3
+        },
+        {
+          "guid": "6099edb8-96c5-4628-b7ef-49f596d23d62",
+          "name": "DoS_Attack",
+          "slug": "dos-attack",
+          "type": "DATA",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "eab6e900-1bfc-4ca2-80e0-53678ea6d05e",
+          "name": "Overclock",
+          "slug": "overclock",
+          "type": "DATA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "d81d653a-adc1-43e4-9f42-153ce321e904",
+          "name": "Diavolama",
+          "slug": "diavolama",
+          "type": "DEMON",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "b19630ab-1b13-4d5e-a7b6-f7e46669fdc8",
+          "name": "Criolancia",
+          "slug": "criolancia",
+          "type": "ICE",
+          "power": 70,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1780
+        },
+        {
+          "name": "Attack",
+          "value": 524
+        },
+        {
+          "name": "Defense",
+          "value": 336
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 389
+        },
+        {
+          "name": "Sp. Def",
+          "value": 336
+        },
+        {
+          "name": "Speed",
+          "value": 517
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "knequital-postgame",
+      "name": "Knequital POSTGAME",
+      "sourceFile": "Knequital_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Knequital",
+      "originSlug": "knequital",
+      "image": "/images/animon/knequital.webp",
+      "formName": "Sealed",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "AURA",
+      "hiddenType": "CHAKRA",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "3876450d-7157-4a59-a184-da19db66d855",
+          "name": "Colpo Diagonale",
+          "slug": "colpo-diagonale",
+          "type": "CHAKRA",
+          "power": 65,
+          "cost": 1
+        },
+        {
+          "guid": "286c3bbb-d766-453c-afe2-7da9fea50ac9",
+          "name": "Ventolama",
+          "slug": "ventolama",
+          "type": "AURA",
+          "power": 100,
+          "cost": 3
+        },
+        {
+          "guid": "020dab0d-d5f5-46f9-9783-58ad71080357",
+          "name": "Illuminazione",
+          "slug": "illuminazione",
+          "type": "AURA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "f7b75677-077b-4e40-b0f7-93e0f1c937c6",
+          "name": "Perforazione",
+          "slug": "perforazione",
+          "type": "AURA",
+          "power": 55,
+          "cost": 2
+        },
+        {
+          "guid": "eabb399f-5f72-448a-8517-b1c4c167490b",
+          "name": "Energilama",
+          "slug": "energilama",
+          "type": "CHAKRA",
+          "power": 100,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1280
+        },
+        {
+          "name": "Attack",
+          "value": 352
+        },
+        {
+          "name": "Defense",
+          "value": 225
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 352
+        },
+        {
+          "name": "Sp. Def",
+          "value": 225
+        },
+        {
+          "name": "Speed",
+          "value": 256
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "kokepole-postgame",
+      "name": "Kokepole POSTGAME",
+      "sourceFile": "Kokepole_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Kokepole",
+      "originSlug": "kokepole",
+      "image": "/images/animon/kokepole.webp",
+      "formName": "Phase1",
+      "level": 80,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 20000,
+      "elementType": "GEO",
+      "hiddenType": "ANCIENT",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 90
+      },
+      "skills": [
+        {
+          "guid": "64c4cdd6-4ddf-4e29-bbcc-38292b6b27dc",
+          "name": "Fangobotto",
+          "slug": "fangobotto",
+          "type": "GEO",
+          "power": 110,
+          "cost": 3
+        },
+        {
+          "guid": "112fbaf3-e0d1-4f9b-866d-4c15c4c7a60e",
+          "name": "Esplosione Delta",
+          "slug": "esplosione-delta",
+          "type": "NONE",
+          "power": 85,
+          "cost": 4
+        },
+        {
+          "guid": "4cc9bc14-b4c5-43d1-8a74-410fe995be11",
+          "name": "Draco Flatus",
+          "slug": "draco-flatus",
+          "type": "ANCIENT",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "2345c168-a1d8-4eab-b675-fd5fa9f625f5",
+          "name": "Cor Chelys",
+          "slug": "cor-chelys",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1680
+        },
+        {
+          "name": "Attack",
+          "value": 410
+        },
+        {
+          "name": "Defense",
+          "value": 328
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 410
+        },
+        {
+          "name": "Sp. Def",
+          "value": 328
+        },
+        {
+          "name": "Speed",
+          "value": 328
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "lampecko-boss",
+      "name": "Lampecko Boss",
+      "sourceFile": "Lampecko_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Lampecko",
+      "originSlug": "lampecko",
+      "image": "/images/animon/lampecko.webp",
+      "formName": "Base Form",
+      "level": 18,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "VIRUS",
+      "hiddenType": "ANCIENT",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 150
+        },
+        {
+          "name": "Attack",
+          "value": 30
+        },
+        {
+          "name": "Defense",
+          "value": 25
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 40
+        },
+        {
+          "name": "Sp. Def",
+          "value": 90
+        },
+        {
+          "name": "Speed",
+          "value": 26
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "majetsune-controlled-form-boss",
+      "name": "Majetsune Controlled Form Boss",
+      "sourceFile": "Majetsune_Controlled_Form_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Majetsune",
+      "originSlug": "majetsune-pacifist",
+      "image": "/images/animon/majetsune-pacifist.webp",
+      "formName": "Controlled Form",
+      "level": 65,
+      "targetBst": 1380,
+      "extraHealthBars": 8,
+      "expGiven": 6000,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "DATA",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "58fbb433-b4ec-4645-b127-4ee964db2ebf",
+          "name": "Formattazione",
+          "slug": "formattazione",
+          "type": "DATA",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "a6be3c3a-65a7-4c51-b027-c80e2e80d4b5",
+          "name": "Aberransione",
+          "slug": "aberransione",
+          "type": "ANOMALOUS",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "fcade399-3e46-4878-8191-e1f4b9911bce",
+          "name": "Cyberbeam",
+          "slug": "cyberbeam",
+          "type": "DATA",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "7abb3518-e3be-43d9-a599-6407073c65d5",
+          "name": "Glitch_Wave",
+          "slug": "glitch-wave",
+          "type": "DATA",
+          "power": 71,
+          "cost": 4
+        },
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1800
+        },
+        {
+          "name": "Attack",
+          "value": 345
+        },
+        {
+          "name": "Defense",
+          "value": 324
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 375
+        },
+        {
+          "name": "Sp. Def",
+          "value": 324
+        },
+        {
+          "name": "Speed",
+          "value": 298
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "majetsune-true-form-boss",
+      "name": "Majetsune True Form Boss",
+      "sourceFile": "Majetsune_True_Form_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Majetsune",
+      "originSlug": "majetsune-pacifist",
+      "image": "/images/animon/majetsune-pacifist.webp",
+      "formName": "True Form",
+      "level": 65,
+      "targetBst": 1380,
+      "extraHealthBars": 8,
+      "expGiven": 6000,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "ANCIENT",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "712693b9-5274-492a-b155-f9422b4290f9",
+          "name": "Cor Leonis",
+          "slug": "cor-leonis",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "606bc730-3bc6-4643-b2aa-596b11a565d1",
+          "name": "Vis Bolidis",
+          "slug": "vis-bolidis",
+          "type": "ANCIENT",
+          "power": 140,
+          "cost": 4
+        },
+        {
+          "guid": "4cc9bc14-b4c5-43d1-8a74-410fe995be11",
+          "name": "Draco Flatus",
+          "slug": "draco-flatus",
+          "type": "ANCIENT",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "e3e94b47-3887-465d-be3f-3ae4a5162fbf",
+          "name": "Cor Draconis",
+          "slug": "cor-draconis",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "e82db8d5-0cb0-4547-b715-9662319cdcbc",
+          "name": "Psiscissione",
+          "slug": "psiscissione",
+          "type": "ANOMALOUS",
+          "power": 85,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1400
+        },
+        {
+          "name": "Attack",
+          "value": 386
+        },
+        {
+          "name": "Defense",
+          "value": 324
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 386
+        },
+        {
+          "name": "Sp. Def",
+          "value": 324
+        },
+        {
+          "name": "Speed",
+          "value": 278
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "morsiver-postgame",
+      "name": "Morsiver POSTGAME",
+      "sourceFile": "Morsiver_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Morsiver",
+      "originSlug": "morsiver",
+      "image": "/images/animon/morsiver.webp",
+      "formName": "Worn Out",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "FIRE",
+      "hiddenType": "DEMON",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "c3afecea-fd3d-471e-8de3-e80fc880bb98",
+          "name": "Istigazione",
+          "slug": "istigazione",
+          "type": "ANOMALOUS",
+          "power": 0,
+          "cost": 1
+        },
+        {
+          "guid": "c8883b17-f65c-4635-a496-02b9c11308a7",
+          "name": "Inquietocchio",
+          "slug": "inquietocchio",
+          "type": "DEMON",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "ed0f93da-7559-4d97-80d8-62589a085431",
+          "name": "Fiamma Oscura",
+          "slug": "fiamma-oscura",
+          "type": "FIRE",
+          "power": 110,
+          "cost": 2
+        },
+        {
+          "guid": "7af76249-ae0d-481e-b514-9988a201247c",
+          "name": "Insidiasfera",
+          "slug": "insidiasfera",
+          "type": "DEMON",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "d81d653a-adc1-43e4-9f42-153ce321e904",
+          "name": "Diavolama",
+          "slug": "diavolama",
+          "type": "DEMON",
+          "power": 100,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1070
+        },
+        {
+          "name": "Attack",
+          "value": 288
+        },
+        {
+          "name": "Defense",
+          "value": 210
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 378
+        },
+        {
+          "name": "Sp. Def",
+          "value": 336
+        },
+        {
+          "name": "Speed",
+          "value": 262
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "morsiver-ritual",
+      "name": "Morsiver Ritual",
+      "sourceFile": "Morsiver_Ritual.asset",
+      "category": "Boss Animon",
+      "originName": "Morsiver",
+      "originSlug": "morsiver",
+      "image": "/images/animon/morsiver.webp",
+      "formName": "Worn Out",
+      "level": 28,
+      "targetBst": 600,
+      "extraHealthBars": 2,
+      "expGiven": 400,
+      "elementType": "FIRE",
+      "hiddenType": "DEMON",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "ed0f93da-7559-4d97-80d8-62589a085431",
+          "name": "Fiamma Oscura",
+          "slug": "fiamma-oscura",
+          "type": "FIRE",
+          "power": 110,
+          "cost": 2
+        },
+        {
+          "guid": "c8883b17-f65c-4635-a496-02b9c11308a7",
+          "name": "Inquietocchio",
+          "slug": "inquietocchio",
+          "type": "DEMON",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "d81d653a-adc1-43e4-9f42-153ce321e904",
+          "name": "Diavolama",
+          "slug": "diavolama",
+          "type": "DEMON",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 195
+        },
+        {
+          "name": "Attack",
+          "value": 79
+        },
+        {
+          "name": "Defense",
+          "value": 59
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 104
+        },
+        {
+          "name": "Sp. Def",
+          "value": 92
+        },
+        {
+          "name": "Speed",
+          "value": 73
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "morsiver-ritual-nf",
+      "name": "Morsiver Ritual NF",
+      "sourceFile": "Morsiver_Ritual_NF.asset",
+      "category": "Boss Animon",
+      "originName": "Morsiver",
+      "originSlug": "morsiver",
+      "image": "/images/animon/morsiver.webp",
+      "formName": "Worn Out",
+      "level": 55,
+      "targetBst": 600,
+      "extraHealthBars": 4,
+      "expGiven": 800,
+      "elementType": "FIRE",
+      "hiddenType": "DEMON",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "ed0f93da-7559-4d97-80d8-62589a085431",
+          "name": "Fiamma Oscura",
+          "slug": "fiamma-oscura",
+          "type": "FIRE",
+          "power": 110,
+          "cost": 2
+        },
+        {
+          "guid": "c8883b17-f65c-4635-a496-02b9c11308a7",
+          "name": "Inquietocchio",
+          "slug": "inquietocchio",
+          "type": "DEMON",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "d81d653a-adc1-43e4-9f42-153ce321e904",
+          "name": "Diavolama",
+          "slug": "diavolama",
+          "type": "DEMON",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 320
+        },
+        {
+          "name": "Attack",
+          "value": 155
+        },
+        {
+          "name": "Defense",
+          "value": 113
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 205
+        },
+        {
+          "name": "Sp. Def",
+          "value": 181
+        },
+        {
+          "name": "Speed",
+          "value": 142
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-arct-rex",
+      "name": "NF Arct-Rex",
+      "sourceFile": "NF_Arct-Rex.asset",
+      "category": "Boss Animon",
+      "originName": "Arct-Rex",
+      "originSlug": "arct-rex",
+      "image": "/images/animon/arct-rex.webp",
+      "formName": "Base Form",
+      "level": 32,
+      "targetBst": 620,
+      "extraHealthBars": 4,
+      "expGiven": 2800,
+      "elementType": "ICE",
+      "hiddenType": "DATA",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [
+        {
+          "guid": "4c652c23-7c0a-4340-a698-6f28f71f08cc",
+          "name": "Number_Crunch",
+          "slug": "number-crunch",
+          "type": "DATA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "f3c1b9e9-348e-4cce-8e88-5139f40449c9",
+          "name": "Bufera",
+          "slug": "bufera",
+          "type": "ICE",
+          "power": 75,
+          "cost": 4
+        },
+        {
+          "guid": "feb9a4d3-2331-4260-b3dc-20c9107b6d88",
+          "name": "Brinaimpatto",
+          "slug": "brinaimpatto",
+          "type": "ICE",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "5d25092d-7183-45e1-a2dc-c093699836e4",
+          "name": "Lancia Diamante",
+          "slug": "lancia-diamante",
+          "type": "GEO",
+          "power": 85,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 495
+        },
+        {
+          "name": "Attack",
+          "value": 109
+        },
+        {
+          "name": "Defense",
+          "value": 86
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 109
+        },
+        {
+          "name": "Sp. Def",
+          "value": 91
+        },
+        {
+          "name": "Speed",
+          "value": 73
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-blumesternorth",
+      "name": "NF BlumesterNorth",
+      "sourceFile": "NF_BlumesterNorth.asset",
+      "category": "Boss Animon",
+      "originName": "Blumester",
+      "originSlug": "blumester-settentrionale",
+      "image": "/images/animon/blumester-settentrionale.webp",
+      "formName": "Horrens",
+      "level": 23,
+      "targetBst": 580,
+      "extraHealthBars": 4,
+      "expGiven": 800,
+      "elementType": "ELECTRIC",
+      "hiddenType": "FIRE",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "01d51561-3c9a-491e-9ee8-f48fe5f24f11",
+          "name": "Lamavolt",
+          "slug": "lamavolt",
+          "type": "ELECTRIC",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "5d25092d-7183-45e1-a2dc-c093699836e4",
+          "name": "Lancia Diamante",
+          "slug": "lancia-diamante",
+          "type": "GEO",
+          "power": 85,
+          "cost": 2
+        },
+        {
+          "guid": "dce452c8-e3b2-4624-8c96-d0bb8bd5e2ec",
+          "name": "Bagliore Solare",
+          "slug": "bagliore-solare",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "49839eec-f632-46a6-9a45-d46c17b66090",
+          "name": "Scossa di ritorno",
+          "slug": "scossa-di-ritorno",
+          "type": "ELECTRIC",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 462
+        },
+        {
+          "name": "Attack",
+          "value": 97
+        },
+        {
+          "name": "Defense",
+          "value": 55
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 70
+        },
+        {
+          "name": "Sp. Def",
+          "value": 47
+        },
+        {
+          "name": "Speed",
+          "value": 63
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-blumestersouth",
+      "name": "NF BlumesterSouth",
+      "sourceFile": "NF_BlumesterSouth.asset",
+      "category": "Boss Animon",
+      "originName": "Blumester",
+      "originSlug": "blumester-settentrionale",
+      "image": "/images/animon/blumester-settentrionale.webp",
+      "formName": "BOSS_M_CLOSED",
+      "level": 45,
+      "targetBst": 740,
+      "extraHealthBars": 5,
+      "expGiven": 1600,
+      "elementType": "WATER",
+      "hiddenType": "ANOMALOUS",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "6f552b67-89a1-40ec-b4b9-eceaa1d9fda4",
+          "name": "Esperaggio",
+          "slug": "esperaggio",
+          "type": "ANOMALOUS",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "a3037b30-91b5-41dd-b4b2-df3dd70ecab2",
+          "name": "Obbrobrionda",
+          "slug": "obbrobrionda",
+          "type": "ANOMALOUS",
+          "power": 40,
+          "cost": 3
+        },
+        {
+          "guid": "b61ca3f9-d879-425f-b168-a367b7db8e41",
+          "name": "Idrovortex",
+          "slug": "idrovortex",
+          "type": "WATER",
+          "power": 85,
+          "cost": 2
+        },
+        {
+          "guid": "3d962e75-7b94-4beb-9ee6-8f9ed4bb333b",
+          "name": "Congestione",
+          "slug": "congestione",
+          "type": "WATER",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "d7e06b3b-e51c-43fe-8a56-8382f9ce4ba9",
+          "name": "Idroslitta-BOSS",
+          "slug": "idroslitta-boss",
+          "type": "WATER",
+          "power": 60,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 900
+        },
+        {
+          "name": "Attack",
+          "value": 148
+        },
+        {
+          "name": "Defense",
+          "value": 118
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 224
+        },
+        {
+          "name": "Sp. Def",
+          "value": 113
+        },
+        {
+          "name": "Speed",
+          "value": 137
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-dualineembodied",
+      "name": "NF DualineEmbodied",
+      "sourceFile": "NF_DualineEmbodied.asset",
+      "category": "Boss Animon",
+      "originName": "Dualine",
+      "originSlug": "dualine-forma-incarnata",
+      "image": "/images/animon/dualine-forma-incarnata.webp",
+      "formName": "Embodied Form",
+      "level": 41,
+      "targetBst": 700,
+      "extraHealthBars": 5,
+      "expGiven": 1500,
+      "elementType": "GRASS",
+      "hiddenType": "GEO",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 30
+      },
+      "skills": [
+        {
+          "guid": "be30715f-4c07-4b41-be53-b905256c174d",
+          "name": "Fangotrappola",
+          "slug": "fangotrappola",
+          "type": "GEO",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "a02450ec-48ab-4607-89ef-41896af9e506",
+          "name": "Furia del Pianeta",
+          "slug": "furia-del-pianeta",
+          "type": "GRASS",
+          "power": 45,
+          "cost": 2
+        },
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "36a9545b-0566-4171-9139-e8c34da3ac13",
+          "name": "Assimilazione",
+          "slug": "assimilazione",
+          "type": "GRASS",
+          "power": 40,
+          "cost": 2
+        },
+        {
+          "guid": "9716a74b-8cb6-4fbc-b56d-6a4980714588",
+          "name": "Aromasintesi",
+          "slug": "aromasintesi",
+          "type": "GRASS",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 576
+        },
+        {
+          "name": "Attack",
+          "value": 104
+        },
+        {
+          "name": "Defense",
+          "value": 128
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 149
+        },
+        {
+          "name": "Sp. Def",
+          "value": 139
+        },
+        {
+          "name": "Speed",
+          "value": 99
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-dualinenormal",
+      "name": "NF DualineNormal",
+      "sourceFile": "NF_DualineNormal.asset",
+      "category": "Boss Animon",
+      "originName": "Dualine",
+      "originSlug": "dualine-forma-incarnata",
+      "image": "/images/animon/dualine-forma-incarnata.webp",
+      "formName": "Free Form",
+      "level": 41,
+      "targetBst": 600,
+      "extraHealthBars": 3,
+      "expGiven": 0,
+      "elementType": "GRASS",
+      "hiddenType": "GEO",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 100,
+        "chaos": 50,
+        "intelligence": 30
+      },
+      "skills": [
+        {
+          "guid": "be30715f-4c07-4b41-be53-b905256c174d",
+          "name": "Fangotrappola",
+          "slug": "fangotrappola",
+          "type": "GEO",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "28db9573-3936-44c2-a040-0652f60a5367",
+          "name": "Testata",
+          "slug": "testata",
+          "type": "GEO",
+          "power": 50,
+          "cost": 1
+        },
+        {
+          "guid": "f11da85d-b684-4f66-9cd2-88cef9ec9083",
+          "name": "Falcenatura",
+          "slug": "falcenatura",
+          "type": "GRASS",
+          "power": 75,
+          "cost": 3
+        },
+        {
+          "guid": "4ead9181-160b-435d-ac0e-ae64b930d3b7",
+          "name": "Vigorcura",
+          "slug": "vigorcura",
+          "type": "GRASS",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "9716a74b-8cb6-4fbc-b56d-6a4980714588",
+          "name": "Aromasintesi",
+          "slug": "aromasintesi",
+          "type": "GRASS",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 300
+        },
+        {
+          "name": "Attack",
+          "value": 90
+        },
+        {
+          "name": "Defense",
+          "value": 100
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 92
+        },
+        {
+          "name": "Sp. Def",
+          "value": 100
+        },
+        {
+          "name": "Speed",
+          "value": 90
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-katamos",
+      "name": "NF Katamos",
+      "sourceFile": "NF_Katamos.asset",
+      "category": "Boss Animon",
+      "originName": "Katamos",
+      "originSlug": "katamos",
+      "image": "/images/animon/katamos.webp",
+      "formName": "Base Form",
+      "level": 54,
+      "targetBst": 770,
+      "extraHealthBars": 5,
+      "expGiven": 5600,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "AURA",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 40,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "b9921e51-c089-489a-9327-70e81923ef51",
+          "name": "Raffica Tagliente",
+          "slug": "raffica-tagliente",
+          "type": "AURA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "e82db8d5-0cb0-4547-b715-9662319cdcbc",
+          "name": "Psiscissione",
+          "slug": "psiscissione",
+          "type": "ANOMALOUS",
+          "power": 85,
+          "cost": 3
+        },
+        {
+          "guid": "584ca76d-f2eb-476f-8f68-a7d939647080",
+          "name": "Gravicinesi",
+          "slug": "gravicinesi",
+          "type": "ANOMALOUS",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "7af76249-ae0d-481e-b514-9988a201247c",
+          "name": "Insidiasfera",
+          "slug": "insidiasfera",
+          "type": "DEMON",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "6f552b67-89a1-40ec-b4b9-eceaa1d9fda4",
+          "name": "Esperaggio",
+          "slug": "esperaggio",
+          "type": "ANOMALOUS",
+          "power": 120,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 810
+        },
+        {
+          "name": "Attack",
+          "value": 196
+        },
+        {
+          "name": "Defense",
+          "value": 150
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 260
+        },
+        {
+          "name": "Sp. Def",
+          "value": 167
+        },
+        {
+          "name": "Speed",
+          "value": 177
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-kentaress",
+      "name": "NF Kentaress",
+      "sourceFile": "NF_Kentaress.asset",
+      "category": "Boss Animon",
+      "originName": "Kentaress",
+      "originSlug": "kentaress",
+      "image": "/images/animon/kentaress.webp",
+      "formName": "Base Form",
+      "level": 36,
+      "targetBst": 640,
+      "extraHealthBars": 5,
+      "expGiven": 2500,
+      "elementType": "DATA",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "bd78a6c6-1e04-449d-a8ec-20de4cea9f79",
+          "name": "Scatto Fulmineo",
+          "slug": "scatto-fulmineo",
+          "type": "ELECTRIC",
+          "power": 40,
+          "cost": 3
+        },
+        {
+          "guid": "6099edb8-96c5-4628-b7ef-49f596d23d62",
+          "name": "DoS_Attack",
+          "slug": "dos-attack",
+          "type": "DATA",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "eab6e900-1bfc-4ca2-80e0-53678ea6d05e",
+          "name": "Overclock",
+          "slug": "overclock",
+          "type": "DATA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "c0265b5b-e63b-4785-bb74-723c1a83152e",
+          "name": "Ditolancia",
+          "slug": "ditolancia",
+          "type": "CHAKRA",
+          "power": 75,
+          "cost": 2
+        },
+        {
+          "guid": "b19630ab-1b13-4d5e-a7b6-f7e46669fdc8",
+          "name": "Criolancia",
+          "slug": "criolancia",
+          "type": "ICE",
+          "power": 70,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 868
+        },
+        {
+          "name": "Attack",
+          "value": 165
+        },
+        {
+          "name": "Defense",
+          "value": 76
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 88
+        },
+        {
+          "name": "Sp. Def",
+          "value": 76
+        },
+        {
+          "name": "Speed",
+          "value": 122
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-knequital-boss",
+      "name": "NF Knequital Boss",
+      "sourceFile": "NF_Knequital_Boss.asset",
+      "category": "Boss Animon",
+      "originName": "Knequital",
+      "originSlug": "knequital",
+      "image": "/images/animon/knequital.webp",
+      "formName": "Sealed",
+      "level": 20,
+      "targetBst": 580,
+      "extraHealthBars": 3,
+      "expGiven": 700,
+      "elementType": "AURA",
+      "hiddenType": "CHAKRA",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "c65743f9-256c-4c9e-b900-89b5a7cb6496",
+          "name": "Colpo Radioso",
+          "slug": "colpo-radioso",
+          "type": "AURA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "286c3bbb-d766-453c-afe2-7da9fea50ac9",
+          "name": "Ventolama",
+          "slug": "ventolama",
+          "type": "AURA",
+          "power": 100,
+          "cost": 3
+        },
+        {
+          "guid": "020dab0d-d5f5-46f9-9783-58ad71080357",
+          "name": "Illuminazione",
+          "slug": "illuminazione",
+          "type": "AURA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "eabb399f-5f72-448a-8517-b1c4c167490b",
+          "name": "Energilama",
+          "slug": "energilama",
+          "type": "CHAKRA",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "6a8ad41f-300b-4842-8ecd-5e89f7cc2e65",
+          "name": "Lamardente",
+          "slug": "lamardente",
+          "type": "FIRE",
+          "power": 100,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 417
+        },
+        {
+          "name": "Attack",
+          "value": 67
+        },
+        {
+          "name": "Defense",
+          "value": 44
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 67
+        },
+        {
+          "name": "Sp. Def",
+          "value": 44
+        },
+        {
+          "name": "Speed",
+          "value": 50
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-morsiver",
+      "name": "NF Morsiver",
+      "sourceFile": "NF_Morsiver.asset",
+      "category": "Boss Animon",
+      "originName": "Morsiver",
+      "originSlug": "morsiver",
+      "image": "/images/animon/morsiver.webp",
+      "formName": "Worn Out",
+      "level": 51,
+      "targetBst": 760,
+      "extraHealthBars": 5,
+      "expGiven": 2000,
+      "elementType": "FIRE",
+      "hiddenType": "DEMON",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "ed0f93da-7559-4d97-80d8-62589a085431",
+          "name": "Fiamma Oscura",
+          "slug": "fiamma-oscura",
+          "type": "FIRE",
+          "power": 110,
+          "cost": 2
+        },
+        {
+          "guid": "c8883b17-f65c-4635-a496-02b9c11308a7",
+          "name": "Inquietocchio",
+          "slug": "inquietocchio",
+          "type": "DEMON",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "d81d653a-adc1-43e4-9f42-153ce321e904",
+          "name": "Diavolama",
+          "slug": "diavolama",
+          "type": "DEMON",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 960
+        },
+        {
+          "name": "Attack",
+          "value": 182
+        },
+        {
+          "name": "Defense",
+          "value": 132
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 238
+        },
+        {
+          "name": "Sp. Def",
+          "value": 211
+        },
+        {
+          "name": "Speed",
+          "value": 165
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-nuclheart",
+      "name": "NF Nuclheart",
+      "sourceFile": "NF_Nuclheart.asset",
+      "category": "Boss Animon",
+      "originName": "Nuclheart",
+      "originSlug": "nuclheart",
+      "image": "/images/animon/nuclheart.webp",
+      "formName": "Shield Form",
+      "level": 29,
+      "targetBst": 600,
+      "extraHealthBars": 4,
+      "expGiven": 950,
+      "elementType": "VIRUS",
+      "hiddenType": "GEO",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "83219b61-a964-4f7d-9a52-d5906b39879a",
+          "name": "Piretigetto",
+          "slug": "piretigetto",
+          "type": "VIRUS",
+          "power": 15,
+          "cost": 2
+        },
+        {
+          "guid": "adb60ac4-2d23-42f1-8b99-250718519efb",
+          "name": "Nocciofusione",
+          "slug": "nocciofusione",
+          "type": "VIRUS",
+          "power": 150,
+          "cost": 4
+        },
+        {
+          "guid": "2d10940a-3deb-411c-a986-35f632f50781",
+          "name": "Tuonosfera",
+          "slug": "tuonosfera",
+          "type": "ELECTRIC",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "b1d533ba-e58a-437b-a34d-483744ebf804",
+          "name": "Schizzo Acido",
+          "slug": "schizzo-acido",
+          "type": "VIRUS",
+          "power": 60,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 584
+        },
+        {
+          "name": "Attack",
+          "value": 45
+        },
+        {
+          "name": "Defense",
+          "value": 140
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 56
+        },
+        {
+          "name": "Sp. Def",
+          "value": 140
+        },
+        {
+          "name": "Speed",
+          "value": 67
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nf-primalong",
+      "name": "NF Primalong",
+      "sourceFile": "NF_Primalong.asset",
+      "category": "Boss Animon",
+      "originName": "Primalong",
+      "originSlug": "primalong",
+      "image": "/images/animon/primalong.webp",
+      "formName": "Base Form",
+      "level": 58,
+      "targetBst": 780,
+      "extraHealthBars": 6,
+      "expGiven": 5200,
+      "elementType": "ANCIENT",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "c3b87a62-0597-42e3-a0ad-c949e4345bda",
+          "name": "Plus Ultra",
+          "slug": "plus-ultra",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "aaf81fba-736d-47bf-9333-1b9989b11479",
+          "name": "Lama Reliquia",
+          "slug": "lama-reliquia",
+          "type": "ANCIENT",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "203e24bd-be40-418d-b223-993fa9b27681",
+          "name": "Turbovortex",
+          "slug": "turbovortex",
+          "type": "ANCIENT",
+          "power": 80,
+          "cost": 3
+        },
+        {
+          "guid": "acad2ca1-b55b-4fc5-b578-f307ee25c107",
+          "name": "Excisio",
+          "slug": "excisio",
+          "type": "ANCIENT",
+          "power": 140,
+          "cost": 4
+        },
+        {
+          "guid": "5d25092d-7183-45e1-a2dc-c093699836e4",
+          "name": "Lancia Diamante",
+          "slug": "lancia-diamante",
+          "type": "GEO",
+          "power": 85,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1246
+        },
+        {
+          "name": "Attack",
+          "value": 276
+        },
+        {
+          "name": "Defense",
+          "value": 193
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 246
+        },
+        {
+          "name": "Sp. Def",
+          "value": 162
+        },
+        {
+          "name": "Speed",
+          "value": 160
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "nuclheart-postgame",
+      "name": "Nuclheart POSTGAME",
+      "sourceFile": "Nuclheart_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Nuclheart",
+      "originSlug": "nuclheart",
+      "image": "/images/animon/nuclheart.webp",
+      "formName": "Shield Form",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "VIRUS",
+      "hiddenType": "GEO",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "28db9573-3936-44c2-a040-0652f60a5367",
+          "name": "Testata",
+          "slug": "testata",
+          "type": "GEO",
+          "power": 50,
+          "cost": 1
+        },
+        {
+          "guid": "7ed39117-8266-4174-b068-57b2e1221fd9",
+          "name": "Venoraggio",
+          "slug": "venoraggio",
+          "type": "VIRUS",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "8700cbfe-c53e-4d56-b9cf-a3dc367bcf67",
+          "name": "Vettore",
+          "slug": "vettore",
+          "type": "VIRUS",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "64c4cdd6-4ddf-4e29-bbcc-38292b6b27dc",
+          "name": "Fangobotto",
+          "slug": "fangobotto",
+          "type": "GEO",
+          "power": 110,
+          "cost": 3
+        },
+        {
+          "guid": "adb60ac4-2d23-42f1-8b99-250718519efb",
+          "name": "Nocciofusione",
+          "slug": "nocciofusione",
+          "type": "VIRUS",
+          "power": 150,
+          "cost": 4
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1545
+        },
+        {
+          "name": "Attack",
+          "value": 129
+        },
+        {
+          "name": "Defense",
+          "value": 402
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 207
+        },
+        {
+          "name": "Sp. Def",
+          "value": 402
+        },
+        {
+          "name": "Speed",
+          "value": 204
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "primalong-postgame",
+      "name": "Primalong POSTGAME",
+      "sourceFile": "Primalong_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Primalong",
+      "originSlug": "primalong",
+      "image": "/images/animon/primalong.webp",
+      "formName": "Base Form",
+      "level": 100,
+      "targetBst": 1000,
+      "extraHealthBars": 7,
+      "expGiven": 15000,
+      "elementType": "ANCIENT",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "c3b87a62-0597-42e3-a0ad-c949e4345bda",
+          "name": "Plus Ultra",
+          "slug": "plus-ultra",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "aaf81fba-736d-47bf-9333-1b9989b11479",
+          "name": "Lama Reliquia",
+          "slug": "lama-reliquia",
+          "type": "ANCIENT",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "203e24bd-be40-418d-b223-993fa9b27681",
+          "name": "Turbovortex",
+          "slug": "turbovortex",
+          "type": "ANCIENT",
+          "power": 80,
+          "cost": 3
+        },
+        {
+          "guid": "acad2ca1-b55b-4fc5-b578-f307ee25c107",
+          "name": "Excisio",
+          "slug": "excisio",
+          "type": "ANCIENT",
+          "power": 140,
+          "cost": 4
+        },
+        {
+          "guid": "be30715f-4c07-4b41-be53-b905256c174d",
+          "name": "Fangotrappola",
+          "slug": "fangotrappola",
+          "type": "GEO",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 2000
+        },
+        {
+          "name": "Attack",
+          "value": 484
+        },
+        {
+          "name": "Defense",
+          "value": 392
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 423
+        },
+        {
+          "name": "Sp. Def",
+          "value": 378
+        },
+        {
+          "name": "Speed",
+          "value": 274
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "pymant-boss",
+      "name": "Pymant Boss",
+      "sourceFile": "Pymant_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Pymant",
+      "originSlug": "pymant",
+      "image": "/images/animon/pymant.webp",
+      "formName": "Base Form",
+      "level": 13,
+      "targetBst": 420,
+      "extraHealthBars": 2,
+      "expGiven": 200,
+      "elementType": "FIRE",
+      "hiddenType": "AURA",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [
+        {
+          "guid": "b9921e51-c089-489a-9327-70e81923ef51",
+          "name": "Raffica Tagliente",
+          "slug": "raffica-tagliente",
+          "type": "AURA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "05644754-43f9-46cf-87d0-46c9b511db20",
+          "name": "Graffio",
+          "slug": "graffio",
+          "type": "NONE",
+          "power": 50,
+          "cost": 1
+        },
+        {
+          "guid": "dd4b645d-a358-44cc-aeab-332255464da3",
+          "name": "Passo Sismico",
+          "slug": "passo-sismico",
+          "type": "GEO",
+          "power": 55,
+          "cost": 3
+        },
+        {
+          "guid": "f992fe49-f9ce-4219-848c-b3a8dc75fc3f",
+          "name": "Riscaldamento",
+          "slug": "riscaldamento",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "7c4cf016-8a32-49d4-be6e-b1539d16b930",
+          "name": "Fiammata",
+          "slug": "fiammata",
+          "type": "FIRE",
+          "power": 60,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 300
+        },
+        {
+          "name": "Attack",
+          "value": 32
+        },
+        {
+          "name": "Defense",
+          "value": 27
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 33
+        },
+        {
+          "name": "Sp. Def",
+          "value": 27
+        },
+        {
+          "name": "Speed",
+          "value": 33
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "pymant-postgame",
+      "name": "Pymant POSTGAME",
+      "sourceFile": "Pymant_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Pymant",
+      "originSlug": "pymant",
+      "image": "/images/animon/pymant.webp",
+      "formName": "Base Form",
+      "level": 70,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 14000,
+      "elementType": "CHAKRA",
+      "hiddenType": "FIRE",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [
+        {
+          "guid": "a92a2c58-82de-4c25-8609-adcba006e577",
+          "name": "Fuocolpo",
+          "slug": "fuocolpo",
+          "type": "FIRE",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "eabb399f-5f72-448a-8517-b1c4c167490b",
+          "name": "Energilama",
+          "slug": "energilama",
+          "type": "CHAKRA",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "f992fe49-f9ce-4219-848c-b3a8dc75fc3f",
+          "name": "Riscaldamento",
+          "slug": "riscaldamento",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "99d6c97e-07ce-4925-948d-af021e433502",
+          "name": "Fiammofrecce",
+          "slug": "fiammofrecce",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1300
+        },
+        {
+          "name": "Attack",
+          "value": 342
+        },
+        {
+          "name": "Defense",
+          "value": 198
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 378
+        },
+        {
+          "name": "Sp. Def",
+          "value": 219
+        },
+        {
+          "name": "Speed",
+          "value": 268
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-arct-rex",
+      "name": "SF Arct-Rex",
+      "sourceFile": "SF_Arct-Rex.asset",
+      "category": "Boss Animon",
+      "originName": "Arct-Rex",
+      "originSlug": "arct-rex",
+      "image": "/images/animon/arct-rex.webp",
+      "formName": "Base Form",
+      "level": 54,
+      "targetBst": 770,
+      "extraHealthBars": 5,
+      "expGiven": 5600,
+      "elementType": "ICE",
+      "hiddenType": "DATA",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [
+        {
+          "guid": "4c652c23-7c0a-4340-a698-6f28f71f08cc",
+          "name": "Number_Crunch",
+          "slug": "number-crunch",
+          "type": "DATA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "f3c1b9e9-348e-4cce-8e88-5139f40449c9",
+          "name": "Bufera",
+          "slug": "bufera",
+          "type": "ICE",
+          "power": 75,
+          "cost": 4
+        },
+        {
+          "guid": "feb9a4d3-2331-4260-b3dc-20c9107b6d88",
+          "name": "Brinaimpatto",
+          "slug": "brinaimpatto",
+          "type": "ICE",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "5d25092d-7183-45e1-a2dc-c093699836e4",
+          "name": "Lancia Diamante",
+          "slug": "lancia-diamante",
+          "type": "GEO",
+          "power": 85,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 810
+        },
+        {
+          "name": "Attack",
+          "value": 223
+        },
+        {
+          "name": "Defense",
+          "value": 174
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 223
+        },
+        {
+          "name": "Sp. Def",
+          "value": 185
+        },
+        {
+          "name": "Speed",
+          "value": 147
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-blumesternorth",
+      "name": "SF BlumesterNorth",
+      "sourceFile": "SF_BlumesterNorth.asset",
+      "category": "Boss Animon",
+      "originName": "Blumester",
+      "originSlug": "blumester-settentrionale",
+      "image": "/images/animon/blumester-settentrionale.webp",
+      "formName": "Horrens",
+      "level": 45,
+      "targetBst": 740,
+      "extraHealthBars": 5,
+      "expGiven": 1600,
+      "elementType": "ELECTRIC",
+      "hiddenType": "FIRE",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "01d51561-3c9a-491e-9ee8-f48fe5f24f11",
+          "name": "Lamavolt",
+          "slug": "lamavolt",
+          "type": "ELECTRIC",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "5d25092d-7183-45e1-a2dc-c093699836e4",
+          "name": "Lancia Diamante",
+          "slug": "lancia-diamante",
+          "type": "GEO",
+          "power": 85,
+          "cost": 2
+        },
+        {
+          "guid": "dce452c8-e3b2-4624-8c96-d0bb8bd5e2ec",
+          "name": "Bagliore Solare",
+          "slug": "bagliore-solare",
+          "type": "FIRE",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "49839eec-f632-46a6-9a45-d46c17b66090",
+          "name": "Scossa di ritorno",
+          "slug": "scossa-di-ritorno",
+          "type": "ELECTRIC",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 828
+        },
+        {
+          "name": "Attack",
+          "value": 207
+        },
+        {
+          "name": "Defense",
+          "value": 129
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 164
+        },
+        {
+          "name": "Sp. Def",
+          "value": 108
+        },
+        {
+          "name": "Speed",
+          "value": 148
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-blumestersouth",
+      "name": "SF BlumesterSouth",
+      "sourceFile": "SF_BlumesterSouth.asset",
+      "category": "Boss Animon",
+      "originName": "Blumester",
+      "originSlug": "blumester-settentrionale",
+      "image": "/images/animon/blumester-settentrionale.webp",
+      "formName": "BOSS_M_CLOSED",
+      "level": 23,
+      "targetBst": 580,
+      "extraHealthBars": 4,
+      "expGiven": 800,
+      "elementType": "WATER",
+      "hiddenType": "ANOMALOUS",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "6f552b67-89a1-40ec-b4b9-eceaa1d9fda4",
+          "name": "Esperaggio",
+          "slug": "esperaggio",
+          "type": "ANOMALOUS",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "a3037b30-91b5-41dd-b4b2-df3dd70ecab2",
+          "name": "Obbrobrionda",
+          "slug": "obbrobrionda",
+          "type": "ANOMALOUS",
+          "power": 40,
+          "cost": 3
+        },
+        {
+          "guid": "b61ca3f9-d879-425f-b168-a367b7db8e41",
+          "name": "Idrovortex",
+          "slug": "idrovortex",
+          "type": "WATER",
+          "power": 85,
+          "cost": 2
+        },
+        {
+          "guid": "3d962e75-7b94-4beb-9ee6-8f9ed4bb333b",
+          "name": "Congestione",
+          "slug": "congestione",
+          "type": "WATER",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "d7e06b3b-e51c-43fe-8a56-8382f9ce4ba9",
+          "name": "Idroslitta-BOSS",
+          "slug": "idroslitta-boss",
+          "type": "WATER",
+          "power": 60,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 462
+        },
+        {
+          "name": "Attack",
+          "value": 63
+        },
+        {
+          "name": "Defense",
+          "value": 51
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 93
+        },
+        {
+          "name": "Sp. Def",
+          "value": 49
+        },
+        {
+          "name": "Speed",
+          "value": 58
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-dualineembodied",
+      "name": "SF DualineEmbodied",
+      "sourceFile": "SF_DualineEmbodied.asset",
+      "category": "Boss Animon",
+      "originName": "Dualine",
+      "originSlug": "dualine-forma-incarnata",
+      "image": "/images/animon/dualine-forma-incarnata.webp",
+      "formName": "Embodied Form",
+      "level": 19,
+      "targetBst": 560,
+      "extraHealthBars": 4,
+      "expGiven": 700,
+      "elementType": "GRASS",
+      "hiddenType": "GEO",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 30
+      },
+      "skills": [
+        {
+          "guid": "be30715f-4c07-4b41-be53-b905256c174d",
+          "name": "Fangotrappola",
+          "slug": "fangotrappola",
+          "type": "GEO",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "a02450ec-48ab-4607-89ef-41896af9e506",
+          "name": "Furia del Pianeta",
+          "slug": "furia-del-pianeta",
+          "type": "GRASS",
+          "power": 45,
+          "cost": 2
+        },
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "36a9545b-0566-4171-9139-e8c34da3ac13",
+          "name": "Assimilazione",
+          "slug": "assimilazione",
+          "type": "GRASS",
+          "power": 40,
+          "cost": 2
+        },
+        {
+          "guid": "9716a74b-8cb6-4fbc-b56d-6a4980714588",
+          "name": "Aromasintesi",
+          "slug": "aromasintesi",
+          "type": "GRASS",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 300
+        },
+        {
+          "name": "Attack",
+          "value": 42
+        },
+        {
+          "name": "Defense",
+          "value": 50
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 59
+        },
+        {
+          "name": "Sp. Def",
+          "value": 55
+        },
+        {
+          "name": "Speed",
+          "value": 40
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-dualinenormal",
+      "name": "SF DualineNormal",
+      "sourceFile": "SF_DualineNormal.asset",
+      "category": "Boss Animon",
+      "originName": "Dualine",
+      "originSlug": "dualine-forma-incarnata",
+      "image": "/images/animon/dualine-forma-incarnata.webp",
+      "formName": "Free Form",
+      "level": 19,
+      "targetBst": 500,
+      "extraHealthBars": 2,
+      "expGiven": 0,
+      "elementType": "GRASS",
+      "hiddenType": "GEO",
+      "emotionalType": "FELICIS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 100,
+        "chaos": 50,
+        "intelligence": 30
+      },
+      "skills": [
+        {
+          "guid": "be30715f-4c07-4b41-be53-b905256c174d",
+          "name": "Fangotrappola",
+          "slug": "fangotrappola",
+          "type": "GEO",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "28db9573-3936-44c2-a040-0652f60a5367",
+          "name": "Testata",
+          "slug": "testata",
+          "type": "GEO",
+          "power": 50,
+          "cost": 1
+        },
+        {
+          "guid": "f11da85d-b684-4f66-9cd2-88cef9ec9083",
+          "name": "Falcenatura",
+          "slug": "falcenatura",
+          "type": "GRASS",
+          "power": 75,
+          "cost": 3
+        },
+        {
+          "guid": "4ead9181-160b-435d-ac0e-ae64b930d3b7",
+          "name": "Vigorcura",
+          "slug": "vigorcura",
+          "type": "GRASS",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "9716a74b-8cb6-4fbc-b56d-6a4980714588",
+          "name": "Aromasintesi",
+          "slug": "aromasintesi",
+          "type": "GRASS",
+          "power": 0,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 197
+        },
+        {
+          "name": "Attack",
+          "value": 42
+        },
+        {
+          "name": "Defense",
+          "value": 47
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 43
+        },
+        {
+          "name": "Sp. Def",
+          "value": 47
+        },
+        {
+          "name": "Speed",
+          "value": 40
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-katamos",
+      "name": "SF Katamos",
+      "sourceFile": "SF_Katamos.asset",
+      "category": "Boss Animon",
+      "originName": "Katamos",
+      "originSlug": "katamos",
+      "image": "/images/animon/katamos.webp",
+      "formName": "Base Form",
+      "level": 32,
+      "targetBst": 620,
+      "extraHealthBars": 4,
+      "expGiven": 2800,
+      "elementType": "ANOMALOUS",
+      "hiddenType": "AURA",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 40,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "b9921e51-c089-489a-9327-70e81923ef51",
+          "name": "Raffica Tagliente",
+          "slug": "raffica-tagliente",
+          "type": "AURA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "e82db8d5-0cb0-4547-b715-9662319cdcbc",
+          "name": "Psiscissione",
+          "slug": "psiscissione",
+          "type": "ANOMALOUS",
+          "power": 85,
+          "cost": 3
+        },
+        {
+          "guid": "584ca76d-f2eb-476f-8f68-a7d939647080",
+          "name": "Gravicinesi",
+          "slug": "gravicinesi",
+          "type": "ANOMALOUS",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "7af76249-ae0d-481e-b514-9988a201247c",
+          "name": "Insidiasfera",
+          "slug": "insidiasfera",
+          "type": "DEMON",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "6f552b67-89a1-40ec-b4b9-eceaa1d9fda4",
+          "name": "Esperaggio",
+          "slug": "esperaggio",
+          "type": "ANOMALOUS",
+          "power": 120,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 495
+        },
+        {
+          "name": "Attack",
+          "value": 97
+        },
+        {
+          "name": "Defense",
+          "value": 74
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 127
+        },
+        {
+          "name": "Sp. Def",
+          "value": 82
+        },
+        {
+          "name": "Speed",
+          "value": 87
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-kentaress",
+      "name": "SF Kentaress",
+      "sourceFile": "SF_Kentaress.asset",
+      "category": "Boss Animon",
+      "originName": "Kentaress",
+      "originSlug": "kentaress",
+      "image": "/images/animon/kentaress.webp",
+      "formName": "Base Form",
+      "level": 58,
+      "targetBst": 780,
+      "extraHealthBars": 6,
+      "expGiven": 5200,
+      "elementType": "DATA",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "bd78a6c6-1e04-449d-a8ec-20de4cea9f79",
+          "name": "Scatto Fulmineo",
+          "slug": "scatto-fulmineo",
+          "type": "ELECTRIC",
+          "power": 40,
+          "cost": 3
+        },
+        {
+          "guid": "6099edb8-96c5-4628-b7ef-49f596d23d62",
+          "name": "DoS_Attack",
+          "slug": "dos-attack",
+          "type": "DATA",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "eab6e900-1bfc-4ca2-80e0-53678ea6d05e",
+          "name": "Overclock",
+          "slug": "overclock",
+          "type": "DATA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "c0265b5b-e63b-4785-bb74-723c1a83152e",
+          "name": "Ditolancia",
+          "slug": "ditolancia",
+          "type": "CHAKRA",
+          "power": 75,
+          "cost": 2
+        },
+        {
+          "guid": "b19630ab-1b13-4d5e-a7b6-f7e46669fdc8",
+          "name": "Criolancia",
+          "slug": "criolancia",
+          "type": "ICE",
+          "power": 70,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1246
+        },
+        {
+          "name": "Attack",
+          "value": 319
+        },
+        {
+          "name": "Defense",
+          "value": 145
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 167
+        },
+        {
+          "name": "Sp. Def",
+          "value": 145
+        },
+        {
+          "name": "Speed",
+          "value": 235
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-knequital-boss",
+      "name": "SF Knequital Boss",
+      "sourceFile": "SF_Knequital_Boss.asset",
+      "category": "Boss Animon",
+      "originName": "Knequital",
+      "originSlug": "knequital",
+      "image": "/images/animon/knequital.webp",
+      "formName": "Sealed",
+      "level": 41,
+      "targetBst": 735,
+      "extraHealthBars": 4,
+      "expGiven": 1500,
+      "elementType": "AURA",
+      "hiddenType": "CHAKRA",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "c65743f9-256c-4c9e-b900-89b5a7cb6496",
+          "name": "Colpo Radioso",
+          "slug": "colpo-radioso",
+          "type": "AURA",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "286c3bbb-d766-453c-afe2-7da9fea50ac9",
+          "name": "Ventolama",
+          "slug": "ventolama",
+          "type": "AURA",
+          "power": 100,
+          "cost": 3
+        },
+        {
+          "guid": "020dab0d-d5f5-46f9-9783-58ad71080357",
+          "name": "Illuminazione",
+          "slug": "illuminazione",
+          "type": "AURA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "eabb399f-5f72-448a-8517-b1c4c167490b",
+          "name": "Energilama",
+          "slug": "energilama",
+          "type": "CHAKRA",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "e6ffa512-1d02-4b43-abf1-93e17309cc26",
+          "name": "Lamagelo",
+          "slug": "lamagelo",
+          "type": "ICE",
+          "power": 100,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 768
+        },
+        {
+          "name": "Attack",
+          "value": 174
+        },
+        {
+          "name": "Defense",
+          "value": 111
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 174
+        },
+        {
+          "name": "Sp. Def",
+          "value": 111
+        },
+        {
+          "name": "Speed",
+          "value": 127
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-morsiver",
+      "name": "SF Morsiver",
+      "sourceFile": "SF_Morsiver.asset",
+      "category": "Boss Animon",
+      "originName": "Morsiver",
+      "originSlug": "morsiver",
+      "image": "/images/animon/morsiver.webp",
+      "formName": "Worn Out",
+      "level": 29,
+      "targetBst": 600,
+      "extraHealthBars": 4,
+      "expGiven": 950,
+      "elementType": "FIRE",
+      "hiddenType": "DEMON",
+      "emotionalType": "HORRENS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 100
+      },
+      "skills": [
+        {
+          "guid": "4ad48b23-9330-4b6e-9f2c-6b8764f4e522",
+          "name": "Fuocosfera",
+          "slug": "fuocosfera",
+          "type": "FIRE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "ed0f93da-7559-4d97-80d8-62589a085431",
+          "name": "Fiamma Oscura",
+          "slug": "fiamma-oscura",
+          "type": "FIRE",
+          "power": 110,
+          "cost": 2
+        },
+        {
+          "guid": "c8883b17-f65c-4635-a496-02b9c11308a7",
+          "name": "Inquietocchio",
+          "slug": "inquietocchio",
+          "type": "DEMON",
+          "power": 0,
+          "cost": 3
+        },
+        {
+          "guid": "d81d653a-adc1-43e4-9f42-153ce321e904",
+          "name": "Diavolama",
+          "slug": "diavolama",
+          "type": "DEMON",
+          "power": 100,
+          "cost": 2
+        },
+        {
+          "guid": "3249e385-6414-4ea7-96e8-5695f2b77d43",
+          "name": "Attacco Mentale",
+          "slug": "attacco-mentale",
+          "type": "ANOMALOUS",
+          "power": 45,
+          "cost": 3
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 584
+        },
+        {
+          "name": "Attack",
+          "value": 84
+        },
+        {
+          "name": "Defense",
+          "value": 62
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 110
+        },
+        {
+          "name": "Sp. Def",
+          "value": 97
+        },
+        {
+          "name": "Speed",
+          "value": 77
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-nuclheart",
+      "name": "SF Nuclheart",
+      "sourceFile": "SF_Nuclheart.asset",
+      "category": "Boss Animon",
+      "originName": "Nuclheart",
+      "originSlug": "nuclheart",
+      "image": "/images/animon/nuclheart.webp",
+      "formName": "Shield Form",
+      "level": 51,
+      "targetBst": 760,
+      "extraHealthBars": 5,
+      "expGiven": 2000,
+      "elementType": "VIRUS",
+      "hiddenType": "GEO",
+      "emotionalType": "MESTUS",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "a9456dd0-f3ee-4f6d-ad55-a66bf4f7c895",
+          "name": "Frammentopioggia",
+          "slug": "frammentopioggia",
+          "type": "GEO",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "83219b61-a964-4f7d-9a52-d5906b39879a",
+          "name": "Piretigetto",
+          "slug": "piretigetto",
+          "type": "VIRUS",
+          "power": 15,
+          "cost": 2
+        },
+        {
+          "guid": "adb60ac4-2d23-42f1-8b99-250718519efb",
+          "name": "Nocciofusione",
+          "slug": "nocciofusione",
+          "type": "VIRUS",
+          "power": 150,
+          "cost": 4
+        },
+        {
+          "guid": "2d10940a-3deb-411c-a986-35f632f50781",
+          "name": "Tuonosfera",
+          "slug": "tuonosfera",
+          "type": "ELECTRIC",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "b1d533ba-e58a-437b-a34d-483744ebf804",
+          "name": "Schizzo Acido",
+          "slug": "schizzo-acido",
+          "type": "VIRUS",
+          "power": 60,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 960
+        },
+        {
+          "name": "Attack",
+          "value": 80
+        },
+        {
+          "name": "Defense",
+          "value": 253
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 129
+        },
+        {
+          "name": "Sp. Def",
+          "value": 253
+        },
+        {
+          "name": "Speed",
+          "value": 127
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "sf-primalong",
+      "name": "SF Primalong",
+      "sourceFile": "SF_Primalong.asset",
+      "category": "Boss Animon",
+      "originName": "Primalong",
+      "originSlug": "primalong",
+      "image": "/images/animon/primalong.webp",
+      "formName": "Base Form",
+      "level": 36,
+      "targetBst": 640,
+      "extraHealthBars": 5,
+      "expGiven": 2500,
+      "elementType": "ANCIENT",
+      "hiddenType": "NONE",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 75
+      },
+      "skills": [
+        {
+          "guid": "c3b87a62-0597-42e3-a0ad-c949e4345bda",
+          "name": "Plus Ultra",
+          "slug": "plus-ultra",
+          "type": "ANCIENT",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "aaf81fba-736d-47bf-9333-1b9989b11479",
+          "name": "Lama Reliquia",
+          "slug": "lama-reliquia",
+          "type": "ANCIENT",
+          "power": 90,
+          "cost": 2
+        },
+        {
+          "guid": "203e24bd-be40-418d-b223-993fa9b27681",
+          "name": "Turbovortex",
+          "slug": "turbovortex",
+          "type": "ANCIENT",
+          "power": 80,
+          "cost": 3
+        },
+        {
+          "guid": "acad2ca1-b55b-4fc5-b578-f307ee25c107",
+          "name": "Excisio",
+          "slug": "excisio",
+          "type": "ANCIENT",
+          "power": 140,
+          "cost": 4
+        },
+        {
+          "guid": "5d25092d-7183-45e1-a2dc-c093699836e4",
+          "name": "Lancia Diamante",
+          "slug": "lancia-diamante",
+          "type": "GEO",
+          "power": 85,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 868
+        },
+        {
+          "name": "Attack",
+          "value": 143
+        },
+        {
+          "name": "Defense",
+          "value": 101
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 127
+        },
+        {
+          "name": "Sp. Def",
+          "value": 85
+        },
+        {
+          "name": "Speed",
+          "value": 84
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "toxigall-boss",
+      "name": "Toxigall Boss",
+      "sourceFile": "Toxigall_Boss_Data.asset",
+      "category": "Boss Animon",
+      "originName": "Toxigall",
+      "originSlug": "toxigall",
+      "image": "/images/animon/toxigall.webp",
+      "formName": "Base Form",
+      "level": 8,
+      "targetBst": 600,
+      "extraHealthBars": 1,
+      "expGiven": 100,
+      "elementType": "VIRUS",
+      "hiddenType": "GEO",
+      "emotionalType": "FUROR",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "skills": [],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 62
+        },
+        {
+          "name": "Attack",
+          "value": 32
+        },
+        {
+          "name": "Defense",
+          "value": 23
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 23
+        },
+        {
+          "name": "Sp. Def",
+          "value": 23
+        },
+        {
+          "name": "Speed",
+          "value": 27
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    },
+    {
+      "slug": "wicedom-postgame",
+      "name": "Wicedom POSTGAME",
+      "sourceFile": "Wicedom_POSTGAME.asset",
+      "category": "Boss Animon",
+      "originName": "Wicedom",
+      "originSlug": "wicedom",
+      "image": "/images/animon/wicedom.webp",
+      "formName": "Phase1",
+      "level": 80,
+      "targetBst": 600,
+      "extraHealthBars": 5,
+      "expGiven": 20000,
+      "elementType": "ICE",
+      "hiddenType": "DATA",
+      "emotionalType": "SEREUM",
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 90
+      },
+      "skills": [
+        {
+          "guid": "fcade399-3e46-4878-8191-e1f4b9911bce",
+          "name": "Cyberbeam",
+          "slug": "cyberbeam",
+          "type": "DATA",
+          "power": 120,
+          "cost": 3
+        },
+        {
+          "guid": "764e3f59-8bb9-43ee-8066-c187b2b6f447",
+          "name": "Raggio Polare",
+          "slug": "raggio-polare",
+          "type": "ICE",
+          "power": 60,
+          "cost": 2
+        },
+        {
+          "guid": "bf2537af-3497-493f-94f1-016c54ec1660",
+          "name": "Gelosfera",
+          "slug": "gelosfera",
+          "type": "ICE",
+          "power": 50,
+          "cost": 2
+        },
+        {
+          "guid": "300067cb-99a1-4b9c-a6a9-1859a0df1a38",
+          "name": "Scudo_AV",
+          "slug": "scudo-av",
+          "type": "DATA",
+          "power": 0,
+          "cost": 2
+        },
+        {
+          "guid": "020dab0d-d5f5-46f9-9783-58ad71080357",
+          "name": "Illuminazione",
+          "slug": "illuminazione",
+          "type": "AURA",
+          "power": 0,
+          "cost": 2
+        }
+      ],
+      "statsOverride": [
+        {
+          "name": "HP",
+          "value": 1680
+        },
+        {
+          "name": "Attack",
+          "value": 233
+        },
+        {
+          "name": "Defense",
+          "value": 386
+        },
+        {
+          "name": "Sp. Atk",
+          "value": 507
+        },
+        {
+          "name": "Sp. Def",
+          "value": 439
+        },
+        {
+          "name": "Speed",
+          "value": 287
+        }
+      ],
+      "dataSource": "asset-ripper-bossdata"
+    }
+  ],
+  "campBosses": [
+    {
+      "slug": "camp-boss-berta",
+      "name": "Berta",
+      "sourceFile": "CampBoss_Berta.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Patround",
+          "slug": "patround",
+          "image": "/images/animon/thumbs/patround.webp",
+          "formName": "Patrol Mode",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Patround",
+          "slug": "patround",
+          "image": "/images/animon/thumbs/patround.webp",
+          "formName": "Patrol Mode",
+          "level": 1,
+          "levelScaleOffset": 3,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Chompuff",
+          "slug": "chompuff",
+          "image": "/images/animon/thumbs/chompuff.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 0,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Luxecko",
+          "slug": "luxecko",
+          "image": "/images/animon/thumbs/luxecko.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Lopyuna",
+          "slug": "lopyuna",
+          "image": "/images/animon/thumbs/lopyuna.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Alpaguet",
+          "slug": "alpaguet",
+          "image": "/images/animon/thumbs/alpaguet.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "NONE",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-blanco",
+      "name": "Blanco",
+      "sourceFile": "Blanco_LastBoss (BOSSRUSH).asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 2,
+      "scaleLevels": false,
+      "scaleWithPowers": false,
+      "evolveWithLevel": false,
+      "useBossDatas": true,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Ghorious",
+          "slug": "ghorious",
+          "image": "/images/animon/thumbs/ghorious.webp",
+          "formName": "Base Form",
+          "level": 61,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Garbasilisk",
+          "slug": "garbasilisk",
+          "image": "/images/animon/thumbs/garbasilisk.webp",
+          "formName": "Base Form",
+          "level": 61,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Babalure",
+          "slug": "babalure",
+          "image": "/images/animon/thumbs/babalure.webp",
+          "formName": "Base Form",
+          "level": 61,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Impetoad",
+          "slug": "impetoad",
+          "image": "/images/animon/thumbs/impetoad.webp",
+          "formName": "Base Form",
+          "level": 61,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Anizord",
+          "slug": "anizord",
+          "image": "/images/animon/thumbs/anizord.webp",
+          "formName": "Base Form",
+          "level": 61,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Chromaura",
+          "slug": "chromaura",
+          "image": "/images/animon/thumbs/chromaura.webp",
+          "formName": "Base Form",
+          "level": 61,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-cinque",
+      "name": "Cinque",
+      "sourceFile": "CampBoss_Cinque.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Rainagon",
+          "slug": "rainagon",
+          "image": "/images/animon/thumbs/rainagon.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 3,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Alpaguet",
+          "slug": "alpaguet",
+          "image": "/images/animon/thumbs/alpaguet.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Trepagator",
+          "slug": "trepagator",
+          "image": "/images/animon/thumbs/trepagator.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 0,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Toxigall",
+          "slug": "toxigall",
+          "image": "/images/animon/thumbs/toxigall.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Cimitrick",
+          "slug": "cimitrick-settentrionale",
+          "image": "/images/animon/thumbs/cimitrick-settentrionale.webp",
+          "formName": "Horrens",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Nefandle",
+          "slug": "nefandle",
+          "image": "/images/animon/thumbs/nefandle.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-iena",
+      "name": "Iena",
+      "sourceFile": "CampBoss_Iena.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Trinkoral",
+          "slug": "trinkoral",
+          "image": "/images/animon/thumbs/trinkoral.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Obsidedge",
+          "slug": "obsidedge",
+          "image": "/images/animon/thumbs/obsidedge.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 3,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Impetoad",
+          "slug": "impetoad",
+          "image": "/images/animon/thumbs/impetoad.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Papaco",
+          "slug": "papaco",
+          "image": "/images/animon/thumbs/papaco.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Klawller",
+          "slug": "klawller",
+          "image": "/images/animon/thumbs/klawller.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Foiequack",
+          "slug": "foiequack",
+          "image": "/images/animon/thumbs/foiequack.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -1,
+          "hiddenType": "NONE",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-liza",
+      "name": "Liza",
+      "sourceFile": "CampBoss_Liza.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Sphytter",
+          "slug": "sphytter",
+          "image": "/images/animon/thumbs/sphytter.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Rainagon",
+          "slug": "rainagon",
+          "image": "/images/animon/thumbs/rainagon.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 3,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Luxecko",
+          "slug": "luxecko",
+          "image": "/images/animon/thumbs/luxecko.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Lobstrike",
+          "slug": "lobstrike-settentrionale",
+          "image": "/images/animon/thumbs/lobstrike-settentrionale.webp",
+          "formName": "Mestus",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Toypette",
+          "slug": "toypette-rotoshape",
+          "image": "/images/animon/thumbs/toypette-rotoshape.webp",
+          "formName": "Roundshape",
+          "level": 1,
+          "levelScaleOffset": -1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Ferroll",
+          "slug": "ferroll",
+          "image": "/images/animon/thumbs/ferroll.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 0,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-pepper",
+      "name": "Pepper",
+      "sourceFile": "CampBoss_Pepper.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Therapix",
+          "slug": "therapix",
+          "image": "/images/animon/thumbs/therapix.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Silverus",
+          "slug": "silverus",
+          "image": "/images/animon/thumbs/silverus.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 4,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Toypette",
+          "slug": "toypette-rotoshape",
+          "image": "/images/animon/thumbs/toypette-rotoshape.webp",
+          "formName": "Quadshape",
+          "level": 1,
+          "levelScaleOffset": -3,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Patround",
+          "slug": "patround",
+          "image": "/images/animon/thumbs/patround.webp",
+          "formName": "Patrol Mode",
+          "level": 1,
+          "levelScaleOffset": -2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Devoblet",
+          "slug": "devoblet",
+          "image": "/images/animon/thumbs/devoblet.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Lobstrike",
+          "slug": "lobstrike-settentrionale",
+          "image": "/images/animon/thumbs/lobstrike-settentrionale.webp",
+          "formName": "Mestus",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-rezza",
+      "name": "Rezza",
+      "sourceFile": "CampBoss_Rezza.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Konbian",
+          "slug": "konbian",
+          "image": "/images/animon/thumbs/konbian.webp",
+          "formName": "Base Form",
+          "level": 17,
+          "levelScaleOffset": 3,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Yakora",
+          "slug": "yakora",
+          "image": "/images/animon/thumbs/yakora.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Babalure",
+          "slug": "babalure",
+          "image": "/images/animon/thumbs/babalure.webp",
+          "formName": "Base Form",
+          "level": 16,
+          "levelScaleOffset": 2,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Papaco",
+          "slug": "papaco",
+          "image": "/images/animon/thumbs/papaco.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Fulgaze",
+          "slug": "fulgaze",
+          "image": "/images/animon/thumbs/fulgaze.webp",
+          "formName": "Base Form",
+          "level": 15,
+          "levelScaleOffset": -1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Meloquinia",
+          "slug": "meloquinia",
+          "image": "/images/animon/thumbs/meloquinia.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 0,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-timo",
+      "name": "Timo",
+      "sourceFile": "CampBoss_Timo.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 20.2,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Foiequack",
+          "slug": "foiequack",
+          "image": "/images/animon/thumbs/foiequack.webp",
+          "formName": "Base Form",
+          "level": 33,
+          "levelScaleOffset": 3,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Bibrickle",
+          "slug": "bibrickle",
+          "image": "/images/animon/thumbs/bibrickle.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Lordrake",
+          "slug": "lordrake",
+          "image": "/images/animon/thumbs/lordrake.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Konbian",
+          "slug": "konbian",
+          "image": "/images/animon/thumbs/konbian.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Impetoad",
+          "slug": "impetoad",
+          "image": "/images/animon/thumbs/impetoad.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Rainagon",
+          "slug": "rainagon",
+          "image": "/images/animon/thumbs/rainagon.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 4,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-valerio",
+      "name": "Valerio",
+      "sourceFile": "AL_PrisonBoss.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": false,
+      "scaleWithPowers": false,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Almyuna",
+          "slug": "almyuna",
+          "image": "/images/animon/thumbs/almyuna.webp",
+          "formName": "Base Form",
+          "level": 17,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Chompuff",
+          "slug": "chompuff",
+          "image": "/images/animon/thumbs/chompuff.webp",
+          "formName": "Base Form",
+          "level": 20,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Ogiemask",
+          "slug": "ogiemask",
+          "image": "/images/animon/thumbs/ogiemask.webp",
+          "formName": "Base Form",
+          "level": 18,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Toxigall",
+          "slug": "toxigall",
+          "image": "/images/animon/thumbs/toxigall.webp",
+          "formName": "Base Form",
+          "level": 19,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Canabble",
+          "slug": "canabble-settentrionale",
+          "image": "/images/animon/thumbs/canabble-settentrionale.webp",
+          "formName": "Sereum",
+          "level": 17,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        },
+        {
+          "name": "Chompuff",
+          "slug": "chompuff",
+          "image": "/images/animon/thumbs/chompuff.webp",
+          "formName": "Base Form",
+          "level": 21,
+          "levelScaleOffset": 0,
+          "hiddenType": "NONE",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    },
+    {
+      "slug": "camp-boss-vela",
+      "name": "Vela",
+      "sourceFile": "CampBoss_Vela.asset",
+      "category": "Camp Boss",
+      "moneyDrop": 386,
+      "levelCap": 100,
+      "preferredBattleSize": 4,
+      "scaleLevels": true,
+      "scaleWithPowers": true,
+      "evolveWithLevel": false,
+      "useBossDatas": false,
+      "rank": 0,
+      "weaknesses": [],
+      "strengths": [],
+      "ai": {
+        "switching": 50,
+        "longTermThinking": 50,
+        "buffing": 50,
+        "debuffing": 50,
+        "attacking": 50,
+        "healing": 50,
+        "chaos": 50,
+        "intelligence": 50
+      },
+      "party": [
+        {
+          "name": "Kerocrack",
+          "slug": "kerocrack",
+          "image": "/images/animon/thumbs/kerocrack.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Volcabeko",
+          "slug": "volcabeko",
+          "image": "/images/animon/thumbs/volcabeko.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Nefandle",
+          "slug": "nefandle",
+          "image": "/images/animon/thumbs/nefandle.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "ELECTRIC",
+          "skills": []
+        },
+        {
+          "name": "Konbian",
+          "slug": "konbian",
+          "image": "/images/animon/thumbs/konbian.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": -1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        },
+        {
+          "name": "Skeletape",
+          "slug": "skeletape",
+          "image": "/images/animon/thumbs/skeletape.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 2,
+          "hiddenType": "ELECTRIC",
+          "skills": []
+        },
+        {
+          "name": "Carrigante",
+          "slug": "carrigante",
+          "image": "/images/animon/thumbs/carrigante.webp",
+          "formName": "Base Form",
+          "level": 1,
+          "levelScaleOffset": 1,
+          "hiddenType": "CHAKRA",
+          "skills": []
+        }
+      ],
+      "dataSource": "asset-ripper-lumendata"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="FIRE">
+  <rect width="160" height="160" rx="28" fill="#fffdf7"/>
+  <rect x="10" y="10" width="140" height="140" rx="24" fill="#d85036" opacity="0.16"/>
+  <circle cx="80" cy="68" r="42" fill="#d85036"/>
+  <path d="M80 28 L91 57 L122 57 L97 76 L107 107 L80 89 L53 107 L63 76 L38 57 L69 57 Z" fill="#fffdf7" opacity="0.88"/>
+  <text x="80" y="129" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#1f2430">FIR</text>
+  <text x="80" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#68707c">AFFINITY</text>
+</svg>
