@@ -11,6 +11,10 @@
             starter, learn affinities and type matchups, track evolutions, and look up skills, items, and boss fights
             before you commit levels or rare materials.
           </p>
+          <p class="hero-byline">
+            A comprehensive, no-fluff database. Hand-tested and verified by Frontline Pathfinder &amp; the LumenTale guide
+            team.
+          </p>
           <div class="btn-row btn-row-center">
             <RouterLink class="btn-primary" to="/animon">Open Animon Dex</RouterLink>
             <RouterLink class="btn-secondary" to="/starters">Best Starter Guide</RouterLink>

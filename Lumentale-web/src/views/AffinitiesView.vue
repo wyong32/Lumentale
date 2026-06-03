@@ -1,5 +1,5 @@
 <template>
-  <main class="page-main">
+  <main class="page-main affinities-page">
     <section class="page-hero-section" aria-labelledby="affinities-title">
       <div class="container">
         <div class="page-hero-content page-hero-center">
@@ -11,8 +11,8 @@
           <p class="eyebrow">Type Chart &amp; Combat Traits</p>
           <h1 id="affinities-title">LumenTale Type Chart – Elements &amp; Affinities Guide</h1>
           <p class="lead lead-center">
-            How LumenTale's 13 element types and 5 emotional affinities work in Memories of Trey — what each affinity
-            does in 4v4 battles, how to read resistances, and how to build a team with real type coverage in Talea.
+            How element types and emotional affinities work in Memories of Trey — battle bonuses, dex filters, and
+            team-building without assuming a single global weakness chart.
           </p>
           <div class="page-meta" style="margin-top: 14px">
             <span class="meta-pill">{{ elementTypes.length }} Elements</span>
@@ -23,66 +23,137 @@
       </div>
     </section>
 
+    <!-- 1. Five affinities — single source of truth -->
     <section class="affinities-section" aria-labelledby="emotion-title">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Emotional Affinities</p>
           <h2 id="emotion-title">Five Battle Affinities You Can Activate</h2>
           <p>
-            Every Animon carries one emotional affinity. Trigger it during battle for extra SP and a team-wide bonus —
-            separate from element typing and move matchups.
+            Every Animon has one affinity. Spend extra SP in battle for a team-wide bonus — separate from element typing
+            and move matchups. Tap a card to filter the dex by that affinity.
           </p>
         </div>
         <div class="affinity-grid">
           <RouterLink
-            v-for="item in affinityGuide"
+            v-for="item in affinityCards"
             :key="item.name"
             class="affinity-card"
             :class="`affinity-card-${item.name.toLowerCase()}`"
             :to="animonDexLink({ affinity: item.name })"
           >
-            <span :class="tagClass(item.name, 'emotion')" class="affinity-card-tag">{{ item.name }}</span>
+            <div class="affinity-card-top">
+              <img
+                class="affinity-card-icon"
+                :src="typeIconSrc(item.name)"
+                :alt="`${item.name} affinity icon`"
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div class="affinity-card-heading">
+                <span :class="tagClass(item.name, 'emotion')" class="affinity-card-tag">{{ item.name }}</span>
+                <span class="affinity-card-count">{{ item.count }} Animon</span>
+              </div>
+            </div>
             <h3>{{ item.tagline }}</h3>
-            <p>{{ item.blurb }}</p>
+            <p class="affinity-card-lead">{{ item.blurb }}</p>
+            <p v-if="item.themeNote" class="affinity-card-theme">{{ item.themeNote }}</p>
             <ul class="affinity-card-list">
               <li v-for="tip in item.tips" :key="tip">{{ tip }}</li>
             </ul>
-            <span class="affinity-card-foot">Browse {{ item.name }} Animon →</span>
+            <span class="affinity-card-foot">Browse {{ item.name }} in the dex →</span>
           </RouterLink>
         </div>
       </div>
     </section>
 
-    <section class="elements-section" aria-labelledby="elements-title">
+    <!-- 2. Elements — one block: intro + detailed catalog (no mosaic duplicate) -->
+    <section class="elements-catalog-section" aria-labelledby="elements-title">
       <div class="container">
-        <div class="elements-layout">
-          <aside class="elements-intro">
+        <div class="elements-catalog-layout">
+          <aside class="elements-catalog-intro">
             <p class="eyebrow">Element Types</p>
-            <h2 id="elements-title">13 LumenTale Element Types</h2>
+            <h2 id="elements-title">13 Element Types in Talea</h2>
             <p>
-              Element type labels every Animon and most skills. Unlike classic monster games, LumenTale does not use one
-              universal weakness chart — each species has its own resistances. Use elements for coverage and skill typing,
-              then scan opponents to learn what actually hits hard.
+              Element labels every Animon and most skills. LumenTale does not use one universal weakness chart — each
+              species has its own resistances. Scan in battle; shield icons mean pivot, not keep spamming the same type.
             </p>
-            <RouterLink class="btn-secondary" to="/animon">Open Full Animon Dex</RouterLink>
+            <p class="elements-catalog-stat">
+              <strong>{{ typedSkillsCount }}</strong> skills in our list carry a typed element.
+            </p>
+            <RouterLink class="btn-primary" to="/animon">Open Animon Dex</RouterLink>
+            <RouterLink class="btn-secondary" to="/wiki/skills">Skills by type</RouterLink>
           </aside>
-          <div class="elements-mosaic">
-            <RouterLink
-              v-for="row in sortedElements"
-              :key="row.name"
-              class="element-tile"
-              :class="tagClass(row.name)"
-              :to="animonDexLink({ element: row.name })"
-              :style="{ '--fill': `${row.pct}%` }"
-            >
-              <span class="element-tile-name">{{ row.name }}</span>
-              <span class="element-tile-meta">
-                <strong>{{ row.count }}</strong>
-                <small>Animon</small>
-              </span>
-              <span class="element-tile-bar" aria-hidden="true" />
-            </RouterLink>
+
+          <div class="elements-catalog-main">
+            <ul class="element-catalog-list" role="list">
+              <li v-for="row in sortedElements" :key="row.name">
+                <RouterLink class="element-catalog-row" :to="animonDexLink({ element: row.name })">
+                  <span class="element-catalog-icon-wrap">
+                    <img
+                      :src="typeIconSrc(row.name)"
+                      :alt="`${row.name} element icon`"
+                      width="56"
+                      height="56"
+                      loading="lazy"
+                    />
+                  </span>
+                  <div class="element-catalog-copy">
+                    <div class="element-catalog-head">
+                      <strong>{{ row.name }}</strong>
+                      <small>{{ getTypeInfo(row.name, 'element').label }}</small>
+                    </div>
+                    <p>{{ getTypeInfo(row.name, 'element').description }}</p>
+                  </div>
+                  <div class="element-catalog-meta">
+                    <strong>{{ row.count }}</strong>
+                    <small>Animon</small>
+                    <span class="element-catalog-pct">{{ row.pct }}%</span>
+                  </div>
+                </RouterLink>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Compact reference: hidden types + battle impact -->
+    <section class="data-section affinities-reference-section" aria-labelledby="reference-title">
+      <div class="container">
+        <div class="affinities-reference-grid">
+          <article class="guide-block affinities-reference-card">
+            <p class="eyebrow">Also on this page</p>
+            <h2 id="reference-title">Hidden Types &amp; What We Can Confirm</h2>
+            <div class="affinities-reference-columns">
+              <div>
+                <h3>Hidden type</h3>
+                <p>
+                  Boss and special forms may store a hidden type besides the visible element.
+                  {{ bossFormsWithHiddenType }} boss or camp records in our data show a non-neutral hidden type — treat
+                  as fight-specific until you confirm on your save.
+                </p>
+              </div>
+              <div>
+                <h3>Weakness data</h3>
+                <p>
+                  Resistances are per species, not one global matrix. Two FIRE skills can land differently on the same
+                  target depending on shields and hidden typings.
+                </p>
+              </div>
+            </div>
+          </article>
+          <aside class="affinities-matrix-card" aria-label="Battle data status">
+            <h3>Data status</h3>
+            <ul class="affinities-matrix-list">
+              <li v-for="row in effectMatrix" :key="row.label">
+                <span class="affinities-matrix-label">{{ row.label }}</span>
+                <span class="type-effect-state" :class="`is-${row.state.toLowerCase()}`">{{ row.state }}</span>
+                <p>{{ row.text }}</p>
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
@@ -90,23 +161,20 @@
     <section class="data-section" aria-labelledby="matchups-title">
       <div class="container">
         <article class="guide-block">
-          <h2 id="matchups-title">How LumenTale Matchups Actually Work</h2>
+          <h2 id="matchups-title">How Matchups Actually Work</h2>
           <p class="prose">
-            Treat the type chart as a <strong>team-building framework</strong>, not a cheat sheet. Two FIRE skills might
-            behave differently against the same target depending on that Animon's hidden resistances, secondary typing, and
-            shield state. The move UI shows a shield icon when your attack is resisted — switch attackers instead of
-            burning SP on chip damage.
+            Treat the type chart as a <strong>team-building framework</strong>, not a cheat sheet. The move UI shows a
+            shield icon when your attack is resisted — switch attackers instead of burning SP on chip damage.
           </p>
           <p class="prose" style="margin-top: 12px">
-            Super-effective hits and critical strikes build <strong>TP</strong>. At four TP your squad earns a bonus action
-            that costs no SP — pair that free turn with a high-impact affinity activation or finisher. Smaller active teams
-            charge TP faster; larger teams give more elemental options while exploring routes.
+            Super-effective hits and critical strikes build <strong>TP</strong>. At four TP your squad earns a bonus
+            action that costs no SP — pair that free turn with an affinity activation or finisher.
           </p>
           <ul>
             <li><strong>Scan</strong> wild and trainer Animon early — resistances are per species, not global.</li>
             <li>Cover multiple elements on your bench before you funnel levels into one favourite.</li>
             <li>Save SP and affinity triggers for rival fights, story bosses, and multi-HP-bar encounters.</li>
-            <li>Open individual <RouterLink to="/animon">Animon detail pages</RouterLink> for species-specific matchup notes.</li>
+            <li>Open individual <RouterLink to="/animon">Animon detail pages</RouterLink> for species-specific notes.</li>
           </ul>
         </article>
       </div>
@@ -203,9 +271,13 @@
 <script setup>
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import { animonDexLink, distribution, elementTypes, emotionalTypes, tagClass } from '@/lib/data'
+import { animonDexLink, bosses, distribution, elementTypes, emotionalTypes, skills, tagClass } from '@/lib/data'
+import { getTypeInfo, hasBattleType, typeIconSrc } from '@/lib/typeInfo'
 
 const elements = distribution('elementType')
+const emotions = distribution('emotionalType')
+const emotionCountMap = Object.fromEntries(emotions.map((row) => [row.name, row.count]))
+
 const sortedElements = computed(() => {
   const total = elements.reduce((sum, row) => sum + row.count, 0) || 1
   return [...elements]
@@ -216,12 +288,50 @@ const sortedElements = computed(() => {
     }))
 })
 
+const typedSkillsCount = skills.filter(
+  (skill) => skill.type && skill.type !== 'NONE' && skill.type !== 'UNKNOWN',
+).length
+const statusSkillsCount = skills.filter((skill) => skill.category === 'STATUS').length
+
+const bossFormsWithHiddenType = computed(() => {
+  const fromBoss = (bosses.bossAnimon || []).filter((boss) => hasBattleType(boss.hiddenType)).length
+  const fromCamp = (bosses.campBosses || []).reduce(
+    (sum, boss) =>
+      sum + (boss.party || []).filter((member) => hasBattleType(member.hiddenType)).length,
+    0,
+  )
+  return fromBoss + fromCamp
+})
+
+const effectMatrix = [
+  {
+    label: 'Skill typing',
+    state: 'Confirmed',
+    text: `${typedSkillsCount} skills have a typed element.`,
+  },
+  {
+    label: 'Status tools',
+    state: 'Confirmed',
+    text: `${statusSkillsCount} status skills — some create fields or typed boosts.`,
+  },
+  {
+    label: 'Weakness chart',
+    state: 'Partial',
+    text: 'Per-species resistances; scan in battle.',
+  },
+  {
+    label: 'Affinity bonuses',
+    state: 'Confirmed',
+    text: 'All five affinities activatable with extra SP.',
+  },
+]
+
 const affinityGuide = [
   {
     name: 'FELICIS',
     tagline: 'Healing & team sustain',
     blurb:
-      'Felicis keeps your squad alive through long routes and multi-phase boss fights. Best when you expect damage spikes rather than one-turn burst windows.',
+      'Keeps your squad alive through long routes and multi-phase boss fights. Best when you expect damage spikes rather than one-turn burst windows.',
     tips: [
       'Activate before a predicted big hit or AoE',
       'Pairs well with defensive pivots and status cleanses',
@@ -232,7 +342,7 @@ const affinityGuide = [
     name: 'FUROR',
     tagline: 'Aggressive damage boost',
     blurb:
-      'Furor pushes raw offensive output for the whole active party. Save it for turns where you can follow up with multiple attackers before the buff window closes.',
+      'Pushes raw offensive output for the whole active party. Save it for turns where you can follow up with multiple attackers.',
     tips: [
       'Stack with super-effective skills for TP gain',
       'Avoid firing on turns where you must swap out',
@@ -243,7 +353,7 @@ const affinityGuide = [
     name: 'HORRENS',
     tagline: 'Resistance bypass',
     blurb:
-      'Horrens helps when shield icons block your primary typing. Use it to force damage through otherwise resisted elements instead of grinding chip hits.',
+      'Helps when shield icons block your primary typing. Forces damage through otherwise resisted elements instead of chip hits.',
     tips: [
       'Scan first — confirm resistance before spending SP',
       'Critical on bulky bosses with narrow weaknesses',
@@ -254,7 +364,7 @@ const affinityGuide = [
     name: 'MESTUS',
     tagline: 'Bonus damage by target HP',
     blurb:
-      'Mestus rewards finishing high-HP targets and punishing tanky route leaders. Strong in fights where you chip down one big threat over several turns.',
+      'Rewards finishing high-HP targets and punishing tanky route leaders. Strong when you chip one big threat over several turns.',
     tips: [
       'Best late in a fight on a wounded boss',
       'Less value on scattered low-HP wild packs',
@@ -265,7 +375,7 @@ const affinityGuide = [
     name: 'SEREUM',
     tagline: 'Critical hits & TP gain',
     blurb:
-      'Sereum skews toward crit-focused teams that want faster TP charges. Excellent when you are setting up a bonus turn finisher on the next round.',
+      'Skews toward crit-focused teams that want faster TP charges. Excellent when setting up a bonus-turn finisher.',
     tips: [
       'Plan the follow-up TP turn before activating',
       'Works with multi-hit or high-crit skill sets',
@@ -273,6 +383,17 @@ const affinityGuide = [
     ],
   },
 ]
+
+const affinityCards = computed(() =>
+  affinityGuide.map((item) => {
+    const theme = getTypeInfo(item.name, 'emotion')
+    return {
+      ...item,
+      count: emotionCountMap[item.name] ?? 0,
+      themeNote: theme.description,
+    }
+  }),
+)
 
 const teamTips = [
   { label: 'Element spread', text: 'Aim for three different elements on your early bench before hyper-focusing one line.' },
