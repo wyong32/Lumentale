@@ -28,7 +28,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Emotional Affinities</p>
-          <h2 id="emotion-title">Five Battle Affinities You Can Activate</h2>
+          <h2 id="emotion-title">Five ATTRIBUTE Battle Affinities You Can Activate</h2>
           <p>
             Every Animon has one affinity. Spend extra SP in battle for a team-wide bonus — separate from element typing
             and move matchups. Tap a card to filter the dex by that affinity.

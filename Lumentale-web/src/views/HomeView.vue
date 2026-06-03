@@ -219,44 +219,58 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Combat System</p>
-          <h2 id="combat-title">Core Combat Mechanics</h2>
-          <p>Key mechanics every player should understand before building teams or reading boss guides.</p>
+          <h2 id="combat-title">Core Combat: SP, ATTRIBUTE &amp; TP</h2>
+          <p>
+            Three systems to learn before team-building — shared SP, five activatable ATTRIBUTE bonuses, and TP bonus
+            turns. Element types (below) are separate from ATTRIBUTE and govern move typing and coverage.
+          </p>
         </div>
         <div class="combat-content">
           <article class="combat-card">
             <h3>Shared SP System</h3>
             <p>
-              In 4v4 battles your entire team draws from one SP pool. Every skill costs SP — plan rotations across all
-              four Animon instead of spamming one attacker.
+              In 4v4 battles your entire team draws from one SP pool. Skills, heals, and ATTRIBUTE activations all spend
+              SP — plan rotations across all four Animon instead of spamming one attacker.
             </p>
             <ul>
               <li>No individual PP limits like classic monster games</li>
               <li>Support moves cost SP but enable stronger follow-ups</li>
-              <li>Conserving SP for key turns wins tough boss fights</li>
+              <li>Save SP headroom before bosses and rival fights</li>
             </ul>
           </article>
-          <article class="combat-card">
-            <h3>Emotional Affinities</h3>
+          <article class="combat-card combat-card-attribute">
+            <h3>Battle ATTRIBUTE</h3>
             <p>
-              Each Animon has one of five emotional affinities activatable during battle for an extra SP cost, granting
-              team-wide effects.
+              Each Animon carries one of five ATTRIBUTE affinities. Trigger it in battle for extra SP and a team-wide
+              buff — Felicis, Furor, Horrens, Mestus, or Sereum.
             </p>
-            <ul>
+            <ul class="combat-attribute-list">
               <li v-for="row in emotionalAffinities" :key="row.key">
-                <strong>{{ row.name }}</strong> — {{ row.desc }}
+                <img
+                  class="combat-attribute-icon"
+                  :src="typeIconSrc(row.key)"
+                  :alt="''"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+                <span>
+                  <strong>{{ row.name }}</strong> — {{ row.desc }}
+                </span>
               </li>
             </ul>
+            <RouterLink class="combat-card-link" to="/affinities">Full ATTRIBUTE guide →</RouterLink>
           </article>
           <article class="combat-card">
             <h3>TP Bonus Turns</h3>
             <p>
-              Landing super-effective hits builds TP. At 4 TP your team earns a free extra action — devastating when timed
-              with a high-cost finisher.
+              Super-effective hits and critical strikes build TP. At 4 TP your squad earns a free action — pair it with
+              an ATTRIBUTE trigger or a high-cost finisher.
             </p>
             <ul>
-              <li>Each species has individual weaknesses, not a global chart</li>
-              <li>Scan enemies in battle to reveal resistances</li>
-              <li>Type diversity matters more than one overpowered Animon</li>
+              <li>Resistances are per species — scan, do not assume a global chart</li>
+              <li>Shield icons mean pivot element or use Horrens ATTRIBUTE</li>
+              <li>Cover multiple elements on the bench, not one carry</li>
             </ul>
           </article>
         </div>
@@ -270,14 +284,14 @@
             <p class="eyebrow">Element Distribution</p>
             <h2 id="elements-title">Element Types in Talea</h2>
             <p>
-              Every LumenTale Animon carries one of 13 element types in Memories of Trey. Browse by type below or open
-              the full affinities type chart for Talea team building.
+              Every Animon has one of <strong>13 element types</strong> for skills and coverage — this is not the same
+              as battle ATTRIBUTE. Tap a type to filter the dex, or read the full type chart for ATTRIBUTE details.
             </p>
             <div class="elements-total">
               <strong>{{ summary.counts.animon }}</strong>
               <span>Animon in the dex</span>
             </div>
-            <RouterLink class="btn-secondary" to="/affinities">Open Affinities Page</RouterLink>
+            <RouterLink class="btn-secondary" to="/affinities">Type chart &amp; ATTRIBUTE</RouterLink>
           </aside>
           <div class="elements-mosaic">
             <RouterLink
@@ -285,10 +299,19 @@
               :key="row.name"
               class="element-tile"
               :class="tagClass(row.name)"
-              :to="`/animon?element=${row.name}`"
+              :to="animonDexLink({ element: row.name })"
               :style="{ '--fill': `${row.pct}%` }"
             >
+              <img
+                class="element-tile-icon"
+                :src="typeIconSrc(row.name)"
+                :alt="''"
+                width="40"
+                height="40"
+                loading="lazy"
+              />
               <span class="element-tile-name">{{ row.name }}</span>
+              <small class="element-tile-label">{{ getTypeInfo(row.name, 'element').label }}</small>
               <span class="element-tile-meta">
                 <strong>{{ row.count }}</strong>
                 <small>{{ row.pct }}%</small>
@@ -389,7 +412,9 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
-import { bosses, distribution, emotionLabels, imgSrc, recipes, summary, tagClass } from '@/lib/data'
+import { animonDexLink, bosses, distribution, emotionLabels, imgSrc, recipes, starters, summary, tagClass } from '@/lib/data'
+import { getTypeInfo, typeIconSrc } from '@/lib/typeInfo'
+import { getHomeFaqs } from '@/seo/homeSchema.js'
 
 const EMOTION_ORDER = ['FELICIS', 'FUROR', 'HORRENS', 'MESTUS', 'SEREUM']
 
@@ -407,7 +432,8 @@ const emotionalAffinities = EMOTION_ORDER.map((key) => ({
   name: key.charAt(0) + key.slice(1).toLowerCase(),
   desc: emotionalAffinityHomeCopy[key] || emotionLabels[key],
 }))
-import { getHomeFaqs } from '@/seo/homeSchema.js'
+
+const featured = computed(() => starters().slice(0, 5))
 
 const router = useRouter()
 const searchQuery = ref('')
