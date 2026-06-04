@@ -984,6 +984,16 @@ img {
   font-size: 0.9rem;
 }
 
+.home-data-slot {
+  contain: layout style;
+}
+
+.page-main--home-pending .home-data-slot::after {
+  content: '';
+  display: block;
+  min-height: 1680px;
+}
+
 .hero-section {
   padding: 56px 0 40px;
 }

@@ -10,6 +10,8 @@
     "skills": 198,
     "items": 282,
     "recipes": 164,
-    "bossAnimon": 51
+    "bossAnimon": 51,
+    "cookingRecipes": 128,
+    "craftingRecipes": 36
   }
 }

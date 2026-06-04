@@ -1,5 +1,5 @@
 <template>
-  <main class="page-main">
+  <main class="page-main" :class="{ 'page-main--home-pending': !dataLib }">
 
     <section class="hero-section" aria-labelledby="home-title">
       <div class="container">
@@ -175,7 +175,8 @@
       </div>
     </section>
 
-    <section class="dex-section" aria-labelledby="starters-title">
+    <div class="home-data-slot" :aria-busy="!dataLib">
+    <section v-if="dataLib" class="dex-section" aria-labelledby="starters-title">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Starter Animon</p>
@@ -277,7 +278,7 @@
       </div>
     </section>
 
-    <section class="elements-section" aria-labelledby="elements-title">
+    <section v-if="dataLib" class="elements-section" aria-labelledby="elements-title">
       <div class="container">
         <div class="elements-layout">
           <aside class="elements-intro">
@@ -323,6 +324,8 @@
       </div>
     </section>
 
+    </div>
+
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
         <div class="wiki-layout">
@@ -353,7 +356,7 @@
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
             </RouterLink>
             <RouterLink class="wiki-row wiki-row-items" to="/wiki/cooking">
-              <div class="wiki-row-badge">{{ cookingCount }}</div>
+              <div class="wiki-row-badge">{{ summary.counts.cookingRecipes }}</div>
               <div class="wiki-row-body">
                 <h3>Cooking</h3>
                 <p>Fountain dishes — ingredient lists and success rates for food before long routes.</p>
@@ -361,7 +364,7 @@
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
             </RouterLink>
             <RouterLink class="wiki-row wiki-row-items" to="/wiki/crafting">
-              <div class="wiki-row-badge">{{ craftingCount }}</div>
+              <div class="wiki-row-badge">{{ summary.counts.craftingRecipes }}</div>
               <div class="wiki-row-body">
                 <h3>Crafting</h3>
                 <p>Workshop Bilia upgrades and tools — materials, success rates, and item links.</p>
@@ -410,20 +413,16 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, shallowRef } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import summary from '@/data/summary.json'
-import {
-  animonDexLink,
-  distribution,
-  emotionLabels,
-  imgSrc,
-  recipes,
-  starters,
-  tagClass,
-} from '@/lib/data'
 import { getTypeInfo, typeIconSrc } from '@/lib/typeInfo'
 import { getHomeFaqs } from '@/seo/homeSchema.js'
+
+const dataLib = shallowRef(null)
+import('@/lib/data').then((m) => {
+  dataLib.value = m
+})
 
 const EMOTION_ORDER = ['FELICIS', 'FUROR', 'HORRENS', 'MESTUS', 'SEREUM']
 
@@ -435,33 +434,47 @@ const emotionalAffinityHomeCopy = {
   SEREUM: 'critical hits & TP gain',
 }
 
-const emotionalAffinities = EMOTION_ORDER.map((key) => ({
-  key,
-  name: key.charAt(0) + key.slice(1).toLowerCase(),
-  desc: emotionalAffinityHomeCopy[key] || emotionLabels[key],
-}))
+const emotionalAffinities = computed(() => {
+  const labels = dataLib.value?.emotionLabels ?? {}
+  return EMOTION_ORDER.map((key) => ({
+    key,
+    name: key.charAt(0) + key.slice(1).toLowerCase(),
+    desc: emotionalAffinityHomeCopy[key] || labels[key],
+  }))
+})
 
-const featured = computed(() => starters().slice(0, 5))
-
-const router = useRouter()
-const searchQuery = ref('')
-const cookingCount = computed(() => recipes.filter((r) => r.projectLabel === 'Cooking').length)
-const craftingCount = computed(() => recipes.filter((r) => r.projectLabel === 'Crafting').length)
-
-function goSearch() {
-  const q = searchQuery.value.trim()
-  router.push({ path: '/search', query: q ? { q } : {} })
-}
+const featured = computed(() => (dataLib.value ? dataLib.value.starters().slice(0, 5) : []))
 
 const sortedElements = computed(() => {
+  if (!dataLib.value) return []
   const total = summary.counts.animon || 1
-  return [...distribution('elementType')]
+  return [...dataLib.value.distribution('elementType')]
     .sort((a, b) => b.count - a.count)
     .map((row) => ({
       ...row,
       pct: Math.round((row.count / total) * 100),
     }))
 })
+
+const router = useRouter()
+const searchQuery = ref('')
+
+function goSearch() {
+  const q = searchQuery.value.trim()
+  router.push({ path: '/search', query: q ? { q } : {} })
+}
+
+function imgSrc(path, label) {
+  return dataLib.value?.imgSrc(path, label) ?? ''
+}
+
+function tagClass(type, kind) {
+  return dataLib.value?.tagClass(type, kind) ?? 'tag'
+}
+
+function animonDexLink(filters) {
+  return dataLib.value?.animonDexLink(filters) ?? { path: '/animon' }
+}
 
 const faqs = getHomeFaqs(summary.counts.animon)
 </script>
