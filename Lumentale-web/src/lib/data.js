@@ -208,7 +208,6 @@ export function recipesUsingItem(itemSlug) {
 export const PLACEHOLDER =
   'https://placehold.co/40x40/ffdac1/6B9B7B?text='
 
-// 图片路径回退占位符
 export function imgSrc(path, label = 'LT') {
   if (path && path.startsWith('/images/')) return path
   const text = encodeURIComponent(String(label).slice(0, 4))
@@ -429,8 +428,8 @@ export const emotionLabels = {
   SEREUM: 'Critical hits & TP gain',
 }
 
-// 元素/情感 tag 的 CSS 类名
 export function tagClass(type, kind = 'element') {
   const key = (type || 'none').toLowerCase()
   return kind === 'emotion' ? `tag tag-emo-${key}` : `tag tag-${key}`
 }
+
