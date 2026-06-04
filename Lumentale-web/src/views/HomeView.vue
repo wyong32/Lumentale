@@ -328,8 +328,8 @@
 import { ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import summary from '@/data/summary.json'
-import { typeIconSrc } from '@/lib/typeInfo'
 import { getHomeFaqs } from '@/seo/homeSchema.js'
+import { typeIconSrc } from '@/lib/typeInfo'
 
 const EMOTION_ORDER = ['FELICIS', 'FUROR', 'HORRENS', 'MESTUS', 'SEREUM']
 
