@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { applyNavigationSeo } from '@/seo/pageSeo.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -282,7 +281,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  applyNavigationSeo(to)
+  import('@/seo/pageSeo.js').then(({ applyNavigationSeo }) => applyNavigationSeo(to))
 })
 
 export default router

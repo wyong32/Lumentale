@@ -70,5 +70,5 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import BrandMark from '@/components/BrandMark.vue'
-import { summary } from '@/lib/data'
+import summary from '@/data/summary.json'
 </script>

@@ -21,10 +21,8 @@
   --text-dim: #94a3b8;
   --text-on-dark: #e2e8f0;
   --container: 1400px;
-  --font-display: 'Century Gothic', 'CenturyGothic', 'Avenir Next', 'Avenir', 'Franklin Gothic Medium', 'Trebuchet MS', sans-serif;
-  --font-body: 'Candara', 'Corbel', 'Optima', 'Segoe UI', 'Ubuntu', -apple-system, 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
-  --font-prose: 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
-  --font-mono: 'Consolas', 'Menlo', 'Monaco', monospace;
+  --font-display: system-ui, sans-serif;
+  --font-body: system-ui, sans-serif;
   --radius: 18px;
   --radius-sm: 12px;
   --shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
@@ -39,12 +37,10 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.65;
   color: var(--text);
@@ -60,7 +56,7 @@ h1,
 h2,
 h4 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--text);
 }
@@ -87,12 +83,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: var(--font-mono);
-}
-
-.guide-detail-content,
-.legal-document {
-  font-family: var(--font-prose);
+  font-family: ui-monospace, monospace;
 }
 
 p {
@@ -2377,26 +2368,9 @@ img {
   border-radius: 50%;
   background: var(--pink);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--pink) 35%, transparent);
-  animation: guides-pulse 2s ease-in-out infinite;
-}
-
-@keyframes guides-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.55;
-    transform: scale(0.92);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .guides-hero-badge-dot {
-    animation: none;
-  }
-
   .guides-resource-link:hover {
     transform: none;
   }
