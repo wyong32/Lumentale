@@ -988,10 +988,37 @@ img {
   contain: layout style;
 }
 
-.page-main--home-pending .home-data-slot::after {
-  content: '';
-  display: block;
-  min-height: 1680px;
+.home-data-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+.home-data-skeleton-dex,
+.home-data-skeleton-elements {
+  border-radius: var(--radius);
+  border: 3px solid #fff;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  box-shadow: var(--shadow-card);
+}
+
+.home-data-skeleton-dex {
+  min-height: 520px;
+}
+
+.home-data-skeleton-elements {
+  min-height: 760px;
+}
+
+@media (max-width: 1024px) {
+  .home-data-skeleton-dex {
+    min-height: 980px;
+  }
+
+  .home-data-skeleton-elements {
+    min-height: 780px;
+  }
 }
 
 .hero-section {

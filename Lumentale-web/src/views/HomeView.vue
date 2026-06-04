@@ -1,5 +1,5 @@
 <template>
-  <main class="page-main" :class="{ 'page-main--home-pending': !dataLib }">
+  <main class="page-main">
 
     <section class="hero-section" aria-labelledby="home-title">
       <div class="container">
@@ -176,46 +176,6 @@
     </section>
 
     <div class="home-data-slot" :aria-busy="!dataLib">
-    <section v-if="dataLib" class="dex-section" aria-labelledby="starters-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Starter Animon</p>
-          <h2 id="starters-title">Compare Starting Animon</h2>
-          <p>
-            Five Animon can begin your journey in Talea. Each belongs to a unique element and emotional affinity line with
-            its own evolution branch at level 40.
-          </p>
-        </div>
-        <div class="dex-content">
-          <RouterLink
-            v-for="entry in featured"
-            :key="entry.slug"
-            class="dex-item"
-            :to="`/animon/${entry.slug}`"
-          >
-            <div class="dex-item-art">
-              <img
-                :src="imgSrc(entry.image, entry.name)"
-                :alt="`${entry.name} LumenTale starter Animon`"
-                width="120"
-                height="130"
-                loading="lazy"
-              />
-            </div>
-            <div class="dex-item-body">
-              <small>#{{ entry.number }}</small>
-              <strong>{{ entry.name }}</strong>
-              <div class="dex-item-tags">
-                <span :class="tagClass(entry.elementType)">{{ entry.elementType }}</span>
-                <span :class="tagClass(entry.emotionalType, 'emotion')">{{ entry.emotionalType }}</span>
-              </div>
-              <small>BST {{ entry.minBst }}–{{ entry.maxBst }}</small>
-            </div>
-          </RouterLink>
-        </div>
-      </div>
-    </section>
-
     <section class="combat-section" aria-labelledby="combat-title">
       <div class="container">
         <div class="section-head">
@@ -278,6 +238,48 @@
       </div>
     </section>
 
+    <div class="home-data-tail">
+    <template v-if="dataLib">
+    <section class="dex-section" aria-labelledby="starters-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Starter Animon</p>
+          <h2 id="starters-title">Compare Starting Animon</h2>
+          <p>
+            Five Animon can begin your journey in Talea. Each belongs to a unique element and emotional affinity line with
+            its own evolution branch at level 40.
+          </p>
+        </div>
+        <div class="dex-content">
+          <RouterLink
+            v-for="entry in featured"
+            :key="entry.slug"
+            class="dex-item"
+            :to="`/animon/${entry.slug}`"
+          >
+            <div class="dex-item-art">
+              <img
+                :src="imgSrc(entry.image, entry.name)"
+                :alt="`${entry.name} LumenTale starter Animon`"
+                width="120"
+                height="130"
+                loading="lazy"
+              />
+            </div>
+            <div class="dex-item-body">
+              <small>#{{ entry.number }}</small>
+              <strong>{{ entry.name }}</strong>
+              <div class="dex-item-tags">
+                <span :class="tagClass(entry.elementType)">{{ entry.elementType }}</span>
+                <span :class="tagClass(entry.emotionalType, 'emotion')">{{ entry.emotionalType }}</span>
+              </div>
+              <small>BST {{ entry.minBst }}–{{ entry.maxBst }}</small>
+            </div>
+          </RouterLink>
+        </div>
+      </div>
+    </section>
+
     <section v-if="dataLib" class="elements-section" aria-labelledby="elements-title">
       <div class="container">
         <div class="elements-layout">
@@ -323,6 +325,12 @@
         </div>
       </div>
     </section>
+    </template>
+    <div v-else class="home-data-skeleton" aria-hidden="true">
+      <div class="home-data-skeleton-dex" />
+      <div class="home-data-skeleton-elements" />
+    </div>
+    </div>
 
     </div>
 
