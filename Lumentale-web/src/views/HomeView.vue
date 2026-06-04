@@ -175,7 +175,6 @@
       </div>
     </section>
 
-    <template v-if="data">
     <section class="dex-section" aria-labelledby="starters-title">
       <div class="container">
         <div class="section-head">
@@ -381,7 +380,6 @@
         </div>
       </div>
     </section>
-    </template>
 
     <section class="faq-section" aria-labelledby="faq-title">
       <div class="container">
@@ -412,19 +410,20 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref, shallowRef } from 'vue'
+import { computed, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import summary from '@/data/summary.json'
+import {
+  animonDexLink,
+  distribution,
+  emotionLabels,
+  imgSrc,
+  recipes,
+  starters,
+  tagClass,
+} from '@/lib/data'
 import { getTypeInfo, typeIconSrc } from '@/lib/typeInfo'
 import { getHomeFaqs } from '@/seo/homeSchema.js'
-
-const data = shallowRef(null)
-
-onMounted(() => {
-  import('@/lib/data').then((m) => {
-    data.value = m
-  })
-})
 
 const EMOTION_ORDER = ['FELICIS', 'FUROR', 'HORRENS', 'MESTUS', 'SEREUM']
 
@@ -436,54 +435,33 @@ const emotionalAffinityHomeCopy = {
   SEREUM: 'critical hits & TP gain',
 }
 
-const emotionalAffinities = computed(() => {
-  const labels = data.value?.emotionLabels ?? {}
-  return EMOTION_ORDER.map((key) => ({
-    key,
-    name: key.charAt(0) + key.slice(1).toLowerCase(),
-    desc: emotionalAffinityHomeCopy[key] || labels[key],
-  }))
-})
+const emotionalAffinities = EMOTION_ORDER.map((key) => ({
+  key,
+  name: key.charAt(0) + key.slice(1).toLowerCase(),
+  desc: emotionalAffinityHomeCopy[key] || emotionLabels[key],
+}))
 
-const featured = computed(() => (data.value ? data.value.starters().slice(0, 5) : []))
-
-const sortedElements = computed(() => {
-  if (!data.value) return []
-  const total = summary.counts.animon || 1
-  return [...data.value.distribution('elementType')]
-    .sort((a, b) => b.count - a.count)
-    .map((row) => ({
-      ...row,
-      pct: Math.round((row.count / total) * 100),
-    }))
-})
-
-const cookingCount = computed(
-  () => data.value?.recipes.filter((r) => r.projectLabel === 'Cooking').length ?? 0,
-)
-const craftingCount = computed(
-  () => data.value?.recipes.filter((r) => r.projectLabel === 'Crafting').length ?? 0,
-)
+const featured = computed(() => starters().slice(0, 5))
 
 const router = useRouter()
 const searchQuery = ref('')
+const cookingCount = computed(() => recipes.filter((r) => r.projectLabel === 'Cooking').length)
+const craftingCount = computed(() => recipes.filter((r) => r.projectLabel === 'Crafting').length)
 
 function goSearch() {
   const q = searchQuery.value.trim()
   router.push({ path: '/search', query: q ? { q } : {} })
 }
 
-function imgSrc(path, label) {
-  return data.value?.imgSrc(path, label) ?? ''
-}
-
-function tagClass(type, kind) {
-  return data.value?.tagClass(type, kind) ?? 'tag'
-}
-
-function animonDexLink(filters) {
-  return data.value?.animonDexLink(filters) ?? { path: '/animon' }
-}
+const sortedElements = computed(() => {
+  const total = summary.counts.animon || 1
+  return [...distribution('elementType')]
+    .sort((a, b) => b.count - a.count)
+    .map((row) => ({
+      ...row,
+      pct: Math.round((row.count / total) * 100),
+    }))
+})
 
 const faqs = getHomeFaqs(summary.counts.animon)
 </script>

@@ -96,12 +96,12 @@
         }
         function scheduleIdle() {
           if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadThirdParty, { timeout: 8000 });
+            requestIdleCallback(loadThirdParty, { timeout: 12000 });
           } else {
-            setTimeout(loadThirdParty, 5000);
+            setTimeout(loadThirdParty, 12000);
           }
         }
-        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (type) {
+        ['pointerdown', 'keydown', 'touchstart'].forEach(function (type) {
           window.addEventListener(type, loadThirdParty, { once: true, passive: true });
         });
         window.addEventListener('load', scheduleIdle);
