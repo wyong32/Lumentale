@@ -21,8 +21,10 @@
   --text-dim: #94a3b8;
   --text-on-dark: #e2e8f0;
   --container: 1400px;
-  --font-display: 'Baloo 2', cursive, sans-serif;
-  --font-body: 'Nunito', system-ui, sans-serif;
+  --font-display: 'Century Gothic', 'CenturyGothic', 'Avenir Next', 'Avenir', 'Franklin Gothic Medium', 'Trebuchet MS', sans-serif;
+  --font-body: 'Candara', 'Corbel', 'Optima', 'Segoe UI', 'Ubuntu', -apple-system, 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
+  --font-prose: 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+  --font-mono: 'Consolas', 'Menlo', 'Monaco', monospace;
   --radius: 18px;
   --radius-sm: 12px;
   --shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
@@ -37,10 +39,12 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.65;
   color: var(--text);
@@ -54,26 +58,41 @@ body {
 
 h1,
 h2,
-h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
   color: var(--text);
 }
 
 h1 {
   font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.08;
 }
 
 h2 {
   font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.12;
 }
 
 h3 {
-  font-size: 1.05rem;
   font-family: var(--font-body);
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+}
+
+.guide-detail-content,
+.legal-document {
+  font-family: var(--font-prose);
 }
 
 p {
@@ -135,6 +154,7 @@ img {
   color: var(--text-muted);
   max-width: 720px;
   margin-top: 16px;
+  text-wrap: pretty;
 }
 
 .lead strong {
