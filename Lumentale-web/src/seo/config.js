@@ -6,7 +6,7 @@ export const seoConfig = {
   fullDomain: 'https://lumentale.org',
   siteName: 'LumenTale Wiki',
   /** Site logo — header, footer, OG/Twitter, JSON-LD */
-  defaultOgImage: '/images/logo.png',
+  defaultOgImage: '/images/logo.webp',
   defaults: {
     title: 'LumenTale | Animon, Starters, Evolutions, Wiki & Guides',
     description:
