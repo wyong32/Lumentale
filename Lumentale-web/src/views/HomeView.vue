@@ -175,7 +175,6 @@
       </div>
     </section>
 
-    <div class="home-data-slot" :aria-busy="!dataLib">
     <section class="combat-section" aria-labelledby="combat-title">
       <div class="container">
         <div class="section-head">
@@ -183,7 +182,8 @@
           <h2 id="combat-title">Core Combat: SP, ATTRIBUTE &amp; TP</h2>
           <p>
             Three systems to learn before team-building — shared SP, five activatable ATTRIBUTE bonuses, and TP bonus
-            turns. Element types (below) are separate from ATTRIBUTE and govern move typing and coverage.
+            turns. Element types on the <RouterLink to="/affinities">Affinities page</RouterLink> are separate from
+            ATTRIBUTE and govern move typing and coverage.
           </p>
         </div>
         <div class="combat-content">
@@ -237,102 +237,6 @@
         </div>
       </div>
     </section>
-
-    <div class="home-data-tail">
-    <template v-if="dataLib">
-    <section class="dex-section" aria-labelledby="starters-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Starter Animon</p>
-          <h2 id="starters-title">Compare Starting Animon</h2>
-          <p>
-            Five Animon can begin your journey in Talea. Each belongs to a unique element and emotional affinity line with
-            its own evolution branch at level 40.
-          </p>
-        </div>
-        <div class="dex-content">
-          <RouterLink
-            v-for="entry in featured"
-            :key="entry.slug"
-            class="dex-item"
-            :to="`/animon/${entry.slug}`"
-          >
-            <div class="dex-item-art">
-              <img
-                :src="imgSrc(entry.image, entry.name)"
-                :alt="`${entry.name} LumenTale starter Animon`"
-                width="120"
-                height="130"
-                loading="lazy"
-              />
-            </div>
-            <div class="dex-item-body">
-              <small>#{{ entry.number }}</small>
-              <strong>{{ entry.name }}</strong>
-              <div class="dex-item-tags">
-                <span :class="tagClass(entry.elementType)">{{ entry.elementType }}</span>
-                <span :class="tagClass(entry.emotionalType, 'emotion')">{{ entry.emotionalType }}</span>
-              </div>
-              <small>BST {{ entry.minBst }}–{{ entry.maxBst }}</small>
-            </div>
-          </RouterLink>
-        </div>
-      </div>
-    </section>
-
-    <section v-if="dataLib" class="elements-section" aria-labelledby="elements-title">
-      <div class="container">
-        <div class="elements-layout">
-          <aside class="elements-intro">
-            <p class="eyebrow">Element Distribution</p>
-            <h2 id="elements-title">Element Types in Talea</h2>
-            <p>
-              Every Animon has one of <strong>13 element types</strong> for skills and coverage — this is not the same
-              as battle ATTRIBUTE. Tap a type to filter the dex, or read the full type chart for ATTRIBUTE details.
-            </p>
-            <div class="elements-total">
-              <strong>{{ summary.counts.animon }}</strong>
-              <span>Animon in the dex</span>
-            </div>
-            <RouterLink class="btn-secondary" to="/affinities">Type chart &amp; ATTRIBUTE</RouterLink>
-          </aside>
-          <div class="elements-mosaic">
-            <RouterLink
-              v-for="row in sortedElements"
-              :key="row.name"
-              class="element-tile"
-              :class="tagClass(row.name)"
-              :to="animonDexLink({ element: row.name })"
-              :style="{ '--fill': `${row.pct}%` }"
-            >
-              <img
-                class="element-tile-icon"
-                :src="typeIconSrc(row.name)"
-                :alt="''"
-                width="40"
-                height="40"
-                loading="lazy"
-              />
-              <span class="element-tile-name">{{ row.name }}</span>
-              <small class="element-tile-label">{{ getTypeInfo(row.name, 'element').label }}</small>
-              <span class="element-tile-meta">
-                <strong>{{ row.count }}</strong>
-                <small>{{ row.pct }}%</small>
-              </span>
-              <span class="element-tile-bar" aria-hidden="true" />
-            </RouterLink>
-          </div>
-        </div>
-      </div>
-    </section>
-    </template>
-    <div v-else class="home-data-skeleton" aria-hidden="true">
-      <div class="home-data-skeleton-dex" />
-      <div class="home-data-skeleton-elements" />
-    </div>
-    </div>
-
-    </div>
 
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
@@ -421,16 +325,11 @@
 </template>
 
 <script setup>
-import { computed, ref, shallowRef } from 'vue'
+import { ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import summary from '@/data/summary.json'
-import { getTypeInfo, typeIconSrc } from '@/lib/typeInfo'
+import { typeIconSrc } from '@/lib/typeInfo'
 import { getHomeFaqs } from '@/seo/homeSchema.js'
-
-const dataLib = shallowRef(null)
-import('@/lib/data').then((m) => {
-  dataLib.value = m
-})
 
 const EMOTION_ORDER = ['FELICIS', 'FUROR', 'HORRENS', 'MESTUS', 'SEREUM']
 
@@ -442,27 +341,11 @@ const emotionalAffinityHomeCopy = {
   SEREUM: 'critical hits & TP gain',
 }
 
-const emotionalAffinities = computed(() => {
-  const labels = dataLib.value?.emotionLabels ?? {}
-  return EMOTION_ORDER.map((key) => ({
-    key,
-    name: key.charAt(0) + key.slice(1).toLowerCase(),
-    desc: emotionalAffinityHomeCopy[key] || labels[key],
-  }))
-})
-
-const featured = computed(() => (dataLib.value ? dataLib.value.starters().slice(0, 5) : []))
-
-const sortedElements = computed(() => {
-  if (!dataLib.value) return []
-  const total = summary.counts.animon || 1
-  return [...dataLib.value.distribution('elementType')]
-    .sort((a, b) => b.count - a.count)
-    .map((row) => ({
-      ...row,
-      pct: Math.round((row.count / total) * 100),
-    }))
-})
+const emotionalAffinities = EMOTION_ORDER.map((key) => ({
+  key,
+  name: key.charAt(0) + key.slice(1).toLowerCase(),
+  desc: emotionalAffinityHomeCopy[key],
+}))
 
 const router = useRouter()
 const searchQuery = ref('')
@@ -470,18 +353,6 @@ const searchQuery = ref('')
 function goSearch() {
   const q = searchQuery.value.trim()
   router.push({ path: '/search', query: q ? { q } : {} })
-}
-
-function imgSrc(path, label) {
-  return dataLib.value?.imgSrc(path, label) ?? ''
-}
-
-function tagClass(type, kind) {
-  return dataLib.value?.tagClass(type, kind) ?? 'tag'
-}
-
-function animonDexLink(filters) {
-  return dataLib.value?.animonDexLink(filters) ?? { path: '/animon' }
 }
 
 const faqs = getHomeFaqs(summary.counts.animon)
