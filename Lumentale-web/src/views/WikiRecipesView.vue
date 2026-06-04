@@ -133,7 +133,7 @@
                   >
                     <img
                       :src="imgSrc(ing.image, ing.name)"
-                      :alt="''"
+                      :alt="`${ing.name} ingredient icon`"
                       width="36"
                       height="36"
                       loading="lazy"

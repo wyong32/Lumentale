@@ -210,7 +210,7 @@
                 <img
                   class="combat-attribute-icon"
                   :src="typeIconSrc(row.key)"
-                  :alt="''"
+                  :alt="`${row.name} emotional affinity icon`"
                   width="32"
                   height="32"
                   loading="lazy"

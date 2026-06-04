@@ -192,7 +192,7 @@
                     >
                       <img
                         :src="imgSrc(recipe.result?.image, recipe.result?.name)"
-                        :alt="''"
+                        :alt="`${recipe.result?.name} recipe icon`"
                         width="52"
                         height="52"
                         loading="lazy"
@@ -220,7 +220,7 @@
                     >
                       <img
                         :src="imgSrc(entry.recipe.result?.image, entry.recipe.result?.name)"
-                        :alt="''"
+                        :alt="`${entry.recipe.result?.name || entry.recipe.name} recipe icon`"
                         width="52"
                         height="52"
                         loading="lazy"

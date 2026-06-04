@@ -54,7 +54,7 @@
               <div class="recipe-entry-art">
                 <img
                   :src="imgSrc(recipe.result?.image, recipe.result?.name || recipe.name)"
-                  :alt="''"
+                  :alt="recipe.result?.name || recipe.name"
                   width="72"
                   height="72"
                   loading="lazy"
@@ -109,7 +109,13 @@
                   @click.stop
                 >
                   <span class="recipe-ing-pill-icon">
-                    <img :src="imgSrc(ing.image, ing.name)" :alt="''" width="28" height="28" loading="lazy" />
+                    <img
+                      :src="imgSrc(ing.image, ing.name)"
+                      :alt="`${ing.name} ingredient icon`"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                    />
                   </span>
                   <span class="recipe-ing-pill-name">{{ ing.name }}</span>
                   <span class="recipe-ing-pill-qty">×{{ ing.amount }}</span>

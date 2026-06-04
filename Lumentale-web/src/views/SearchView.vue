@@ -73,7 +73,13 @@
           <h2 id="search-items" class="search-section-title">Items</h2>
           <div class="search-item-list">
             <RouterLink v-for="hit in results.items" :key="hit.slug" class="search-item-row" :to="hit.to">
-              <img :src="imgSrc(hit.image, hit.title)" :alt="''" width="48" height="48" loading="lazy" />
+              <img
+                :src="imgSrc(hit.image, hit.title)"
+                :alt="`${hit.title} item icon`"
+                width="48"
+                height="48"
+                loading="lazy"
+              />
               <div>
                 <strong>{{ hit.title }}</strong>
                 <small>{{ hit.subtitle }}</small>
@@ -94,7 +100,13 @@
               :class="hit.projectLabel === 'Cooking' ? 'recipe-card--cooking' : 'recipe-card--crafting'"
               :to="hit.to"
             >
-              <img :src="imgSrc(hit.image, hit.title)" :alt="''" width="56" height="56" loading="lazy" />
+              <img
+                :src="imgSrc(hit.image, hit.title)"
+                :alt="`${hit.title} recipe icon`"
+                width="56"
+                height="56"
+                loading="lazy"
+              />
               <div>
                 <strong>{{ hit.title }}</strong>
                 <small>{{ hit.subtitle }}</small>

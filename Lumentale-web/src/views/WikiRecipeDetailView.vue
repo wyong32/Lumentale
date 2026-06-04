@@ -84,7 +84,7 @@
                       >
                         <img
                           :src="imgSrc(ing.image, ing.name)"
-                          :alt="''"
+                          :alt="`${ing.name} ingredient icon`"
                           width="36"
                           height="36"
                           loading="lazy"
@@ -212,7 +212,7 @@
                   >
                     <img
                       :src="imgSrc(other.result?.image, other.result?.name)"
-                      :alt="''"
+                      :alt="`${other.result?.name || other.name} recipe icon`"
                       width="52"
                       height="52"
                       loading="lazy"
