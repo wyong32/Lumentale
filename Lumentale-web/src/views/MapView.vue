@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Talea Map</span>
           </nav>
@@ -35,7 +35,7 @@
           <p class="prose" style="margin-top: 12px">
             We only add map pins after someone walks the route and confirms the spot — wild tables, hidden items, and shop
             NPCs will appear here once that work is done. Until then, pair this map with the
-            <RouterLink to="/beginner">Beginner Guide</RouterLink> and <RouterLink to="/animon">Animon Dex</RouterLink>
+            <a href="/beginner">Beginner Guide</a> and <a href="/animon">Animon Dex</a>
             when you are hunting a specific species.
           </p>
         </article>
@@ -104,22 +104,22 @@
             <article class="info-card" style="margin-top: 16px">
               <h2>Related Pages</h2>
               <div class="related-links" style="margin-top: 8px">
-                <RouterLink class="related-link" to="/beginner">
+                <a class="related-link" href="/beginner">
                   Beginner Guide
                   <small>First routes in Talea</small>
-                </RouterLink>
-                <RouterLink class="related-link" to="/guides">
+                </a>
+                <a class="related-link" href="/guides">
                   All Guides
                   <small>Walkthroughs and tips</small>
-                </RouterLink>
-                <RouterLink class="related-link" to="/animon">
+                </a>
+                <a class="related-link" href="/animon">
                   Animon Dex
                   <small>Species by type and affinity</small>
-                </RouterLink>
-                <RouterLink class="related-link" to="/wiki/items">
+                </a>
+                <a class="related-link" href="/wiki/items">
                   Items List
                   <small>Materials and shop stock</small>
-                </RouterLink>
+                </a>
               </div>
             </article>
           </aside>
@@ -130,7 +130,7 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { imgSrc } from '@/lib/data'
 
 const mapStatus = [

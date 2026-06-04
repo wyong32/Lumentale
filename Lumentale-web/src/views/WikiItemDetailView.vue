@@ -3,11 +3,11 @@
     <section class="page-hero-section wiki-detail-hero" aria-labelledby="item-detail-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki">Wiki</RouterLink>
+          <a href="/wiki">Wiki</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki/items">Items</RouterLink>
+          <a href="/wiki/items">Items</a>
           <span aria-hidden="true">›</span>
           <span>{{ item.name }}</span>
         </nav>
@@ -49,9 +49,9 @@
               </div>
             </div>
             <div v-if="craftedBy.length" class="detail-art-cta">
-              <RouterLink class="btn-primary btn-block" :to="`/wiki/recipes/${craftedBy[0].slug}`">
+              <a class="btn-primary btn-block" :href="`/wiki/recipes/${craftedBy[0].slug}`">
                 How to craft
-              </RouterLink>
+              </a>
             </div>
           </aside>
 
@@ -76,9 +76,9 @@
                   </div>
                   <div v-if="craftedBy.length" class="detail-glance-tile detail-glance-tile--link">
                     <span>Get it from</span>
-                    <RouterLink :to="`/wiki/recipes/${craftedBy[0].slug}`">
+                    <a :href="`/wiki/recipes/${craftedBy[0].slug}`">
                       {{ craftedBy[0].result?.name || craftedBy[0].name }} recipe
-                    </RouterLink>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@
                 <p v-if="flavorText" class="prose">{{ flavorText }}</p>
                 <p v-if="recipeDescLink && !flavorText" class="prose detail-note">
                   In-game flavor text comes from the
-                  <RouterLink :to="`/wiki/recipes/${recipeDescLink.slug}`">Fountain recipe</RouterLink>
+                  <a :href="`/wiki/recipes/${recipeDescLink.slug}`">Fountain recipe</a>
                   when you craft {{ item.name }}.
                 </p>
                 <p v-if="playerNote" class="prose detail-note">{{ playerNote }}</p>
@@ -184,11 +184,11 @@
                     Combine materials at the Fountain or workshop to make {{ item.name }}.
                   </p>
                   <div class="detail-ref-list">
-                    <RouterLink
+                    <a
                       v-for="recipe in craftedBy"
                       :key="recipe.slug"
                       class="detail-ref-row"
-                      :to="`/wiki/recipes/${recipe.slug}`"
+                      :href="`/wiki/recipes/${recipe.slug}`"
                     >
                       <img
                         :src="imgSrc(recipe.result?.image, recipe.result?.name)"
@@ -202,7 +202,7 @@
                         <p>{{ recipe.projectLabel }} · {{ recipe.successRate ?? '?' }}% · {{ recipe.ingredientSummary }}</p>
                       </div>
                       <span class="detail-ref-arrow" aria-hidden="true">→</span>
-                    </RouterLink>
+                    </a>
                   </div>
                 </div>
 
@@ -212,11 +212,11 @@
                     Spend {{ item.name }} when cooking or crafting these results.
                   </p>
                   <div class="detail-ref-list">
-                    <RouterLink
+                    <a
                       v-for="entry in usedInRecipes"
                       :key="entry.recipe.slug"
                       class="detail-ref-row"
-                      :to="`/wiki/recipes/${entry.recipe.slug}`"
+                      :href="`/wiki/recipes/${entry.recipe.slug}`"
                     >
                       <img
                         :src="imgSrc(entry.recipe.result?.image, entry.recipe.result?.name)"
@@ -230,7 +230,7 @@
                         <p>Uses ×{{ entry.amount }} · {{ entry.recipe.projectLabel }} · {{ entry.recipe.successRate ?? '?' }}%</p>
                       </div>
                       <span class="detail-ref-arrow" aria-hidden="true">→</span>
-                    </RouterLink>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -246,18 +246,18 @@
             <nav class="detail-explore" aria-label="Related wiki pages">
               <p class="detail-explore-title">Keep exploring</p>
               <div class="detail-explore-links">
-                <RouterLink class="detail-explore-link" to="/wiki/items">All Items</RouterLink>
-                <RouterLink class="detail-explore-link" to="/wiki/cooking">Cooking</RouterLink>
-                <RouterLink class="detail-explore-link" to="/wiki/crafting">Crafting</RouterLink>
-                <RouterLink class="detail-explore-link" to="/beginner">Beginner Guide</RouterLink>
+                <a class="detail-explore-link" href="/wiki/items">All Items</a>
+                <a class="detail-explore-link" href="/wiki/cooking">Cooking</a>
+                <a class="detail-explore-link" href="/wiki/crafting">Crafting</a>
+                <a class="detail-explore-link" href="/beginner">Beginner Guide</a>
               </div>
             </nav>
 
             <div class="btn-row detail-main-actions">
-              <RouterLink class="btn-secondary" to="/wiki/items">← All Items</RouterLink>
-              <RouterLink v-if="craftedBy[0]" class="btn-primary" :to="`/wiki/recipes/${craftedBy[0].slug}`">
+              <a class="btn-secondary" href="/wiki/items">← All Items</a>
+              <a v-if="craftedBy[0]" class="btn-primary" :href="`/wiki/recipes/${craftedBy[0].slug}`">
                 View Craft Recipe
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -269,15 +269,15 @@
     <section class="page-hero-section">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki/items">Items</RouterLink>
+          <a href="/wiki/items">Items</a>
           <span aria-hidden="true">›</span>
           <span>Not found</span>
         </nav>
         <h1>Item Not Found</h1>
         <p class="lead">We do not have this item yet — browse the full list or search by name.</p>
-        <RouterLink class="btn-primary" to="/wiki/items">Browse Items</RouterLink>
+        <a class="btn-primary" href="/wiki/items">Browse Items</a>
       </div>
     </section>
   </main>
@@ -285,7 +285,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import {
   formatDataLabel,
   itemBySlug,

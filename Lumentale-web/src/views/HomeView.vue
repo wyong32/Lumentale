@@ -16,9 +16,9 @@
             team.
           </p>
           <div class="btn-row btn-row-center">
-            <RouterLink class="btn-primary" to="/animon">Open Animon Dex</RouterLink>
-            <RouterLink class="btn-secondary" to="/starters">Best Starter Guide</RouterLink>
-            <RouterLink class="btn-secondary" to="/beginner">Beginner Route</RouterLink>
+            <a class="btn-primary" href="/animon">Open Animon Dex</a>
+            <a class="btn-secondary" href="/starters">Best Starter Guide</a>
+            <a class="btn-secondary" href="/beginner">Beginner Route</a>
           </div>
         </div>
         <form class="hero-search" role="search" aria-label="Search LumenTale wiki" @submit.prevent="goSearch">
@@ -93,8 +93,8 @@
               and the customizable Anispace dimension, LumenTale offers rich team-building for story, collection, and PvP.
             </p>
             <div class="btn-row">
-              <RouterLink class="btn-secondary" to="/beginner">Read Beginner Guide</RouterLink>
-              <RouterLink class="btn-secondary" to="/affinities">Learn Affinities</RouterLink>
+              <a class="btn-secondary" href="/beginner">Read Beginner Guide</a>
+              <a class="btn-secondary" href="/affinities">Learn Affinities</a>
             </div>
           </div>
           <aside class="game-facts" aria-label="Game facts">
@@ -118,7 +118,7 @@
           <p>Essential pages for new and returning players — open what you need for your current route or boss fight.</p>
         </div>
         <div class="guides-content">
-          <RouterLink class="guide-card" to="/animon">
+          <a class="guide-card" href="/animon">
             <span class="guide-card-num">01</span>
             <h3>Animon Dex</h3>
             <p>
@@ -126,8 +126,8 @@
               catch rate, and individual stat spreads. Filter by type or search by name.
             </p>
             <span class="guide-card-arrow">Explore Dex →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/starters">
+          </a>
+          <a class="guide-card" href="/starters">
             <span class="guide-card-num">02</span>
             <h3>Starter Guide</h3>
             <p>
@@ -135,8 +135,8 @@
               affinity, evolution paths, and early-game BST at a glance.
             </p>
             <span class="guide-card-arrow">Pick a Starter →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/beginner">
+          </a>
+          <a class="guide-card" href="/beginner">
             <span class="guide-card-num">03</span>
             <h3>Beginner Guide</h3>
             <p>
@@ -144,8 +144,8 @@
               mistakes, and build a balanced early team.
             </p>
             <span class="guide-card-arrow">Start Playing →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/affinities">
+          </a>
+          <a class="guide-card" href="/affinities">
             <span class="guide-card-num">04</span>
             <h3>Affinities &amp; Types</h3>
             <p>
@@ -153,8 +153,8 @@
               Sereum — and how they shape 4v4 combat strategy.
             </p>
             <span class="guide-card-arrow">View Affinities →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/evolutions">
+          </a>
+          <a class="guide-card" href="/evolutions">
             <span class="guide-card-num">05</span>
             <h3>Evolution Guide</h3>
             <p>
@@ -162,15 +162,15 @@
               we flag anything still unconfirmed so you can verify before spending materials.
             </p>
             <span class="guide-card-arrow">See Evolutions →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/wiki">
+          </a>
+          <a class="guide-card" href="/wiki">
             <span class="guide-card-num">06</span>
             <h3>Wiki Home</h3>
             <p>
               Jump to skills, items, boss stats, and every other lookup page — built for quick checks mid-playthrough.
             </p>
             <span class="guide-card-arrow">Browse Wiki →</span>
-          </RouterLink>
+          </a>
         </div>
       </div>
     </section>
@@ -182,7 +182,7 @@
           <h2 id="combat-title">Core Combat: SP, ATTRIBUTE &amp; TP</h2>
           <p>
             Three systems to learn before team-building — shared SP, five activatable ATTRIBUTE bonuses, and TP bonus
-            turns. Element types on the <RouterLink to="/affinities">Affinities page</RouterLink> are separate from
+            turns. Element types on the <a href="/affinities">Affinities page</a> are separate from
             ATTRIBUTE and govern move typing and coverage.
           </p>
         </div>
@@ -220,7 +220,7 @@
                 </span>
               </li>
             </ul>
-            <RouterLink class="combat-card-link" to="/affinities">Full ATTRIBUTE guide →</RouterLink>
+            <a class="combat-card-link" href="/affinities">Full ATTRIBUTE guide →</a>
           </article>
           <article class="combat-card">
             <h3>TP Bonus Turns</h3>
@@ -248,49 +248,49 @@
               Search moves, shop items, and boss stats while you play — filter by type, category, or name and jump back
               to the Animon dex when you need typings.
             </p>
-            <RouterLink class="btn-secondary" to="/wiki">Open Wiki Home</RouterLink>
+            <a class="btn-secondary" href="/wiki">Open Wiki Home</a>
           </div>
           <div class="wiki-catalog">
-            <RouterLink class="wiki-row wiki-row-skills" to="/wiki/skills">
+            <a class="wiki-row wiki-row-skills" href="/wiki/skills">
               <div class="wiki-row-badge">{{ summary.counts.skills }}</div>
               <div class="wiki-row-body">
                 <h3>Skills List</h3>
                 <p>Power, SP cost, accuracy, cooldown, category, target type, and elemental classification.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/items">
+            </a>
+            <a class="wiki-row wiki-row-items" href="/wiki/items">
               <div class="wiki-row-badge">{{ summary.counts.items }}</div>
               <div class="wiki-row-body">
                 <h3>Items List</h3>
                 <p>Bilias, medicines, ingredients, materials, and key items with prices and effect data.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/cooking">
+            </a>
+            <a class="wiki-row wiki-row-items" href="/wiki/cooking">
               <div class="wiki-row-badge">{{ summary.counts.cookingRecipes }}</div>
               <div class="wiki-row-body">
                 <h3>Cooking</h3>
                 <p>Fountain dishes — ingredient lists and success rates for food before long routes.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/crafting">
+            </a>
+            <a class="wiki-row wiki-row-items" href="/wiki/crafting">
               <div class="wiki-row-badge">{{ summary.counts.craftingRecipes }}</div>
               <div class="wiki-row-body">
                 <h3>Crafting</h3>
                 <p>Workshop Bilia upgrades and tools — materials, success rates, and item links.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-bosses" to="/wiki/bosses">
+            </a>
+            <a class="wiki-row wiki-row-bosses" href="/wiki/bosses">
               <div class="wiki-row-badge">{{ summary.counts.bossAnimon }}</div>
               <div class="wiki-row-body">
                 <h3>Boss Guide</h3>
                 <p>Boss levels, HP bars, stat overrides, hidden types, affinities, and camp boss teams.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </div>
@@ -326,7 +326,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import summary from '@/data/summary.json'
 import { getHomeFaqs } from '@/seo/homeSchema.js'
 import { typeIconSrc } from '@/lib/typeInfo'

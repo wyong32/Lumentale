@@ -3,9 +3,9 @@
     <section class="page-hero-section" aria-labelledby="detail-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/animon">Animon</RouterLink>
+          <a href="/animon">Animon</a>
           <span aria-hidden="true">›</span>
           <span>{{ entry.name }}</span>
         </nav>
@@ -19,12 +19,12 @@
         </p>
         <div class="page-meta" style="margin-top: 14px">
           <span class="meta-pill">#{{ entry.number }}</span>
-          <RouterLink :class="tagClass(entry.elementType)" :to="animonDexLink({ element: entry.elementType })">
+          <a :class="tagClass(entry.elementType)" :href="animonDexLink({ element: entry.elementType })">
             {{ entry.elementType }}
-          </RouterLink>
-          <RouterLink :class="tagClass(entry.emotionalType, 'emotion')" :to="animonDexLink({ affinity: entry.emotionalType })">
+          </a>
+          <a :class="tagClass(entry.emotionalType, 'emotion')" :href="animonDexLink({ affinity: entry.emotionalType })">
             {{ entry.emotionalType }}
-          </RouterLink>
+          </a>
           <span class="meta-pill">{{ entry.rarity }}</span>
         </div>
       </div>
@@ -78,42 +78,42 @@
             <div class="guide-block" style="margin-top: 28px">
               <h2>Related Pages</h2>
               <div class="related-links">
-                <RouterLink v-if="relatedEvolutions.length" class="related-link" :to="evolutionLink">
+                <a v-if="relatedEvolutions.length" class="related-link" :href="evolutionLink">
                   Evolution Guide
                   <small>{{ relatedEvolutions.length }} step{{ relatedEvolutions.length > 1 ? 's' : '' }}</small>
-                </RouterLink>
-                <RouterLink class="related-link" :to="animonDexLink({ element: entry.elementType })">
+                </a>
+                <a class="related-link" :href="animonDexLink({ element: entry.elementType })">
                   {{ entry.elementType }} Animon
                   <small>Filter Dex by element</small>
-                </RouterLink>
-                <RouterLink class="related-link" :to="animonDexLink({ affinity: entry.emotionalType })">
+                </a>
+                <a class="related-link" :href="animonDexLink({ affinity: entry.emotionalType })">
                   {{ entry.emotionalType }} Affinity
                   <small>Same emotional type</small>
-                </RouterLink>
-                <RouterLink v-if="entry.canBeKickstarter" class="related-link" to="/starters">
+                </a>
+                <a v-if="entry.canBeKickstarter" class="related-link" href="/starters">
                   Starter Guide
                   <small>Compare all starters</small>
-                </RouterLink>
-                <RouterLink v-if="bossLink" class="related-link" :to="bossLink">
+                </a>
+                <a v-if="bossLink" class="related-link" :href="bossLink">
                   Boss Entry
                   <small>{{ bossEntry.name }}</small>
-                </RouterLink>
-                <RouterLink class="related-link" to="/affinities">
+                </a>
+                <a class="related-link" href="/affinities">
                   Type Chart
                   <small>Elements &amp; affinities</small>
-                </RouterLink>
+                </a>
               </div>
             </div>
 
             <div class="btn-row">
-              <RouterLink class="btn-secondary" to="/animon">← Back to Dex</RouterLink>
-              <RouterLink
+              <a class="btn-secondary" href="/animon">← Back to Dex</a>
+              <a
                 v-if="relatedEvolutions.length"
                 class="btn-primary"
-                :to="evolutionLink"
+                :href="evolutionLink"
               >
                 Evolution Guide
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -126,7 +126,7 @@
       <div class="container">
         <h1>Animon Not Found</h1>
         <p class="lead">We do not have a dex page for this Animon yet — browse the full list or try another name.</p>
-        <RouterLink class="btn-primary" to="/animon">Browse Animon Dex</RouterLink>
+        <a class="btn-primary" href="/animon">Browse Animon Dex</a>
       </div>
     </section>
   </main>
@@ -134,7 +134,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import {
   animonDexLink,
   bossForAnimon,
@@ -148,7 +148,9 @@ import {
 const route = useRoute()
 const entry = computed(() => bySlug(route.params.slug))
 const relatedEvolutions = computed(() => (entry.value ? evolutionsForAnimon(entry.value.slug) : []))
-const evolutionLink = computed(() => (entry.value ? evolutionLinkForAnimon(entry.value.slug) : { path: '/evolutions' }))
+const evolutionLink = computed(() =>
+  entry.value ? evolutionLinkForAnimon(entry.value.slug) : '/evolutions',
+)
 const bossEntry = computed(() => (entry.value ? bossForAnimon(entry.value.slug) : null))
 const bossLink = computed(() => (entry.value ? bossLinkForAnimon(entry.value.slug) : null))
 </script>

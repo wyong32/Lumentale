@@ -3,9 +3,9 @@
     <div class="header-rainbow" aria-hidden="true"></div>
     <div class="container">
       <div class="header-content">
-        <RouterLink class="brand" to="/" aria-label="LumenTale home" @click="closeMenus">
+        <a class="brand" href="/" aria-label="LumenTale home" @click="closeMenus">
           <BrandMark />
-        </RouterLink>
+        </a>
 
         <button
           type="button"
@@ -22,14 +22,14 @@
 
         <nav id="main-nav" class="main-nav" :class="{ 'is-open': mobileOpen }" aria-label="Primary navigation">
           <div class="nav-tray">
-            <RouterLink class="nav-link" to="/" exact-active-class="is-active" @click="closeMenus">Home</RouterLink>
-            <RouterLink class="nav-link" to="/animon" active-class="is-active" @click="closeMenus">Animon</RouterLink>
-            <RouterLink class="nav-link" to="/beginner" active-class="is-active" @click="closeMenus">Beginner</RouterLink>
-            <RouterLink class="nav-link" to="/starters" active-class="is-active" @click="closeMenus">Starters</RouterLink>
-            <RouterLink class="nav-link" to="/affinities" active-class="is-active" @click="closeMenus">Affinities</RouterLink>
-            <RouterLink class="nav-link" to="/evolutions" active-class="is-active" @click="closeMenus">Evolutions</RouterLink>
-            <RouterLink class="nav-link" to="/guides" active-class="is-active" @click="closeMenus">Guides</RouterLink>
-            <RouterLink class="nav-link" to="/map" active-class="is-active" @click="closeMenus">Map</RouterLink>
+            <a class="nav-link" href="/" :class="{ 'is-active': route.path === '/' }" @click="closeMenus">Home</a>
+            <a class="nav-link" href="/animon" :class="{ 'is-active': isNavActive('/animon') }" @click="closeMenus">Animon</a>
+            <a class="nav-link" href="/beginner" :class="{ 'is-active': isNavActive('/beginner') }" @click="closeMenus">Beginner</a>
+            <a class="nav-link" href="/starters" :class="{ 'is-active': isNavActive('/starters') }" @click="closeMenus">Starters</a>
+            <a class="nav-link" href="/affinities" :class="{ 'is-active': isNavActive('/affinities') }" @click="closeMenus">Affinities</a>
+            <a class="nav-link" href="/evolutions" :class="{ 'is-active': isNavActive('/evolutions') }" @click="closeMenus">Evolutions</a>
+            <a class="nav-link" href="/guides" :class="{ 'is-active': isNavActive('/guides') }" @click="closeMenus">Guides</a>
+            <a class="nav-link" href="/map" :class="{ 'is-active': isNavActive('/map') }" @click="closeMenus">Map</a>
 
             <div
               class="nav-dropdown"
@@ -50,31 +50,61 @@
                 </svg>
               </button>
               <div class="nav-dropdown-menu" role="menu">
-                <RouterLink class="dropdown-link" to="/wiki" active-class="is-active" @click="closeMenus">
+                <a
+                  class="dropdown-link"
+                  href="/wiki"
+                  :class="{ 'is-active': route.path === '/wiki' }"
+                  @click="closeMenus"
+                >
                   <span class="dropdown-link-label">Wiki Home</span>
                   <small>Skills, items, cooking &amp; bosses</small>
-                </RouterLink>
+                </a>
                 <div class="dropdown-divider"></div>
-                <RouterLink class="dropdown-link" to="/wiki/skills" active-class="is-active" @click="closeMenus">
+                <a
+                  class="dropdown-link"
+                  href="/wiki/skills"
+                  :class="{ 'is-active': isNavActive('/wiki/skills') }"
+                  @click="closeMenus"
+                >
                   <span class="dropdown-link-label">Skills</span>
                   <small>Moves &amp; SP costs</small>
-                </RouterLink>
-                <RouterLink class="dropdown-link" to="/wiki/items" active-class="is-active" @click="closeMenus">
+                </a>
+                <a
+                  class="dropdown-link"
+                  href="/wiki/items"
+                  :class="{ 'is-active': isNavActive('/wiki/items') }"
+                  @click="closeMenus"
+                >
                   <span class="dropdown-link-label">Items</span>
                   <small>Bilias &amp; materials</small>
-                </RouterLink>
-                <RouterLink class="dropdown-link" to="/wiki/cooking" active-class="is-active" @click="closeMenus">
+                </a>
+                <a
+                  class="dropdown-link"
+                  href="/wiki/cooking"
+                  :class="{ 'is-active': isNavActive('/wiki/cooking') }"
+                  @click="closeMenus"
+                >
                   <span class="dropdown-link-label">Cooking</span>
                   <small>Fountain dishes</small>
-                </RouterLink>
-                <RouterLink class="dropdown-link" to="/wiki/crafting" active-class="is-active" @click="closeMenus">
+                </a>
+                <a
+                  class="dropdown-link"
+                  href="/wiki/crafting"
+                  :class="{ 'is-active': isNavActive('/wiki/crafting') }"
+                  @click="closeMenus"
+                >
                   <span class="dropdown-link-label">Crafting</span>
                   <small>Workshop upgrades</small>
-                </RouterLink>
-                <RouterLink class="dropdown-link" to="/wiki/bosses" active-class="is-active" @click="closeMenus">
+                </a>
+                <a
+                  class="dropdown-link"
+                  href="/wiki/bosses"
+                  :class="{ 'is-active': isNavActive('/wiki/bosses') }"
+                  @click="closeMenus"
+                >
                   <span class="dropdown-link-label">Bosses</span>
                   <small>Levels &amp; HP bars</small>
-                </RouterLink>
+                </a>
               </div>
             </div>
           </div>
@@ -86,7 +116,7 @@
 
 <script setup>
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import BrandMark from '@/components/BrandMark.vue'
 
 const wikiOpen = ref(false)
@@ -120,6 +150,10 @@ function toggleWiki() {
 function closeMenus() {
   mobileOpen.value = false
   wikiOpen.value = false
+}
+
+function isNavActive(href) {
+  return route.path === href || route.path.startsWith(`${href}/`)
 }
 
 watch(

@@ -4,9 +4,9 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
-            <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
+            <a href="/wiki">LumenTale Wiki</a>
             <span aria-hidden="true">›</span>
             <span>Skills</span>
           </nav>
@@ -141,22 +141,22 @@
           <article class="info-card">
             <h2>Related Pages</h2>
             <div class="related-links" style="margin-top: 8px">
-              <RouterLink class="related-link" to="/animon">
+              <a class="related-link" href="/animon">
                 Animon Dex
                 <small>Species move pools on detail pages</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/affinities">
+              </a>
+              <a class="related-link" href="/affinities">
                 Type Chart
                 <small>Elements and affinities</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki/items">
+              </a>
+              <a class="related-link" href="/wiki/items">
                 Items List
                 <small>Medicines and materials</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki">
+              </a>
+              <a class="related-link" href="/wiki">
                 Wiki Home
                 <small>All reference pages</small>
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -167,7 +167,7 @@
 
 <script setup>
 import { computed, onMounted, ref, toRef, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { skillTypes, skills, tagClass } from '@/lib/data'
 

@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Affinities</span>
           </nav>
@@ -35,12 +35,12 @@
           </p>
         </div>
         <div class="affinity-grid">
-          <RouterLink
+          <a
             v-for="item in affinityCards"
             :key="item.name"
             class="affinity-card"
             :class="`affinity-card-${item.name.toLowerCase()}`"
-            :to="animonDexLink({ affinity: item.name })"
+            :href="animonDexLink({ affinity: item.name })"
           >
             <div class="affinity-card-top">
               <img
@@ -63,7 +63,7 @@
               <li v-for="tip in item.tips" :key="tip">{{ tip }}</li>
             </ul>
             <span class="affinity-card-foot">Browse {{ item.name }} in the dex →</span>
-          </RouterLink>
+          </a>
         </div>
       </div>
     </section>
@@ -82,14 +82,14 @@
             <p class="elements-catalog-stat">
               <strong>{{ typedSkillsCount }}</strong> skills in our list carry a typed element.
             </p>
-            <RouterLink class="btn-primary" to="/animon">Open Animon Dex</RouterLink>
-            <RouterLink class="btn-secondary" to="/wiki/skills">Skills by type</RouterLink>
+            <a class="btn-primary" href="/animon">Open Animon Dex</a>
+            <a class="btn-secondary" href="/wiki/skills">Skills by type</a>
           </aside>
 
           <div class="elements-catalog-main">
             <ul class="element-catalog-list" role="list">
               <li v-for="row in sortedElements" :key="row.name">
-                <RouterLink class="element-catalog-row" :to="animonDexLink({ element: row.name })">
+                <a class="element-catalog-row" :href="animonDexLink({ element: row.name })">
                   <span class="element-catalog-icon-wrap">
                     <img
                       :src="typeIconSrc(row.name)"
@@ -111,7 +111,7 @@
                     <small>Animon</small>
                     <span class="element-catalog-pct">{{ row.pct }}%</span>
                   </div>
-                </RouterLink>
+                </a>
               </li>
             </ul>
           </div>
@@ -174,7 +174,7 @@
             <li><strong>Scan</strong> wild and trainer Animon early — resistances are per species, not global.</li>
             <li>Cover multiple elements on your bench before you funnel levels into one favourite.</li>
             <li>Save SP and affinity triggers for rival fights, story bosses, and multi-HP-bar encounters.</li>
-            <li>Open individual <RouterLink to="/animon">Animon detail pages</RouterLink> for species-specific notes.</li>
+            <li>Open individual <a href="/animon">Animon detail pages</a> for species-specific notes.</li>
           </ul>
         </article>
       </div>
@@ -222,7 +222,7 @@
             <ul>
               <li>Shield icons mean resistance — pivot types</li>
               <li>Hidden typings can flip an expected matchup</li>
-              <li>Check the <RouterLink to="/wiki/skills">Skills list</RouterLink> for target types</li>
+              <li>Check the <a href="/wiki/skills">Skills list</a> for target types</li>
             </ul>
           </article>
         </div>
@@ -244,22 +244,22 @@
           <article class="info-card">
             <h2>Go Deeper</h2>
             <div class="related-links" style="margin-top: 8px">
-              <RouterLink class="related-link" to="/beginner">
+              <a class="related-link" href="/beginner">
                 Beginner Guide
                 <small>First hours in Talea</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/starters">
+              </a>
+              <a class="related-link" href="/starters">
                 Starter Comparison
                 <small>Five opening partners</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/evolutions">
+              </a>
+              <a class="related-link" href="/evolutions">
                 Evolution Guide
                 <small>Branches and requirements</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki/bosses">
+              </a>
+              <a class="related-link" href="/wiki/bosses">
                 Boss Guide
                 <small>Levels, HP bars, affinities</small>
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -270,7 +270,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { animonDexLink, bosses, distribution, elementTypes, emotionalTypes, skills, tagClass } from '@/lib/data'
 import { getTypeInfo, hasBattleType, typeIconSrc } from '@/lib/typeInfo'
 

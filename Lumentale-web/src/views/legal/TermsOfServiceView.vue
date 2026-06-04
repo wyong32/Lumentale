@@ -3,7 +3,7 @@
     <section class="page-hero-section" aria-labelledby="legal-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
           <span>Legal</span>
           <span aria-hidden="true">›</span>
@@ -63,7 +63,7 @@
             Original text, layout, and compilation on the Site may be protected by copyright as a collective work. Game
             assets, names, and trademarks belong to their owners. Your use of the Site does not grant you any license to
             official game intellectual property beyond what is allowed by fair use or fan-resource norms in your
-            jurisdiction. See our <RouterLink to="/legal/copyright">Copyright</RouterLink> page for more detail.
+            jurisdiction. See our <a href="/legal/copyright">Copyright</a> page for more detail.
           </p>
 
           <h2>Disclaimer of Warranties</h2>
@@ -111,10 +111,10 @@
         </article>
 
         <nav class="legal-nav" aria-label="Legal pages">
-          <RouterLink to="/legal/privacy-policy">Privacy Policy</RouterLink>
-          <RouterLink to="/legal/copyright">Copyright</RouterLink>
-          <RouterLink to="/legal/about-us">About Us</RouterLink>
-          <RouterLink to="/legal/contact-us">Contact Us</RouterLink>
+          <a href="/legal/privacy-policy">Privacy Policy</a>
+          <a href="/legal/copyright">Copyright</a>
+          <a href="/legal/about-us">About Us</a>
+          <a href="/legal/contact-us">Contact Us</a>
         </nav>
       </div>
     </section>
@@ -122,5 +122,5 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 </script>

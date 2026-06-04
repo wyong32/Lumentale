@@ -5,9 +5,9 @@
         <div class="page-hero-content">
           <div>
             <nav class="breadcrumb" aria-label="Breadcrumb">
-              <RouterLink to="/">Home</RouterLink>
+              <a href="/">Home</a>
               <span aria-hidden="true">›</span>
-              <RouterLink to="/wiki">Wiki</RouterLink>
+              <a href="/wiki">Wiki</a>
               <span aria-hidden="true">›</span>
               <span>Recipes</span>
             </nav>
@@ -18,7 +18,7 @@
               Tap any material for its item page, or tap the dish for the full recipe.
             </p>
           </div>
-          <RouterLink class="btn-secondary" to="/wiki">← Wiki Home</RouterLink>
+          <a class="btn-secondary" href="/wiki">← Wiki Home</a>
         </div>
       </div>
     </section>
@@ -94,15 +94,15 @@
               <span v-else-if="recipe.successRate != null" class="recipe-success recipe-success--safe">
                 {{ recipe.successRate }}% success
               </span>
-              <RouterLink class="recipe-card-open" :to="`/wiki/recipes/${recipe.slug}`">
+              <a class="recipe-card-open" :href="`/wiki/recipes/${recipe.slug}`">
                 Open recipe
-              </RouterLink>
+              </a>
             </header>
 
             <div class="recipe-card-body">
-              <RouterLink
+              <a
                 class="recipe-output"
-                :to="`/wiki/recipes/${recipe.slug}`"
+                :href="`/wiki/recipes/${recipe.slug}`"
                 :aria-label="`Open ${recipe.result?.name || recipe.name} recipe`"
               >
                 <div class="recipe-output-frame">
@@ -116,7 +116,7 @@
                 </div>
                 <strong class="recipe-output-name">{{ recipe.result?.name || recipe.name }}</strong>
                 <span class="recipe-output-label">You make this</span>
-              </RouterLink>
+              </a>
 
               <div class="recipe-mix" :aria-label="`Ingredients for ${recipe.result?.name || recipe.name}`">
                 <p class="recipe-mix-label">
@@ -124,11 +124,11 @@
                   Combine
                 </p>
                 <div class="recipe-chips">
-                  <RouterLink
+                  <a
                     v-for="(ing, index) in recipe.ingredients"
                     :key="`${recipe.slug}-ing-${ing.guid}-${index}`"
                     class="recipe-chip"
-                    :to="itemDetailLink(ing.slug)"
+                    :href="itemDetailLink(ing.slug)"
                     :title="`View ${ing.name} item page`"
                   >
                     <img
@@ -140,7 +140,7 @@
                     />
                     <span class="recipe-chip-name">{{ ing.name }}</span>
                     <span class="recipe-chip-qty">×{{ ing.amount }}</span>
-                  </RouterLink>
+                  </a>
                 </div>
                 <span class="recipe-mix-arrow" aria-hidden="true">→</span>
               </div>
@@ -175,22 +175,22 @@
           <article class="info-card">
             <h2>Related Pages</h2>
             <div class="related-links" style="margin-top: 8px">
-              <RouterLink class="related-link" to="/wiki/items">
+              <a class="related-link" href="/wiki/items">
                 Items List
                 <small>Every material with its own detail page</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/beginner">
+              </a>
+              <a class="related-link" href="/beginner">
                 Beginner Guide
                 <small>When the Fountain unlocks and early food</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/evolutions">
+              </a>
+              <a class="related-link" href="/evolutions">
                 Evolution Guide
                 <small>Mats that double as evolve items</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki">
+              </a>
+              <a class="related-link" href="/wiki">
                 Wiki Home
                 <small>Skills, bosses, and more guides</small>
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -201,7 +201,7 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { imgSrc, itemDetailLink, recipeProjectTypes, recipes } from '@/lib/data'
 
 const query = ref('')

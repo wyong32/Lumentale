@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Search</span>
           </nav>
@@ -43,9 +43,9 @@
       <div class="container">
         <p class="page-intro">No results for “{{ query.trim() }}”. Try another name or open a full list from the wiki.</p>
         <div class="btn-row btn-row-center" style="margin-top: 16px">
-          <RouterLink class="btn-secondary" to="/animon">Animon Dex</RouterLink>
-          <RouterLink class="btn-secondary" to="/wiki/items">Items</RouterLink>
-          <RouterLink class="btn-secondary" to="/wiki/skills">Skills</RouterLink>
+          <a class="btn-secondary" href="/animon">Animon Dex</a>
+          <a class="btn-secondary" href="/wiki/items">Items</a>
+          <a class="btn-secondary" href="/wiki/skills">Skills</a>
         </div>
       </div>
     </section>
@@ -55,7 +55,7 @@
         <div class="container">
           <h2 id="search-animon" class="search-section-title">Animon</h2>
           <div class="dex-content search-dex-grid">
-            <RouterLink v-for="hit in results.animon" :key="hit.slug" class="dex-item" :to="hit.to">
+            <a v-for="hit in results.animon" :key="hit.slug" class="dex-item" :href="hit.to">
               <div class="dex-item-art">
                 <img :src="imgSrc(hit.image, hit.title)" :alt="hit.title" width="120" height="130" loading="lazy" />
               </div>
@@ -63,7 +63,7 @@
                 <strong>{{ hit.title }}</strong>
                 <small>{{ hit.subtitle }}</small>
               </div>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </section>
@@ -72,7 +72,7 @@
         <div class="container">
           <h2 id="search-items" class="search-section-title">Items</h2>
           <div class="search-item-list">
-            <RouterLink v-for="hit in results.items" :key="hit.slug" class="search-item-row" :to="hit.to">
+            <a v-for="hit in results.items" :key="hit.slug" class="search-item-row" :href="hit.to">
               <img
                 :src="imgSrc(hit.image, hit.title)"
                 :alt="`${hit.title} item icon`"
@@ -84,7 +84,7 @@
                 <strong>{{ hit.title }}</strong>
                 <small>{{ hit.subtitle }}</small>
               </div>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </section>
@@ -93,12 +93,12 @@
         <div class="container">
           <h2 id="search-recipes" class="search-section-title">Recipes</h2>
           <div class="search-recipe-grid">
-            <RouterLink
+            <a
               v-for="hit in results.recipes"
               :key="hit.slug"
               class="search-recipe-card"
               :class="hit.projectLabel === 'Cooking' ? 'recipe-card--cooking' : 'recipe-card--crafting'"
-              :to="hit.to"
+              :href="hit.to"
             >
               <img
                 :src="imgSrc(hit.image, hit.title)"
@@ -111,7 +111,7 @@
                 <strong>{{ hit.title }}</strong>
                 <small>{{ hit.subtitle }}</small>
               </div>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </section>
@@ -136,7 +136,9 @@
             </table>
           </div>
           <p class="result-note">
-            <RouterLink :to="{ path: '/wiki/skills', query: { q: query.trim() } }">Open full skills list with this filter</RouterLink>
+            <a :href="routeHref({ path: '/wiki/skills', query: { q: query.trim() } })">
+              Open full skills list with this filter
+            </a>
           </p>
         </div>
       </section>
@@ -145,18 +147,18 @@
         <div class="container">
           <h2 id="search-bosses" class="search-section-title">Bosses</h2>
           <div class="grid-cards">
-            <RouterLink
+            <a
               v-for="hit in results.bosses"
               :key="hit.slug"
               class="info-card search-boss-card"
-              :to="{ path: hit.to, hash: `#boss-${hit.slug}` }"
+              :href="routeHref({ path: hit.to, hash: `#boss-${hit.slug}` })"
             >
               <img :src="imgSrc(hit.image, hit.title)" :alt="hit.title" width="72" height="72" loading="lazy" />
               <div>
                 <strong>{{ hit.title }}</strong>
                 <small>{{ hit.subtitle }}</small>
               </div>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </section>
@@ -165,11 +167,11 @@
         <div class="container">
           <h2 id="search-guides" class="search-section-title">Guides</h2>
           <div class="guides-content">
-            <RouterLink v-for="hit in results.guides" :key="hit.slug" class="guide-card" :to="hit.to">
+            <a v-for="hit in results.guides" :key="hit.slug" class="guide-card" :href="hit.to">
               <h3>{{ hit.title }}</h3>
               <p>{{ hit.subtitle }}</p>
               <span class="guide-card-arrow">Read →</span>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </section>
@@ -179,8 +181,8 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { RouterLink, useRoute, useRouter } from 'vue-router'
-import { imgSrc } from '@/lib/data'
+import { useRoute, useRouter } from 'vue-router'
+import { imgSrc, routeHref } from '@/lib/data'
 import { searchSite } from '@/lib/search.js'
 
 const route = useRoute()

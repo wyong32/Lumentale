@@ -57,6 +57,26 @@ const recipeResultGuids = new Set(
   recipes.map((recipe) => recipe.result?.guid).filter(Boolean),
 )
 
+export function routeHref(to) {
+  if (typeof to === 'string') return to
+  if (!to || typeof to !== 'object') return '/'
+  let path = to.path || '/'
+  const query = to.query
+  if (query && typeof query === 'object') {
+    const params = new URLSearchParams()
+    for (const [key, value] of Object.entries(query)) {
+      if (value != null && value !== '') params.set(key, String(value))
+    }
+    const qs = params.toString()
+    if (qs) path = `${path}?${qs}`
+  }
+  if (to.hash) {
+    const hash = String(to.hash)
+    path += hash.startsWith('#') ? hash : `#${hash}`
+  }
+  return path
+}
+
 export function itemDetailLink(nameOrSlug) {
   const value = String(nameOrSlug || '').trim()
   if (!value) return '/wiki/items'
@@ -64,7 +84,7 @@ export function itemDetailLink(nameOrSlug) {
   if (bySlug) return `/wiki/items/${bySlug.slug}`
   const byName = items.find((entry) => entry.name.toLowerCase() === value.toLowerCase())
   if (byName) return `/wiki/items/${byName.slug}`
-  return { path: '/wiki/items', query: { q: value } }
+  return routeHref({ path: '/wiki/items', query: { q: value } })
 }
 
 export function itemRoleLabel(item) {
@@ -270,12 +290,12 @@ export function evolutionsForAnimon(slug) {
 
 export function evolutionLinkForAnimon(slug) {
   const rows = evolutionsForAnimon(slug)
-  if (!rows.length) return { path: '/evolutions' }
-  return {
+  if (!rows.length) return '/evolutions'
+  return routeHref({
     path: '/evolutions',
     query: { animon: slug },
     hash: `#${rows[0].anchorId}`,
-  }
+  })
 }
 
 export function bossForAnimon(slug) {
@@ -288,13 +308,17 @@ export function animonDexLink(filters = {}) {
   if (filters.affinity || filters.emotion) query.affinity = filters.affinity || filters.emotion
   if (filters.rarity) query.rarity = filters.rarity
   if (filters.q) query.q = filters.q
-  return Object.keys(query).length ? { path: '/animon', query } : { path: '/animon' }
+  return routeHref(Object.keys(query).length ? { path: '/animon', query } : { path: '/animon' })
 }
 
 export function bossLinkForAnimon(slug) {
   const boss = bossForAnimon(slug)
   if (!boss) return null
-  return { path: '/wiki/bosses', query: { animon: slug }, hash: `#boss-${boss.slug}` }
+  return routeHref({
+    path: '/wiki/bosses',
+    query: { animon: slug },
+    hash: `#boss-${boss.slug}`,
+  })
 }
 
 export function unique(values) {

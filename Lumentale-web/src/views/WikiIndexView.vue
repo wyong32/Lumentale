@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Wiki</span>
           </nav>
@@ -51,49 +51,49 @@
               Filter skills by element, items by category, recipes by cooking or crafting, or bosses by name — then jump
               to the Animon dex or evolution page when you are planning typings for a fight.
             </p>
-            <RouterLink class="btn-primary" to="/wiki/skills">Browse Skills</RouterLink>
+            <a class="btn-primary" href="/wiki/skills">Browse Skills</a>
           </aside>
           <div class="wiki-catalog">
-            <RouterLink class="wiki-row wiki-row-skills" to="/wiki/skills">
+            <a class="wiki-row wiki-row-skills" href="/wiki/skills">
               <div class="wiki-row-badge">{{ summary.counts.skills }}</div>
               <div class="wiki-row-body">
                 <h3>Skills List</h3>
                 <p>Power, SP cost, accuracy, cooldown, category, target type, and elemental classification for every move.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/items">
+            </a>
+            <a class="wiki-row wiki-row-items" href="/wiki/items">
               <div class="wiki-row-badge">{{ summary.counts.items }}</div>
               <div class="wiki-row-body">
                 <h3>Items List</h3>
                 <p>Bilias, medicines, ingredients, materials, and key items with prices, stacks, and shop data.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/cooking">
+            </a>
+            <a class="wiki-row wiki-row-items" href="/wiki/cooking">
               <div class="wiki-row-badge">{{ cookingCount }}</div>
               <div class="wiki-row-body">
                 <h3>Cooking</h3>
                 <p>Fountain cooking — ingredient amounts, success rates, and links to each material.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-items" to="/wiki/crafting">
+            </a>
+            <a class="wiki-row wiki-row-items" href="/wiki/crafting">
               <div class="wiki-row-badge">{{ craftingCount }}</div>
               <div class="wiki-row-body">
                 <h3>Crafting</h3>
                 <p>Workshop crafting — Bilia upgrades, tools, and material requirements.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
-            <RouterLink class="wiki-row wiki-row-bosses" to="/wiki/bosses">
+            </a>
+            <a class="wiki-row wiki-row-bosses" href="/wiki/bosses">
               <div class="wiki-row-badge">{{ bosses.counts.bossAnimon }}</div>
               <div class="wiki-row-body">
                 <h3>Boss Guide</h3>
                 <p>Boss Animon levels, HP bars, stat overrides, hidden typings, affinities, and dex cross-links.</p>
               </div>
               <span class="wiki-row-arrow" aria-hidden="true">→</span>
-            </RouterLink>
+            </a>
           </div>
         </div>
       </div>
@@ -107,42 +107,42 @@
           <p>Start here if you are new — or jump to the dex and type chart when team-building.</p>
         </div>
         <div class="guides-content">
-          <RouterLink class="guide-card" to="/animon">
+          <a class="guide-card" href="/animon">
             <span class="guide-card-num">{{ summary.counts.animon }}</span>
             <h3>Animon Dex</h3>
             <p>All numbered Animon with stats, types, catch rates, and evolution links.</p>
             <span class="guide-card-arrow">Open →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/beginner">
+          </a>
+          <a class="guide-card" href="/beginner">
             <span class="guide-card-num">01</span>
             <h3>Beginner Guide</h3>
             <p>First-hours route, SP rotation, and common mistakes to avoid.</p>
             <span class="guide-card-arrow">Read →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/starters">
+          </a>
+          <a class="guide-card" href="/starters">
             <span class="guide-card-num">5</span>
             <h3>Starters</h3>
             <p>Compare every Kickstarter starter before you lock in a partner.</p>
             <span class="guide-card-arrow">Compare →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/affinities">
+          </a>
+          <a class="guide-card" href="/affinities">
             <span class="guide-card-num">13+5</span>
             <h3>Affinities</h3>
             <p>Element types, emotional affinities, and battle trait timing.</p>
             <span class="guide-card-arrow">Learn →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/evolutions">
+          </a>
+          <a class="guide-card" href="/evolutions">
             <span class="guide-card-num">Guide</span>
             <h3>Evolutions</h3>
             <p>Level, item, weather, trait, and special evolution requirements.</p>
             <span class="guide-card-arrow">View →</span>
-          </RouterLink>
-          <RouterLink class="guide-card" to="/map">
+          </a>
+          <a class="guide-card" href="/map">
             <span class="guide-card-num">Map</span>
             <h3>Talea Map</h3>
             <p>Full Talea map art plus route notes as new areas unlock in your playthrough.</p>
             <span class="guide-card-arrow">Explore →</span>
-          </RouterLink>
+          </a>
         </div>
       </div>
     </section>
@@ -162,22 +162,22 @@
           <article class="info-card">
             <h2>More From the Site</h2>
             <div class="related-links" style="margin-top: 8px">
-              <RouterLink class="related-link" to="/guides">
+              <a class="related-link" href="/guides">
                 Player Guides
                 <small>Walkthroughs and tips</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/animon">
+              </a>
+              <a class="related-link" href="/animon">
                 Animon Dex
                 <small>Every species we track</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki/skills">
+              </a>
+              <a class="related-link" href="/wiki/skills">
                 Skills List
                 <small>Move data and filters</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki/bosses">
+              </a>
+              <a class="related-link" href="/wiki/bosses">
                 Boss Guide
                 <small>Levels and HP bars</small>
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -187,7 +187,7 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { bosses, recipes, summary } from '@/lib/data'
 
 const cookingCount = recipes.filter((r) => r.projectLabel === 'Cooking').length

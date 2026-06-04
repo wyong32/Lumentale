@@ -3,11 +3,11 @@
     <section class="page-hero-section wiki-detail-hero" aria-labelledby="recipe-detail-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
+          <a href="/wiki">LumenTale Wiki</a>
           <span aria-hidden="true">›</span>
-          <RouterLink :to="recipeListPath">{{ recipe.projectLabel }}</RouterLink>
+          <a :href="recipeListPath">{{ recipe.projectLabel }}</a>
           <span aria-hidden="true">›</span>
           <span>{{ displayName }}</span>
         </nav>
@@ -46,9 +46,9 @@
               <div v-if="resultItem" class="stat-row"><span>Result price</span><strong>{{ resultItem.price || '—' }}</strong></div>
             </div>
             <div v-if="resultItem" class="detail-art-cta">
-              <RouterLink class="btn-primary btn-block" :to="itemDetailLink(resultItem.slug)">
+              <a class="btn-primary btn-block" :href="itemDetailLink(resultItem.slug)">
                 Full item page
-              </RouterLink>
+              </a>
             </div>
           </aside>
 
@@ -76,11 +76,11 @@
                       Materials
                     </p>
                     <div class="recipe-chips">
-                      <RouterLink
+                      <a
                         v-for="(ing, index) in recipe.ingredients"
                         :key="`${recipe.slug}-ing-${ing.guid}-${index}`"
                         class="recipe-chip"
-                        :to="itemDetailLink(ing.slug)"
+                        :href="itemDetailLink(ing.slug)"
                       >
                         <img
                           :src="imgSrc(ing.image, ing.name)"
@@ -91,14 +91,14 @@
                         />
                         <span class="recipe-chip-name">{{ ing.name }}</span>
                         <span class="recipe-chip-qty">×{{ ing.amount }}</span>
-                      </RouterLink>
+                      </a>
                     </div>
                   </div>
                   <span class="detail-recipe-flow-arrow" aria-hidden="true">→</span>
-                  <RouterLink
+                  <a
                     v-if="resultItem"
                     class="detail-recipe-flow-result"
-                    :to="itemDetailLink(resultItem.slug)"
+                    :href="itemDetailLink(resultItem.slug)"
                   >
                     <img
                       :src="imgSrc(recipe.result?.image, displayName)"
@@ -107,7 +107,7 @@
                       height="64"
                     />
                     <strong>{{ displayName }}</strong>
-                  </RouterLink>
+                  </a>
                   <div v-else class="detail-recipe-flow-result">
                     <strong>{{ displayName }}</strong>
                   </div>
@@ -119,7 +119,7 @@
             <section v-if="resultItem" class="detail-panel detail-panel--primary" aria-labelledby="recipe-result-heading">
               <header class="detail-panel-head">
                 <h2 id="recipe-result-heading">What you get</h2>
-                <RouterLink class="detail-explore-link" :to="itemDetailLink(resultItem.slug)">Item page</RouterLink>
+                <a class="detail-explore-link" :href="itemDetailLink(resultItem.slug)">Item page</a>
               </header>
               <div class="detail-panel-body">
                 <div class="detail-glance-grid detail-glance-grid--compact">
@@ -204,11 +204,11 @@
                   After you craft {{ displayName }}, you can spend it in these other recipes.
                 </p>
                 <div class="detail-ref-list">
-                  <RouterLink
+                  <a
                     v-for="other in resultUsedElsewhere"
                     :key="other.slug"
                     class="detail-ref-row"
-                    :to="`/wiki/recipes/${other.slug}`"
+                    :href="`/wiki/recipes/${other.slug}`"
                   >
                     <img
                       :src="imgSrc(other.result?.image, other.result?.name)"
@@ -222,7 +222,7 @@
                       <p>{{ other.projectLabel }} · {{ other.ingredientSummary }}</p>
                     </div>
                     <span class="detail-ref-arrow" aria-hidden="true">→</span>
-                  </RouterLink>
+                  </a>
                 </div>
               </div>
             </section>
@@ -237,19 +237,19 @@
             <nav class="detail-explore" aria-label="Related wiki pages">
               <p class="detail-explore-title">Keep exploring</p>
               <div class="detail-explore-links">
-                <RouterLink class="detail-explore-link" :to="recipeListPath">All {{ recipe.projectLabel }} Recipes</RouterLink>
-                <RouterLink class="detail-explore-link" to="/wiki/items">All Items</RouterLink>
-                <RouterLink v-if="recipe.projectLabel === 'Cooking'" class="detail-explore-link" to="/beginner">
+                <a class="detail-explore-link" :href="recipeListPath">All {{ recipe.projectLabel }} Recipes</a>
+                <a class="detail-explore-link" href="/wiki/items">All Items</a>
+                <a v-if="recipe.projectLabel === 'Cooking'" class="detail-explore-link" href="/beginner">
                   Beginner Guide
-                </RouterLink>
+                </a>
               </div>
             </nav>
 
             <div class="btn-row detail-main-actions">
-              <RouterLink class="btn-secondary" :to="recipeListPath">← All {{ recipe.projectLabel }}</RouterLink>
-              <RouterLink v-if="resultItem" class="btn-primary" :to="itemDetailLink(resultItem.slug)">
+              <a class="btn-secondary" :href="recipeListPath">← All {{ recipe.projectLabel }}</a>
+              <a v-if="resultItem" class="btn-primary" :href="itemDetailLink(resultItem.slug)">
                 View {{ displayName }} Item
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -261,17 +261,17 @@
     <section class="page-hero-section">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/wiki/cooking">Cooking</RouterLink>
+          <a href="/wiki/cooking">Cooking</a>
           <span aria-hidden="true">›</span>
           <span>Not found</span>
         </nav>
         <h1>Recipe Not Found</h1>
         <p class="lead">We do not have this recipe in our list yet — browse cooking or crafting lists.</p>
         <div class="btn-row">
-          <RouterLink class="btn-primary" to="/wiki/cooking">Cooking Recipes</RouterLink>
-          <RouterLink class="btn-secondary" to="/wiki/crafting">Crafting Recipes</RouterLink>
+          <a class="btn-primary" href="/wiki/cooking">Cooking Recipes</a>
+          <a class="btn-secondary" href="/wiki/crafting">Crafting Recipes</a>
         </div>
       </div>
     </section>
@@ -280,7 +280,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import {
   formatDataLabel,
   itemBySlug,

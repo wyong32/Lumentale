@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Starters</span>
           </nav>
@@ -22,11 +22,11 @@
     <section class="dex-section">
       <div class="container">
         <div class="dex-content">
-          <RouterLink
+          <a
             v-for="entry in topStarters"
             :key="entry.slug"
             class="dex-item"
-            :to="`/animon/${entry.slug}`"
+            :href="`/animon/${entry.slug}`"
           >
             <div class="dex-item-art">
               <img :src="imgSrc(entry.image, entry.name)" :alt="entry.name" width="120" height="130" loading="lazy" />
@@ -39,7 +39,7 @@
                 <span :class="tagClass(entry.emotionalType, 'emotion')">{{ entry.emotionalType }}</span>
               </div>
             </div>
-          </RouterLink>
+          </a>
         </div>
       </div>
     </section>
@@ -66,22 +66,22 @@
               <tbody>
                 <tr v-for="entry in starterList" :key="entry.slug">
                   <td>
-                    <RouterLink class="row-link" :to="`/animon/${entry.slug}`">{{ entry.name }}</RouterLink>
+                    <a class="row-link" :href="`/animon/${entry.slug}`">{{ entry.name }}</a>
                   </td>
                   <td>
-                    <RouterLink :to="animonDexLink({ element: entry.elementType })">
+                    <a :href="animonDexLink({ element: entry.elementType })">
                       <span :class="tagClass(entry.elementType)">{{ entry.elementType }}</span>
-                    </RouterLink>
+                    </a>
                   </td>
                   <td>
-                    <RouterLink :to="animonDexLink({ affinity: entry.emotionalType })">
+                    <a :href="animonDexLink({ affinity: entry.emotionalType })">
                       <span :class="tagClass(entry.emotionalType, 'emotion')">{{ entry.emotionalType }}</span>
-                    </RouterLink>
+                    </a>
                   </td>
                   <td>{{ entry.minBst }}–{{ entry.maxBst }}</td>
                   <td>{{ entry.catchRate }}</td>
                   <td>
-                    <RouterLink :to="evolutionLinkForAnimon(entry.slug)">View line →</RouterLink>
+                    <a :href="evolutionLinkForAnimon(entry.slug)">View line →</a>
                   </td>
                 </tr>
               </tbody>
@@ -95,7 +95,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { animonDexLink, evolutionLinkForAnimon, imgSrc, starters, tagClass } from '@/lib/data'
 
 const starterList = computed(() => starters())

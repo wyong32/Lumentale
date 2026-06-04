@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Animon</span>
           </nav>
@@ -112,11 +112,11 @@
         </div>
 
         <div class="dex-content">
-          <RouterLink
+          <a
             v-for="entry in visible"
             :key="entry.slug"
             class="dex-item"
-            :to="`/animon/${entry.slug}`"
+            :href="`/animon/${entry.slug}`"
           >
             <div class="dex-item-art">
               <img
@@ -136,7 +136,7 @@
               </div>
               <small>BST {{ entry.minBst }}–{{ entry.maxBst }} · {{ entry.rarity }}</small>
             </div>
-          </RouterLink>
+          </a>
         </div>
         <div v-if="hasMore" ref="sentinel" class="list-load-sentinel" aria-hidden="true"></div>
         <p v-if="hasMore" class="result-note">
@@ -150,7 +150,7 @@
 
 <script setup>
 import { computed, onMounted, ref, toRef, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { animon, elementTypes, emotionalTypes, imgSrc, rarityTypes, tagClass } from '@/lib/data'
 

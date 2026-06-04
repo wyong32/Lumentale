@@ -5,9 +5,9 @@
         <div class="page-hero-content">
           <div>
             <nav class="breadcrumb" aria-label="Breadcrumb">
-              <RouterLink to="/">Home</RouterLink>
+              <a href="/">Home</a>
               <span aria-hidden="true">›</span>
-              <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
+              <a href="/wiki">LumenTale Wiki</a>
               <span aria-hidden="true">›</span>
               <span>Items</span>
             </nav>
@@ -18,7 +18,7 @@
               materials, and key items. Open any row for shop price, effects, and linked cooking or crafting recipes.
             </p>
           </div>
-          <RouterLink class="btn-secondary" to="/wiki">← Wiki Home</RouterLink>
+          <a class="btn-secondary" href="/wiki">← Wiki Home</a>
         </div>
       </div>
     </section>
@@ -68,7 +68,7 @@
               <tbody>
                 <tr v-for="item in visible" :key="item.slug">
                   <td>
-                    <RouterLink class="row-link" :to="`/wiki/items/${item.slug}`">
+                    <a class="row-link" :href="`/wiki/items/${item.slug}`">
                       <img
                         class="row-thumb"
                         :src="imgSrc(item.image, item.name)"
@@ -80,7 +80,7 @@
                       <div>
                         <strong>{{ item.name }}</strong>
                       </div>
-                    </RouterLink>
+                    </a>
                   </td>
                   <td>{{ itemRoleLabel(item) }}</td>
                   <td>{{ item.type }}</td>
@@ -103,7 +103,7 @@
 
 <script setup>
 import { computed, ref, toRef, watch } from 'vue'
-import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { imgSrc, itemBySlug, itemRoleLabel, itemTypes, items } from '@/lib/data'
 

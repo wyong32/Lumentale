@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Evolutions</span>
           </nav>
@@ -28,9 +28,9 @@
         <div class="evo-focus-banner">
           <p>
             Showing evolution steps for
-            <RouterLink :to="`/animon/${animonFocus.slug}`">{{ animonFocus.name }}</RouterLink>
+            <a :href="`/animon/${animonFocus.slug}`">{{ animonFocus.name }}</a>
           </p>
-          <RouterLink class="btn-secondary" to="/evolutions">Show all evolutions</RouterLink>
+          <a class="btn-secondary" href="/evolutions">Show all evolutions</a>
         </div>
       </div>
     </section>
@@ -95,7 +95,7 @@
           <div v-if="section.name === 'Starter lines' && !animonFocus" class="evo-starter-grid">
             <article v-for="chain in starterChains" :key="chain.starter.slug" class="evo-chain-card">
               <header class="evo-chain-head">
-                <RouterLink class="evo-chain-starter" :to="`/animon/${chain.starter.slug}`">
+                <a class="evo-chain-starter" :href="`/animon/${chain.starter.slug}`">
                   <img
                     :src="imgSrc(chain.starter.image, chain.starter.name)"
                     :alt="chain.starter.name"
@@ -110,7 +110,7 @@
                       <span :class="tagClass(chain.starter.emotionalType, 'emotion')">{{ chain.starter.emotionalType }}</span>
                     </div>
                   </div>
-                </RouterLink>
+                </a>
               </header>
               <div
                 v-for="step in chain.steps"
@@ -121,27 +121,27 @@
               >
                 <div class="evo-mini-flow">
                   <div class="evo-mini-side">
-                    <RouterLink
+                    <a
                       v-for="entry in stepFromEntries(step)"
                       :key="`${step.anchorId}-from-${entry.slug}`"
                       class="evo-mini-node"
-                      :to="`/animon/${entry.slug}`"
+                      :href="`/animon/${entry.slug}`"
                     >
                       <img :src="imgSrc(entry.image, entry.name)" :alt="entry.name" width="48" height="48" loading="lazy" />
                       <span>{{ entry.name }}</span>
-                    </RouterLink>
+                    </a>
                   </div>
                   <span class="evo-mini-arrow" aria-hidden="true">→</span>
                   <div class="evo-mini-side">
-                    <RouterLink
+                    <a
                       v-for="entry in stepToEntries(step)"
                       :key="`${step.anchorId}-to-${entry.slug}`"
                       class="evo-mini-node"
-                      :to="`/animon/${entry.slug}`"
+                      :href="`/animon/${entry.slug}`"
                     >
                       <img :src="imgSrc(entry.image, entry.name)" :alt="entry.name" width="48" height="48" loading="lazy" />
                       <span>{{ entry.name }}</span>
-                    </RouterLink>
+                    </a>
                   </div>
                 </div>
                 <p class="evo-chain-req">{{ step.requirement }}</p>
@@ -165,11 +165,11 @@
               <div class="evo-card-flow">
                 <div class="evo-card-side">
                   <template v-for="(name, idx) in parseEvolutionNames(row.from)">
-                    <RouterLink
+                    <a
                       v-if="byName(name)"
                       :key="`${row.anchorId}-from-${name}`"
                       class="evo-card-node"
-                      :to="`/animon/${byName(name).slug}`"
+                      :href="`/animon/${byName(name).slug}`"
                     >
                       <img
                         :src="imgSrc(byName(name).image, name)"
@@ -179,7 +179,7 @@
                         loading="lazy"
                       />
                       <span>{{ name }}</span>
-                    </RouterLink>
+                    </a>
                     <span v-else :key="`${row.anchorId}-from-${name}`" class="evo-card-node evo-card-node-text">{{ name }}</span>
                     <span
                       v-if="idx < parseEvolutionNames(row.from).length - 1"
@@ -191,11 +191,11 @@
                 <span class="evo-card-arrow" aria-hidden="true">→</span>
                 <div class="evo-card-side">
                   <template v-for="(name, idx) in parseEvolutionNames(row.to)">
-                    <RouterLink
+                    <a
                       v-if="byName(name)"
                       :key="`${row.anchorId}-to-${name}`"
                       class="evo-card-node"
-                      :to="`/animon/${byName(name).slug}`"
+                      :href="`/animon/${byName(name).slug}`"
                     >
                       <img
                         :src="imgSrc(byName(name).image, name)"
@@ -205,7 +205,7 @@
                         loading="lazy"
                       />
                       <span>{{ name }}</span>
-                    </RouterLink>
+                    </a>
                     <span v-else :key="`${row.anchorId}-to-${name}`" class="evo-card-node evo-card-node-text">{{ name }}</span>
                     <span
                       v-if="idx < parseEvolutionNames(row.to).length - 1"
@@ -239,22 +239,22 @@
           <article class="info-card">
             <h2>Related Guides</h2>
             <div class="related-links" style="margin-top: 8px">
-              <RouterLink class="related-link" to="/starters">
+              <a class="related-link" href="/starters">
                 Starter Comparison
                 <small>Five opening partners</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/beginner">
+              </a>
+              <a class="related-link" href="/beginner">
                 Beginner Guide
                 <small>First hours in Talea</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/animon">
+              </a>
+              <a class="related-link" href="/animon">
                 Animon Dex
                 <small>Stats, types, and links</small>
-              </RouterLink>
-              <RouterLink class="related-link" to="/wiki/items">
+              </a>
+              <a class="related-link" href="/wiki/items">
                 Items List
                 <small>Evolution materials &amp; keys</small>
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -265,7 +265,7 @@
 
 <script setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import {
   byName,
   bySlug,

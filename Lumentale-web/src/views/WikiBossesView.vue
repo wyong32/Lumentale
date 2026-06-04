@@ -5,9 +5,9 @@
         <div class="page-hero-content">
           <div>
             <nav class="breadcrumb" aria-label="Breadcrumb">
-              <RouterLink to="/">Home</RouterLink>
+              <a href="/">Home</a>
               <span aria-hidden="true">›</span>
-              <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
+              <a href="/wiki">LumenTale Wiki</a>
               <span aria-hidden="true">›</span>
               <span>Bosses</span>
             </nav>
@@ -19,7 +19,7 @@
               you are walking into before you spend medicine.
             </p>
           </div>
-          <RouterLink class="btn-secondary" to="/wiki">← Wiki Home</RouterLink>
+          <a class="btn-secondary" href="/wiki">← Wiki Home</a>
         </div>
       </div>
     </section>
@@ -74,20 +74,20 @@
               <div class="stat-row"><span>Target BST</span><strong>{{ boss.targetBst }}</strong></div>
             </div>
             <div class="boss-info-actions">
-              <RouterLink
+              <a
                 v-if="boss.originSlug"
                 class="boss-info-link"
-                :to="`/animon/${boss.originSlug}`"
+                :href="`/animon/${boss.originSlug}`"
               >
                 View in Dex →
-              </RouterLink>
-              <RouterLink
+              </a>
+              <a
                 v-if="boss.originSlug && evolutionLinkForAnimon(boss.originSlug).query"
                 class="boss-info-link"
-                :to="evolutionLinkForAnimon(boss.originSlug)"
+                :href="evolutionLinkForAnimon(boss.originSlug)"
               >
                 Evolution line →
-              </RouterLink>
+              </a>
             </div>
           </article>
         </div>
@@ -103,7 +103,7 @@
 
 <script setup>
 import { computed, nextTick, onMounted, ref, toRef, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { bosses, evolutionLinkForAnimon, imgSrc, tagClass } from '@/lib/data'
 

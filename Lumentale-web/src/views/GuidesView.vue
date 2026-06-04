@@ -4,7 +4,7 @@
       <div class="container">
         <div class="page-hero-content page-hero-center">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <RouterLink to="/">Home</RouterLink>
+            <a href="/">Home</a>
             <span aria-hidden="true">›</span>
             <span>Guides</span>
           </nav>
@@ -35,12 +35,12 @@
           </header>
 
           <div class="guide-list-grid">
-            <RouterLink
+            <a
               v-for="guide in guides"
               :key="guide.id"
               class="guide-list-card"
               :class="{ 'guide-list-card--featured': guide.isHome }"
-              :to="`/guides/${guide.addressBar}`"
+              :href="`/guides/${guide.addressBar}`"
             >
               <div class="guide-list-cover">
                 <img
@@ -63,7 +63,7 @@
                   <time class="guide-list-date" :datetime="guide.publishDate">{{ formatDate(guide.publishDate) }}</time>
                 </div>
               </div>
-            </RouterLink>
+            </a>
           </div>
         </template>
 
@@ -84,7 +84,7 @@
               </ul>
               <p class="guides-empty-foot">
                 Have a topic you want first?
-                <RouterLink to="/legal/contact-us">Send a suggestion</RouterLink>
+                <a href="/legal/contact-us">Send a suggestion</a>
               </p>
             </aside>
 
@@ -104,7 +104,7 @@
                   <h4 :id="`guides-group-${group.id}`" class="guides-resource-label">{{ group.label }}</h4>
                   <ul class="guides-resource-list">
                     <li v-for="item in group.items" :key="item.to">
-                      <RouterLink class="guides-resource-link" :to="item.to">
+                      <a class="guides-resource-link" :href="item.to">
                         <span class="guides-resource-icon" :class="`guides-resource-icon--${item.tone}`" aria-hidden="true">
                           {{ item.glyph }}
                         </span>
@@ -113,7 +113,7 @@
                           <small>{{ item.desc }}</small>
                         </span>
                         <span class="guides-resource-go" aria-hidden="true">→</span>
-                      </RouterLink>
+                      </a>
                     </li>
                   </ul>
                 </section>
@@ -128,7 +128,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { guides, imgSrc } from '@/lib/data'
 
 const hasGuides = computed(() => guides.length > 0)

@@ -3,9 +3,9 @@
     <section class="page-hero-section" aria-labelledby="guide-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
-          <RouterLink to="/guides">Guides</RouterLink>
+          <a href="/guides">Guides</a>
           <span aria-hidden="true">›</span>
           <span>{{ guide.title }}</span>
         </nav>
@@ -32,7 +32,7 @@
             </figure>
             <article class="guide-detail-content" v-html="prepared.html" />
             <div class="guide-detail-footer">
-              <RouterLink class="btn-secondary" to="/guides">← All Guides</RouterLink>
+              <a class="btn-secondary" href="/guides">← All Guides</a>
             </div>
           </div>
 
@@ -59,7 +59,7 @@
     <section class="data-section">
       <div class="container">
         <p class="result-note">Guide not found.</p>
-        <RouterLink class="btn-secondary" to="/guides">← All Guides</RouterLink>
+        <a class="btn-secondary" href="/guides">← All Guides</a>
       </div>
     </section>
   </main>
@@ -67,7 +67,7 @@
 
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { guideBySlug, imgSrc } from '@/lib/data'
 
 const route = useRoute()

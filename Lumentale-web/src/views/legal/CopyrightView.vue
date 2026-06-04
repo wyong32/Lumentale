@@ -3,7 +3,7 @@
     <section class="page-hero-section" aria-labelledby="legal-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
           <span>Legal</span>
           <span aria-hidden="true">›</span>
@@ -90,10 +90,10 @@
         </article>
 
         <nav class="legal-nav" aria-label="Legal pages">
-          <RouterLink to="/legal/privacy-policy">Privacy Policy</RouterLink>
-          <RouterLink to="/legal/terms-of-service">Terms of Service</RouterLink>
-          <RouterLink to="/legal/about-us">About Us</RouterLink>
-          <RouterLink to="/legal/contact-us">Contact Us</RouterLink>
+          <a href="/legal/privacy-policy">Privacy Policy</a>
+          <a href="/legal/terms-of-service">Terms of Service</a>
+          <a href="/legal/about-us">About Us</a>
+          <a href="/legal/contact-us">Contact Us</a>
         </nav>
       </div>
     </section>
@@ -101,5 +101,5 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 </script>

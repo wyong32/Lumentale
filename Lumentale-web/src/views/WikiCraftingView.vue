@@ -5,9 +5,9 @@
         <div class="page-hero-content">
           <div>
             <nav class="breadcrumb" aria-label="Breadcrumb">
-              <RouterLink to="/">Home</RouterLink>
+              <a href="/">Home</a>
               <span aria-hidden="true">›</span>
-              <RouterLink to="/wiki">LumenTale Wiki</RouterLink>
+              <a href="/wiki">LumenTale Wiki</a>
               <span aria-hidden="true">›</span>
               <span>Crafting</span>
             </nav>
@@ -18,7 +18,7 @@
               with ingredient lists and success rates.
             </p>
           </div>
-          <RouterLink class="btn-secondary" to="/wiki">← Wiki Home</RouterLink>
+          <a class="btn-secondary" href="/wiki">← Wiki Home</a>
         </div>
       </div>
     </section>
@@ -37,7 +37,7 @@
       <div class="container">
         <p class="result-note" style="margin-top: 0">
           Looking for food buffs?
-          <RouterLink to="/wiki/cooking">Open Cooking recipes</RouterLink>
+          <a href="/wiki/cooking">Open Cooking recipes</a>
         </p>
       </div>
     </section>
@@ -46,7 +46,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import WikiRecipeListSection from '@/components/WikiRecipeListSection.vue'
 import { recipes } from '@/lib/data'
 

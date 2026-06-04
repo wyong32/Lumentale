@@ -910,7 +910,7 @@ img {
 }
 
 .legal-nav a:hover,
-.legal-nav a.router-link-active {
+.legal-nav a.is-active {
   border-color: #93c5fd;
   background: #eff6ff;
   color: var(--blue-dark);

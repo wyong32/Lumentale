@@ -9,9 +9,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand-card">
-          <RouterLink class="brand footer-brand" to="/" aria-label="LumenTale home">
+          <a class="brand footer-brand" href="/" aria-label="LumenTale home">
             <BrandMark />
-          </RouterLink>
+          </a>
           <p>
             Unofficial guides for LumenTale: Memories of Trey — Animon dex, starter picks, type chart, evolution
             routes, and searchable skills, items, recipes, and bosses for your Talea run.
@@ -25,34 +25,34 @@
 
         <div class="footer-links-grid">
           <div class="footer-col">
-            <h4>Explore</h4>
-            <RouterLink to="/animon">Animon Dex</RouterLink>
-            <RouterLink to="/starters">Starters</RouterLink>
-            <RouterLink to="/affinities">Affinities</RouterLink>
-            <RouterLink to="/evolutions">Evolutions</RouterLink>
+            <h2>Explore</h2>
+            <a href="/animon">Animon Dex</a>
+            <a href="/starters">Starters</a>
+            <a href="/affinities">Affinities</a>
+            <a href="/evolutions">Evolutions</a>
           </div>
           <div class="footer-col">
-            <h4>Guides</h4>
-            <RouterLink to="/beginner">Beginner Guide</RouterLink>
-            <RouterLink to="/guides">All Guides</RouterLink>
-            <RouterLink to="/map">Talea Map</RouterLink>
+            <h2>Guides</h2>
+            <a href="/beginner">Beginner Guide</a>
+            <a href="/guides">All Guides</a>
+            <a href="/map">Talea Map</a>
           </div>
           <div class="footer-col">
-            <h4>Wiki</h4>
-            <RouterLink to="/wiki">Wiki Home</RouterLink>
-            <RouterLink to="/wiki/skills">Skills</RouterLink>
-            <RouterLink to="/wiki/items">Items</RouterLink>
-            <RouterLink to="/wiki/cooking">Cooking</RouterLink>
-            <RouterLink to="/wiki/crafting">Crafting</RouterLink>
-            <RouterLink to="/wiki/bosses">Bosses</RouterLink>
+            <h2>Wiki</h2>
+            <a href="/wiki">Wiki Home</a>
+            <a href="/wiki/skills">Skills</a>
+            <a href="/wiki/items">Items</a>
+            <a href="/wiki/cooking">Cooking</a>
+            <a href="/wiki/crafting">Crafting</a>
+            <a href="/wiki/bosses">Bosses</a>
           </div>
           <div class="footer-col">
-            <h4>Legal</h4>
-            <RouterLink to="/legal/privacy-policy">Privacy Policy</RouterLink>
-            <RouterLink to="/legal/terms-of-service">Terms of Service</RouterLink>
-            <RouterLink to="/legal/copyright">Copyright</RouterLink>
-            <RouterLink to="/legal/about-us">About Us</RouterLink>
-            <RouterLink to="/legal/contact-us">Contact Us</RouterLink>
+            <h2>Legal</h2>
+            <a href="/legal/privacy-policy" rel="noopener noreferrer nofollow">Privacy Policy</a>
+            <a href="/legal/terms-of-service" rel="noopener noreferrer nofollow">Terms of Service</a>
+            <a href="/legal/copyright" rel="noopener noreferrer nofollow">Copyright</a>
+            <a href="/legal/about-us" rel="noopener noreferrer nofollow">About Us</a>
+            <a href="/legal/contact-us" rel="noopener noreferrer nofollow">Contact Us</a>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import BrandMark from '@/components/BrandMark.vue'
 import summary from '@/data/summary.json'
 </script>

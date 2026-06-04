@@ -46,9 +46,9 @@
           :style="{ '--entry-i': index }"
         >
           <article class="recipe-entry-card">
-            <RouterLink
+            <a
               class="recipe-entry-main"
-              :to="`/wiki/recipes/${recipe.slug}`"
+              :href="`/wiki/recipes/${recipe.slug}`"
               :aria-label="`Open ${recipe.result?.name || recipe.name} recipe`"
             >
               <div class="recipe-entry-art">
@@ -91,7 +91,7 @@
                   />
                 </svg>
               </span>
-            </RouterLink>
+            </a>
 
             <div
               v-if="recipe.ingredients.length"
@@ -100,11 +100,11 @@
             >
               <span class="recipe-entry-ing-label">{{ isCooking ? 'Combine' : 'Materials' }}</span>
               <div class="recipe-entry-ing-track">
-                <RouterLink
+                <a
                   v-for="(ing, ingIndex) in recipe.ingredients"
                   :key="`${recipe.slug}-ing-${ing.guid}-${ingIndex}`"
                   class="recipe-ing-pill"
-                  :to="itemDetailLink(ing.slug)"
+                  :href="itemDetailLink(ing.slug)"
                   :title="`View ${ing.name}`"
                   @click.stop
                 >
@@ -119,7 +119,7 @@
                   </span>
                   <span class="recipe-ing-pill-name">{{ ing.name }}</span>
                   <span class="recipe-ing-pill-qty">×{{ ing.amount }}</span>
-                </RouterLink>
+                </a>
               </div>
             </div>
           </article>
@@ -139,7 +139,7 @@
 
 <script setup>
 import { computed, ref, toRef } from 'vue'
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { imgSrc, itemDetailLink, recipes } from '@/lib/data'
 

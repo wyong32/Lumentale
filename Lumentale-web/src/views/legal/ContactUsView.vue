@@ -3,7 +3,7 @@
     <section class="page-hero-section" aria-labelledby="legal-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <RouterLink to="/">Home</RouterLink>
+          <a href="/">Home</a>
           <span aria-hidden="true">›</span>
           <span>Legal</span>
           <span aria-hidden="true">›</span>
@@ -45,7 +45,7 @@
               <strong>Guide ideas</strong> — a short description of the topic and any steps you have already tested in-game;
             </li>
             <li>
-              <strong>Copyright or legal notices</strong> — see our <RouterLink to="/legal/copyright">Copyright</RouterLink>
+              <strong>Copyright or legal notices</strong> — see our <a href="/legal/copyright">Copyright</a>
               page and mark the subject line clearly (e.g. “DMCA Notice”).
             </li>
           </ul>
@@ -63,8 +63,8 @@
 
           <h2>Privacy and Legal Contacts</h2>
           <p>
-            Privacy-related requests under our <RouterLink to="/legal/privacy-policy">Privacy Policy</RouterLink> and
-            contractual questions under our <RouterLink to="/legal/terms-of-service">Terms of Service</RouterLink> should
+            Privacy-related requests under our <a href="/legal/privacy-policy">Privacy Policy</a> and
+            contractual questions under our <a href="/legal/terms-of-service">Terms of Service</a> should
             also be sent to <a href="mailto:wyong@lumentale.org">wyong@lumentale.org</a> with a descriptive subject line.
           </p>
 
@@ -83,10 +83,10 @@
         </article>
 
         <nav class="legal-nav" aria-label="Legal pages">
-          <RouterLink to="/legal/privacy-policy">Privacy Policy</RouterLink>
-          <RouterLink to="/legal/terms-of-service">Terms of Service</RouterLink>
-          <RouterLink to="/legal/copyright">Copyright</RouterLink>
-          <RouterLink to="/legal/about-us">About Us</RouterLink>
+          <a href="/legal/privacy-policy">Privacy Policy</a>
+          <a href="/legal/terms-of-service">Terms of Service</a>
+          <a href="/legal/copyright">Copyright</a>
+          <a href="/legal/about-us">About Us</a>
         </nav>
       </div>
     </section>
@@ -94,5 +94,5 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 </script>

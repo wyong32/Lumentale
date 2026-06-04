@@ -5,7 +5,7 @@
         <div class="page-hero-content">
           <div>
             <nav class="breadcrumb" aria-label="Breadcrumb">
-              <RouterLink to="/">Home</RouterLink>
+              <a href="/">Home</a>
               <span aria-hidden="true">›</span>
               <span>Beginner</span>
             </nav>
@@ -17,8 +17,8 @@
               new players down.
             </p>
             <div class="btn-row">
-              <RouterLink class="btn-primary" to="/starters">Compare Starters</RouterLink>
-              <RouterLink class="btn-secondary" to="/animon">Open Animon Dex</RouterLink>
+              <a class="btn-primary" href="/starters">Compare Starters</a>
+              <a class="btn-secondary" href="/animon">Open Animon Dex</a>
             </div>
           </div>
         </div>
@@ -33,12 +33,12 @@
           <p>Work through these steps in order during your opening hours in Talea.</p>
         </div>
         <div class="guides-content">
-          <RouterLink v-for="step in routeSteps" :key="step.title" class="guide-card" :to="step.to">
+          <a v-for="step in routeSteps" :key="step.title" class="guide-card" :href="step.to">
             <span class="guide-card-num">{{ step.num }}</span>
             <h3>{{ step.title }}</h3>
             <p>{{ step.text }}</p>
             <span class="guide-card-arrow">{{ step.cta }} →</span>
-          </RouterLink>
+          </a>
         </div>
       </div>
     </section>
@@ -58,8 +58,8 @@
             routes, so a starter whose affinity you enjoy using in battle matters more than raw stat totals on paper.
           </p>
           <ul>
-            <li>Compare all five on the <RouterLink to="/starters">Starters page</RouterLink> before committing.</li>
-            <li>Read each line's evolution branch on the <RouterLink to="/evolutions">Evolution Guide</RouterLink>.</li>
+            <li>Compare all five on the <a href="/starters">Starters page</a> before committing.</li>
+            <li>Read each line's evolution branch on the <a href="/evolutions">Evolution Guide</a>.</li>
             <li>Open the Animon detail page for move lists and BST once you shortlist a favourite.</li>
           </ul>
         </article>
@@ -92,7 +92,7 @@
               Each activation costs extra SP.
             </li>
           </ul>
-          <RouterLink class="btn-secondary" to="/affinities">Read the full type chart</RouterLink>
+          <a class="btn-secondary" href="/affinities">Read the full type chart</a>
         </article>
 
         <article class="guide-block">
@@ -109,9 +109,9 @@
             burn them at the Fountain until you know what they feed.
           </p>
           <ul>
-            <li>Use the <RouterLink to="/animon">Animon Dex</RouterLink> to compare species while hunting on each route.</li>
+            <li>Use the <a href="/animon">Animon Dex</a> to compare species while hunting on each route.</li>
             <li>Save before branching evolutions and major boss attempts.</li>
-            <li>Check the <RouterLink to="/map">Talea map</RouterLink> as new regions unlock so you do not backtrack blindly.</li>
+            <li>Check the <a href="/map">Talea map</a> as new regions unlock so you do not backtrack blindly.</li>
           </ul>
         </article>
 
@@ -128,9 +128,9 @@
             replace a route capture with a "weaker" looking species.
           </p>
           <ul>
-            <li>Browse the <RouterLink to="/wiki/skills">Skills list</RouterLink> when building your core four.</li>
-            <li>Look up medicines and materials on the <RouterLink to="/wiki/items">Items list</RouterLink>.</li>
-            <li>Review boss levels and HP bars on the <RouterLink to="/wiki/bosses">Boss guide</RouterLink>.</li>
+            <li>Browse the <a href="/wiki/skills">Skills list</a> when building your core four.</li>
+            <li>Look up medicines and materials on the <a href="/wiki/items">Items list</a>.</li>
+            <li>Review boss levels and HP bars on the <a href="/wiki/bosses">Boss guide</a>.</li>
           </ul>
         </article>
       </div>
@@ -171,22 +171,22 @@
             have checked their stats and packed enough medicine.
           </p>
           <div class="related-links" style="margin-top: 20px">
-            <RouterLink class="related-link" to="/evolutions">
+            <a class="related-link" href="/evolutions">
               Evolution Guide
               <small>Branches, items, and special triggers</small>
-            </RouterLink>
-            <RouterLink class="related-link" to="/wiki/skills">
+            </a>
+            <a class="related-link" href="/wiki/skills">
               Skills List
               <small>Move lists for team building</small>
-            </RouterLink>
-            <RouterLink class="related-link" to="/wiki/bosses">
+            </a>
+            <a class="related-link" href="/wiki/bosses">
               Boss Guide
               <small>Levels, HP bars, and affinities</small>
-            </RouterLink>
-            <RouterLink class="related-link" to="/guides">
+            </a>
+            <a class="related-link" href="/guides">
               More Guides
               <small>Additional walkthroughs</small>
-            </RouterLink>
+            </a>
           </div>
         </article>
       </div>
@@ -195,7 +195,7 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import {} from 'vue-router'
 
 const routeSteps = [
   {
