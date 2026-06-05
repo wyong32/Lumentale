@@ -3252,8 +3252,8 @@ img {
 
 /* Inner-page hero band (excludes home .hero-section and guide detail .guide-detail-hero) */
 .page-hero-section {
-  padding: 18px 0 20px;
-  margin-bottom: 20px;
+  padding: 24px 0 22px;
+  margin-bottom: 22px;
   border-bottom: 1px solid color-mix(in srgb, var(--blue) 14%, transparent);
   background: linear-gradient(
     180deg,
@@ -3263,46 +3263,46 @@ img {
 }
 
 .page-hero-section .breadcrumb {
-  margin-bottom: 10px;
-  font-size: 0.8rem;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
 }
 
 .page-hero-section .eyebrow {
   height: auto;
-  min-height: 22px;
-  padding: 2px 10px;
-  margin-bottom: 8px;
+  min-height: 24px;
+  padding: 3px 12px;
+  margin-bottom: 10px;
   border-radius: 6px;
   background: color-mix(in srgb, var(--blue) 7%, #fff);
   border: 1px solid color-mix(in srgb, var(--blue) 14%, transparent);
   color: var(--blue-dark);
-  font-size: 0.64rem;
+  font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   box-shadow: none;
 }
 
+/* Larger than content h2 (clamp 1.45rem–2rem), smaller than home h1 */
 .page-hero-section h1 {
-  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
-  line-height: 1.22;
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  line-height: 1.18;
   letter-spacing: -0.02em;
-  max-width: 46ch;
 }
 
 .page-hero-section .lead {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  max-width: 58ch;
+  margin-top: 10px;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  max-width: 640px;
 }
 
 .page-hero-section .page-meta {
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .page-hero-section .legal-updated {
-  margin-top: 8px;
-  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: 0.82rem;
 }
 
 .page-hero-content {
@@ -3310,32 +3310,36 @@ img {
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 16px 24px;
+  gap: 18px 24px;
 }
 
 .page-hero-center {
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   gap: 0;
 }
 
 .page-hero-center .breadcrumb {
-  width: 100%;
+  justify-content: center;
 }
 
-.page-hero-center h1,
+.page-hero-center h1 {
+  max-width: 48ch;
+}
+
 .page-hero-center .lead {
-  max-width: 52ch;
+  max-width: 640px;
+  margin-inline: auto;
 }
 
 .page-hero-center .page-meta {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .page-hero-section .lead-center {
-  margin-inline: 0;
-  text-align: left;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .page-meta {
@@ -5791,18 +5795,20 @@ img {
   }
 
   .page-hero-section {
-    padding: 14px 0 16px;
-    margin-bottom: 16px;
+    padding: 18px 0 18px;
+    margin-bottom: 18px;
   }
 
   .page-hero-section h1 {
-    font-size: 1.28rem;
+    font-size: 1.62rem;
+  }
+
+  .page-hero-center h1 {
     max-width: none;
   }
 
   .page-hero-section .lead {
-    font-size: 0.86rem;
-    max-width: none;
+    font-size: 0.9rem;
   }
 
   .page-hero-content {
