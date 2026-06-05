@@ -72,28 +72,62 @@ function urlNode(loc, lastmod, changefreq, priority) {
   </url>`
 }
 
+function normalizePathKey(loc) {
+  if (loc === '/') return '/'
+  return `/${String(loc).replace(/^\/+|\/+$/g, '')}`
+}
+
+function pathKeyFromLoc(loc) {
+  try {
+    return normalizePathKey(new URL(loc).pathname)
+  } catch {
+    return normalizePathKey(loc)
+  }
+}
+
+/** Read lastmod dates from the previous sitemap so only new URLs get a fresh date */
+function loadExistingLastmods(filePath) {
+  const map = new Map()
+  if (!fs.existsSync(filePath)) return map
+
+  const content = fs.readFileSync(filePath, 'utf8')
+  for (const match of content.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) {
+    const key = pathKeyFromLoc(match[1])
+    const date = coerceSitemapLastmod(match[2], '')
+    if (date) map.set(key, date)
+  }
+  return map
+}
+
 function generate() {
-  const lastmod = new Date().toISOString().split('T')[0]
+  const buildDay = new Date().toISOString().split('T')[0]
+  const publicPath = path.join(__dirname, '../public/sitemap.xml')
+  const existingLastmods = loadExistingLastmods(publicPath)
   const seen = new Set()
+  let newUrlCount = 0
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `
 
-  function appendUrl(loc, lastmodValue, changefreq, priority) {
-    const key = loc === '/' ? '/' : `/${String(loc).replace(/^\/+|\/+$/g, '')}`
+  function appendUrl(loc, newLastmod, changefreq, priority) {
+    const key = normalizePathKey(loc)
     if (seen.has(key)) return
     seen.add(key)
+
+    const lastmodValue = existingLastmods.has(key) ? existingLastmods.get(key) : newLastmod
+    if (!existingLastmods.has(key)) newUrlCount += 1
+
     xml += `\n${urlNode(key, lastmodValue, changefreq, priority)}`
   }
 
   for (const r of staticRoutes) {
-    appendUrl(r.path, lastmod, getChangefreq(r.name), getPriority(r.name))
+    appendUrl(r.path, buildDay, getChangefreq(r.name), getPriority(r.name))
   }
 
   for (const entry of animon) {
     if (!entry?.slug) continue
-    appendUrl(`/animon/${entry.slug}`, lastmod, getChangefreq('animon-detail'), getPriority('animon-detail'))
+    appendUrl(`/animon/${entry.slug}`, buildDay, getChangefreq('animon-detail'), getPriority('animon-detail'))
   }
 
   const guideList = Array.isArray(guides) ? guides : guides.default || []
@@ -101,23 +135,21 @@ function generate() {
     if (!g?.addressBar) continue
     const slug = String(g.addressBar).replace(/^\/+|\/+$/g, '')
     const guidePath = `/guides/${slug}`
-    const date = coerceSitemapLastmod(g.publishDate, lastmod)
+    const date = coerceSitemapLastmod(g.publishDate, buildDay)
     appendUrl(guidePath, date, getChangefreq('guide-detail'), getPriority('guide-detail'))
   }
 
   for (const recipe of recipes) {
     if (!recipe?.slug) continue
-    appendUrl(`/wiki/recipes/${recipe.slug}`, lastmod, getChangefreq('wiki-recipe-detail'), getPriority('wiki-recipe-detail'))
+    appendUrl(`/wiki/recipes/${recipe.slug}`, buildDay, getChangefreq('wiki-recipe-detail'), getPriority('wiki-recipe-detail'))
   }
 
   for (const item of items) {
     if (!item?.slug) continue
-    appendUrl(`/wiki/items/${item.slug}`, lastmod, getChangefreq('wiki-item-detail'), getPriority('wiki-item-detail'))
+    appendUrl(`/wiki/items/${item.slug}`, buildDay, getChangefreq('wiki-item-detail'), getPriority('wiki-item-detail'))
   }
 
   xml += '\n</urlset>'
-
-  const publicPath = path.join(__dirname, '../public/sitemap.xml')
   const publicDir = path.dirname(publicPath)
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true })
@@ -127,6 +159,7 @@ function generate() {
 
   const count = (xml.match(/<url>/g) || []).length
   console.log(`Total URLs: ${count} (${fullDomain})`)
+  console.log(`New URLs this run: ${newUrlCount} (existing lastmod preserved: ${count - newUrlCount})`)
 }
 
 generate()
