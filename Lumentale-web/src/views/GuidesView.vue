@@ -24,14 +24,9 @@
 
     <section class="guides-page-section" :aria-labelledby="hasGuides ? 'guides-catalog-title' : 'guides-fallback-title'">
       <div class="container">
-        <!-- Published articles -->
         <template v-if="hasGuides">
           <header class="guides-catalog-head">
-            <div>
-              <p class="eyebrow">Published</p>
-              <h2 id="guides-catalog-title">{{ guides.length }} walkthrough{{ guides.length === 1 ? '' : 's' }}</h2>
-            </div>
-            <p class="guides-catalog-note">Full routes and boss notes verified in-game where possible.</p>
+            <h2 id="guides-catalog-title">All Guides</h2>
           </header>
 
           <div class="guide-list-grid">
@@ -39,27 +34,25 @@
               v-for="guide in guides"
               :key="guide.id"
               class="guide-list-card"
-              :class="{ 'guide-list-card--featured': guide.isHome }"
               :href="`/guides/${guide.addressBar}`"
             >
               <div class="guide-list-cover">
                 <img
                   :src="imgSrc(guide.imageUrl, guide.title)"
                   :alt="guide.imageAlt"
-                  width="420"
-                  height="236"
                   loading="lazy"
+                  decoding="async"
                 />
                 <span v-if="guide.isHome" class="guide-list-featured">Featured</span>
               </div>
               <div class="guide-list-body">
-                <div class="page-meta">
-                  <span v-for="tag in guide.tags" :key="tag" class="meta-pill">{{ tag }}</span>
+                <div v-if="guide.tags?.length" class="guide-list-tags">
+                  <span v-for="tag in guide.tags" :key="tag" class="meta-pill meta-pill--sm">{{ tag }}</span>
                 </div>
-                <h3>{{ guide.title }}</h3>
-                <p>{{ guide.description }}</p>
+                <h3 class="guide-list-title">{{ guide.title }}</h3>
+                <p class="guide-list-desc">{{ guide.description }}</p>
                 <div class="guide-list-foot">
-                  <span class="guide-list-arrow">Read guide →</span>
+                  <p v-if="guide.author" class="guide-list-author">{{ guide.author }}</p>
                   <time class="guide-list-date" :datetime="guide.publishDate">{{ formatDate(guide.publishDate) }}</time>
                 </div>
               </div>
@@ -67,7 +60,6 @@
           </div>
         </template>
 
-        <!-- Empty catalog -->
         <template v-else>
           <div class="guides-empty-layout">
             <aside class="guides-empty-panel" aria-labelledby="guides-fallback-title">
@@ -128,7 +120,6 @@
 
 <script setup>
 import { computed } from 'vue'
-import {} from 'vue-router'
 import { guides, imgSrc } from '@/lib/data'
 
 const hasGuides = computed(() => guides.length > 0)
@@ -138,81 +129,27 @@ const starterGroups = [
     id: 'play',
     label: 'Start your run',
     items: [
-      {
-        to: '/beginner',
-        title: 'Beginner route',
-        desc: 'First hours, SP rotation, capture basics',
-        glyph: '▶',
-        tone: 'play',
-      },
-      {
-        to: '/starters',
-        title: 'Starter comparison',
-        desc: 'Five partners, elements, and level-40 branches',
-        glyph: '★',
-        tone: 'play',
-      },
-      {
-        to: '/map',
-        title: 'Talea map',
-        desc: 'Regions and route orientation',
-        glyph: '◎',
-        tone: 'play',
-      },
+      { to: '/beginner', title: 'Beginner route', desc: 'First hours, SP rotation, capture basics', glyph: '▶', tone: 'play' },
+      { to: '/starters', title: 'Starter comparison', desc: 'Five partners, elements, and level-40 branches', glyph: '★', tone: 'play' },
+      { to: '/map', title: 'Talea map', desc: 'Regions and route orientation', glyph: '◎', tone: 'play' },
     ],
   },
   {
     id: 'build',
     label: 'Build your team',
     items: [
-      {
-        to: '/affinities',
-        title: 'Types & ATTRIBUTE',
-        desc: '13 elements and five battle affinities',
-        glyph: '◆',
-        tone: 'build',
-      },
-      {
-        to: '/evolutions',
-        title: 'Evolution guide',
-        desc: 'Level, item, and special requirements',
-        glyph: '↗',
-        tone: 'build',
-      },
-      {
-        to: '/animon',
-        title: 'Animon dex',
-        desc: 'Stats, catch rates, and filters',
-        glyph: '#',
-        tone: 'build',
-      },
+      { to: '/affinities', title: 'Types & ATTRIBUTE', desc: '13 elements and five battle affinities', glyph: '◆', tone: 'build' },
+      { to: '/evolutions', title: 'Evolution guide', desc: 'Level, item, and special requirements', glyph: '↗', tone: 'build' },
+      { to: '/animon', title: 'Animon dex', desc: 'Stats, catch rates, and filters', glyph: '#', tone: 'build' },
     ],
   },
   {
     id: 'lookup',
     label: 'Mid-fight lookup',
     items: [
-      {
-        to: '/wiki/skills',
-        title: 'Skills',
-        desc: 'Move data and filters',
-        glyph: '⚡',
-        tone: 'lookup',
-      },
-      {
-        to: '/wiki/bosses',
-        title: 'Bosses',
-        desc: 'Levels and HP bars',
-        glyph: '⚔',
-        tone: 'lookup',
-      },
-      {
-        to: '/wiki',
-        title: 'Wiki home',
-        desc: 'Items, cooking, crafting, and more',
-        glyph: '≡',
-        tone: 'lookup',
-      },
+      { to: '/wiki/skills', title: 'Skills', desc: 'Move data and filters', glyph: '⚡', tone: 'lookup' },
+      { to: '/wiki/bosses', title: 'Bosses', desc: 'Levels and HP bars', glyph: '⚔', tone: 'lookup' },
+      { to: '/wiki', title: 'Wiki home', desc: 'Items, cooking, crafting, and more', glyph: '≡', tone: 'lookup' },
     ],
   },
 ]
@@ -221,8 +158,9 @@ function formatDate(value) {
   if (!value) return ''
   return new Date(value).toLocaleDateString('en-US', {
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
   })
 }
+
 </script>

@@ -1,42 +1,58 @@
 <template>
   <main v-if="guide" class="page-main page-main--guide-detail">
-    <section class="page-hero-section" aria-labelledby="guide-title">
+    <section class="guide-detail-hero" aria-labelledby="guide-title">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
+        <nav class="breadcrumb guide-detail-breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span aria-hidden="true">›</span>
           <a href="/guides">Guides</a>
           <span aria-hidden="true">›</span>
-          <span>{{ guide.title }}</span>
+          <span class="guide-detail-breadcrumb-current">Article</span>
         </nav>
-        <div class="page-meta" style="margin-top: 14px">
-          <span v-for="tag in guide.tags" :key="tag" class="meta-pill">{{ tag }}</span>
-          <time class="meta-pill" :datetime="guide.publishDate">{{ formatDate(guide.publishDate) }}</time>
-        </div>
-        <h1 id="guide-title">{{ guide.title }}</h1>
-        <p class="lead">{{ guide.description }}</p>
-      </div>
-    </section>
 
-    <section class="data-section guide-detail-section">
-      <div class="container">
-        <div class="guide-detail-page">
-          <div class="guide-detail-main">
-            <figure class="guide-detail-cover">
-              <img
-                :src="imgSrc(guide.imageUrl, guide.title)"
-                :alt="guide.imageAlt"
-                width="800"
-                height="450"
-              />
-            </figure>
-            <article class="guide-detail-content" v-html="prepared.html" />
-            <div class="guide-detail-footer">
-              <a class="btn-secondary" href="/guides">← All Guides</a>
+        <div class="guide-detail-hero-grid">
+          <div class="guide-detail-hero-copy">
+            <div v-if="guide.tags?.length" class="guide-detail-tags">
+              <span v-for="tag in guide.tags" :key="tag" class="meta-pill">{{ tag }}</span>
+            </div>
+            <h1 id="guide-title" class="guide-detail-title">{{ guide.title }}</h1>
+            <p class="guide-detail-lead">{{ guide.description }}</p>
+
+            <div class="guide-detail-byline">
+              <p v-if="guide.author" class="guide-detail-author">{{ guide.author }}</p>
+              <div class="guide-detail-meta-chips">
+                <time class="guide-detail-chip" :datetime="guide.publishDate">
+                  <span class="guide-detail-chip-label">Published</span>
+                  {{ formatDate(guide.publishDate) }}
+                </time>
+              </div>
             </div>
           </div>
 
-          <aside class="guide-detail-sidebar" aria-label="Table of contents">
+          <figure class="guide-detail-hero-cover">
+            <img
+              :src="imgSrc(guide.imageUrl, guide.title)"
+              :alt="guide.imageAlt"
+              width="720"
+              height="405"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-detail-section">
+      <div class="container">
+        <div class="guide-detail-page">
+          <article class="guide-detail-main">
+            <div class="guide-detail-article guide-detail-content" v-html="prepared.html" />
+            <footer class="guide-detail-footer">
+              <a class="btn-secondary" href="/guides">← All Guides</a>
+            </footer>
+          </article>
+
+          <aside v-if="prepared.headings.length" class="guide-detail-sidebar" aria-label="Table of contents">
             <nav class="guide-toc">
               <p class="guide-toc-label">On this page</p>
               <a
@@ -55,6 +71,7 @@
       </div>
     </section>
   </main>
+
   <main v-else class="page-main">
     <section class="data-section">
       <div class="container">
@@ -79,7 +96,7 @@ const prepared = computed(() => prepareGuideHtml(guide.value?.detailsHtml || '')
 let observer = null
 
 function stripTags(text) {
-  return String(text).replace(/<[^>]+>/g, '').trim()
+  return String(text).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
 function slugify(text) {

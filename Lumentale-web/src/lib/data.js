@@ -229,7 +229,17 @@ export const PLACEHOLDER =
   'https://placehold.co/40x40/ffdac1/6B9B7B?text='
 
 export function imgSrc(path, label = 'LT') {
-  if (path && path.startsWith('/images/')) return path
+  if (!path) {
+    const text = encodeURIComponent(String(label).slice(0, 4))
+    return `${PLACEHOLDER}${text}`
+  }
+  if (
+    path.startsWith('/images/') ||
+    path.startsWith('https://') ||
+    path.startsWith('http://')
+  ) {
+    return path
+  }
   const text = encodeURIComponent(String(label).slice(0, 4))
   return `${PLACEHOLDER}${text}`
 }
