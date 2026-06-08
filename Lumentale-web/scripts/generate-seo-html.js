@@ -395,33 +395,11 @@ function writeRouteHtml(template, route) {
   }
 }
 
-function patchEntryHtml(html) {
-  const assetsDir = path.join(distDir, 'assets')
-  if (!fs.existsSync(assetsDir) || html.includes('modulepreload')) return html
-
-  const homeRouteChunks = ['HomeView-', 'homeSchema-', 'typeInfo-']
-  const preloads = fs
-    .readdirSync(assetsDir)
-    .filter(
-      (name) =>
-        name.endsWith('.js') && homeRouteChunks.some((prefix) => name.startsWith(prefix)),
-    )
-    .map((name) => `<link rel="modulepreload" crossorigin href="/assets/${name}">`)
-    .join('\n    ')
-
-  if (!preloads) return html
-
-  return html.replace(
-    /(<script type="module" crossorigin src="\/assets\/index-[^"]+\.js"><\/script>)/,
-    `${preloads}\n    $1`,
-  )
-}
-
 function generate() {
   if (!fs.existsSync(templatePath)) {
     throw new Error(`Missing built index.html at ${templatePath}`)
   }
-  const template = patchEntryHtml(fs.readFileSync(templatePath, 'utf8'))
+  const template = fs.readFileSync(templatePath, 'utf8')
   const routes = buildRoutes()
   for (const route of routes) writeRouteHtml(template, route)
   console.log(`SEO HTML generated for ${routes.length} routes`)

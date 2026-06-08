@@ -280,8 +280,29 @@ const router = createRouter({
   },
 })
 
+const DETAIL_ROUTE_NAMES = new Set([
+  'animon-detail',
+  'guide-detail',
+  'wiki-recipe-detail',
+  'wiki-item-detail',
+])
+
 router.afterEach((to) => {
-  import('@/seo/pageSeo.js').then(({ applyNavigationSeo }) => applyNavigationSeo(to))
+  if (DETAIL_ROUTE_NAMES.has(to.name)) {
+    import('@/seo/pageSeo.js').then(({ applyNavigationSeo }) => applyNavigationSeo(to))
+    return
+  }
+
+  if (to.meta?.title) {
+    import('@/seo/documentMeta.js').then(({ applyDocumentSeo }) => {
+      applyDocumentSeo({
+        path: to.path,
+        title: to.meta.title,
+        description: to.meta.description,
+        keywords: to.meta.keywords,
+      })
+    })
+  }
 })
 
 export default router

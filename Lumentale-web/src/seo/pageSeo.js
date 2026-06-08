@@ -1,4 +1,3 @@
-import { bySlug, guideBySlug, itemBySlug, recipeBySlug, summary } from '@/lib/data'
 import { animonDetailSeo } from './animonSeo.js'
 import { itemDetailSeo } from './itemSeo.js'
 import { recipeDetailSeo } from './recipeSeo.js'
@@ -11,7 +10,6 @@ import {
   buildGraphJsonLd,
   resolveCanonicalUrl,
 } from './documentMeta.js'
-import { buildHomeJsonLd } from './homeSchema.js'
 import { fitDescription, fitTitle } from './utils.js'
 
 const NOT_FOUND_ANIMON_TDK = {
@@ -46,19 +44,9 @@ const NOT_FOUND_ITEM_TDK = {
   keywords: 'LumenTale items, Memories of Trey items, item not found, LumenTale crafting',
 }
 
-function resolvePageMeta(to) {
-  if (to.meta?.title && to.meta?.description) {
-    return {
-      title: to.meta.title,
-      description: to.meta.description,
-      keywords: to.meta.keywords,
-    }
-  }
-  return seoConfig.defaults
-}
-
-export function applyNavigationSeo(to) {
+export async function applyNavigationSeo(to) {
   const siteUrl = seoConfig.fullDomain.replace(/\/+$/, '')
+  const { bySlug, guideBySlug, itemBySlug, recipeBySlug } = await import('@/lib/data')
 
   if (to.name === 'animon-detail') {
     const entry = bySlug(to.params.slug)
@@ -226,33 +214,5 @@ export function applyNavigationSeo(to) {
         ]),
       ),
     })
-    return
   }
-
-  const meta = resolvePageMeta(to)
-  const path = to.path
-  const url = resolveCanonicalUrl(path)
-
-  if (to.name === 'home') {
-    applyDocumentSeo({
-      path,
-      title: meta.title,
-      description: meta.description,
-      keywords: meta.keywords,
-      jsonLd: buildHomeJsonLd({
-        title: meta.title,
-        description: meta.description,
-        url,
-        animonCount: summary.counts.animon,
-      }),
-    })
-    return
-  }
-
-  applyDocumentSeo({
-    path,
-    title: meta.title,
-    description: meta.description,
-    keywords: meta.keywords,
-  })
 }

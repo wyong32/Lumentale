@@ -68,7 +68,6 @@
 </template>
 
 <script setup>
-import {} from 'vue-router'
 import BrandMark from '@/components/BrandMark.vue'
 import summary from '@/data/summary.json'
 </script>
