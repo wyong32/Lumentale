@@ -1028,6 +1028,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lumentale.org/guides/lumentale-20-rare-animon-spawn-locations</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lumentale.org/guides/lumentale-unlock-all-legendary-locations</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lumentale.org/wiki/recipes/aglietta</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>

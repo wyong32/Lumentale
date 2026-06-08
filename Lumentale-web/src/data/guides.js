@@ -338,7 +338,325 @@ export default [
   </p>
   <p>While a three-level gap isn't massive in the grand scheme of things, it saves you roughly 20 minutes of tedious early-game wild grinding. If you aren't married to a specific design, taking the recommended starter is always the optimal play for a faster start.
   </p>`,
-  }
+  },
+
+  {
+    id: 3,
+    title: "Lumentale: Memories of Trey — Complete Hunter Directory for All 20 Rare Animons",
+    description: "Finding every rare Animon in Lumentale: Memories of Trey is the ultimate test of a tamer's patience. Many wikis contain outdated or misleading beta location data, leading to hours of wasted grinding. After extensive datatesting (with big thanks to Card Maniac, rag, and PG from the official Discord community), we have mapped out and verified the exact locations, weather requirements, and progression triggers for all 20 rare Animons featured in the game.",
+    tags: [],
+    publishDate: "2026-06-08",
+    imageUrl: "/images/guides/guides03.webp",
+    imageAlt: "Lumentale Memories of Trey  Complete Hunter Directory for All 20 Rare Animons",
+    seo: {
+      title: "Lumentale: Memories of Trey — The 20 Rare Animon Spawn &amp; Hunt Locations Guide",
+      description: "An exhaustive, hand-verified guide to locating and catching all 20 rare Animons in Lumentale: Memories of Trey. Includes Verdi's RNG manipulation buff, weather locks, and progression requirements.",
+      keywords: "Lumentale Memories of Trey, Lumentale rare animon, Lumentale spawn locations, Mewaii location, Toypette puzzle, Chagma fountain, Twinkler AniSpace, Kageka Area 04, Ozelash spawn"
+    },
+    author: "LumenTale Fan Guide Team",
+    addressBar: "lumentale-20-rare-animon-spawn-locations",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub 
+  </p>
+  <p> Tested on Build: Release v1.0 | Sourced from: 70+ Hours of Live In-Game Datatesting
+  </p>
+  <p>Finding every rare Animon in Lumentale: Memories of Trey is the ultimate test of a tamer's patience. Many wikis contain outdated or misleading beta location data, leading to hours of wasted grinding. After extensive datatesting (with big thanks to Card Maniac, rag, and PG from the official Discord community), we have mapped out and verified the exact locations, weather requirements, and progression triggers for all 20 rare Animons featured in the game.
+  </p>
+  <h2>The Foundation: Verdi's Card-Sacrifice RNG Buff
+  </h2>
+  <p>Before stepping out to hunt any rare target on this list, you must prime your overworld spawn rates. Hunting without this setup is highly inefficient.
+  </p>
+  <p>First, spawn Verdi (The Wandering Collector). After defeating the local zone leader, enter and immediately exit your AniSpace (the PC storage menu). This loading transition forces Verdi to appear nearby on the overworld.
+  </p>
+  <p>Hand Verdi a card of the Animon you wish to hunt. This sacrifices the card to activate a hidden +20% spawn rate boost for that specific species in your current area.
+  </p>
+  <ol>
+  <li>Buff Quality: Standard cards and holographic cards give the exact same +20% boost. Do not waste your holographic cards here.
+  </li>
+  <li>Duration: The buff lasts exactly **30 real-world minutes** (which translate to **10 in-game hours**).
+  </li>
+  <li>Monitoring the Buff: There is no visual status icon on your UI. Use a physical stopwatch, or watch the in-game clock—it wears off exactly 10 in-game hours after activation. Opening your main menu *pauses* this timer; starting encounters does not.
+  </li>
+  <li>No Stacking: Giving Verdi multiple cards at once does not stack the buff. Submit one card every 30 minutes.
+  </li>
+  </ol>
+  <p><img src="/images/guides/guides03-01.webp" alt="Verdi's Card-Sacrifice RNG Buff" width="50%">
+  </p>
+  <h2>The Ultimate 20 Rare Animon Hunt Directory
+  </h2>
+  <p>Below is the complete, verified list of all 20 rare Animons featured in the game, categorized by their true spawn coordinates and specific environmental triggers.
+  </p>
+  <h3>1. Mewaii
+  </h3>
+  <p>True Location: Plains Biome, specifically the **second swamp entrance** path.
+  </p>
+  <p><img src="/images/guides/guides03-02.webp" alt="Where to find Mewaii" width="50%">
+  </p>
+  <p>Trailer Disinformation: Official promotional footage showed Mewaii wandering the starting Plains Biome fields. After 30 minutes of testing that starting zone, we recorded zero encounters. Do not waste your time there; head directly to the second swamp entrance where we successfully spawned six of them in a single buff window.
+  </p>
+  <h3>2. Ozelash
+  </h3>
+  <p>True Location: Area 23.
+  </p>
+  <p>Spawning Trick: Stick to the center of Area 23. This spot has an extremely high concentration of spawn points, allowing you to cycle spawns quickly. It usually appears as a companion spawn alongside wild Alpagall.
+  </p>
+  <h3>3. Florenco
+  </h3>
+  <p>True Location: Aeolyc Islands (Area 15).
+  </p>
+  <p>Requirements: Florenco can spawn in the upper cliff section once you obtain **Water Power** to swim across. Alternatively, it can spawn in the small, isolated section accessible only after obtaining **Grass Power**.
+  </p>
+  <h3>4. Vortail
+  </h3>
+  <p>True Location: Aeolyc Islands (Area 15).
+  </p>
+  <p>Requirements: Similar to Florenco, Vortail is locked to the upper cliff sections (requires Water Power) and the isolated ledges (requires Grass Power). It patrols these high-elevation grassy paths.
+  </p>
+  <h3>5. Salabel
+  </h3>
+  <p>True Location: Suvius Peak (Area 12).
+  </p>
+  <p>Requirements: You must have **Water Power** unlocked to cross the lava rivers. Salabel likes to hide in the dark, extreme corners of the caves. If it doesn't appear on the overworld, run into wild Skeletape packs—Salabel regularly spawns as a hidden battle partner.
+  </p>
+  <h3>6. Kageka
+  </h3>
+  <p>True Location: Area 04.
+  </p>
+  <p>Requirements: Kageka does not spawn in the location shown in early promotional trailers. It is tucked away in Area 04, which is completely inaccessible until both the North and South areas of the zone have been cleared. It spawns as a hidden partner under the overworld Griblin models.
+  </p>
+  <h3>7. Rainxy (Weather Locked)
+  </h3>
+  <p>True Location: Area 01.
+  </p>
+  <p>Requirements: Rainxy is strictly weather-sensitive and will **only spawn while it is actively raining** (indicated by the cloud/rain icon on your mini-map). We found the most consistent spawn loop is running back and forth directly outside the camp entrance during downpours.
+  </p>
+  <h3>8. Minube (Yellow Variant)
+  </h3>
+  <p>True Location: Area 06 Cave.
+  </p>
+  <p>Requirements: Navigate deep into the cave layout of Area 06 with your Verdi card buff active. The yellow variant spawns directly on the rocky cavern floor.
+  </p>
+  <h3>9. Yokora
+  </h3>
+  <p>True Location: Darkwood Forest (Area 07).
+  </p>
+  <p>Requirements: Requires **Grass Power** (climbing mechanics) to reach the ledge. Yokora patrols the dense bamboo area situated directly **east of the giant central tree**.
+  </p>
+  <h3>10. Katamos
+  </h3>
+  <p>True Location: Aeolyc Islands beach area.
+  </p>
+  <p>The Secret: Katamos is introduced as a major story boss, but the game's code treats him as a standard overworld rare spawn once the battle is cleared. Return to the beach where you first fought him, pop your Verdi card buff, and you can farm him repeatedly to min-max his stats.
+  </p>
+  <h3>11. Soblin (Weather Locked)
+  </h3>
+  <p>True Location: Area 25 (Glacial Peaks).
+  </p>
+  <p>Requirements: Soblin is our second weather-dependent Animon. It **only spawns during snowstorms**. Area 25 is the absolute best place to hunt it, as the zone is locked to permanent snow weather, saving you from waiting on random weather cycles.
+  </p>
+  <h3>12. Toypette (Red, Blue, &amp; Yellow Forms)
+  </h3>
+  <p>Toypette's three color variants are locked behind completely different biomes and mechanics:
+  </p>
+  <ol>
+  <li>Red Toypette: Spawns in the fire zone of the Plains Biome (Area 18). Look for it as a companion spawn alongside wild Doryogun.
+  </li>
+  <li>Blue Toypette: Spawns in Area 25 (Glacial Peak). Head west of the main Lumen Camp. There is a small circular path loop right next to the ice bridges; we call this the "sweet spot" for running quick laps to cycle spawns.
+  </li>
+  <li>Yellow Toypette (The Voltier Puzzle): Go to the Lampet minigame building in Voltier. Use your Electric Power to interact with the console, shifting the tube colors to **Green**, and then to **Pink**. This triggers a cutscene that unlocks the alleyway gate. Yellow Toypette will spawn there or alongside wild Toxigall and Ogiemask.
+  </li>
+  </ol>
+  <h3>13. Devoblet
+  </h3>
+  <p>True Location: Titan Quarry (Area 20).
+  </p>
+  <p>Spawning Trick: Devoblet is a very straightforward overworld spawn. Simply run up and down the main path where the zone boss is located with your Verdi card buff active.
+  </p>
+  <h3>14. Twinkler (AniSpace Exclusive)
+  </h3>
+  <p>True Location: Inside your **AniSpace** sandbox.
+  </p>
+  <p>Spawning Trick: Twinkler is exclusive to the AniSpace. Every time you enter, there is a chance one will be wandering around. To farm it efficiently, enter and exit your AniSpace repeatedly. 
+  </p>
+  <p> Pathfinder's Tip: Do this while standing in a small overworld area with minimal assets, like the **Lumen Club**, to drastically reduce your loading screens and save time. 
+  </p>
+  <h3>15. Chagma
+  </h3>
+  <p>True Location: Area 02 / Area 03 (Early) or Area 05 (Late).
+  </p>
+  <p>Early Hunting Hack: Early on, Chagma's spawn rate is abysmal. If you insist on grinding Chagma early, go to a Fountain and select **"Rest until the Afternoon"**. Chagma's spawn window is strictly time-sensitive; our tests yielded zero morning spawns but immediate success during afternoon hours. In Area 02, look for it hidden under overworld Deniuli models; in Area 03, check under Almyuna models.
+  </p>
+  <h3>16. Deniuli
+  </h3>
+  <p>True Location: Area 02 overworld.
+  </p>
+  <p>Significance: Deniuli patrols the grassy paths of Area 02. Engaging these overworld models is your primary method for triggering early-game partner battles that can contain Chagma.
+  </p>
+  <h3>17. Almyuna
+  </h3>
+  <p>True Location: Area 03 overworld.
+  </p>
+  <p>Significance: Similar to Deniuli, Almyuna patrols the overworld paths of Area 03. Engaging them with an active card buff is your best bet for pulling an early afternoon Chagma into battle.
+  </p>
+  <h3>18. Inkrow
+  </h3>
+  <p>True Location: Skyreach Lake (Area 17).
+  </p>
+  <p>Requirements: Requires **Grass Power** (climbing mechanics) to reach the summit. Scale the metal pipes and platforms near the waterfall. Inkrow patrols the high industrial platforms at the very top of the lake zone.
+  </p>
+  <h3>19. Lordrake
+  </h3>
+  <p>True Location: Brackish Palace (Area 08).
+  </p>
+  <p>Requirements: Head deep inside the overgrown palace ruins near the final dark orb container. Lordrake spawns on the overworld paths or as a companion spawn alongside wild Canabble.
+  </p>
+  <h3>20. Elymile
+  </h3>
+  <p>True Location: Suvius Peak (Area 12).
+  </p>
+  <p>Requirements: Cross the lava fields using your Water Power. It shares overworld spawn pools inside the volcanic caves and frequently appears as a partner spawn in wild battles alongside Skeletape and Bonkey.
+  </p>`,
+  },
+
+  {
+    id: 4,
+    title: "How to Unlock All 8 Legendary Locations in Lumentale: Memories of Trey",
+    description: "Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pokédex (AniWiki) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.",
+    tags: [],
+    publishDate: "2026-06-08",
+    imageUrl: "/images/guides/guides04.webp",
+    imageAlt: "How to Unlock All Legendary Locations in Lumentale Memories of Trey",
+    seo: {
+      title: "How to Unlock All Legendary Locations in Lumentale: Memories of Trey",
+      description: "Step-by-step guide to finding and unlocking all 8 Legendary Animons in Lumentale: Memories of Trey. Learn puzzle solutions for Suvius Peak, Skyreach Lake, and post-game.",
+      keywords: "Lumentale Memories of Trey, Lumentale Legendary locations, Lumentale unlock legendaries, Morsiver location, Knequital invisible path, Primalong unlock, Kentaress, Nuclheart puzzle"
+    },
+    author: "LumenTale Fan Guide Team",
+    addressBar: "lumentale-unlock-all-legendary-locations",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Build: Release Build | Prerequisites: North &amp; South Paths Cleared
+  </p>
+  <p>Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pokédex (AniWiki) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.
+  </p>
+  <p>The Catch Rate Secret: Do not waste your rare, high-tier capture items or stress over catching these targets. Defeating a Legendary in battle automatically adds them to your active team or your AniSpace storage box. Focus 100% of your strategy on winning the fight.
+  </p>
+  <h2>Phase 1: The South Path Legends (No Story Gates)
+  </h2>
+  <p>These three Legendaries are accessible as soon as the South Path is fully open. They do not require complex quest lines, but they do feature minor movement puzzles.
+  </p>
+  <h3>1. Yakora (The Joyous Sentinel)
+  </h3>
+  <ol>
+  <li>Location: Darkwood Forest (Area 07).
+  </li>
+  <li>The Puzzle: There is no complex mechanism here; it is a simple maze-like process of elimination. Navigate the bamboo-lined paths to the clearing in the center-north of the zone.
+  </li>
+  <li>Stats: Lv. 70 | Attribute: Felicis (Joy/Happiness) | Type: Grass.
+  </li>
+  </ol>
+  <h3>2. Dualine (The Serein Flame)
+  </h3>
+  <ol>
+  <li>Location: Darkwood Forest (Area 07).
+  </li>
+  <li>The Puzzle: Found in the same forest as Yakora. Head to the westernmost clearing. Run through the trial-and-error path layouts until you reach the isolated grove.
+  </li>
+  <li>Stats: Lv. 70 | Attribute: Sereum (Calm/Tranquility) | Type: Fire.
+  </li>
+  </ol>
+  <p><img src="/images/guides/guides04-01.webp" alt="Dualine" width="50%">
+  </p>
+  <h3>3. Morsiver (The Demon of the Peaks)
+  </h3>
+  <ol>
+  <li>Location: Suvius Peak (Area 12).
+  </li>
+  <li>The Puzzle: This zone catches many players off guard because the game never explicitly forces you to use this mechanic beforehand. You must use your Water Holoken to shoot the active lava flows. This cools the magma down, building a solid rock path you can cross to reach the deep caldera.
+  </li>
+  <li>Stats: Lv. 100 | Attribute: Horrens (Fear/Anxiety) | Type: Demon.
+  </li>
+  <li>Reward: Defeating Morsiver unlocks the **Demon Holoken Power**, allowing you to infuse your Holoken with energy that completely hides Trey from nearby wild Animons for a short duration.
+  </li>
+  </ol>
+  <h2>Phase 2: The North Path Legends (Quest Locked)
+  </h2>
+  <p>Unlocking these three requires initiating a specific poaching investigation questline in Arsilia.
+  </p>
+  <p>The Unlock Step: Go to Arsilia at Nighttime. An NPC will stop you, suspecting you are a poacher, and challenge you to a battle. Win the fight to kick off the "Poaching Case" questline. This eventually grants you a warrant to search the Council member's flat and unlocks the path to **Skyreach Lake (Area 17)**.
+  </p>
+  <h3>4. Knequital (The Invisible Path)
+  </h3>
+  <ol>
+  <li>Location: Skyreach Lake Caves (Area 17).
+  </li>
+  <li>The Puzzle: The cave is pitch black and filled with **invisible floors and platforms**. You must have an Aura-type Animon out on the overworld to illuminate the hidden path. Watch the floor closely; follow the glowing purple tiles and pipe layouts to cross the waterfalls safely.
+  </li>
+  <li>Stats: Lv. 100 | Attribute: Sereum | Type: Steel.
+  </li>
+  </ol>
+  <h3>5. Nuclheart (The Valve Chamber)
+  </h3>
+  <ol>
+  <li>Location: Biome Plains (Area 22).
+  </li>
+  <li>The Puzzle: You need to locate and activate four key valves scattered throughout the Biome Plains. To trigger them, hit them using your Virus Holoken power. Once all four keys are green, head into the central chamber.
+  </li>
+  <li>Stats: Lv. 100 | Attribute: Horrens | Type: Poison.
+  </li>
+  <li>Reward: Unlocks **Chakra Holoken Power**, which considerably increases Trey's overworld movement speed.
+  </li>
+  </ol>
+  <h3>6. Blumester (The Conveyor Switched Maze)
+  </h3>
+  <ol>
+  <li>Location: Titan Quarry (Area 20).
+  </li>
+  <li>The Puzzle: The area is a labyrinth of conveyor belts and platforms. You must locate and hit the various mechanical switches using your Holoken. The rooms reset if you take the incorrect path, so follow the shadow indicators cast by the overhead pipes to deduce the correct direction.
+  </li>
+  <li>Stats: Lv. 100 | Attribute: Horrens | Type: Water.
+  </li>
+  </ol>
+  <h2>Phase 3: Post-Game Sages (AniWiki Locked)
+  </h2>
+  <p>The final two Legendaries are strictly post-game content and require rolling the credits first.
+  </p>
+  <h3>7. Primalong (The Sage of Memorenia)
+  </h3>
+  <ol>
+  <li>Location: Memorenia (Area 18 Shrine).
+  </li>
+  <li>Requirements:Complete the main story and let the credits roll.
+  </li>
+  <li>Head back to any camp to trigger the Verdi/Zukkero quest sequence. Accept the "Info Request: Cimitrick" bounty.
+  </li>
+  <li>Head to the great temple at the summit of Memorenia and speak to the Sage, Mars.
+  </li>
+  <li>The Dex Gate: Mars will only fight you if you have registered at least 132 Animons in your AniWiki. (They do not need to be fully scanned/yellow-starred; simple capture registration is enough).
+  </li>
+  <li>Stats: Lv. 100 | Attribute: Sereum | Type: Wood.
+  </li>
+  </ol>
+  <h3>8. Kentaress (The Void Champion)
+  </h3>
+  <p><img src="/images/guides/guides04-02.webp" alt="Kentaress" width="50%">
+  </p>
+  <ol>
+  <li>Location: Speranova.
+  </li>
+  <li>Requirements:Complete the story and obtain the **Ice Holoken Power** from the Glacial Peaks puzzle post-game.
+  </li>
+  <li>Speak to the Sage, Zero, at the Speranova teleportation pad.
+  </li>
+  <li>The Dex Gate: Zero is the ultimate challenge. He will refuse to battle you until your AniWiki is 100% complete (excepting the final secret legend itself). You must capture every other standard and legendary Animon in the game first.
+  </li>
+  <li>Stats: Lv. 100 | Attribute: Sereum | Type: Space.
+  </li>
+  </ol>`,
+  },
+  
+  
+
+
 
 
 ]
