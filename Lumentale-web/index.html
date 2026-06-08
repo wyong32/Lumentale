@@ -94,17 +94,9 @@
           adsScript.crossOrigin = 'anonymous';
           document.head.appendChild(adsScript);
         }
-        function scheduleIdle() {
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadThirdParty, { timeout: 12000 });
-          } else {
-            setTimeout(loadThirdParty, 12000);
-          }
-        }
         ['pointerdown', 'keydown', 'touchstart'].forEach(function (type) {
           window.addEventListener(type, loadThirdParty, { once: true, passive: true });
         });
-        window.addEventListener('load', scheduleIdle);
       })();
     </script>
   </head>

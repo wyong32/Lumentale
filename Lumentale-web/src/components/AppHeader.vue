@@ -163,7 +163,7 @@ watch(
 
 onMounted(() => {
   navMediaQuery = window.matchMedia('(min-width: 1025px)')
-  syncNavMode()
+  requestAnimationFrame(syncNavMode)
   navMediaQuery.addEventListener('change', syncNavMode)
 })
 

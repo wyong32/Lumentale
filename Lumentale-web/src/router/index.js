@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -6,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/HomeView.vue'),
+      component: HomeView,
       meta: {
         title: 'LumenTale | Animon, Starters, Evolutions, Wiki & Guides',
         description:
@@ -287,7 +288,14 @@ const DETAIL_ROUTE_NAMES = new Set([
   'wiki-item-detail',
 ])
 
+let initialNavigation = true
+
 router.afterEach((to) => {
+  if (initialNavigation) {
+    initialNavigation = false
+    if (to.name === 'home') return
+  }
+
   if (DETAIL_ROUTE_NAMES.has(to.name)) {
     import('@/seo/pageSeo.js').then(({ applyNavigationSeo }) => applyNavigationSeo(to))
     return
