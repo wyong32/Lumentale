@@ -24,6 +24,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="guides-section" aria-labelledby="first-route-title">
       <div class="container">
@@ -42,6 +43,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="data-section">
       <div class="container">
@@ -63,6 +65,7 @@
             <li>Open the Animon detail page for move lists and BST once you shortlist a favourite.</li>
           </ul>
         </article>
+    <GptAdSlot unit="3" />
 
         <article class="guide-block">
           <h2>Step 2 — Learn 4v4 SP Combat</h2>
@@ -94,6 +97,7 @@
           </ul>
           <a class="btn-secondary" href="/affinities">Read the full type chart</a>
         </article>
+    <GptAdSlot unit="1" />
 
         <article class="guide-block">
           <h2>Step 3 — Capture, Evolve &amp; Explore</h2>
@@ -114,6 +118,7 @@
             <li>Check the <a href="/map">Talea map</a> as new regions unlock so you do not backtrack blindly.</li>
           </ul>
         </article>
+    <GptAdSlot unit="2" />
 
         <article class="guide-block">
           <h2>Step 4 — Items, Skills &amp; Boss Prep</h2>
@@ -135,6 +140,7 @@
         </article>
       </div>
     </section>
+    <GptAdSlot unit="3" />
 
     <section class="data-section" aria-labelledby="checklist-title">
       <div class="container">
@@ -159,6 +165,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="data-section" aria-labelledby="after-five-title">
       <div class="container">
@@ -191,6 +198,7 @@
         </article>
       </div>
     </section>
+    <GptAdSlot unit="2" />
   </main>
 </template>
 

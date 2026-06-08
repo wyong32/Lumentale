@@ -22,6 +22,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="dex-section" aria-labelledby="animon-list-heading">
       <div class="container">
@@ -110,6 +111,7 @@
             />
           </label>
         </div>
+    <GptAdSlot unit="2" />
 
         <div class="dex-content">
           <a
@@ -145,6 +147,7 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} Animon ({{ animon.length }} total)</p>
       </div>
     </section>
+    <GptAdSlot unit="3" />
   </main>
 </template>
 

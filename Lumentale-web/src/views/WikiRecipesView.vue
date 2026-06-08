@@ -1,5 +1,7 @@
 <template>
   <main class="page-main">
+    <GptAdSlot unit="1" />
+    
     <section class="page-hero-section" aria-labelledby="recipes-title">
       <div class="container">
         <div class="page-hero-content">
@@ -22,6 +24,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="data-section" aria-labelledby="recipes-list-heading">
       <div class="container">
@@ -159,6 +162,7 @@
         </p>
       </div>
     </section>
+    <GptAdSlot unit="3" />
 
     <section class="data-section" aria-labelledby="recipes-tips-title">
       <div class="container">

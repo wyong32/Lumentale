@@ -1,5 +1,7 @@
 <template>
   <main v-if="guide" class="page-main page-main--guide-detail">
+    <GptAdSlot unit="1" />
+    
     <section class="guide-detail-hero" aria-labelledby="guide-title">
       <div class="container">
         <nav class="breadcrumb guide-detail-breadcrumb" aria-label="Breadcrumb">
@@ -41,12 +43,16 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="guide-detail-section">
       <div class="container">
         <div class="guide-detail-page">
           <article class="guide-detail-main">
+
             <div class="guide-detail-article guide-detail-content" v-html="prepared.html" />
+    <GptAdSlot unit="3" />
+
             <footer class="guide-detail-footer">
               <a class="btn-secondary" href="/guides">← All Guides</a>
             </footer>

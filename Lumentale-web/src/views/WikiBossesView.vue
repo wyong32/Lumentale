@@ -23,6 +23,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="data-section" aria-labelledby="bosses-list-heading">
       <div class="container">
@@ -40,6 +41,8 @@
             <input v-model="query" type="search" placeholder="Search bosses…" aria-label="Search bosses" />
           </label>
         </div>
+    <GptAdSlot unit="2" />
+    
         <div class="grid-cards">
           <article
             v-for="boss in visible"
@@ -98,6 +101,7 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} bosses ({{ bossList.length }} total)</p>
       </div>
     </section>
+    <GptAdSlot unit="3" />
   </main>
 </template>
 

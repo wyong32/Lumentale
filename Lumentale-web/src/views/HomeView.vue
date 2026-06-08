@@ -40,6 +40,7 @@
         </form>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="stats-section" aria-label="Wiki coverage">
       <div class="container">
@@ -109,6 +110,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="guides-section" aria-labelledby="guides-title">
       <div class="container">
@@ -174,6 +176,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="3" />
 
     <section class="combat-section" aria-labelledby="combat-title">
       <div class="container">
@@ -237,6 +240,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
@@ -295,6 +299,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="faq-section" aria-labelledby="faq-title">
       <div class="container">
@@ -310,6 +315,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="3" />
 
     <section class="disclaimer-section" aria-label="Site disclaimer">
       <div class="container">

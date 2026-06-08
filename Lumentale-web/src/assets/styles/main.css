@@ -115,6 +115,18 @@ img {
   margin-inline: auto;
 }
 
+.gpt-ad-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.gpt-ad-slot__inner {
+  margin-inline: auto;
+  text-align: center;
+}
+
 .page-main {
   overflow-x: hidden;
 }

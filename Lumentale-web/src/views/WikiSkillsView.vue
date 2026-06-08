@@ -24,6 +24,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="data-section" aria-labelledby="skills-about-title">
       <div class="container">
@@ -41,6 +42,7 @@
         </article>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="wiki-catalog-section" aria-labelledby="skills-list-title">
       <div class="container">
@@ -125,6 +127,7 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} skills ({{ skills.length }} total)</p>
       </div>
     </section>
+    <GptAdSlot unit="3" />
 
     <section class="data-section">
       <div class="container">
@@ -162,6 +165,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
   </main>
 </template>
 

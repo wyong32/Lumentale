@@ -22,6 +22,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="data-section" aria-labelledby="wiki-about-title">
       <div class="container">
@@ -40,6 +41,7 @@
         </article>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
@@ -98,6 +100,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="3" />
 
     <section class="guides-section" aria-labelledby="wiki-guides-title">
       <div class="container">
@@ -146,6 +149,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="data-section" aria-labelledby="wiki-tips-title">
       <div class="container">
@@ -183,6 +187,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
   </main>
 </template>
 

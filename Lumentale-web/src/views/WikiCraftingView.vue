@@ -1,5 +1,6 @@
 <template>
   <main class="page-main">
+    <GptAdSlot unit="1" />
     <section class="page-hero-section" aria-labelledby="crafting-title">
       <div class="container">
         <div class="page-hero-content">
@@ -22,6 +23,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <WikiRecipeListSection
       project-label="Crafting"
@@ -32,6 +34,7 @@
       search-placeholder="Search crafting recipes…"
       search-aria="Search crafting recipes"
     />
+    <GptAdSlot unit="3" />
 
     <section class="data-section">
       <div class="container">

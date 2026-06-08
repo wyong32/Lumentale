@@ -22,6 +22,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section v-if="animonFocus" class="data-section evo-focus-section">
       <div class="container">
@@ -53,6 +54,7 @@
         </article>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="evo-catalog-section" aria-labelledby="evo-catalog-title">
       <div class="container">
@@ -64,6 +66,7 @@
             steps. Open a species page to jump here with that line highlighted.
           </p>
         </div>
+        
 
         <div class="dex-filter-panel">
           <div class="filter-row">
@@ -88,6 +91,7 @@
             </button>
           </div>
         </div>
+    <GptAdSlot unit="3" />
 
         <div v-for="section in displayGroups" :key="section.name" class="evo-group-block">
           <h3 v-if="!groupFilter" class="evo-group-title">{{ section.name }}</h3>
@@ -167,7 +171,7 @@
                   <template v-for="(name, idx) in parseEvolutionNames(row.from)">
                     <a
                       v-if="byName(name)"
-                      :key="`${row.anchorId}-from-${name}`"
+                      :key="`${row.anchorId}-from-link-${name}`"
                       class="evo-card-node"
                       :href="`/animon/${byName(name).slug}`"
                     >
@@ -180,7 +184,7 @@
                       />
                       <span>{{ name }}</span>
                     </a>
-                    <span v-else :key="`${row.anchorId}-from-${name}`" class="evo-card-node evo-card-node-text">{{ name }}</span>
+                    <span v-else :key="`${row.anchorId}-from-text-${name}`" class="evo-card-node evo-card-node-text">{{ name }}</span>
                     <span
                       v-if="idx < parseEvolutionNames(row.from).length - 1"
                       :key="`${row.anchorId}-from-split-${idx}`"
@@ -193,7 +197,7 @@
                   <template v-for="(name, idx) in parseEvolutionNames(row.to)">
                     <a
                       v-if="byName(name)"
-                      :key="`${row.anchorId}-to-${name}`"
+                      :key="`${row.anchorId}-to-link-${name}`"
                       class="evo-card-node"
                       :href="`/animon/${byName(name).slug}`"
                     >
@@ -206,7 +210,7 @@
                       />
                       <span>{{ name }}</span>
                     </a>
-                    <span v-else :key="`${row.anchorId}-to-${name}`" class="evo-card-node evo-card-node-text">{{ name }}</span>
+                    <span v-else :key="`${row.anchorId}-to-text-${name}`" class="evo-card-node evo-card-node-text">{{ name }}</span>
                     <span
                       v-if="idx < parseEvolutionNames(row.to).length - 1"
                       :key="`${row.anchorId}-to-split-${idx}`"
@@ -219,6 +223,7 @@
             </article>
           </div>
         </div>
+    <GptAdSlot unit="1" />
 
         <p class="result-note">Showing {{ filtered.length }} of {{ rows.length }} evolution steps</p>
       </div>
@@ -260,6 +265,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
   </main>
 </template>
 

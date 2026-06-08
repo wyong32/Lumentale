@@ -18,6 +18,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="1" />
 
     <section class="dex-section">
       <div class="container">
@@ -43,6 +44,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="2" />
 
     <section class="data-section" aria-labelledby="starters-table-heading">
       <div class="container">
@@ -90,6 +92,7 @@
         </div>
       </div>
     </section>
+    <GptAdSlot unit="3" />
   </main>
 </template>
 
