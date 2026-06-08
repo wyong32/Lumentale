@@ -15,14 +15,35 @@
             encounter spots, item pickups, shops, and NPC markers as players confirm each area in-game.
           </p>
           <div class="page-meta" style="margin-top: 14px">
-            <span class="meta-pill">Region map live</span>
-            <span class="meta-pill">Pins coming soon</span>
-            <span class="meta-pill">Updated May 2026</span>
+            <span class="meta-pill">Interactive map live</span>
+            <span class="meta-pill">41 areas</span>
+            <span class="meta-pill">Updated June 2026</span>
           </div>
         </div>
       </div>
     </section>
     <GptAdSlot unit="1" />
+
+    <section class="map-section" aria-labelledby="map-art-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Talea Regions</p>
+          <h2 id="map-art-title">Full Talea World Map</h2>
+          <p>
+            Click any area pin to see wild Animon species for that route — filter by Logos (north) or Mythos (south), or
+            search by area name.
+          </p>
+        </div>
+
+        <div class="map-showcase map-showcase--interactive">
+          <TaleaInteractiveMap />
+          <p class="map-caption">
+            Interactive LumenTale map — tap a location pin or pick an area from the list to view catchable Animon.
+          </p>
+        </div>
+      </div>
+    </section>
+    <GptAdSlot unit="3" />
 
     <section class="data-section" aria-labelledby="map-about-title">
       <div class="container">
@@ -44,29 +65,7 @@
     </section>
     <GptAdSlot unit="2" />
 
-    <section class="map-section" aria-labelledby="map-art-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Talea Regions</p>
-          <h2 id="map-art-title">Full Talea World Map</h2>
-          <p>Use this art to orient yourself between routes — interactive markers will land on the same image as we verify each location.</p>
-        </div>
-
-        <figure class="map-showcase">
-          <img
-            :src="imgSrc('/images/maps/talea-map.webp', 'Talea Map')"
-            alt="Talea region map in LumenTale Memories of Trey"
-            width="1200"
-            height="760"
-            loading="eager"
-          />
-          <figcaption class="map-caption">
-            Talea region map — encounter, item, and shop pins will appear here after in-game confirmation.
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-    <GptAdSlot unit="3" />
+    
 
     <section class="data-section" aria-labelledby="map-status-title">
       <div class="container">
@@ -134,21 +133,20 @@
 </template>
 
 <script setup>
-import {} from 'vue-router'
-import { imgSrc } from '@/lib/data'
+import TaleaInteractiveMap from '@/components/TaleaInteractiveMap.vue'
 
 const mapStatus = [
   {
-    label: 'Region art',
+    label: 'Region map',
     value: 'Live',
-    note: 'Full Talea map artwork — use it now to see how regions connect.',
+    note: 'Interactive Talea map with 41 area pins — click any location for wild Animon lists.',
     ready: true,
   },
   {
     label: 'Named routes',
-    value: 'In progress',
-    note: 'Zone labels and path names as we finish each story chapter.',
-    ready: false,
+    value: 'Live',
+    note: 'All major routes and towns labelled on the map — Mythos south, Logos north.',
+    ready: true,
   },
   {
     label: 'Wild encounters',
@@ -171,8 +169,8 @@ const mapStatus = [
 ]
 
 const mapTips = [
-  { label: 'Right now', text: 'Use the map for orientation — follow the Beginner Guide for early route order.' },
-  { label: 'Hunting a species', text: 'Filter the Animon Dex by element while area pins are still rolling out.' },
+  { label: 'Right now', text: 'Use the interactive map to see which Animon spawn in each area — pair it with the Beginner Guide for route order.' },
+  { label: 'Hunting a species', text: 'Pick an area pin, then open any species card to jump straight to its dex entry.' },
   { label: 'Crafting prep', text: 'Check the Items list for materials even before pickup pins go live.' },
   { label: 'Updates', text: 'New markers will appear on this same page — bookmark it for your playthrough.' },
 ]

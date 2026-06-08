@@ -430,7 +430,7 @@ img {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 200;
+  z-index: 1000;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   box-shadow: 0 8px 28px rgba(59, 130, 246, 0.1);
@@ -3164,6 +3164,251 @@ img {
   text-align: center;
 }
 
+.map-showcase--interactive {
+  display: flex;
+  flex-direction: column;
+}
+
+.talea-map-tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  min-height: 708px;
+}
+
+.talea-map-tool__map-wrap {
+  position: relative;
+  min-height: 708px;
+  background: #000;
+}
+
+.talea-map-tool__map {
+  width: 100%;
+  height: 100%;
+  min-height: 708px;
+  background: #000;
+}
+
+.talea-map-tool__map .leaflet-container {
+  font-family: inherit;
+  background: #000;
+}
+
+.talea-map-tool__map-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.talea-map-tool__zoom-btn {
+  width: 34px;
+  height: 34px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+}
+
+.talea-map-tool__zoom-btn:hover {
+  background: #fff;
+}
+
+.talea-map-tool__sidebar {
+  display: flex;
+  flex-direction: column;
+  max-height: 620px;
+  border-left: 2px dashed #dbeafe;
+  background: #fff;
+}
+
+.talea-map-tool__sidebar-head {
+  padding: 16px;
+  border-bottom: 2px dashed #eef6ff;
+}
+
+.talea-map-tool__sidebar-title {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.talea-map-tool__search input {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border: 2px solid #dbeafe;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.88rem;
+  background: #f8fafc;
+}
+
+.talea-map-tool__search input:focus {
+  outline: 2px solid color-mix(in srgb, var(--blue) 35%, transparent);
+  border-color: var(--blue);
+  background: #fff;
+}
+
+.talea-map-tool__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.talea-map-tool__filter {
+  height: 30px;
+  padding: 0 10px;
+  border: 2px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.talea-map-tool__filter.is-active {
+  border-color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 12%, #fff);
+  color: var(--blue-dark, #1d4ed8);
+}
+
+.talea-map-tool__location-list,
+.talea-map-tool__detail {
+  flex: 1;
+  overflow: auto;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+}
+
+.talea-map-tool__location-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.talea-map-tool__location-btn:hover,
+.talea-map-tool__location-btn.is-active {
+  background: color-mix(in srgb, var(--blue) 10%, #fff);
+}
+
+.talea-map-tool__location-name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.talea-map-tool__location-meta {
+  margin-top: 2px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.talea-map-tool__back {
+  margin-bottom: 8px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--blue-dark, #1d4ed8);
+  cursor: pointer;
+}
+
+.talea-map-tool__detail-title {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.talea-map-tool__detail-meta {
+  margin: 0 0 12px;
+}
+
+.talea-map-tool__region-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.talea-map-tool__region-pill.is-logos {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.talea-map-tool__region-pill.is-mythos {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.talea-map-tool__animon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.talea-map-tool__animon-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 2px solid #eef6ff;
+  border-radius: 10px;
+  background: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.talea-map-tool__animon-card:hover {
+  border-color: var(--blue);
+  background: #fff;
+}
+
+.talea-map-tool__animon-card img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.talea-map-tool__empty {
+  padding: 12px;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
 .map-status-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5696,6 +5941,22 @@ img {
   .wiki-layout,
   .map-layout {
     grid-template-columns: 1fr;
+  }
+
+  .talea-map-tool {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .talea-map-tool__map-wrap,
+  .talea-map-tool__map {
+    min-height: 375px;
+  }
+
+  .talea-map-tool__sidebar {
+    max-height: 420px;
+    border-left: none;
+    border-top: 2px dashed #dbeafe;
   }
 
   .map-sidebar {
