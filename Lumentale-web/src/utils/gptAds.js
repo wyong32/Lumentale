@@ -1,4 +1,4 @@
-import { GPT_UNITS } from '@/config/gpt'
+import { GPT_AD_DELAY_MS, GPT_UNITS } from '@/config/gpt'
 
 const UNIT_PATH = {
   1: GPT_UNITS.banner1,
@@ -25,7 +25,7 @@ function defineBannerSlot(path, elementId) {
     ?.addService(googletag.pubads())
 }
 
-export function Gt(elementId, unit) {
+function displaySlot(elementId, unit) {
   const path = UNIT_PATH[unit] ?? UNIT_PATH[Number(unit)]
   if (!path || !elementId) return
 
@@ -49,6 +49,10 @@ export function Gt(elementId, unit) {
     googletag.display(elementId)
     googletag.pubads().refresh([slot])
   })
+}
+
+export function Gt(elementId, unit) {
+  setTimeout(() => displaySlot(elementId, unit), GPT_AD_DELAY_MS)
 }
 
 export function mountGptPageAds(entries) {

@@ -128,18 +128,20 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     <script>
-      googletag.cmd.push(function () {
-        var oopSlots = [];
-        if (window.__gptAnchorSlot) {
-          googletag.display(window.__gptAnchorSlot);
-          oopSlots.push(window.__gptAnchorSlot);
-        }
-        if (window.__gptInterstitialSlot) {
-          googletag.display(window.__gptInterstitialSlot);
-          oopSlots.push(window.__gptInterstitialSlot);
-        }
-        if (oopSlots.length) googletag.pubads().refresh(oopSlots);
-      });
+      setTimeout(function () {
+        googletag.cmd.push(function () {
+          var oopSlots = [];
+          if (window.__gptAnchorSlot) {
+            googletag.display(window.__gptAnchorSlot);
+            oopSlots.push(window.__gptAnchorSlot);
+          }
+          if (window.__gptInterstitialSlot) {
+            googletag.display(window.__gptInterstitialSlot);
+            oopSlots.push(window.__gptInterstitialSlot);
+          }
+          if (oopSlots.length) googletag.pubads().refresh(oopSlots);
+        });
+      }, 3000);
     </script>
   </body>
 </html>
