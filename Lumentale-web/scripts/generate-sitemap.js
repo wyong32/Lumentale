@@ -6,6 +6,7 @@ import animon from '../src/data/animon.json' with { type: 'json' }
 import guides from '../src/data/guides.js'
 import items from '../src/data/items.json' with { type: 'json' }
 import recipes from '../src/data/recipes.json' with { type: 'json' }
+import summary from '../src/data/summary.json' with { type: 'json' }
 import { seoConfig } from '../src/seo/config.js'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -14,26 +15,26 @@ const __dirname = path.dirname(__filename)
 const fullDomain = seoConfig.fullDomain.replace(/\/+$/, '')
 
 const staticRoutes = [
-  { path: '/', name: 'home' },
-  { path: '/animon', name: 'animon' },
-  { path: '/beginner', name: 'beginner' },
-  { path: '/starters', name: 'starters' },
-  { path: '/affinities', name: 'affinities' },
-  { path: '/evolutions', name: 'evolutions' },
-  { path: '/guides', name: 'guides' },
-  { path: '/map', name: 'map' },
-  { path: '/wiki', name: 'wiki' },
-  { path: '/wiki/skills', name: 'wiki-skills' },
-  { path: '/wiki/items', name: 'wiki-items' },
-  { path: '/wiki/bosses', name: 'wiki-bosses' },
-  { path: '/search', name: 'search' },
-  { path: '/wiki/cooking', name: 'wiki-cooking' },
-  { path: '/wiki/crafting', name: 'wiki-crafting' },
-  { path: '/legal/privacy-policy', name: 'legal-privacy' },
-  { path: '/legal/terms-of-service', name: 'legal-terms' },
-  { path: '/legal/copyright', name: 'legal-copyright' },
-  { path: '/legal/about-us', name: 'legal-about' },
-  { path: '/legal/contact-us', name: 'legal-contact' },
+  { path: '/', name: 'home', contentFile: 'src/views/HomeView.vue' },
+  { path: '/animon', name: 'animon', contentFile: 'src/views/AnimonView.vue' },
+  { path: '/beginner', name: 'beginner', contentFile: 'src/views/BeginnerGuideView.vue' },
+  { path: '/starters', name: 'starters', contentFile: 'src/views/StartersView.vue' },
+  { path: '/affinities', name: 'affinities', contentFile: 'src/views/AffinitiesView.vue' },
+  { path: '/evolutions', name: 'evolutions', contentFile: 'src/views/EvolutionsView.vue' },
+  { path: '/guides', name: 'guides', contentFile: 'src/data/guides.js' },
+  { path: '/map', name: 'map', contentFile: 'src/views/MapView.vue' },
+  { path: '/wiki', name: 'wiki', contentFile: 'src/views/WikiIndexView.vue' },
+  { path: '/wiki/skills', name: 'wiki-skills', contentFile: 'src/views/WikiSkillsView.vue' },
+  { path: '/wiki/items', name: 'wiki-items', contentFile: 'src/views/WikiItemsView.vue' },
+  { path: '/wiki/bosses', name: 'wiki-bosses', contentFile: 'src/views/WikiBossesView.vue' },
+  { path: '/search', name: 'search', contentFile: 'src/views/SearchView.vue' },
+  { path: '/wiki/cooking', name: 'wiki-cooking', contentFile: 'src/views/WikiCookingView.vue' },
+  { path: '/wiki/crafting', name: 'wiki-crafting', contentFile: 'src/views/WikiCraftingView.vue' },
+  { path: '/legal/privacy-policy', name: 'legal-privacy', contentFile: 'src/views/legal/PrivacyPolicyView.vue' },
+  { path: '/legal/terms-of-service', name: 'legal-terms', contentFile: 'src/views/legal/TermsOfServiceView.vue' },
+  { path: '/legal/copyright', name: 'legal-copyright', contentFile: 'src/views/legal/CopyrightView.vue' },
+  { path: '/legal/about-us', name: 'legal-about', contentFile: 'src/views/legal/AboutUsView.vue' },
+  { path: '/legal/contact-us', name: 'legal-contact', contentFile: 'src/views/legal/ContactUsView.vue' },
 ]
 
 function getPriority(name) {
@@ -85,7 +86,7 @@ function pathKeyFromLoc(loc) {
   }
 }
 
-/** Read lastmod dates from the previous sitemap so only new URLs get a fresh date */
+/** Read lastmod dates from the previous sitemap for merge/compare */
 function loadExistingLastmods(filePath) {
   const map = new Map()
   if (!fs.existsSync(filePath)) return map
@@ -99,35 +100,54 @@ function loadExistingLastmods(filePath) {
   return map
 }
 
+function fileLastmod(relativePath, fallback) {
+  const filePath = path.join(__dirname, '..', relativePath)
+  if (!fs.existsSync(filePath)) return fallback
+  return coerceSitemapLastmod(fs.statSync(filePath).mtime, fallback)
+}
+
 function generate() {
   const buildDay = new Date().toISOString().split('T')[0]
   const publicPath = path.join(__dirname, '../public/sitemap.xml')
   const existingLastmods = loadExistingLastmods(publicPath)
+  const wikiDataDay = coerceSitemapLastmod(summary.generatedAt, buildDay)
   const seen = new Set()
   let newUrlCount = 0
+  let bumpedUrlCount = 0
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `
 
-  function appendUrl(loc, newLastmod, changefreq, priority) {
+  function resolveLastmod(key, contentDate) {
+    const content = coerceSitemapLastmod(contentDate, buildDay)
+    const existing = existingLastmods.get(key)
+    if (!existing) {
+      newUrlCount += 1
+      return content
+    }
+    if (content > existing) bumpedUrlCount += 1
+    return content > existing ? content : existing
+  }
+
+  function appendUrl(loc, contentDate, changefreq, priority) {
     const key = normalizePathKey(loc)
     if (seen.has(key)) return
     seen.add(key)
 
-    const lastmodValue = existingLastmods.has(key) ? existingLastmods.get(key) : newLastmod
-    if (!existingLastmods.has(key)) newUrlCount += 1
-
+    const lastmodValue = resolveLastmod(key, contentDate)
     xml += `\n${urlNode(key, lastmodValue, changefreq, priority)}`
   }
 
   for (const r of staticRoutes) {
-    appendUrl(r.path, buildDay, getChangefreq(r.name), getPriority(r.name))
+    const contentDate = r.contentFile ? fileLastmod(r.contentFile, buildDay) : buildDay
+    appendUrl(r.path, contentDate, getChangefreq(r.name), getPriority(r.name))
   }
 
   for (const entry of animon) {
     if (!entry?.slug) continue
-    appendUrl(`/animon/${entry.slug}`, buildDay, getChangefreq('animon-detail'), getPriority('animon-detail'))
+    const contentDate = coerceSitemapLastmod(entry.lastUpdated, wikiDataDay)
+    appendUrl(`/animon/${entry.slug}`, contentDate, getChangefreq('animon-detail'), getPriority('animon-detail'))
   }
 
   const guideList = Array.isArray(guides) ? guides : guides.default || []
@@ -135,18 +155,28 @@ function generate() {
     if (!g?.addressBar) continue
     const slug = String(g.addressBar).replace(/^\/+|\/+$/g, '')
     const guidePath = `/guides/${slug}`
-    const date = coerceSitemapLastmod(g.publishDate, buildDay)
-    appendUrl(guidePath, date, getChangefreq('guide-detail'), getPriority('guide-detail'))
+    const contentDate = coerceSitemapLastmod(g.updatedDate || g.publishDate, buildDay)
+    appendUrl(guidePath, contentDate, getChangefreq('guide-detail'), getPriority('guide-detail'))
   }
 
   for (const recipe of recipes) {
     if (!recipe?.slug) continue
-    appendUrl(`/wiki/recipes/${recipe.slug}`, buildDay, getChangefreq('wiki-recipe-detail'), getPriority('wiki-recipe-detail'))
+    appendUrl(
+      `/wiki/recipes/${recipe.slug}`,
+      wikiDataDay,
+      getChangefreq('wiki-recipe-detail'),
+      getPriority('wiki-recipe-detail'),
+    )
   }
 
   for (const item of items) {
     if (!item?.slug) continue
-    appendUrl(`/wiki/items/${item.slug}`, buildDay, getChangefreq('wiki-item-detail'), getPriority('wiki-item-detail'))
+    appendUrl(
+      `/wiki/items/${item.slug}`,
+      wikiDataDay,
+      getChangefreq('wiki-item-detail'),
+      getPriority('wiki-item-detail'),
+    )
   }
 
   xml += '\n</urlset>'
@@ -158,8 +188,11 @@ function generate() {
   console.log('Sitemap written to public/sitemap.xml')
 
   const count = (xml.match(/<url>/g) || []).length
+  const unchanged = count - newUrlCount - bumpedUrlCount
   console.log(`Total URLs: ${count} (${fullDomain})`)
-  console.log(`New URLs this run: ${newUrlCount} (existing lastmod preserved: ${count - newUrlCount})`)
+  console.log(
+    `New: ${newUrlCount}, content bumped: ${bumpedUrlCount}, unchanged: ${unchanged}`,
+  )
 }
 
 generate()

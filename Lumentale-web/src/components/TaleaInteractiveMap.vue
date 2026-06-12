@@ -13,8 +13,13 @@
       <div class="talea-map-tool__sidebar-head">
         <h3 class="talea-map-tool__sidebar-title">All Animon Locations</h3>
         <label class="talea-map-tool__search">
-          <span class="sr-only">Search locations</span>
-          <input v-model="query" type="search" placeholder="Search area…" autocomplete="off" />
+          <span class="sr-only">Search areas and Animon</span>
+          <input
+            v-model="query"
+            type="search"
+            placeholder="Search area or Animon…"
+            autocomplete="off"
+          />
         </label>
         <div class="talea-map-tool__filters" role="tablist" aria-label="Filter by region">
           <button
@@ -41,7 +46,12 @@
           </span>
         </p>
         <p v-if="selectedAnimon.length === 0" class="talea-map-tool__empty">
-          No wild Animon confirmed for this area yet — check back after updates.
+          <template v-if="query.trim() && selected.animon.length">
+            No Animon in this area match your search.
+          </template>
+          <template v-else>
+            No wild Animon confirmed for this area yet — check back after updates.
+          </template>
         </p>
         <ul v-else class="talea-map-tool__animon-grid">
           <li v-for="entry in selectedAnimon" :key="entry.slug">
@@ -71,10 +81,15 @@
             <span class="talea-map-tool__location-meta">
               {{ loc.region }}
               <template v-if="loc.animon.length"> · {{ loc.animon.length }} species</template>
+              <template v-if="loc.matchingAnimon.length">
+                · {{ loc.matchingAnimon.join(', ') }}
+              </template>
             </span>
           </button>
         </li>
-        <li v-if="filteredLocations.length === 0" class="talea-map-tool__empty">No areas match your search.</li>
+        <li v-if="filteredLocations.length === 0" class="talea-map-tool__empty">
+          No areas or Animon match your search.
+        </li>
       </ul>
     </aside>
   </div>
@@ -114,20 +129,38 @@ const animonByName = new Map(
   animon.map((entry) => [entry.name.toLowerCase(), entry]),
 )
 
+function locationMatchesQuery(loc, q) {
+  if (!q) return true
+  if (loc.name.toLowerCase().includes(q)) return true
+  if (loc.region.toLowerCase().includes(q)) return true
+  return loc.animon.some((name) => name.toLowerCase().includes(q))
+}
+
+function matchingAnimonInLocation(loc, q) {
+  if (!q) return []
+  return loc.animon.filter((name) => name.toLowerCase().includes(q))
+}
+
 const filteredLocations = computed(() => {
   const q = query.value.trim().toLowerCase()
-  return taleaMap.locations.filter((loc) => {
-    if (regionFilter.value !== 'all' && loc.region !== regionFilter.value) return false
-    if (!q) return true
-    return loc.name.toLowerCase().includes(q) || loc.region.toLowerCase().includes(q)
-  })
+  return taleaMap.locations
+    .filter((loc) => {
+      if (regionFilter.value !== 'all' && loc.region !== regionFilter.value) return false
+      return locationMatchesQuery(loc, q)
+    })
+    .map((loc) => ({
+      ...loc,
+      matchingAnimon: matchingAnimonInLocation(loc, q),
+    }))
 })
 
 const selectedAnimon = computed(() => {
   if (!selected.value) return []
+  const q = query.value.trim().toLowerCase()
   return selected.value.animon
     .map((name) => animonByName.get(name.toLowerCase()))
     .filter(Boolean)
+    .filter((entry) => !q || entry.name.toLowerCase().includes(q))
 })
 
 function getPinIcon(url) {
@@ -211,4 +244,9 @@ onUnmounted(() => {
 
 watch([filteredLocations, activeId], buildMarkers)
 watch(regionFilter, clearSelection)
+watch(query, () => {
+  if (!selected.value) return
+  const q = query.value.trim().toLowerCase()
+  if (!locationMatchesQuery(selected.value, q)) clearSelection()
+})
 </script>

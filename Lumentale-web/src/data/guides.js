@@ -11,6 +11,7 @@ export default [
   //   description: 'Short summary shown on the guides index and detail hero.',
   //   tags: ['Beginner', 'Combat', 'Exploration'],
   //   publishDate: '2026-05-26',
+  //   updatedDate: '2026-06-08', // optional; bumps sitemap lastmod when guide content changes
   //   imageUrl: '/images/guides/guides01.webp',
   //   imageAlt: 'Cover image alt text for accessibility',
   //   author: 'Author name or byline',
@@ -653,6 +654,286 @@ export default [
   </li>
   </ol>`,
   },
+
+  {
+    id: 5,
+    title: "Lumentale: Memories of Trey — Complete Minube Locations &amp; Chromaura Evolution Guide",
+    description: "Evolving Minube into the elusive Chromaura is one of the most tedious end-game collection puzzles in Lumentale: Memories of Trey. You must track down six distinct color variants of Minube scattered across the map, assemble them in your active party, and trigger a highly specific weather condition. Based on our 70+ hours of live testing and community-sourced spawn data, here is the exact roadmap to unlocking Chromaura.",
+    tags: ["Lumentale: Memories of Trey"],
+    publishDate: "2026-06-12",
+    imageUrl: "/images/guides/guides05.webp",
+    imageAlt: "Lumentale: Memories of Trey — Complete Minube Locations &amp; Chromaura Evolution Guide",
+    seo: {
+      title: "Lumentale: Memories of Trey — Complete Minube Locations &amp; Chromaura Evolution Guide",
+      description: "Find all 6 Minube color variants in Lumentale: Memories of Trey and evolve them into Chromaura. Includes verified spawn tables, overworld locations, and stat-retention tips",
+      keywords: "Lumentale Memories of Trey, Lumentale Minube, Minube locations, Chromaura evolution, how to evolve minube, yellow nebula, red nebula, rainbow weather lumentale"
+    },
+    author: "LumenTale Fan Guide Team",
+    addressBar: "lumentale-memories-of-trey-minube-chromaura-evolution-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub 
+  </p>
+  <p> Tested on Build: Release Build v1.0 | Data Status: Hand-Verified &amp; Community-Sourced
+  </p>
+  <p>Evolving Minube into the elusive Chromaura is one of the most tedious end-game collection puzzles in Lumentale: Memories of Trey. You must track down six distinct color variants of Minube scattered across the map, assemble them in your active party, and trigger a highly specific weather condition. Based on our 70+ hours of live testing and community-sourced spawn data, here is the exact roadmap to unlocking Chromaura.
+  </p>
+  <p>The Evolution Formula Debunked:A common community rumor suggested that evolving Minube fuses all six variants into one, destroying your hard-earned individual stats. This is false. 
+  </p>
+  <p><img src="/images/guides/guides05-01.webp" alt="6 minude color  varinats" width="50%">
+  </p>
+  <p> When the evolution triggers, **only one chosen Minube** actually evolves into Chromaura. The remaining five act as catalysts and remain completely untouched in your party. Furthermore, Chromaura will inherit the exact Level, IVs (from Roman numeral I to X), and training stats of that chosen lead Minube. Therefore, you do not need to level up all six—just invest your resources into one high-quality lead Minube and leave the other five at level 1.
+  </p>
+  <h2>1. The 6 Minube Color Variants: Complete Spawn Index
+  </h2>
+  <p>While some early data tables listed these variants as cave-exclusive encounters, our live testing and player reports confirm that all six variants can appear as overworld and wild encounters. Use the table below to plan your routes:
+  </p>
+  <table>
+  <tbody>
+  <tr>
+  <td data-row="row-fpjmza">Minube Nebula Variant
+  </td>
+  <td data-row="row-fpjmza">Zone Location (Italian / English equivalent)
+  </td>
+  <td data-row="row-fpjmza">Level Range
+  </td>
+  <td data-row="row-fpjmza">Spawn Rate
+  </td>
+  <td data-row="row-fpjmza">Community Hunting Tips
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-7tqirf">Yellow Nebula
+  </td>
+  <td data-row="row-7tqirf">Grotta P06 / Area 06 Cave
+  </td>
+  <td data-row="row-7tqirf">Lv. 13 - 17
+  </td>
+  <td data-row="row-7tqirf">5%
+  </td>
+  <td data-row="row-7tqirf">Found wandering the dark pathways of the Area 06 cavern system. Easy to spot due to its bright yellow glow.
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-cksjrr">Orange Nebula
+  </td>
+  <td data-row="row-cksjrr">Selva Troncombra / Darkwood Forest
+  </td>
+  <td data-row="row-cksjrr">Lv. 17 - 20
+  </td>
+  <td data-row="row-cksjrr">5%
+  </td>
+  <td data-row="row-cksjrr">Can spawn as a regular overworld encounter or as a reinforcement spawn. If you attack another Animon nearby, let the fight initiate instead of instakilling to check for Orange Minube reinforcements. Note: Even a high-level (Lv. 67+) weapon may not one-shot a level 17 Minube due to its defensive scaling.
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-9kva35">Blue Nebula
+  </td>
+  <td data-row="row-9kva35">Picco Suvio 00 / Suvius Peak 00 &amp; 02
+  </td>
+  <td data-row="row-9kva35">Lv. 26 - 32
+  </td>
+  <td data-row="row-9kva35">2% / 5%
+  </td>
+  <td data-row="row-9kva35">Look around the lower paths of Suvius Peak. The spawn rate is low on the entrance paths (2%), but rises to 5% once you descend into the lower caverns.
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-5wpudw">Red Nebula
+  </td>
+  <td data-row="row-5wpudw">Grotta Cremisi / Crimson Cavern
+  </td>
+  <td data-row="row-5wpudw">Lv. 27 - 31
+  </td>
+  <td data-row="row-5wpudw">5%
+  </td>
+  <td data-row="row-5wpudw">Wanders the interior caves of Crimson Cavern. Highly visible on the overworld against the dark cave walls.
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-hpoa0g">Green Nebula
+  </td>
+  <td data-row="row-hpoa0g">Sotterranei del Tempio / Temple Underground (Memorenia)
+  </td>
+  <td data-row="row-hpoa0g">Lv. 31 - 34
+  </td>
+  <td data-row="row-hpoa0g">5% / 3%
+  </td>
+  <td data-row="row-hpoa0g">Confirmed to be both an overworld wanderer and a wild battle encounter. Search the neon-lit ruins beneath Memorenia.
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-4s11hu">Violet Nebula
+  </td>
+  <td data-row="row-4s11hu">Isole Eoliche / Aeolic Islands
+  </td>
+  <td data-row="row-4s11hu">Lv. 58 - 64
+  </td>
+  <td data-row="row-4s11hu">5%
+  </td>
+  <td data-row="row-4s11hu">Late-game overworld spawn. It patrols the high-elevation paths near the ancient statues.
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <p>Survival Threat: The Suvius Peak Explosive Mice!When hunting for the Blue and Red Nebula variants in Suvius Peak / Crimson Cavern, you will run into hordes of Harrogre (popularly known as the "explosive mice"). These mobs are highly aggressive, spawn frequently, and can easily wipe out an unprepared party with their self-destruct moves. Bring high-defense leads or sturdy shields to absorb the blast damage while cycling your Minube spawns.
+  </p>
+  <h2>2. How to Evolve Minube into Chromaura
+  </h2>
+  <p>Once you have captured all six distinct Nebula forms, you must execute the final evolution sequence:
+  </p>
+  <h3>Step 1: Party Setup
+  </h3>
+  <p>Place all six color variants of Minube (Yellow, Orange, Blue, Red, Green, and Violet) into your active 6-member battle party. Ensure the Minube with your preferred IVs and stats is placed in your primary slot.
+  </p>
+  <h3>Step 2: Triggering Rainbow Weather
+  </h3>
+  <p>The evolution is strictly hard-locked behind **Rainbow Weather**, which is one of the rarest weather occurrences in the game. You can trigger this weather in two ways:
+  </p>
+  <ol>
+  <li>The Natural Route (Skyreach Lake): Head to Area 17 (Skyreach Lake). This area has the highest natural spawn rate for the Rainbow weather cycle. Run back and forth between screens to force weather updates until the sky shifts.
+  </li>
+  <li>The Quest Bypass (Paradine City): If you want to avoid relying on random weather generation, progress through the story until you reach **Paradine City** in the late game. A specific local sidequest in the city will force the overworld weather into a permanent Rainbow state until the quest is completed. You can easily trigger your evolution during this window.
+  </li>
+  </ol>
+  <p><img src="/images/guides/guides05-02.webp" alt="Rainbow area17" width="50%">
+  </p>
+  <h3>Step 3: Completing the Evolution
+  </h3>
+  <p>Once you are standing in Rainbow Weather with all six Minubes in your party, open your team menu and select your lead Minube. Trigger the evolution, and it will permanently transform into the powerful, multi-colored Chromaura, while the other five catalyst Minubes remain safely in your party slots.
+  </p>
+  <p><img src="/images/guides/guides05-03.webp" alt="Chromaura" width="50%">
+  </p>`,
+  },
+
+  {
+    id: 6,
+    title: "Lumentale: Memories of Trey — Deciphering the Ancient Language &amp; Tablet Texts",
+    description: "Deciphering the ancient glyphs carved into tablets and posters in <em>Lumentale: Memories of Trey</em> is one of the most rewarding side puzzles in the game. Rather than serving as random decoration, these glyphs constitute a structured substitute cipher. Once decoded, they reveal rich, in-universe lore written in Latin, which can then be translated into English. Here is how we cracked the code and the complete translation of the Area 05 overworld tablets.",
+    tags: ["Lumentale: Memories of Trey"],
+    publishDate: "2026-06-12",
+    imageUrl: "/images/guides/guides06.webp",
+    imageAlt: "Lumentale Memories of Trey — Ancient Glyph Deciphering",
+    seo: {
+      title: "Lumentale: Memories of Trey — Ancient Glyph Deciphering &amp; Translation Guide",
+      description: "A comprehensive guide to deciphering the ancient glyph language in Lumentale: Memories of Trey. Includes the full glyph-to-Latin alphabet and complete overworld tablet translations.",
+      keywords: "Lumentale Memories of Trey, Lumentale ancient language, decipher glyphs lumentale, lumentale alphabet key, translate ancient tablets lumentale"
+    },
+    author: "LumenTale Fan Guide Team",
+    addressBar: "lumentale-memories-of-trey-ancient-language-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub 
+  </p>
+  <p> Tested on Build: Release Build v1.0 | Data Status: Hand-Verified
+  </p>
+  <p>Deciphering the ancient glyphs carved into tablets and posters in Lumentale: Memories of Trey is one of the most rewarding side puzzles in the game. Rather than serving as random decoration, these glyphs constitute a structured substitute cipher. Once decoded, they reveal rich, in-universe lore written in Latin, which can then be translated into English. Here is how we cracked the code and the complete translation of the Area 05 overworld tablets.
+  </p>
+  <h2>1. The Deciphering Strategy: How the Code Was Cracked
+  </h2>
+  <p>To decode the ancient glyphs without an external guide, we used a two-part environmental cross-reference strategy:
+  </p>
+  <h3>The Wanted Poster Clue:
+  </h3>
+  <p>The first piece of the puzzle lies inside the local newspaper, the Gazzetta del Lumen. In one of the articles, there is a prominent wanted poster. 
+  </p>
+  <p> By analyzing the structural layout of the poster, we can easily identify the bold, top heading as "WANTED" and the subtext below as "DEAD OR ALIVE". Comparing these English letters to the printed glyph symbols immediately unlocked our first 11 translated characters (W, A, N, T, E, D, L, O, R, I, V).
+  </p>
+  <p><img src="/images/guides/guides06-01.webp" alt="Iris hamlet" width="50%">
+  </p>
+  <h3>The Map POI Cross-Reference Clue:
+  </h3>
+  <p>With a baseline set of letters established, we then cross-referenced known map **Points of Interest (POIs)** with their in-game glyph names:
+  </p>
+  <ol>
+  <li>The Iris Hamlet Monument: In Iris Hamlet, the central obelisk POI is labeled on the map. Checking the glyph plaque on the obelisk reveals the word "MEMORIALE" (Italian/Talean for Memorial). This unlocked the letters M, O, and L.
+  </li>
+  <li>The Laboratory POI: Heading to the local laboratory reveals the POI plaque labeled "LABORATORIO DI WARAX". This cross-reference successfully unlocked B, U, S, X, and the remaining letters of the core alphabet.
+  </li>
+  </ol>
+  <p>The Missing Letter 'J':Our complete decoding of the alphabet confirms that the letter 'J' is completely absent from the ancient glyph directory. The game skips from 'I' straight to 'K' in its substitution system. This is a common quirk in historically styled ciphers, so keep this in mind when decoding custom messages.
+  </p>
+  <h2>2. Complete Glyph-to-Latin Alphabet Reference
+  </h2>
+  <p>Use this reference table to manually translate any overworld glyph inscriptions you encounter:
+  </p>
+  <p><img src="/images/guides/guides06-02.webp" alt="Ancient Glyph Deciphering 2" width="50%">
+  </p>
+  <table>
+  <tbody>
+  <tr>
+  <td data-row="row-6oblpy">Latin Letter
+  </td>
+  <td data-row="row-6oblpy">Visual Glyph Description / Equivalent
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-j098fe">A / B / C / D
+  </td>
+  <td data-row="row-j098fe">Angled '4' symbol / Standard 'B' loop / Curved 'o' / Backwards 'Z'
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-pu7y1z">E / F / G
+  </td>
+  <td data-row="row-pu7y1z">Horizontal trident / Stylized cursive 'f' / Swirling 'g' loop
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-vb0pms">H / I / K
+  </td>
+  <td data-row="row-vb0pms">Parenthesis brackets '( )' / Double-barred 'I' / Angular hook 'K'
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-9c1arx">L / M / N
+  </td>
+  <td data-row="row-9c1arx">Soft 'L' curve / Angular 'E-like' trident / Sharp double-loop 'W'
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-rgxvzr">O / P / Q / R
+  </td>
+  <td data-row="row-rgxvzr">Horizontal oval / Mirror-flipped 'R' / Closed loop with stem / Standard loop-and-leg
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-08efkw">S / T / U / V
+  </td>
+  <td data-row="row-08efkw">Cursive 'S' path / Cross 'T' bar / Blocky 'U' / Double diagonal forward slashes '//'
+  </td>
+  </tr>
+  <tr>
+  <td data-row="row-36lny5">W / X / Y / Z
+  </td>
+  <td data-row="row-36lny5">Triple slashes / Hourglass 'X' / Vertical stem with fork / Straight horizontal bar with loop
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <h2>3. Area 05 Ancient Tablet Translations
+  </h2>
+  <p>In Area 05, you will find ancient stone tablets surrounded by stone pillars. Deciphering these glyphs reveals the tragic history of the regional master:
+  </p>
+  <h3>Tablet Part 1:
+  </h3>
+  <p>Deciphered Latin Text:
+  </p>
+  <p>"FORTUNA CAECA EST, SED INFORTUNIUM SCIT UBI FERIRE. QUAMVIS MAGNIFICIS TEMPORIBUS IN NOBIS VIVIMUS, MAGNUS MAGISTER ATALANTE NOS RELEQUIT."
+  </p>
+  <p>English Translation:
+  </p>
+  <p>"Fortune is blind, but misfortune knows where to strike. Though we live in magnificent times, the great master Atalante has left us."
+  </p>
+  <h3>Tablet Part 2:
+  </h3>
+  <p>Deciphered Latin Text:
+  </p>
+  <p>"SINE VESTIGIO EVANUIT, PRAETER FRUCTIS INGENII SUI. DICITUR NUPER DIXISSE SE EPIPHANIAM EXPERTUM ESSE QUAE EIUS SENTENTIAM RADICALITER MUTAVIT."
+  </p>
+  <p>English Translation:
+  </p>
+  <p>"He vanished without a trace, save for the fruits of his genius. It is said that shortly before, he claimed to have experienced an epiphany that radically changed his beliefs."
+  </p>
+  <p>Pathfinder's Nostalgia:Solving this puzzle felt incredibly reminiscent of using the Braille chart in Pokémon Emerald to unlock the sealed chambers of the three Regis (Regice, Registeel, and Regirock). It is a fantastic mechanical callback that rewards players for physically observing the world around them instead of following an objective marker.
+  </p>`,
+  }
   
   
 
