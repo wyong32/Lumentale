@@ -78,9 +78,9 @@ export default [
   </h2>
   <p>This is easily the biggest rookie mistake in the mid-game. The game will prompt you to evolve your Melotica into Meloquinia at Lv. 24. Do not blindly click confirm.
   </p>
-  <p>If you look at the fully unlocked AniWiki (which you get by reaching Research Level 3/Yellow Star on an Animon), you will find that Melotica learns its best life-drain recovery move, Absorb, at Lv. 26.
+  <p>If you look at the fully unlocked <a href="/wiki">AniWiki</a> (which you get by reaching Research Level 3/Yellow Star on an Animon), you will find that Melotica learns its best life-drain recovery move, Absorb, at Lv. 26.
   </p>
-  <p>If you evolve at Lv. 24, your newly evolved Meloquinia cannot easily learn this move until much later in the game. I ruined my first playthrough's pacing because I evolved too early and lost my tank's primary sustain option. Hold down the "cancel" button at Lv. 24, wait two more levels to learn Absorb, and then let the evolution proceed. Your mid-game survival rates will thank you.
+  <p>If you evolve at Lv. 24, your newly evolved <a href="/animon/meloquinia">Meloquinia</a> cannot easily learn this move until much later in the game. I ruined my first playthrough's pacing because I evolved too early and lost my tank's primary sustain option. Hold down the "cancel" button at Lv. 24, wait two more levels to learn Absorb, and then let the evolution proceed. Your mid-game survival rates will thank you.
   </p>
   <h2>4. Tuning Quirks (Abilities) Without the RNG Headache
   </h2>
@@ -117,7 +117,7 @@ export default [
   </td>
   </tr>
   <tr>
-  <td data-row="row-mivyzq">Anivite EX
+  <td data-row="row-mivyzq"><a href="/wiki/items/anivite-ex">Anivite EX</a>
   </td>
   <td data-row="row-mivyzq">2
   </td>
@@ -138,7 +138,7 @@ export default [
   </p>
   <h2>6. Skip the 10% Hunt: Crafting the Prismatype
   </h2>
-  <p>Wild Animons only have a 10% chance to spawn with their Secret Type active (and some, like Bonkey, have a 5% split chance between two hidden types). Trying to farm this in the wild is mathematically inefficient.
+  <p>Wild Animons only have a 10% chance to spawn with their Secret Type active (and some, like <a href="/animon/bonkey">Bonkey</a>, have a 5% split chance between two hidden types). Trying to farm this in the wild is mathematically inefficient.
   </p>
   <p>Instead, use the Prismatype item to force-unlock or swap the hidden potential of your Animon. It gives you a second STAB type without adding any defensive weaknesses—a purely beneficial upgrade.
   </p>
@@ -243,7 +243,7 @@ export default [
   </p>
   <h2>3. The Aggro-Tethering Exploit: Catching Water Animons Early
   </h2>
-  <p>Early in the game, you'll see fish-like Animons (like Firtrix) swimming out in deep water. If you try throwing your Holoken at them, it will fail because they are physically out of reach, and you don't have the water-traversal upgrades required to reach them yet.
+  <p>Early in the game, you'll see fish-like Animons (like Firtrix) swimming out in deep water. If you try throwing your <a href="/wiki/items/holoken">Holoken</a> at them, it will fail because they are physically out of reach, and you don't have the water-traversal upgrades required to reach them yet.
   </p>
   <p>You can bypass this limitation entirely using the game's battle-proximity mechanic. When you initiate a wild battle on land, any other wild Animon standing directly adjacent to the target gets dragged into the fight as a multi-battle partner.
   </p>
@@ -327,7 +327,7 @@ export default [
   </h2>
   <p>The video confirmed a fascinating detail regarding the rare "Secret Types" (the 10% wild variants that sport a secondary element).
   </p>
-  <p>Our testing shows that having a secondary Secret Type does not alter the Animon's level-up movepool. For example, a Mollupom with a secret Water secondary type will learn the exact same moves at the exact same levels as a pure Rock Mollupom.
+  <p>Our testing shows that having a secondary Secret Type does not alter the Animon's level-up movepool. For example, a <a href="/animon/mollupom">Mollupom</a> with a secret Water secondary type will learn the exact same moves at the exact same levels as a pure Rock Mollupom.
   </p>
   <p>So, why hunt them? The Same Type Attack Bonus (STAB). Having the type active on their profile grants a massive 50% damage multiplier to moves of that element. A pure Anomalous Oaxle (the candle monster) can still learn Fire moves, but an Anomalous/Fire variant gets a massive, passive damage boost on those same fire moves. It's an essential target for late-game min-maxing.
   </p>
@@ -386,7 +386,7 @@ export default [
   </h2>
   <p>Below is the complete, verified list of all 20 rare Animons featured in the game, categorized by their true spawn coordinates and specific environmental triggers.
   </p>
-  <h3>1. Mewaii
+  <h3>1. <a href="/animon/mewaii">Mewaii</a>
   </h3>
   <p>True Location: Plains Biome, specifically the **second swamp entrance** path.
   </p>
@@ -394,7 +394,7 @@ export default [
   </p>
   <p>Trailer Disinformation: Official promotional footage showed Mewaii wandering the starting Plains Biome fields. After 30 minutes of testing that starting zone, we recorded zero encounters. Do not waste your time there; head directly to the second swamp entrance where we successfully spawned six of them in a single buff window.
   </p>
-  <h3>2. Ozelash
+  <h3>2. <a href="/animon/ozelash">Ozelash</a>
   </h3>
   <p>True Location: Area 23.
   </p>
@@ -406,13 +406,13 @@ export default [
   </p>
   <p>Requirements: Florenco can spawn in the upper cliff section once you obtain **Water Power** to swim across. Alternatively, it can spawn in the small, isolated section accessible only after obtaining **Grass Power**.
   </p>
-  <h3>4. Vortail
+  <h3>4. <a href="/animon/vortail">Vortail</a>
   </h3>
   <p>True Location: Aeolyc Islands (Area 15).
   </p>
   <p>Requirements: Similar to Florenco, Vortail is locked to the upper cliff sections (requires Water Power) and the isolated ledges (requires Grass Power). It patrols these high-elevation grassy paths.
   </p>
-  <h3>5. Salabel
+  <h3>5. <a href="/animon/salabel">Salabel</a>
   </h3>
   <p>True Location: Suvius Peak (Area 12).
   </p>
@@ -424,13 +424,13 @@ export default [
   </p>
   <p>Requirements: Kageka does not spawn in the location shown in early promotional trailers. It is tucked away in Area 04, which is completely inaccessible until both the North and South areas of the zone have been cleared. It spawns as a hidden partner under the overworld Griblin models.
   </p>
-  <h3>7. Rainxy (Weather Locked)
+  <h3>7. <a href="/animon/rainxy">Rainxy</a> (Weather Locked)
   </h3>
   <p>True Location: Area 01.
   </p>
   <p>Requirements: Rainxy is strictly weather-sensitive and will **only spawn while it is actively raining** (indicated by the cloud/rain icon on your mini-map). We found the most consistent spawn loop is running back and forth directly outside the camp entrance during downpours.
   </p>
-  <h3>8. Minube (Yellow Variant)
+  <h3>8. <a href="/animon/minube">Minube</a> (Yellow Variant)
   </h3>
   <p>True Location: Area 06 Cave.
   </p>
@@ -442,13 +442,13 @@ export default [
   </p>
   <p>Requirements: Requires **Grass Power** (climbing mechanics) to reach the ledge. Yokora patrols the dense bamboo area situated directly **east of the giant central tree**.
   </p>
-  <h3>10. Katamos
+  <h3>10. <a href="/animon/katamos">Katamos</a>
   </h3>
   <p>True Location: Aeolyc Islands beach area.
   </p>
   <p>The Secret: Katamos is introduced as a major story boss, but the game's code treats him as a standard overworld rare spawn once the battle is cleared. Return to the beach where you first fought him, pop your Verdi card buff, and you can farm him repeatedly to min-max his stats.
   </p>
-  <h3>11. Soblin (Weather Locked)
+  <h3>11. <a href="/animon/soblin">Soblin</a> (Weather Locked)
   </h3>
   <p>True Location: Area 25 (Glacial Peaks).
   </p>
@@ -466,13 +466,13 @@ export default [
   <li>Yellow Toypette (The Voltier Puzzle): Go to the Lampet minigame building in Voltier. Use your Electric Power to interact with the console, shifting the tube colors to **Green**, and then to **Pink**. This triggers a cutscene that unlocks the alleyway gate. Yellow Toypette will spawn there or alongside wild Toxigall and Ogiemask.
   </li>
   </ol>
-  <h3>13. Devoblet
+  <h3>13. <a href="/animon/devoblet">Devoblet</a>
   </h3>
   <p>True Location: Titan Quarry (Area 20).
   </p>
   <p>Spawning Trick: Devoblet is a very straightforward overworld spawn. Simply run up and down the main path where the zone boss is located with your Verdi card buff active.
   </p>
-  <h3>14. Twinkler (AniSpace Exclusive)
+  <h3>14. <a href="/animon/twinkler">Twinkler</a> (AniSpace Exclusive)
   </h3>
   <p>True Location: Inside your **AniSpace** sandbox.
   </p>
@@ -480,31 +480,31 @@ export default [
   </p>
   <p> Pathfinder's Tip: Do this while standing in a small overworld area with minimal assets, like the **Lumen Club**, to drastically reduce your loading screens and save time. 
   </p>
-  <h3>15. Chagma
+  <h3>15. <a href="/animon/chagma">Chagma</a>
   </h3>
   <p>True Location: Area 02 / Area 03 (Early) or Area 05 (Late).
   </p>
   <p>Early Hunting Hack: Early on, Chagma's spawn rate is abysmal. If you insist on grinding Chagma early, go to a Fountain and select **"Rest until the Afternoon"**. Chagma's spawn window is strictly time-sensitive; our tests yielded zero morning spawns but immediate success during afternoon hours. In Area 02, look for it hidden under overworld Deniuli models; in Area 03, check under Almyuna models.
   </p>
-  <h3>16. Deniuli
+  <h3>16. <a href="/animon/deniuli">Deniuli</a>
   </h3>
   <p>True Location: Area 02 overworld.
   </p>
   <p>Significance: Deniuli patrols the grassy paths of Area 02. Engaging these overworld models is your primary method for triggering early-game partner battles that can contain Chagma.
   </p>
-  <h3>17. Almyuna
+  <h3>17. <a href="/animon/almyuna">Almyuna</a>
   </h3>
   <p>True Location: Area 03 overworld.
   </p>
   <p>Significance: Similar to Deniuli, Almyuna patrols the overworld paths of Area 03. Engaging them with an active card buff is your best bet for pulling an early afternoon Chagma into battle.
   </p>
-  <h3>18. Inkrow
+  <h3>18. <a href="/animon/inkrow">Inkrow</a>
   </h3>
   <p>True Location: Skyreach Lake (Area 17).
   </p>
   <p>Requirements: Requires **Grass Power** (climbing mechanics) to reach the summit. Scale the metal pipes and platforms near the waterfall. Inkrow patrols the high industrial platforms at the very top of the lake zone.
   </p>
-  <h3>19. Lordrake
+  <h3>19. <a href="/animon/lordrake">Lordrake</a>
   </h3>
   <p>True Location: Brackish Palace (Area 08).
   </p>
@@ -514,7 +514,7 @@ export default [
   </h3>
   <p>True Location: Suvius Peak (Area 12).
   </p>
-  <p>Requirements: Cross the lava fields using your Water Power. It shares overworld spawn pools inside the volcanic caves and frequently appears as a partner spawn in wild battles alongside Skeletape and Bonkey.
+  <p>Requirements: Cross the lava fields using your Water Power. It shares overworld spawn pools inside the volcanic caves and frequently appears as a partner spawn in wild battles alongside <a href="/animon/skeletape">Skeletape</a> and Bonkey.
   </p>`,
   },
 
@@ -537,7 +537,7 @@ export default [
   </p>
   <p>Tested on Build: Release Build | Prerequisites: North &amp; South Paths Cleared
   </p>
-  <p>Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pokédex (AniWiki) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.
+  <p>Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pokédex (<a href="/wiki">AniWiki</a>) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.
   </p>
   <p>The Catch Rate Secret: Do not waste your rare, high-tier capture items or stress over catching these targets. Defeating a Legendary in battle automatically adds them to your active team or your AniSpace storage box. Focus 100% of your strategy on winning the fight.
   </p>
@@ -545,7 +545,7 @@ export default [
   </h2>
   <p>These three Legendaries are accessible as soon as the South Path is fully open. They do not require complex quest lines, but they do feature minor movement puzzles.
   </p>
-  <h3>1. Yakora (The Joyous Sentinel)
+  <h3>1. <a href="/animon/yakora">Yakora</a> (The Joyous Sentinel)
   </h3>
   <ol>
   <li>Location: Darkwood Forest (Area 07).
@@ -567,12 +567,12 @@ export default [
   </ol>
   <p><img src="/images/guides/guides04-01.webp" alt="Dualine" width="50%">
   </p>
-  <h3>3. Morsiver (The Demon of the Peaks)
+  <h3>3. <a href="/animon/morsiver">Morsiver</a> (The Demon of the Peaks)
   </h3>
   <ol>
   <li>Location: Suvius Peak (Area 12).
   </li>
-  <li>The Puzzle: This zone catches many players off guard because the game never explicitly forces you to use this mechanic beforehand. You must use your Water Holoken to shoot the active lava flows. This cools the magma down, building a solid rock path you can cross to reach the deep caldera.
+  <li>The Puzzle: This zone catches many players off guard because the game never explicitly forces you to use this mechanic beforehand. You must use your Water <a href="/wiki/items/holoken">Holoken</a> to shoot the active lava flows. This cools the magma down, building a solid rock path you can cross to reach the deep caldera.
   </li>
   <li>Stats: Lv. 100 | Attribute: Horrens (Fear/Anxiety) | Type: Demon.
   </li>
@@ -585,7 +585,7 @@ export default [
   </p>
   <p>The Unlock Step: Go to Arsilia at Nighttime. An NPC will stop you, suspecting you are a poacher, and challenge you to a battle. Win the fight to kick off the "Poaching Case" questline. This eventually grants you a warrant to search the Council member's flat and unlocks the path to **Skyreach Lake (Area 17)**.
   </p>
-  <h3>4. Knequital (The Invisible Path)
+  <h3>4. <a href="/animon/knequital">Knequital</a> (The Invisible Path)
   </h3>
   <ol>
   <li>Location: Skyreach Lake Caves (Area 17).
@@ -595,7 +595,7 @@ export default [
   <li>Stats: Lv. 100 | Attribute: Sereum | Type: Steel.
   </li>
   </ol>
-  <h3>5. Nuclheart (The Valve Chamber)
+  <h3>5. <a href="/animon/nuclheart">Nuclheart</a> (The Valve Chamber)
   </h3>
   <ol>
   <li>Location: Biome Plains (Area 22).
@@ -621,7 +621,7 @@ export default [
   </h2>
   <p>The final two Legendaries are strictly post-game content and require rolling the credits first.
   </p>
-  <h3>7. Primalong (The Sage of Memorenia)
+  <h3>7. <a href="/animon/primalong">Primalong</a> (The Sage of Memorenia)
   </h3>
   <ol>
   <li>Location: Memorenia (Area 18 Shrine).
@@ -637,7 +637,7 @@ export default [
   <li>Stats: Lv. 100 | Attribute: Sereum | Type: Wood.
   </li>
   </ol>
-  <h3>8. Kentaress (The Void Champion)
+  <h3>8. <a href="/animon/kentaress">Kentaress</a> (The Void Champion)
   </h3>
   <p><img src="/images/guides/guides04-02.webp" alt="Kentaress" width="50%">
   </p>
@@ -674,7 +674,7 @@ export default [
   </p>
   <p> Tested on Build: Release Build v1.0 | Data Status: Hand-Verified &amp; Community-Sourced
   </p>
-  <p>Evolving Minube into the elusive Chromaura is one of the most tedious end-game collection puzzles in Lumentale: Memories of Trey. You must track down six distinct color variants of Minube scattered across the map, assemble them in your active party, and trigger a highly specific weather condition. Based on our 70+ hours of live testing and community-sourced spawn data, here is the exact roadmap to unlocking Chromaura.
+  <p>Evolving <a href="/animon/minube">Minube</a> into the elusive <a href="/animon/chromaura">Chromaura</a> is one of the most tedious end-game collection puzzles in Lumentale: Memories of Trey. You must track down six distinct color variants of Minube scattered across the map, assemble them in your active party, and trigger a highly specific weather condition. Based on our 70+ hours of live testing and community-sourced spawn data, here is the exact roadmap to unlocking Chromaura.
   </p>
   <p>The Evolution Formula Debunked:A common community rumor suggested that evolving Minube fuses all six variants into one, destroying your hard-earned individual stats. This is false. 
   </p>
