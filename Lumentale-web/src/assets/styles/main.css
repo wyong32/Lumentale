@@ -127,6 +127,48 @@ img {
   text-align: center;
 }
 
+.alliance-ad-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.alliance-ad-slot__frame {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.alliance-ad-slot__frame--desktop {
+  display: none;
+}
+
+.alliance-ad-slot__frame--mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .alliance-ad-slot__frame--desktop {
+    display: block;
+  }
+
+  .alliance-ad-slot__frame--mobile {
+    display: none;
+  }
+}
+
+.alliance-native-banner {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.alliance-native-banner__inner {
+  margin-inline: auto;
+  text-align: center;
+  width: 100%;
+}
+
 .page-main {
   overflow-x: hidden;
 }

@@ -24,7 +24,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="skills-about-title">
       <div class="container">
@@ -42,7 +43,8 @@
         </article>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     <section class="wiki-catalog-section" aria-labelledby="skills-list-title">
       <div class="container">
@@ -127,7 +129,8 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} skills ({{ skills.length }} total)</p>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section">
       <div class="container">
@@ -165,7 +168,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
   </main>
 </template>
 

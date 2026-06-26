@@ -23,7 +23,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="bosses-list-heading">
       <div class="container">
@@ -41,7 +42,8 @@
             <input v-model="query" type="search" placeholder="Search bosses…" aria-label="Search bosses" />
           </label>
         </div>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
     
         <div class="grid-cards">
           <article
@@ -101,7 +103,8 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} bosses ({{ bossList.length }} total)</p>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
   </main>
 </template>
 

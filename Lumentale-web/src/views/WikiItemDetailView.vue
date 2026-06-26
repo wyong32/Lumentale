@@ -27,7 +27,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="detail-section">
       <div class="container">
@@ -84,7 +85,8 @@
                 </div>
               </div>
             </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
             <section class="detail-panel detail-panel--primary" aria-labelledby="item-does-heading">
               <header class="detail-panel-head">
@@ -118,7 +120,8 @@
                 </p>
               </div>
             </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
             <section
               v-if="effectEntries.length"
@@ -145,7 +148,8 @@
                 </ul>
               </div>
             </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
             <section class="detail-panel" aria-labelledby="item-bag-heading">
               <header class="detail-panel-head">
@@ -172,7 +176,8 @@
                 </div>
               </div>
             </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
             <section
               v-if="craftedBy.length || usedInRecipes.length"
@@ -240,7 +245,8 @@
                 </div>
               </div>
             </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
             <aside class="detail-tip" aria-label="Player tip">
               <p>

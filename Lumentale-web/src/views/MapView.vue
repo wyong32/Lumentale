@@ -22,7 +22,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="map-section" aria-labelledby="map-art-title">
       <div class="container">
@@ -43,7 +44,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="map-about-title">
       <div class="container">
@@ -63,7 +65,8 @@
         </article>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     
 
@@ -128,7 +131,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
   </main>
 </template>
 

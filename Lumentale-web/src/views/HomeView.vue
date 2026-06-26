@@ -40,7 +40,8 @@
         </form>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="stats-section" aria-label="Wiki coverage">
       <div class="container">
@@ -110,7 +111,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     <section class="guides-section" aria-labelledby="guides-title">
       <div class="container">
@@ -176,7 +178,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <section class="combat-section" aria-labelledby="combat-title">
       <div class="container">
@@ -240,7 +243,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
@@ -299,7 +303,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     <section class="faq-section" aria-labelledby="faq-title">
       <div class="container">
@@ -315,7 +320,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <section class="disclaimer-section" aria-label="Site disclaimer">
       <div class="container">

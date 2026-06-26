@@ -1,6 +1,7 @@
 <template>
   <main class="page-main">
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
     
     <section class="page-hero-section" aria-labelledby="recipes-title">
       <div class="container">
@@ -24,7 +25,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="recipes-list-heading">
       <div class="container">
@@ -162,7 +164,8 @@
         </p>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="recipes-tips-title">
       <div class="container">

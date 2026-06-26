@@ -32,7 +32,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section v-if="!qValid" class="data-section">
       <div class="container">
@@ -177,7 +178,8 @@
         </div>
       </section>
     </template>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
   </main>
 </template>
 

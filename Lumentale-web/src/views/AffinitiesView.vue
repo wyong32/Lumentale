@@ -22,7 +22,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <!-- 1. Five affinities — single source of truth -->
     <section class="affinities-section" aria-labelledby="emotion-title">
@@ -68,7 +69,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     <!-- 2. Elements — one block: intro + detailed catalog (no mosaic duplicate) -->
     <section class="elements-catalog-section" aria-labelledby="elements-title">
@@ -120,7 +122,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <!-- 3. Compact reference: hidden types + battle impact -->
     <section class="data-section affinities-reference-section" aria-labelledby="reference-title">
@@ -160,7 +163,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="matchups-title">
       <div class="container">
@@ -183,7 +187,8 @@
         </article>
       </div>
     </section>
-    <GptAdSlot unit="2" />
+    <!-- <GptAdSlot unit="2" /> -->
+    <AllianceAdSlot />
 
     <section class="combat-section" aria-labelledby="combat-mechanics-title">
       <div class="container">
@@ -233,7 +238,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="3" />
+    <!-- <GptAdSlot unit="3" /> -->
+    <AllianceAdSlot />
 
     <section class="data-section" aria-labelledby="team-title">
       <div class="container">
@@ -271,7 +277,8 @@
         </div>
       </div>
     </section>
-    <GptAdSlot unit="1" />
+    <!-- <GptAdSlot unit="1" /> -->
+    <AllianceAdSlot />
   </main>
 </template>
 
