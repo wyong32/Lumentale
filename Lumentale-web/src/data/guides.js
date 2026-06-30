@@ -933,11 +933,224 @@ export default [
   </p>
   <p>Pathfinder's Nostalgia:Solving this puzzle felt incredibly reminiscent of using the Braille chart in Pokémon Emerald to unlock the sealed chambers of the three Regis (Regice, Registeel, and Regirock). It is a fantastic mechanical callback that rewards players for physically observing the world around them instead of following an objective marker.
   </p>`,
-  }
-  
-  
+  },
 
+  {
+    id: 7,
+    title: "Lumentale: Memories of Trey Holoken Powers Guide: Field Abilities, Unlocks, and Route Uses",
+    description: "A practical Lumentale Holoken powers guide for field abilities, lava path checks, route gates, Water Holoken use, and late-game traversal utility.",
+    tags: ["Holoken Powers", "Field Abilities", "Exploration", "Routes"],
+    publishDate: "2026-06-30",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/holoken-powers-route-use.webp",
+    imageAlt: "Lumentale Holoken powers guide with Animon field route team",
+    seo: {
+      title: "Lumentale Holoken Powers Guide - Field Routes",
+      description: "Plan Lumentale Holoken powers for field abilities, lava paths, route gates, Water Holoken checks, and late-game utility without wasting time.",
+      keywords: "Lumentale Holoken powers, field abilities, lava path, Water Holoken",
+    },
+    addressBar: "lumentale-memories-of-trey-holoken-powers-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>FIELD TESTED / PATCH SENSITIVE</strong>. Route gates, Holoken unlock timing, and field interaction feedback can move after balance or map patches.
+  </p>
+  <p>Fast answer: treat Holoken powers as route tools, not combat flavor. If a path looks impossible, the missing answer is usually the right overworld Animon type or a late-game Holoken interaction, not brute force.
+  </p>
+  <figure>
+    <img src="/images/guides/holoken-powers-route-use.webp" alt="Lumentale Holoken powers guide with Animon field route team" title="Lumentale Holoken powers and field route planning" loading="lazy">
+    <figcaption>Route progress starts with the right field toolkit. Bring the Holoken interaction before you clear the whole area twice.</figcaption>
+  </figure>
+  <h2>How Holoken powers work
+  </h2>
+  <p>A Holoken power is any overworld interaction that changes how Trey moves through Talea: cooling a hazard, opening a blocked path, triggering a traversal shortcut, or making a hostile route safer. Do not evaluate these like battle moves. Their value is measured by the areas, quests, and resource loops they unlock.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Field Problem</th><th>Likely Holoken Check</th><th>Route Call</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Hazard floor or heated terrain</td><td>Water-style interaction</td><td>Test the edge before backtracking.</td></tr>
+      <tr><td>Dense enemy movement</td><td>Concealment or avoidance utility</td><td>Use it to cross, not to farm.</td></tr>
+      <tr><td>Long repeated route</td><td>Movement or Chakra-style utility</td><td>Use it after the first clear to cut travel time.</td></tr>
+      <tr><td>No feedback after use</td><td>Wrong type or locked progression</td><td>Leave and return after the next unlock.</td></tr>
+    </tbody>
+  </table>
+  <h3>What counts as a field ability
+  </h3>
+  <p>A field ability is any Holoken interaction that changes the overworld state. In practical terms, that means the power either makes terrain safe, opens a route, reveals an interaction, or lets Trey avoid a bad path. If it only deals damage in a fight, it belongs in the combat guide, not this checklist.
+  </p>
+  <p>Use the <a href="/map">Talea map</a> with this rule: if enemies can be cleared but the terrain still blocks progress, mark the route as a field-ability gate and come back with the correct Holoken setup.
+  </p>
+  <h3>When powers start mattering
+  </h3>
+  <p>Holoken powers start mattering when the map stops behaving like a straight walking route. Caves, peaks, ruins, and late-area loops often ask for a specific overworld interaction. Extra levels will not solve a route gate if the obstacle is waiting for a type-linked field tool.
+  </p>
+  <h2>Important Holoken powers and where to use them
+  </h2>
+  <h3>Water power and lava paths
+  </h3>
+  <p>The clearest route use is the Water Holoken interaction on lava or heat-heavy paths. When a route has active heated terrain, test the edge with the water interaction before assuming the area is locked. If the surface changes after the shot, follow the new safe path instead of hunting for a hidden staircase.
+  </p>
+  <figure>
+    <img src="/images/guides/holoken-powers-lava-path.webp" alt="Lumentale Holoken powers route gate and field ability check" title="Lumentale field ability route gate check" loading="lazy">
+    <figcaption>Field gates are feedback tests. If the terrain reacts, keep routing forward; if it does not, re-check your unlock state.</figcaption>
+  </figure>
+  <table>
+    <thead>
+      <tr><th>Before Entering</th><th>Why It Matters</th><th>Stop Condition</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Confirm obstacle type</td><td>Prevents using the wrong Holoken interaction.</td><td>No visual or route feedback after one clean test.</td></tr>
+      <tr><td>Bring the needed Animon type</td><td>Some powers depend on the available field toolkit.</td><td>The game has not taught or unlocked the interaction yet.</td></tr>
+      <tr><td>Test before farming</td><td>Stops wasted clears in the wrong zone.</td><td>The path remains unchanged after the correct-looking power.</td></tr>
+    </tbody>
+  </table>
+  <h3>Demon, Chakra, and late-game utility powers
+  </h3>
+  <p>Late-game utility powers should be treated as route accelerators. Demon-style concealment helps avoid overworld contact when the area is dense with hostile Animons. Chakra-style movement or utility interactions are high-value during post-game collection, rare-spawn hunting, and repeated puzzle-room loops.
+  </p>
+  <figure>
+    <img src="/images/guides/holoken-powers-field-ability.webp" alt="Lumentale Holoken power utility Animon for late-game routes" title="Lumentale late-game Holoken utility power" loading="lazy">
+    <figcaption>Late powers do not need to be mandatory to be valuable. They save time when a route must be repeated.</figcaption>
+  </figure>
+  <h2>Common Holoken route mistakes
+  </h2>
+  <h3>Missing the required Animon type
+  </h3>
+  <p>The most common routing failure is entering a puzzle area with the wrong overworld toolkit. If a route needs a type-linked Holoken interaction, brute leveling does not solve the blocker. Check your <a href="/animon">Animon roster</a>, confirm the type, then retest the obstacle.
+  </p>
+  <h3>Trying to force a route before the unlock
+  </h3>
+  <p>Some blocked paths are not puzzles yet. If the terrain gives no feedback after the right-looking interaction, mark it as a progression gate and leave. Repeated no-feedback attempts usually mean the route belongs to a later unlock, not that you missed a tiny input window.
+  </p>
+  <h2>FAQ
+  </h2>
+  <h3>What are Holoken powers in Lumentale: Memories of Trey?
+  </h3>
+  <p>Holoken powers are field abilities used to interact with routes, obstacles, and special overworld mechanics. They matter most when terrain or route design blocks normal movement.
+  </p>
+  <h3>Which Holoken power cools lava in Lumentale: Memories of Trey?
+  </h3>
+  <p>The Water Holoken interaction is the route check to test first on lava paths or heated terrain. If the terrain reacts, follow the cooled path; if it does not, re-check the required unlock state.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/guides/lumentale-memories-of-trey-hidden-mechanics">Hidden Mechanics Guide</a> - overworld systems and tested route behavior.</li>
+    <li><a href="/guides/lumentale-unlock-all-legendary-locations">Legendary Locations Guide</a> - route gates and late-area unlock logic.</li>
+    <li><a href="/guides/lumentale-20-rare-animon-spawn-locations">Rare Animon Spawn Guide</a> - repeated routes where movement utility saves time.</li>
+    <li><a href="/wiki/skills">Skills</a> and <a href="/animon">AniDex</a> - check team tools before entering a gated route.</li>
+  </ul>`,
+  },
 
-
-
+  {
+    id: 8,
+    title: "Lumentale: Memories of Trey SP Combat Guide: Shared SP, TP, and Team Action Planning",
+    description: "A direct Lumentale SP combat guide for shared SP, TP generation, turn cycle planning, low-cost moves, weakness coverage, and team action timing.",
+    tags: ["Combat", "SP", "TP", "Team Actions"],
+    publishDate: "2026-06-30",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/sp-combat-stat-planning.webp",
+    imageAlt: "Lumentale SP combat guide showing turn cycle and shared SP",
+    seo: {
+      title: "Lumentale SP Combat Guide - TP Team Actions",
+      description: "Learn Lumentale shared SP, TP generation, turn order, weakness coverage, low-cost moves, and team action timing for cleaner boss fights.",
+      keywords: "Lumentale SP combat, TP, team actions, 4v4 combat, shared SP",
+    },
+    addressBar: "lumentale-memories-of-trey-sp-combat-tp-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>FIELD TESTED / PATCH SENSITIVE</strong>. SP costs, TP gain, move balance, and boss pressure can change after combat patches.
+  </p>
+  <p>Fast answer: Lumentale combat is not just type advantage. Your active team shares SP, turn order can drain that pool before slower Animon act, and TP only flows reliably when your team hits weaknesses.
+  </p>
+  <figure>
+    <img src="/images/guides/sp-combat-stat-planning.webp" alt="Lumentale SP combat guide showing turn cycle and shared SP" title="Lumentale shared SP turn cycle and combat planning" loading="lazy">
+    <figcaption>The turn cycle is the real budget screen. If fast units spend first, slow units inherit the SP leftovers.</figcaption>
+  </figure>
+  <h2>How shared SP changes every turn
+  </h2>
+  <p>Lumentale uses a shared SP economy across the active team. That means one greedy opener can break the whole turn. A fast attacker spending a high-cost move before tanks and supports act can leave the back half of the turn with weak actions, forced basic moves, or no meaningful pressure.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Combat Problem</th><th>Cause</th><th>Fix</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Slow tank does nothing</td><td>Fast units spent the shared SP pool.</td><td>Give the tank a 1-2 SP fallback.</td></tr>
+      <tr><td>TP gain stalls</td><td>Team hits neutral damage too often.</td><td>Add weakness coverage before raw power.</td></tr>
+      <tr><td>Boss phase snowballs</td><td>TP spent during safe turns.</td><td>Hold team actions for danger windows.</td></tr>
+      <tr><td>All moves look strong but feel bad</td><td>Loadout has no cheap stabilizer.</td><td>Keep one efficient button on every active Animon.</td></tr>
+    </tbody>
+  </table>
+  <h3>Why fast units can drain the pool
+  </h3>
+  <p>Fast attackers usually move before bulky or support Animon. If those fast units spend 3-4 SP every turn, the slower team members do not get to play their role. The fix is not always more leveling. Audit turn order and SP cost together.
+  </p>
+  <h3>Why slow tanks need low-cost moves
+  </h3>
+  <p>A bulky Animon with only expensive skills looks strong in the menu but becomes unreliable once faster teammates move first. Keep at least one cheap attack or utility move on every slow unit. Even chip damage matters if it hits a weakness and keeps TP generation alive.
+  </p>
+  <figure>
+    <img src="/images/guides/sp-combat-team-status.webp" alt="Lumentale team action planning with active Animon wheel" title="Lumentale active Animon wheel for team planning" loading="lazy">
+    <figcaption>Plan the active lineup before the fight. The wheel tells you who can carry cheap actions when the shared pool gets low.</figcaption>
+  </figure>
+  <h2>How TP generation works
+  </h2>
+  <h3>Weakness hits and TP gain
+  </h3>
+  <p>TP generation rewards coverage. Weakness hits do more than increase damage; they keep the tactical engine running so the team can access stronger action windows during long fights. A team with four strong neutral attackers can still feel weak if it cannot trigger weakness hits consistently.
+  </p>
+  <p>Use the <a href="/affinities">affinity chart</a> and <a href="/wiki/skills">skills data</a> before boss routes. Coverage is not a luxury stat; it is the resource engine behind TP.
+  </p>
+  <h3>When to spend TP on team actions
+  </h3>
+  <p>Spend TP when it changes the fight state: breaking a dangerous phase, stabilizing after a bad turn, or finishing a boss before it cycles back into pressure. Do not spend it just because the meter is available.
+  </p>
+  <table>
+    <thead>
+      <tr><th>TP Window</th><th>Spend or Hold?</th><th>Reason</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Enemy is near phase change</td><td>Spend</td><td>Push through before the boss resets tempo.</td></tr>
+      <tr><td>Team is healthy and SP is stable</td><td>Hold</td><td>Save TP for the next pressure spike.</td></tr>
+      <tr><td>Two units are low and healer acts late</td><td>Spend</td><td>Team action may prevent a collapse.</td></tr>
+      <tr><td>No weakness coverage available</td><td>Hold or rebuild</td><td>Neutral damage alone will not refill TP cleanly.</td></tr>
+    </tbody>
+  </table>
+  <h2>Best combat setup rules
+  </h2>
+  <h3>Build around coverage, not raw power
+  </h3>
+  <p>Raw power is only reliable when the team can afford the SP cost and still trigger weaknesses. Before a boss route, check whether each active Animon contributes either a weakness hit, a low-cost stabilizer, or a defensive job. If a team member does none of those, it is probably dead weight for that fight.
+  </p>
+  <p>For broader roster setup, pair this page with the <a href="/guides/lumentale-memories-of-trey-team-building-optimization">Team Building and Stat Tuning Guide</a>. That page covers stat prep; this page covers the per-turn resource problem.
+  </p>
+  <h3>Avoid all-high-cost move sets
+  </h3>
+  <p>All-high-cost loadouts collapse because they assume every Animon acts with a full SP pool. In practice, fast units spend first, slow units inherit the leftovers, and the final actions of the turn become empty.
+  </p>
+  <figure>
+    <img src="/images/guides/sp-combat-action-wheel.webp" alt="Lumentale SP combat team action route planning screen" title="Lumentale team action planning before boss fights" loading="lazy">
+    <figcaption>Before a long fight, check whether every active slot has a cheap useful action. That is the difference between tempo and dead turns.</figcaption>
+  </figure>
+  <h2>FAQ
+  </h2>
+  <h3>How does SP work in Lumentale: Memories of Trey?
+  </h3>
+  <p>SP is a shared combat resource. Faster Animon can spend the pool before slower team members act, so every active unit needs at least one efficient low-cost option.
+  </p>
+  <h3>How do you gain TP in Lumentale: Memories of Trey?
+  </h3>
+  <p>TP is mainly generated by exploiting weaknesses and using team coverage to create tactical action windows. Better coverage usually means more reliable TP access.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/guides/lumentale-memories-of-trey-team-building-optimization">Team Building and Stat Tuning Guide</a> - stat prep before the SP problem starts.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-hidden-mechanics">Hidden Mechanics Guide</a> - tested combat and overworld systems players miss.</li>
+    <li><a href="/wiki/bosses">Bosses</a> - plan TP spending around dangerous phases.</li>
+    <li><a href="/affinities">Affinities</a> and <a href="/wiki/skills">Skills</a> - build weakness coverage before raw power.</li>
+  </ul>`,
+  },
 ]
