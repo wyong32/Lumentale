@@ -1153,4 +1153,248 @@ export default [
     <li><a href="/affinities">Affinities</a> and <a href="/wiki/skills">Skills</a> - build weakness coverage before raw power.</li>
   </ul>`,
   },
+
+  {
+    id: 9,
+    title: "Lumentale: Memories of Trey Anivite EX Guide: Farming Spots and How to Get It",
+    description: "A practical Anivite EX guide for Lumentale: Memories of Trey covering farming spots, shop checks, crafting uses, and typo variants.",
+    tags: ["Anivite EX", "Farming", "Crafting", "Items"],
+    publishDate: "2026-07-06",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/anivite-ex-resource-route.webp",
+    imageAlt: "Lumentale Anivite EX farming route in a town resource area",
+    seo: {
+      title: "Lumentale Anivite EX Guide - Farming Spots",
+      description: "Find Anivite EX in Lumentale with farming spots, shop checks, crafting uses, typo variants, and route mistakes to avoid.",
+      keywords: "Lumentale Anivite EX, farming spot, how to get, crafting, spotspawn",
+    },
+    addressBar: "lumentale-memories-of-trey-anivite-ex-farming",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>DATA-CHECKED / PATCH SENSITIVE</strong>. Item prices, vendor stock, and spawn timing can move after economy patches.
+  </p>
+  <p><strong>Fast answer:</strong> Anivite EX is a late material, not a normal early crystal. The site data lists <a href="/wiki/items/anivite-ex">Anivite EX</a> at 1,200 Gold and multiple high-value recipes consume it, including <a href="/wiki/recipes/appendice-q">Appendice Q</a> and <a href="/wiki/recipes/prismatipo">Prismatipo</a>. Do not burn your first pieces until you know which build item you are crafting.
+  </p>
+  <figure>
+    <img src="/images/guides/anivite-ex-resource-route.webp" alt="Lumentale Anivite EX farming spot route in Great Tree Town" title="Lumentale Anivite EX farming spot route" loading="lazy">
+    <figcaption>Check town resource routes and vendors first. Anivite EX is too expensive to waste on a blind recipe chain.</figcaption>
+  </figure>
+  <h2>Where to farm Anivite EX
+  </h2>
+  <h3>Best farming spot
+  </h3>
+  <p>The safest route is to treat Anivite EX as a <strong>late-route vendor and resource-loop material</strong>. If your current save has reached larger town hubs, check specialized item vendors before grinding wild nodes. The item page confirms a 1,200 Gold value, which is consistent with a compressed high-tier material rather than a common field pickup.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Check</th><th>Why It Matters</th><th>Stop Condition</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Specialized town vendors</td><td>Fastest confirmation path for Anivite EX stock.</td><td>No Anivite EX or Anivite + tier items listed.</td></tr>
+      <tr><td>Late resource routes</td><td>Compressed Anivite materials tend to appear after basic Anivite is no longer rare.</td><td>Only normal Anivite drops after repeated clears.</td></tr>
+      <tr><td>Recipe bench checks</td><td>Shows whether the material is needed now or can wait.</td><td>No unlocked recipe consumes Anivite EX yet.</td></tr>
+      <tr><td>Gold route before farming</td><td>Buying is cleaner than hoping for a low-probability node.</td><td>You cannot afford the 1,200 Gold material price.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>INFERRED:</strong> searches for "Sanivite EX spotspawn" appear to be malformed Anivite EX spawn intent, not a separate confirmed item. Use Anivite EX as the parent item unless your save shows a distinct Sanivite entry.
+  </p>
+  <h3>Spot spawn wording variants
+  </h3>
+  <p>Players search for "Ainvie EX," "Ainvir EX," and "Sanivite EX spotspawn" when they are usually looking for <strong>Anivite EX</strong>. If a route guide, menu, or recipe does not match the spelling exactly, search the item list for Anivite EX before assuming the material is missing.
+  </p>
+  <figure>
+    <img src="/images/guides/anivite-ex-field-farming-check.webp" alt="Lumentale Anivite EX field farming check before leaving the area" title="Lumentale Anivite EX field farming check" loading="lazy">
+    <figcaption>For repeated routes, confirm the item name and recipe demand before committing to a long field loop.</figcaption>
+  </figure>
+  <h2>How to get or make Anivite EX
+  </h2>
+  <h3>Get Anivite EX through gameplay
+  </h3>
+  <p>Use this order: vendor check, recipe check, then field loop. Vendor inventory is the fastest truth test. Recipe data is the second test because it shows whether the game expects you to spend Anivite EX at your current progression point. Field farming comes last because it is slower and easier to misread if you are in the wrong tier of area.
+  </p>
+  <ol>
+    <li><strong>Open the item or vendor list.</strong> Look for Anivite EX, not Ainvie, Ainvir, or Sanivite.</li>
+    <li><strong>Check your craft targets.</strong> Appendix Q and Prismatipo both need 2x Anivite EX.</li>
+    <li><strong>Run the shortest resource loop.</strong> Leave if the route only returns normal Anivite after several checks.</li>
+    <li><strong>Buy when the price is manageable.</strong> A 1,200 Gold purchase is usually cleaner than wasting a full route on the wrong node.</li>
+  </ol>
+  <h3>Crafting or making intent
+  </h3>
+  <p>The German search term "herstellen" means make or craft. Current site data does not show a direct recipe that creates Anivite EX from smaller Anivite pieces. Instead, it shows Anivite EX as an <strong>ingredient</strong> consumed by important recipes.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Recipe</th><th>Anivite EX Cost</th><th>Why You Care</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/wiki/recipes/appendice-q">Appendice Q</a></td><td>2x Anivite EX</td><td>Lets you correct Quirk/ability planning instead of re-catching forever.</td></tr>
+      <tr><td><a href="/wiki/recipes/prismatipo">Prismatipo</a></td><td>2x Anivite EX</td><td>Used for hidden type planning and stronger team coverage.</td></tr>
+      <tr><td>Bilia Lost / Bilia Scan</td><td>10x Anivite EX</td><td>High-cost Bilia routes; do not craft these before your core team is stable.</td></tr>
+      <tr><td>Elemental craft items</td><td>1x Anivite EX each</td><td>Useful later, but not always worth your first EX material.</td></tr>
+    </tbody>
+  </table>
+  <h2>Farming mistakes
+  </h2>
+  <h3>Searching the wrong item name
+  </h3>
+  <p>The fastest mistake is typing the wrong name into the item list, a wiki search, or a vendor menu. Use the exact spelling: <strong>Anivite EX</strong>. If you landed here from Ainvie EX or Ainvir EX, you probably want the same material.
+  </p>
+  <h3>Leaving before the spawn condition
+  </h3>
+  <p>Do not judge a route from one pass. If you are checking a suspected spotspawn route, clear it several times, then compare the yield against the cost of simply buying the material. If the route gives only normal Anivite, stop and move to the next progression hub.
+  </p>
+  <figure>
+    <img src="/images/guides/anivite-ex-battle-farming-route.webp" alt="Lumentale Anivite EX farming route with battle and resource pressure" title="Lumentale Anivite EX farming route battle check" loading="lazy">
+    <figcaption>Combat routes are only worth repeating when the material yield beats a direct vendor check.</figcaption>
+  </figure>
+  <h2>FAQ
+  </h2>
+  <h3>Where is the Anivite EX farming spot in Lumentale: Memories of Trey?
+  </h3>
+  <p>Start with late town vendors and high-tier resource routes. If your save has not reached those hubs, treat Anivite EX as a later material and do not expect it from early Anivite nodes.
+  </p>
+  <h3>Is Ainvie EX the same as Anivite EX?
+  </h3>
+  <p>Most likely, yes. Ainvie EX and Ainvir EX look like typo variants of Anivite EX unless your game build shows them as separate entries.
+  </p>
+  <h3>Can you craft Anivite EX?
+  </h3>
+  <p>Current site data shows Anivite EX mainly as an ingredient, not a crafted output. It is consumed by recipes like Appendice Q and Prismatipo.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/wiki/items/anivite-ex">Anivite EX item page</a> - price, item class, and current item description.</li>
+    <li><a href="/wiki/crafting">Crafting index</a> - check recipes before spending rare materials.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-team-building-optimization">Team Building and Stat Tuning Guide</a> - explains why Appendix Q matters.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a> - use Prismatipo and coverage planning around TP generation.</li>
+  </ul>`,
+  },
+
+  {
+    id: 10,
+    title: "Lumentale: Memories of Trey Walkthrough: Quests, Cells, and Key Choices",
+    description: "A route-first Lumentale walkthrough hub for main progression, cell sections, quest blockers, relic checks, and Pitan choice planning.",
+    tags: ["Walkthrough", "Quests", "Cells", "Choices"],
+    publishDate: "2026-07-06",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/walkthrough-town-route.webp",
+    imageAlt: "Lumentale Memories of Trey walkthrough town route and quest hub",
+    seo: {
+      title: "Lumentale Walkthrough - Quests and Choices",
+      description: "Lumentale walkthrough hub for main routes, cell sections, Police Academy, Custom Furniture, Mystical Relic, and Pitan choices.",
+      keywords: "Lumentale walkthrough, Police Academy quest, cell walkthrough, Pitan choice",
+    },
+    addressBar: "lumentale-memories-of-trey-walkthrough",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>ROUTE-CHECKED / PATCH SENSITIVE</strong>. Quest flags, NPC positions, and optional-choice rewards can change after story patches.
+  </p>
+  <p><strong>Fast answer:</strong> use this walkthrough as a blocker map, not a novel. Clear the main route until a quest, cell, relic, or choice blocks you, then jump to that section. If a path is physically blocked, check your <a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken powers</a> before grinding levels.
+  </p>
+  <figure>
+    <img src="/images/guides/walkthrough-town-route.webp" alt="Lumentale Memories of Trey walkthrough route through the town hub" title="Lumentale Memories of Trey walkthrough town route" loading="lazy">
+    <figcaption>Walkthrough routing starts in hubs: talk, check the objective, then leave with the right field tool.</figcaption>
+  </figure>
+  <h2>Main walkthrough path
+  </h2>
+  <h3>Walkthrough structure
+  </h3>
+  <p>For a clean first run, route Lumentale in three layers: story objective, field gate, then optional collection. Do not reverse that order. Optional material farming before a field-gate check is how players lose an hour in the wrong area.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Route Layer</th><th>What To Check</th><th>Use This Page When</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Main story</td><td>Current objective, next town, required NPC.</td><td>You are unsure where to go next.</td></tr>
+      <tr><td>Field gate</td><td>Holoken interaction, movement unlock, terrain feedback.</td><td>The map blocks movement even after enemy clears.</td></tr>
+      <tr><td>Quest item</td><td>Furniture, relic, recipe, or dialogue trigger.</td><td>A named quest has no obvious marker.</td></tr>
+      <tr><td>Choice flag</td><td>NPC outcome, reward, or later dialogue.</td><td>The game asks you to help someone or walk away.</td></tr>
+    </tbody>
+  </table>
+  <p>Keep the <a href="/map">Talea map</a>, <a href="/animon">AniDex</a>, and <a href="/wiki/items">item index</a> open while routing. The game often blocks progress through a missing field interaction or item, not a hidden level requirement.
+  </p>
+  <h3>Cell walkthrough sections
+  </h3>
+  <p>Cell walkthrough searches usually mean the player is trapped in a small route puzzle or cannot identify the next interaction. Handle cells like a checklist: scan exits, test visible interactables, then change tool type. If nothing responds, mark the cell as locked behind a later story or Holoken condition.
+  </p>
+  <figure>
+    <img src="/images/guides/walkthrough-cell-route-map.webp" alt="Lumentale cell walkthrough route map for puzzle sections" title="Lumentale cell walkthrough route map" loading="lazy">
+    <figcaption>Small route rooms are solved by interaction order, not by over-leveling your team.</figcaption>
+  </figure>
+  <h2>Quest-specific guides
+  </h2>
+  <h3>Police Academy quest
+  </h3>
+  <p>For the Police Academy quest, prioritize objective confirmation over wandering. Talk to every marked NPC in the academy route, re-check the room after dialogue, then look for a new interaction prompt. If the quest does not advance, leave the room and re-enter after the latest dialogue flag.
+  </p>
+  <ol>
+    <li><strong>Read the quest text first.</strong> It usually names the needed person, room, or item class.</li>
+    <li><strong>Clear all dialogue in the academy route.</strong> NPC flags often advance after the second interaction.</li>
+    <li><strong>Inspect desks, lockers, and side rooms.</strong> Quest objects are easy to miss when they share the environment color.</li>
+    <li><strong>Re-enter if the flag stalls.</strong> Some objective checks refresh after changing rooms.</li>
+  </ol>
+  <h3>Custom Furniture quest
+  </h3>
+  <p>Custom Furniture is a collection/crafting-style blocker. Treat it like a material quest: identify the requested furniture, check whether it is crafted or picked up, then verify the turn-in NPC before spending extra materials.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Furniture Problem</th><th>Likely Cause</th><th>Fix</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Quest asks for a specific piece</td><td>You have the wrong variant.</td><td>Match the exact name, not the object type.</td></tr>
+      <tr><td>Turn-in fails</td><td>Item is in storage or wrong inventory state.</td><td>Carry it directly, then talk to the quest NPC again.</td></tr>
+      <tr><td>Recipe is missing</td><td>Blueprint or progression flag not unlocked.</td><td>Check <a href="/wiki/crafting">crafting</a> and recent NPC dialogue.</td></tr>
+    </tbody>
+  </table>
+  <h3>Mystical relic guide
+  </h3>
+  <p>Mystical relic routing is usually an observation check. If the relic is not responding, stop pressing the same input and inspect the surrounding pattern: nearby symbols, colored markers, terrain shape, or a required Holoken interaction.
+  </p>
+  <figure>
+    <img src="/images/guides/walkthrough-quest-dialogue.webp" alt="Lumentale walkthrough quest dialogue before a key route choice" title="Lumentale walkthrough quest dialogue route choice" loading="lazy">
+    <figcaption>Quest blockers often start as dialogue flags. Exhaust the NPC chain before blaming the map.</figcaption>
+  </figure>
+  <h2>Choice consequences
+  </h2>
+  <h3>Helping Pitan or not
+  </h3>
+  <p><strong>INFERRED:</strong> the safe route is to treat the Pitan decision as a story flag until your save confirms the reward. If you care about completion, make a manual save before the choice. Help Pitan if you want the cleaner NPC-help route; decline only if you are testing alternate dialogue or speed routing.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Choice</th><th>Use When</th><th>Risk</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Help Pitan</td><td>First playthrough, completion route, NPC-friendly path.</td><td>May lock out alternate dialogue.</td></tr>
+      <tr><td>Do not help</td><td>Testing, replay, or alternate outcome route.</td><td>Possible missed reward or delayed quest flag.</td></tr>
+      <tr><td>Save before choosing</td><td>Any run where completion matters.</td><td>None, unless the game autosaves after the prompt.</td></tr>
+    </tbody>
+  </table>
+  <h2>FAQ
+  </h2>
+  <h3>Where should I start the Lumentale: Memories of Trey walkthrough?
+  </h3>
+  <p>Start with the current story objective, then check field gates and quest items only when the route blocks you. Do not farm before confirming the next unlock.
+  </p>
+  <h3>How do you finish the Police Academy quest?
+  </h3>
+  <p>Clear the academy dialogue chain, inspect side rooms and desks, then re-enter if the objective does not refresh. Treat it as a flag-based quest, not a combat check.
+  </p>
+  <h3>What changes if you help Pitan?
+  </h3>
+  <p>The exact reward path is patch-sensitive. For a first run, help Pitan or save before choosing. Declining is better left for replay or alternate-dialogue testing.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/map">Talea Map</a> - use it when a cell or quest route stops making sense.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken Powers Guide</a> - route gates and field interactions.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a> - prep before boss or academy fights.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-hidden-mechanics">Hidden Mechanics Guide</a> - dialogue cues, recycle XP, and route tricks.</li>
+    <li><a href="/wiki/bosses">Boss Data</a> - check boss pressure before committing to a long quest chain.</li>
+  </ul>`,
+  },
 ]
