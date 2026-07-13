@@ -18,7 +18,7 @@
             <div v-if="guide.tags?.length" class="guide-detail-tags">
               <span v-for="tag in guide.tags" :key="tag" class="meta-pill">{{ tag }}</span>
             </div>
-            <h1 id="guide-title" class="guide-detail-title">{{ guide.title }}</h1>
+            <h1 id="guide-title" class="guide-detail-title">{{ guide.h1 || guide.title }}</h1>
             <p class="guide-detail-lead">{{ guide.description }}</p>
 
             <div class="guide-detail-byline">

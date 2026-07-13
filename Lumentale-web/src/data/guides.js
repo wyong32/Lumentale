@@ -30,8 +30,253 @@ export default [
   // },
 
   {
+    id: 12,
+    title: "Lumentale: Memories of Trey Evolution Guide: Dex Levels, Hidden Types, and All Evolutions",
+    h1: "Lumentale: Memories of Trey Evolution and Dex Guide",
+    description: "A data-first evolution guide for Lumentale covering Dex level checks, starter branches, hidden type decisions, and confirmed Animon evolution routes.",
+    tags: ["Evolution", "Dex", "Hidden Types", "Animon"],
+    publishDate: "2026-07-13",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/evolution-dex-guide.jpg",
+    imageAlt: "Lumentale evolution guide thumbnail with Animon and researcher characters",
+    seo: {
+      title: "Lumentale Evolution and Dex Guide",
+      description: "Learn how evolution works in Lumentale with Dex level checks, starter lines, hidden type notes, and all confirmed Animon evolution routes.",
+      keywords: "Lumentale evolution, dex level evolution, all Animon evolutions, hidden type",
+    },
+    addressBar: "lumentale-memories-of-trey-evolution-dex-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>DATA-CHECKED / PATCH SENSITIVE</strong>. Evolution triggers, Dex wording, and hidden type rates can change after balance or content patches.
+  </p>
+  <p><strong>Fast answer:</strong> evolution in Lumentale is not one mechanic. Some Animon evolve by level, some by time or weather, some by items, some by battle conditions, and starter partners branch near the end of their line. Use the <a href="/evolutions">Evolution Guide</a> as the live table, then use this page to decide what to verify before grinding.
+  </p>
+  <figure>
+    <img src="/images/guides/evolution-dex-guide.jpg" alt="Lumentale evolution guide thumbnail with multiple Animon evolution candidates" title="Lumentale evolution and Dex guide" loading="lazy">
+    <figcaption>Evolution planning starts with the Dex entry, then the requirement, then the confidence tag. Do not spend rare items before all three line up.</figcaption>
+  </figure>
+  <h2>How evolution works
+  </h2>
+  <h3>Dex level evolution
+  </h3>
+  <p>When players search for "dex level evolution," they are usually mixing two separate checks: the <strong>AniDex knowledge state</strong> and the actual evolution trigger. The Dex helps you inspect species data, move timing, and route context, but the trigger still depends on the row type: level, item, weather, party condition, trait count, or battle condition.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Evolution Type</th><th>What To Verify First</th><th>Current Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Level</td><td>Target level and whether a move should be learned before evolving.</td><td>Smellwing to Toxigall at level 18.</td></tr>
+      <tr><td>Item</td><td>Item name, inventory location, and whether the item is consumed.</td><td>Lampecko to Luxecko with Lampalite.</td></tr>
+      <tr><td>Time or weather</td><td>Day, night, rainbow weather, or other route state.</td><td>Deniuli by day; Almyuna by night.</td></tr>
+      <tr><td>Trait or battle condition</td><td>Counter progress before leveling or ending the fight.</td><td>Rainxy trait uses; Chagma critical-hit check.</td></tr>
+      <tr><td>Starter branch</td><td>Level 40 branch condition and final-form item or path.</td><td>Maidelly to Megamitosa or Dolegamii.</td></tr>
+    </tbody>
+  </table>
+  <p>The important rule: never assume the Dex entry alone evolves the Animon. Treat the Dex as the confirmation panel, not the button that performs the evolution.
+  </p>
+  <h3>How to evolve Animon
+  </h3>
+  <p>Use this process before every evolution attempt:
+  </p>
+  <ol>
+    <li><strong>Open the Animon entry.</strong> Confirm the species name and avoid typo traps such as "evoled" searches.</li>
+    <li><strong>Check the evolution group.</strong> Level routes are safer than item, weather, or battle-condition routes.</li>
+    <li><strong>Read the confidence tag.</strong> Rows marked confirmed are stronger than rows marked INFERRED or Needs check.</li>
+    <li><strong>Save before branches.</strong> Starter finals and item forks are not the place to test blind.</li>
+    <li><strong>Verify moves before accepting evolution.</strong> If a pre-evolution learns a key move soon, delay the evolution.</li>
+  </ol>
+  <p>For combat impact, pair this with the <a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a>. A stronger form that breaks your SP curve can still make the team worse.
+  </p>
+  <h2>All evolutions and hidden types
+  </h2>
+  <h3>All Animon evolutions
+  </h3>
+  <p>The table below is the compact route map. It is not a replacement for the live <a href="/evolutions">all evolutions page</a>, but it gives the decision layer players need before committing time or materials.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Line</th><th>Known Route</th><th>Confidence</th><th>Decision Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mewaii line</td><td>Mewaii to Maidelly at level 18; Maidelly to Megamitosa or Dolegamii near level 40.</td><td>Confirmed / branch-sensitive</td><td>Best documented starter line; save before the final branch.</td></tr>
+      <tr><td>Vortail line</td><td>Vortail to Furtex at level 18; Furtex to Weaphoon or Fursazen near level 40.</td><td>INFERRED for branch details</td><td>Choose damage tempo or bulk based on final-form plan.</td></tr>
+      <tr><td>Ozelash line</td><td>Ozelash to Kouzear at level 18; Kouzear to Byazevolt or Zenicore near level 40.</td><td>INFERRED for branch details</td><td>Strong offensive line; do not lock the final form blind.</td></tr>
+      <tr><td>Salabel line</td><td>Salabel to Vilender at level 18; Vilender to Horrogre or Goldrago near level 40.</td><td>INFERRED for branch details</td><td>Useful if you want Demon coverage and safer speed than Queccha.</td></tr>
+      <tr><td>Queccha line</td><td>Queccha to Quequator at level 18; Quequator to Barangu or Meterier near level 40.</td><td>INFERRED for branch details</td><td>Best early bulk line, but slow before the team is built around it.</td></tr>
+      <tr><td>Minube line</td><td>All six colored Minube variants in party, then rainbow weather, into Chromaura.</td><td>Confirmed</td><td>Collection route, not a casual level-up route.</td></tr>
+      <tr><td>Lampecko line</td><td>Lampecko to Luxecko at level 25 with Lampalite.</td><td>Confirmed</td><td>Item check matters more than raw level.</td></tr>
+      <tr><td>Chagma line</td><td>Chagma to Gongbog after 5 critical hits in one battle.</td><td>Confirmed</td><td>Build around crit setup before attempting it.</td></tr>
+    </tbody>
+  </table>
+  <h3>Hidden type checks
+  </h3>
+  <p>Hidden types are a team-building layer, not a normal evolution trigger. A hidden secondary type changes STAB and coverage planning, while the normal evolution requirement still has to be satisfied. This is why hidden type searches belong next to evolution planning but should not be treated as the same mechanic.
+  </p>
+  <p>Current site testing treats wild hidden type hunting as low-efficiency compared with item or route-based correction when those tools become available. If you only need coverage, check <a href="/affinities">Affinities</a>, <a href="/animon">AniDex filters</a>, and crafting routes before farming a rare wild variant for hours.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Question</th><th>Answer</th><th>Route Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Does hidden type evolve the Animon?</td><td>No direct confirmation. Treat it as coverage, not the trigger.</td><td>Meet the normal evolution requirement first.</td></tr>
+      <tr><td>How do you know the hidden type?</td><td>Use Dex data, type display, battle testing, or confirmed item checks.</td><td>Record before spending rare materials.</td></tr>
+      <tr><td>Should you farm hidden type before evolving?</td><td>Only for a final team slot.</td><td>Casual runs should evolve first, then optimize.</td></tr>
+    </tbody>
+  </table>
+  <h2>FAQ
+  </h2>
+  <h3>How do you evolve Animon in Lumentale: Memories of Trey?
+  </h3>
+  <p>Check the evolution group first. Most early routes are level-based, but later routes can require items, time, weather, party state, trait use, or battle conditions.
+  </p>
+  <h3>What is Dex level evolution?
+  </h3>
+  <p>It is search wording for players trying to connect Dex progress with evolution requirements. Use the Dex to confirm species data, but still follow the listed requirement.
+  </p>
+  <h3>Are all Animon evolutions confirmed?
+  </h3>
+  <p>No. Rows marked confirmed are stronger; rows marked INFERRED or branch-sensitive should be verified in your own save before spending rare items or locking a final form.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/evolutions">Evolution Guide</a> - live table for all current evolution rows.</li>
+    <li><a href="/starters">Starter Comparison</a> - starter BST, type, affinity, catch rate, and line links.</li>
+    <li><a href="/animon">AniDex</a> - filter by element, affinity, rarity, and species.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-best-starter-partner-guide">Best Starter and Partner Guide</a> - choosing the partner before the evolution route.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-minube-chromaura-evolution-guide">Minube Chromaura Evolution Guide</a> - deep route for the most annoying special evolution.</li>
+  </ul>`,
+  },
+
+  {
+    id: 11,
+    title: "Lumentale: Memories of Trey Starter Guide: Best Starter and Which Partner to Take",
+    h1: "Best Starter and Partner in Lumentale: Memories of Trey",
+    description: "A practical starter and partner guide for Lumentale: Memories of Trey covering best picks, playstyle fit, availability, and starter evolutions.",
+    tags: ["Starters", "Partner", "Team Building", "Evolution"],
+    publishDate: "2026-07-13",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/starter-partner-anispace-box.webp",
+    imageAlt: "Lumentale starter partner guide showing Animon box and partner selection planning",
+    seo: {
+      title: "Lumentale Best Starter and Partner Guide",
+      description: "Pick the best Lumentale starter by playstyle with partner stats, starter availability, all-starter notes, and evolution routes.",
+      keywords: "Lumentale best starter, which partner to take, starters, starter evolutions",
+    },
+    addressBar: "lumentale-memories-of-trey-best-starter-partner-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>DATA-CHECKED / PATCH SENSITIVE</strong>. Starter stats and branch requirements are pulled from current site runtime data; partner acquisition and final branches can change after patches.
+  </p>
+  <p><strong>Fast answer:</strong> take <strong>Queccha</strong> if you want the safest early partner, <strong>Salabel</strong> if you want speed plus Demon coverage, <strong>Ozelash</strong> if you want a direct physical attacker, <strong>Vortail</strong> if you want fast special pressure, and <strong>Mewaii</strong> if you prefer a stable support-leaning route. There is no single best starter for every save; pick the partner that fixes your first team weakness.
+  </p>
+  <figure>
+    <img src="/images/guides/starter-partner-anispace-box.webp" alt="Lumentale starter partner guide showing Animon box and partner route planning" title="Lumentale best starter and partner guide" loading="lazy">
+    <figcaption>Starter choice is a team-planning decision. The wrong partner is the one that overlaps your early captures and leaves you without coverage.</figcaption>
+  </figure>
+  <h2>Which starter or partner should you take?
+  </h2>
+  <h3>Best starter short answer
+  </h3>
+  <p>The best starter is the one that solves your first 5-10 hours, not the one with the prettiest final form. Current starter data shows all five opening partners have the same catch rate value of 40, close starting BST ranges, and a level 18 first evolution route. That means the decision should be made by role, not by a tiny BST gap.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Starter</th><th>Type / Affinity</th><th>Starting BST</th><th>Pick If You Want</th><th>Main Risk</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/animon/queccha">Queccha</a></td><td>GEO / SEREUM</td><td>335-395</td><td>Safest early bulk and reliable front-line stability.</td><td>Slow speed; needs coverage support.</td></tr>
+      <tr><td><a href="/animon/salabel">Salabel</a></td><td>DEMON / HORRENS</td><td>336-396</td><td>Fast partner route with useful Demon coverage.</td><td>Less raw bulk than Queccha.</td></tr>
+      <tr><td><a href="/animon/ozelash">Ozelash</a></td><td>ELECTRIC / FUROR</td><td>337-397</td><td>Early aggression and strong physical pressure.</td><td>Can feel fragile if you ignore defense.</td></tr>
+      <tr><td><a href="/animon/vortail">Vortail</a></td><td>AURA / MESTUS</td><td>331-391</td><td>Fast special tempo and flexible damage routing.</td><td>Needs SP discipline and protection.</td></tr>
+      <tr><td><a href="/animon/mewaii">Mewaii</a></td><td>VIRUS / FELICIS</td><td>333-393</td><td>Steadier support-leaning route and documented evolution line.</td><td>Can feel slower if you need immediate damage.</td></tr>
+    </tbody>
+  </table>
+  <p>My practical recommendation: first-time players should take <strong>Queccha</strong> or <strong>Salabel</strong>. If you already understand weakness coverage and shared SP pressure, Ozelash and Vortail are stronger tempo picks. Mewaii is the cleanest choice if you value documented evolution data over raw early pace.
+  </p>
+  <h3>Which partner to take
+  </h3>
+  <p>Partner choice should be separated from generic starter hype. You are not only picking a monster; you are picking your first type, affinity, turn-speed profile, and final evolution branch. Use these rules:
+  </p>
+  <ul>
+    <li><strong>Need safer blind routing?</strong> Take Queccha. Its HP and Defense profile is forgiving while you learn field routes.</li>
+    <li><strong>Need speed without giving up coverage?</strong> Take Salabel. It gives a faster route than Queccha while staying flexible.</li>
+    <li><strong>Want early damage races?</strong> Take Ozelash. Build around Attack and do not pretend it is a tank.</li>
+    <li><strong>Want special pressure?</strong> Take Vortail. Keep a low-cost SP option so it does not drain the team pool.</li>
+    <li><strong>Want the most documented first line?</strong> Take Mewaii. Its Mewaii to Maidelly route is the most clearly represented in current evolution data.</li>
+  </ul>
+  <p>For the battle resource side of this decision, read the <a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a>. A starter that spends badly can make a good type matchup feel worse than it should.
+  </p>
+  <h2>Starter availability and evolution
+  </h2>
+  <h3>Where to get starters
+  </h3>
+  <p>Current site data marks the five opening base partners as <strong>Kickstarter-eligible starters</strong>: Mewaii, Vortail, Ozelash, Salabel, and Queccha. Use the <a href="/starters">Starter Comparison</a> page when you need the exact stat card, catch rate, and evolution-line link.
+  </p>
+  <p><strong>INFERRED:</strong> searches like "were to get the starters" are usually asking whether the non-picked starters can be acquired later. Current public data confirms the starter species exist in the Dex, but it does not prove a clean early route for collecting every unchosen starter. Treat extra starter acquisition as completionist routing until your save confirms the location.
+  </p>
+  <h3>Can you get all starters?
+  </h3>
+  <p>Do not assume yes from the opening choice screen alone. Monster-tamer games often allow later starter acquisition, but Lumentale's current site data is stronger for <strong>stats and evolution lines</strong> than for exact post-choice pickup locations. If your route depends on owning all starters, keep a manual save before major story locks and check the AniDex after new regions open.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Question</th><th>Current Safe Answer</th><th>What To Do</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Can I choose only one partner?</td><td>Yes, the opening partner decision is one pick.</td><td>Choose by team role, not final-form art.</td></tr>
+      <tr><td>Can I get every starter later?</td><td>Not confirmed as a simple early route.</td><td>Check new regions, trades, events, or Dex clues.</td></tr>
+      <tr><td>Should I restart for a different starter?</td><td>Only if your current partner overlaps your team badly.</td><td>Usually easier to patch coverage with captures.</td></tr>
+    </tbody>
+  </table>
+  <h3>Starter evolutions and evos
+  </h3>
+  <p>All five starter lines currently point to a first evolution at level 18, then a final branch around level 40. The first step is the easy part. The branch is where you should stop, save, and verify.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Starter</th><th>First Evolution</th><th>Final Branch</th><th>Confidence</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mewaii</td><td>Maidelly at level 18</td><td>Megamitosa / Dolegamii near level 40</td><td>Confirmed early line; branch-sensitive</td></tr>
+      <tr><td>Vortail</td><td>Furtex at level 18</td><td>Weaphoon / Fursazen near level 40</td><td>INFERRED branch details</td></tr>
+      <tr><td>Ozelash</td><td>Kouzear at level 18</td><td>Byazevolt / Zenicore near level 40</td><td>INFERRED branch details</td></tr>
+      <tr><td>Salabel</td><td>Vilender at level 18</td><td>Horrogre / Goldrago near level 40</td><td>INFERRED branch details</td></tr>
+      <tr><td>Queccha</td><td>Quequator at level 18</td><td>Barangu / Meterier near level 40</td><td>INFERRED branch details</td></tr>
+    </tbody>
+  </table>
+  <p>The full branch table is maintained in the <a href="/guides/lumentale-memories-of-trey-evolution-dex-guide">Evolution and Dex Guide</a> and the live <a href="/evolutions">Evolution Guide</a>. Use those before committing a final form.
+  </p>
+  <h2>FAQ
+  </h2>
+  <h3>What is the best starter in Lumentale: Memories of Trey?
+  </h3>
+  <p>For a first playthrough, Queccha is the safest route and Salabel is the best speed-coverage compromise. Ozelash and Vortail are stronger if you want tempo and know how to protect them. Mewaii is the safest documented line.
+  </p>
+  <h3>Which partner should I take?
+  </h3>
+  <p>Take the partner that fixes your early team gap: Queccha for bulk, Salabel for speed coverage, Ozelash for physical pressure, Vortail for special tempo, and Mewaii for support stability.
+  </p>
+  <h3>Can you get all starters in Lumentale: Memories of Trey?
+  </h3>
+  <p>Current data does not confirm a simple early route for every unchosen starter. Treat it as a completionist question, not a guaranteed opening option.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/starters">Starter Comparison</a> - raw starter data, catch rate, type, affinity, and evolution links.</li>
+    <li><a href="/evolutions">Evolution Guide</a> - live evolution table and branch rows.</li>
+    <li><a href="/animon">AniDex</a> - compare all Animon after your starter choice.</li>
+    <li><a href="/affinities">Affinities</a> - understand element and emotional type coverage.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-team-building-optimization">Team Building and Stat Tuning Guide</a> - fix the rest of your squad after the partner pick.</li>
+  </ul>`,
+  },
+
+  {
     id: 1,
-    title: "Lumentale: Memories of Trey — Mid-Game Team Optimization &amp; Stat Tuning",
+    title: "Lumentale: Memories of Trey 鈥?Mid-Game Team Optimization &amp; Stat Tuning",
     description: "Let's skip the generic introduction. If you are hitting a wall in mid-game boss battles or realizing your team feels sluggish, it's not because you aren't high-level enough. It's because you are likely ignoring hidden mechanics, falling into evolution traps, or managing your shared SP pool inefficiently. Based on our 30+ hours of testing, here is how you actually optimize your squad without losing your sanity to RNG.",
     tags: [],
     publishDate: "2026-06-05",
@@ -48,7 +293,7 @@ export default [
   </p>
   <h2>1. The Early Money Grind: Don't Hunt Rare Drops, Smash Rocks
   </h2>
-  <p>Before you tune any stats or swap any abilities, you need capital. Everything in Lumentale's optimization pipeline—from restaurant meals to crafting reagents—is incredibly expensive. Fortunately, there's a highly reliable farming spot right under your nose.
+  <p>Before you tune any stats or swap any abilities, you need capital. Everything in Lumentale's optimization pipeline鈥攆rom restaurant meals to crafting reagents鈥攊s incredibly expensive. Fortunately, there's a highly reliable farming spot right under your nose.
   </p>
   <p>Head to the cave in Area 01 (accessible immediately after picking your path). Using any Animon that can smash rocks, clear out the green crystals.
   </p>
@@ -140,7 +385,7 @@ export default [
   </h2>
   <p>Wild Animons only have a 10% chance to spawn with their Secret Type active (and some, like <a href="/animon/bonkey">Bonkey</a>, have a 5% split chance between two hidden types). Trying to farm this in the wild is mathematically inefficient.
   </p>
-  <p>Instead, use the Prismatype item to force-unlock or swap the hidden potential of your Animon. It gives you a second STAB type without adding any defensive weaknesses—a purely beneficial upgrade.
+  <p>Instead, use the Prismatype item to force-unlock or swap the hidden potential of your Animon. It gives you a second STAB type without adding any defensive weaknesses鈥攁 purely beneficial upgrade.
   </p>
   <h3>Prismatype Recipe:
   </h3>
@@ -166,15 +411,15 @@ export default [
 
   {
     id: 2,
-    title: "Lumentale: Memories of Trey — 7 Unmapped Mechanics &amp; Exploits We Tested",
-    description: "Most modern monster-tamers hold your hand until your palm is sweaty. Lumentale: Memories of Trey does the opposite; it buries several of its most crucial systems under UI flourishes, undocumented behavior, and flavor text. We spent the last week parsing combat values and tracking overworld behaviors. Here are seven hidden mechanics the game won't explicitly explain to you for hours—if ever.",
+    title: "Lumentale: Memories of Trey 鈥?7 Unmapped Mechanics &amp; Exploits We Tested",
+    description: "Most modern monster-tamers hold your hand until your palm is sweaty. Lumentale: Memories of Trey does the opposite; it buries several of its most crucial systems under UI flourishes, undocumented behavior, and flavor text. We spent the last week parsing combat values and tracking overworld behaviors. Here are seven hidden mechanics the game won't explicitly explain to you for hours鈥攊f ever.",
     tags: [],
     publishDate: "2026-06-05",
     author: "LumenTale Fan Guide Team",
     imageUrl: "/images/guides/guides02.webp",
-    imageAlt: "Lumentale: Memories of Trey — 7 Unmapped Mechanics &amp; Exploits We Tested",
+    imageAlt: "Lumentale: Memories of Trey 鈥?7 Unmapped Mechanics &amp; Exploits We Tested",
     seo: {
-      title: "Lumentale: Memories of Trey — 7 Hidden Overworld &amp; Combat Mechanics Explained",
+      title: "Lumentale: Memories of Trey 鈥?7 Hidden Overworld &amp; Combat Mechanics Explained",
       description: "An expert breakdown of unmapped systems in Lumentale: Memories of Trey. Learn about portrait lie detectors, the recycle bin XP multiplier, and early water catching.",
       keywords: "Lumentale Memories of Trey, Lumentale hidden mechanics, Lumentale recycle bins, Lumentale AniSpace, Lumentale status passives, Lumentale water catching exploit"
     },
@@ -183,7 +428,7 @@ export default [
   </p>
   <p>Tested on Build: EA v0.2.x | Data Status: Hand-Verified
   </p>
-  <p>Most modern monster-tamers hold your hand until your palm is sweaty. Lumentale: Memories of Trey does the opposite; it buries several of its most crucial systems under UI flourishes, undocumented behavior, and flavor text. We spent the last week parsing combat values and tracking overworld behaviors. Here are seven hidden mechanics the game won't explicitly explain to you for hours—if ever.
+  <p>Most modern monster-tamers hold your hand until your palm is sweaty. Lumentale: Memories of Trey does the opposite; it buries several of its most crucial systems under UI flourishes, undocumented behavior, and flavor text. We spent the last week parsing combat values and tracking overworld behaviors. Here are seven hidden mechanics the game won't explicitly explain to you for hours鈥攊f ever.
   </p>
   <h2>1. The Dialogue Portrait "Lie Detector"
   </h2>
@@ -193,7 +438,7 @@ export default [
   </p>
   <p><img src="/images/guides/guides02-01.webp" alt="The Dialogue Portrait &quot;Lie Detector'" width="50%">
   </p>
-  <p>My experience: I completely missed this during my first few hours. It wasn't until I spoke to Baza—who was grinning and acting completely confident—that I noticed his portrait was glowing with a heavy blue Mestus aura. Sure enough, his dialogue was a front. Keep an eye on those outlines; they are a built-in narrative spoiler system.
+  <p>My experience: I completely missed this during my first few hours. It wasn't until I spoke to Baza鈥攚ho was grinning and acting completely confident鈥攖hat I noticed his portrait was glowing with a heavy blue Mestus aura. Sure enough, his dialogue was a front. Keep an eye on those outlines; they are a built-in narrative spoiler system.
   </p>
   <h2>2. Stop Wasting Items: The 4x Recycle Bin XP Penalty
   </h2>
@@ -343,14 +588,14 @@ export default [
 
   {
     id: 3,
-    title: "Lumentale: Memories of Trey — Complete Hunter Directory for All 20 Rare Animons",
+    title: "Lumentale: Memories of Trey 鈥?Complete Hunter Directory for All 20 Rare Animons",
     description: "Finding every rare Animon in Lumentale: Memories of Trey is the ultimate test of a tamer's patience. Many wikis contain outdated or misleading beta location data, leading to hours of wasted grinding. After extensive datatesting (with big thanks to Card Maniac, rag, and PG from the official Discord community), we have mapped out and verified the exact locations, weather requirements, and progression triggers for all 20 rare Animons featured in the game.",
     tags: [],
     publishDate: "2026-06-08",
     imageUrl: "/images/guides/guides03.webp",
     imageAlt: "Lumentale Memories of Trey  Complete Hunter Directory for All 20 Rare Animons",
     seo: {
-      title: "Lumentale: Memories of Trey — The 20 Rare Animon Spawn &amp; Hunt Locations Guide",
+      title: "Lumentale: Memories of Trey 鈥?The 20 Rare Animon Spawn &amp; Hunt Locations Guide",
       description: "An exhaustive, hand-verified guide to locating and catching all 20 rare Animons in Lumentale: Memories of Trey. Includes Verdi's RNG manipulation buff, weather locks, and progression requirements.",
       keywords: "Lumentale Memories of Trey, Lumentale rare animon, Lumentale spawn locations, Mewaii location, Toypette puzzle, Chagma fountain, Twinkler AniSpace, Kageka Area 04, Ozelash spawn"
     },
@@ -375,7 +620,7 @@ export default [
   </li>
   <li>Duration: The buff lasts exactly **30 real-world minutes** (which translate to **10 in-game hours**).
   </li>
-  <li>Monitoring the Buff: There is no visual status icon on your UI. Use a physical stopwatch, or watch the in-game clock—it wears off exactly 10 in-game hours after activation. Opening your main menu *pauses* this timer; starting encounters does not.
+  <li>Monitoring the Buff: There is no visual status icon on your UI. Use a physical stopwatch, or watch the in-game clock鈥攊t wears off exactly 10 in-game hours after activation. Opening your main menu *pauses* this timer; starting encounters does not.
   </li>
   <li>No Stacking: Giving Verdi multiple cards at once does not stack the buff. Submit one card every 30 minutes.
   </li>
@@ -416,7 +661,7 @@ export default [
   </h3>
   <p>True Location: Suvius Peak (Area 12).
   </p>
-  <p>Requirements: You must have **Water Power** unlocked to cross the lava rivers. Salabel likes to hide in the dark, extreme corners of the caves. If it doesn't appear on the overworld, run into wild Skeletape packs—Salabel regularly spawns as a hidden battle partner.
+  <p>Requirements: You must have **Water Power** unlocked to cross the lava rivers. Salabel likes to hide in the dark, extreme corners of the caves. If it doesn't appear on the overworld, run into wild Skeletape packs鈥擲alabel regularly spawns as a hidden battle partner.
   </p>
   <h3>6. Kageka
   </h3>
@@ -521,7 +766,7 @@ export default [
   {
     id: 4,
     title: "How to Unlock All 8 Legendary Locations in Lumentale: Memories of Trey",
-    description: "Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pokédex (AniWiki) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.",
+    description: "Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pok茅dex (AniWiki) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.",
     tags: [],
     publishDate: "2026-06-08",
     imageUrl: "/images/guides/guides04.webp",
@@ -537,7 +782,7 @@ export default [
   </p>
   <p>Tested on Build: Release Build | Prerequisites: North &amp; South Paths Cleared
   </p>
-  <p>Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pokédex (<a href="/wiki">AniWiki</a>) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.
+  <p>Once you clear both the North and South paths in Lumentale: Memories of Trey, the game truly opens up, revealing 8 endgame Legendary Animons (Mythos Legends). Tracking them down requires solving hidden environmental puzzles, navigating invisible platform mazes, and meeting strict post-game Pok茅dex (<a href="/wiki">AniWiki</a>) criteria. This guide walks you through each legendary location and how to bypass their unique puzzles.
   </p>
   <p>The Catch Rate Secret: Do not waste your rare, high-tier capture items or stress over catching these targets. Defeating a Legendary in battle automatically adds them to your active team or your AniSpace storage box. Focus 100% of your strategy on winning the fight.
   </p>
@@ -657,14 +902,14 @@ export default [
 
   {
     id: 5,
-    title: "Lumentale: Memories of Trey — Complete Minube Locations &amp; Chromaura Evolution Guide",
+    title: "Lumentale: Memories of Trey 鈥?Complete Minube Locations &amp; Chromaura Evolution Guide",
     description: "Evolving Minube into the elusive Chromaura is one of the most tedious end-game collection puzzles in Lumentale: Memories of Trey. You must track down six distinct color variants of Minube scattered across the map, assemble them in your active party, and trigger a highly specific weather condition. Based on our 70+ hours of live testing and community-sourced spawn data, here is the exact roadmap to unlocking Chromaura.",
     tags: ["Lumentale: Memories of Trey"],
     publishDate: "2026-06-12",
     imageUrl: "/images/guides/guides05.webp",
-    imageAlt: "Lumentale: Memories of Trey — Complete Minube Locations &amp; Chromaura Evolution Guide",
+    imageAlt: "Lumentale: Memories of Trey 鈥?Complete Minube Locations &amp; Chromaura Evolution Guide",
     seo: {
-      title: "Lumentale: Memories of Trey — Complete Minube Locations &amp; Chromaura Evolution Guide",
+      title: "Lumentale: Memories of Trey 鈥?Complete Minube Locations &amp; Chromaura Evolution Guide",
       description: "Find all 6 Minube color variants in Lumentale: Memories of Trey and evolve them into Chromaura. Includes verified spawn tables, overworld locations, and stat-retention tips",
       keywords: "Lumentale Memories of Trey, Lumentale Minube, Minube locations, Chromaura evolution, how to evolve minube, yellow nebula, red nebula, rainbow weather lumentale"
     },
@@ -680,7 +925,7 @@ export default [
   </p>
   <p><img src="/images/guides/guides05-01.webp" alt="6 minude color  varinats" width="50%">
   </p>
-  <p> When the evolution triggers, **only one chosen Minube** actually evolves into Chromaura. The remaining five act as catalysts and remain completely untouched in your party. Furthermore, Chromaura will inherit the exact Level, IVs (from Roman numeral I to X), and training stats of that chosen lead Minube. Therefore, you do not need to level up all six—just invest your resources into one high-quality lead Minube and leave the other five at level 1.
+  <p> When the evolution triggers, **only one chosen Minube** actually evolves into Chromaura. The remaining five act as catalysts and remain completely untouched in your party. Furthermore, Chromaura will inherit the exact Level, IVs (from Roman numeral I to X), and training stats of that chosen lead Minube. Therefore, you do not need to level up all six鈥攋ust invest your resources into one high-quality lead Minube and leave the other five at level 1.
   </p>
   <h2>1. The 6 Minube Color Variants: Complete Spawn Index
   </h2>
@@ -806,14 +1051,14 @@ export default [
 
   {
     id: 6,
-    title: "Lumentale: Memories of Trey — Deciphering the Ancient Language &amp; Tablet Texts",
+    title: "Lumentale: Memories of Trey 鈥?Deciphering the Ancient Language &amp; Tablet Texts",
     description: "Deciphering the ancient glyphs carved into tablets and posters in <em>Lumentale: Memories of Trey</em> is one of the most rewarding side puzzles in the game. Rather than serving as random decoration, these glyphs constitute a structured substitute cipher. Once decoded, they reveal rich, in-universe lore written in Latin, which can then be translated into English. Here is how we cracked the code and the complete translation of the Area 05 overworld tablets.",
     tags: ["Lumentale: Memories of Trey"],
     publishDate: "2026-06-12",
     imageUrl: "/images/guides/guides06.webp",
-    imageAlt: "Lumentale Memories of Trey — Ancient Glyph Deciphering",
+    imageAlt: "Lumentale Memories of Trey 鈥?Ancient Glyph Deciphering",
     seo: {
-      title: "Lumentale: Memories of Trey — Ancient Glyph Deciphering &amp; Translation Guide",
+      title: "Lumentale: Memories of Trey 鈥?Ancient Glyph Deciphering &amp; Translation Guide",
       description: "A comprehensive guide to deciphering the ancient glyph language in Lumentale: Memories of Trey. Includes the full glyph-to-Latin alphabet and complete overworld tablet translations.",
       keywords: "Lumentale Memories of Trey, Lumentale ancient language, decipher glyphs lumentale, lumentale alphabet key, translate ancient tablets lumentale"
     },
@@ -931,7 +1176,7 @@ export default [
   </p>
   <p>"He vanished without a trace, save for the fruits of his genius. It is said that shortly before, he claimed to have experienced an epiphany that radically changed his beliefs."
   </p>
-  <p>Pathfinder's Nostalgia:Solving this puzzle felt incredibly reminiscent of using the Braille chart in Pokémon Emerald to unlock the sealed chambers of the three Regis (Regice, Registeel, and Regirock). It is a fantastic mechanical callback that rewards players for physically observing the world around them instead of following an objective marker.
+  <p>Pathfinder's Nostalgia:Solving this puzzle felt incredibly reminiscent of using the Braille chart in Pok茅mon Emerald to unlock the sealed chambers of the three Regis (Regice, Registeel, and Regirock). It is a fantastic mechanical callback that rewards players for physically observing the world around them instead of following an objective marker.
   </p>`,
   },
 
@@ -1398,3 +1643,4 @@ export default [
   </ul>`,
   },
 ]
+
