@@ -5,6 +5,240 @@
  * Field reference — uncomment and fill one object per guide:
  */
 export default [
+  {
+    id: 14,
+    title: "Lumentale Bugs and Internet Troubleshooting Guide",
+    h1: "Lumentale: Memories of Trey Bugs and Internet Troubleshooting Guide",
+    description: "Fix Lumentale bugs with safe recovery steps, internet checks, PC update checks, and patch-note verification routes.",
+    tags: ["Bugs", "Troubleshooting", "Internet", "Updates"],
+    publishDate: "2026-07-20",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/bugs-internet-troubleshooting-guide.jpg",
+    imageAlt: "Lumentale Memories of Trey bug troubleshooting guide with town route and system checks",
+    seo: {
+      title: "Lumentale Bugs and Internet Troubleshooting Guide",
+      description: "Fix Lumentale bugs with safe recovery steps, internet checks, PC update checks, and patch-note verification routes.",
+      keywords: "Lumentale bug, internet required, PC update, Switch patch notes",
+    },
+    addressBar: "lumentale-memories-of-trey-bugs-internet-troubleshooting-guide",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>PATCH SENSITIVE</strong>. Bug behavior, cloud saves, and platform update flow can change after hotfixes.
+  </p>
+  <p><strong>Fast answer:</strong> do not start by reinstalling. First confirm the game build, back up your save, reproduce the bug once, then split the problem into one of four buckets: launch/update, save/progression, input/display, or internet/platform service. Most bad reports fail because they skip the build number.
+  </p>
+  <figure>
+    <img src="/images/guides/bugs-internet-troubleshooting-guide.jpg" alt="Lumentale Memories of Trey bug troubleshooting guide for update and internet checks" title="Lumentale bugs and internet troubleshooting guide" loading="lazy">
+    <figcaption>When a route, prompt, or save state breaks, freeze the build state first. Random fixes before a backup are how good saves get corrupted.</figcaption>
+  </figure>
+  <h2>Bug checks and safe recovery steps
+  </h2>
+  <h3>Common bug report variants
+  </h3>
+  <p>Most Lumentale bug searches are not asking for a news post. They are asking, "Can I keep playing without wrecking my save?" Use the table below before you touch local files.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Symptom</th><th>Likely Bucket</th><th>First Safe Move</th><th>Do Not Do First</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Quest marker or NPC does not advance</td><td>Save/progression flag</td><td>Save in a new slot, reload, re-enter the room, then repeat the last dialogue chain.</td><td>Delete saves or skip large story sections.</td></tr>
+      <tr><td>Crash on launch or black screen</td><td>Launch/update</td><td>Verify files, check GPU driver, disable overlays, then launch windowed.</td><td>Change multiple graphics settings at once.</td></tr>
+      <tr><td>Controller, keyboard, or menu input is stuck</td><td>Input/display</td><td>Disconnect duplicate input devices and reset bindings from the settings menu.</td><td>Overwrite the whole config folder blindly.</td></tr>
+      <tr><td>Cloud save, achievement, or online feature fails</td><td>Internet/platform service</td><td>Check platform status, cloud sync state, and whether you are online before reopening the game.</td><td>Assume the local save is broken.</td></tr>
+    </tbody>
+  </table>
+  <p>If the bug blocks a route, compare it against the <a href="/guides/lumentale-memories-of-trey-walkthrough">walkthrough</a> and the <a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken powers guide</a>. A missing field interaction can look like a bug when it is actually a route gate.
+  </p>
+  <h3>Before you report a bug
+  </h3>
+  <p>A useful report is short and reproducible. Send the build, platform, save location, exact step, expected result, actual result, and whether the bug survives a reload. Anything weaker forces the developer or community to guess.
+  </p>
+  <ol>
+    <li><strong>Record the build and platform.</strong> PC, Steam Deck, and Switch paths are not the same bug surface.</li>
+    <li><strong>Back up the save before testing.</strong> On PC, use the platform's save folder or cloud-save backup flow before deleting anything.</li>
+    <li><strong>Reproduce from the nearest stable point.</strong> One clean repeat is better than ten vague comments.</li>
+    <li><strong>Strip variables.</strong> Disable overlays, mods, reshade tools, and controller remappers before blaming the base game.</li>
+    <li><strong>Attach a 20-30 second clip if possible.</strong> Show the menu, route, or interaction that fails.</li>
+  </ol>
+  <p>For combat bugs, include the exact Animon, skill, SP state, TP action, target, and weakness interaction. The <a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a> is the reference format I use for those notes.
+  </p>
+  <h2>Internet and patch-note checks
+  </h2>
+  <h3>Does the game require internet?
+  </h3>
+  <p>Split this into gameplay and platform services. The Steam listing exposes single-player support, but also platform services such as cloud, achievements, and online features. That means a normal story session may be playable without constant network access, while updates, first download, cloud sync, storefront entitlement checks, and online modes still need a working connection.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Need</th><th>Internet Required?</th><th>Practical Check</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Downloading or updating</td><td>Yes</td><td>Let the platform finish the patch before launching.</td></tr>
+      <tr><td>Steam Cloud or achievements</td><td>Yes for sync/reporting</td><td>Wait for cloud sync to finish before switching devices.</td></tr>
+      <tr><td>Solo story play</td><td>Usually no after install, but verify per platform</td><td>Test offline from a backed-up save before a long session.</td></tr>
+      <tr><td>Online PvP or platform services</td><td>Yes</td><td>Check platform status before troubleshooting the game client.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Do not use offline mode as a repair tool.</strong> Use it only after your save is backed up and you know cloud sync is not mid-write.
+  </p>
+  <h3>Where to check PC and Switch patch notes
+  </h3>
+  <p>Patch-note searches should end at official platform channels, not reposted changelog fragments. For PC, check the Steam app page, Steam news feed, and library update notes. For Switch, check the console's software update screen, Nintendo eShop page, and official publisher/developer channels.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Platform</th><th>Patch Check</th><th>Use It For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>PC / Steam</td><td>Steam library update notes and official app news</td><td>Hotfix number, crash fixes, save fixes, known issues.</td></tr>
+      <tr><td>Switch</td><td>Software update screen and Nintendo eShop/news channel</td><td>Version confirmation and platform-specific patch timing.</td></tr>
+      <tr><td>Any platform</td><td>Official publisher/developer posts</td><td>Known issue acknowledgement and workaround timing.</td></tr>
+    </tbody>
+  </table>
+  <p>When a guide path still fails after a patch, use the <a href="/search">site search</a> for the quest, item, or Animon name before reporting it. A route note may already explain the trigger.
+  </p>
+  <h2>FAQ
+  </h2>
+  <h3>Does Lumentale: Memories of Trey require internet?
+  </h3>
+  <p>Internet is required for downloads, updates, cloud sync, achievements reporting, and online features. Solo story play should be tested offline only after the game is installed and your save is backed up.
+  </p>
+  <h3>Where are the patch notes?
+  </h3>
+  <p>Check Steam update notes for PC and the Switch software update/eShop route for console builds. Avoid relying on copied changelogs without a version number.
+  </p>
+  <h3>Should I reinstall to fix a bug?
+  </h3>
+  <p>Only after verifying files, backing up saves, checking build version, disabling overlays/mods, and reproducing the bug. Reinstalling first wastes time and may hide the real cause.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/guides/lumentale-memories-of-trey-walkthrough">Walkthrough</a> - verify route blockers before calling them bugs.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken Powers Guide</a> - field gates that can look like broken paths.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a> - report combat bugs with SP, TP, and target context.</li>
+    <li><a href="/wiki/items">Items</a> and <a href="/wiki/crafting">Crafting</a> - check whether a missing material is actually a progression issue.</li>
+  </ul>`,
+  },
+
+  {
+    id: 13,
+    title: "Lumentale Crafting Recipes and Blueprints Guide",
+    h1: "Lumentale: Memories of Trey Crafting and Recipes Guide",
+    description: "All Lumentale crafting recipe checks, blueprint unlock notes, shop-source priorities, and where to buy Glass/Vetro.",
+    tags: ["Crafting", "Recipes", "Blueprints", "Materials"],
+    publishDate: "2026-07-20",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/crafting-recipes-blueprints-guide.jpg",
+    imageAlt: "Lumentale crafting recipes and blueprints guide with workshop material planning",
+    seo: {
+      title: "Lumentale Crafting Recipes and Blueprints Guide",
+      description: "All Lumentale crafting recipe checks, blueprint unlock notes, shop-source priorities, and where to buy Glass/Vetro.",
+      keywords: "Lumentale crafting recipes, blueprints, ingredients, buy glass",
+    },
+    addressBar: "lumentale-memories-of-trey-crafting-recipes-blueprints",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>DATA-CHECKED / PATCH SENSITIVE</strong>. Recipe output, vendor stock, and blueprint wording can move after economy or progression patches.
+  </p>
+  <p><strong>Fast answer:</strong> use the <a href="/wiki/crafting">crafting recipe table</a> first, then check the exact item page before buying materials. Current data confirms <a href="/wiki/items/vetro">Vetro</a> is Glass, costs 50, stacks to 999, and is consumed by key recipes such as <a href="/wiki/recipes/appendice-q">Appendice Q</a>, Bilia upgrades, Dispel, Lampalite, and Potion lines.
+  </p>
+  <figure>
+    <img src="/images/guides/crafting-recipes-blueprints-guide.jpg" alt="Lumentale crafting recipes and blueprints guide for workshop materials and Glass" title="Lumentale crafting recipes and blueprints guide" loading="lazy">
+    <figcaption>Crafting is a material audit. Confirm the recipe, then the ingredient count, then the shop or route source before spending Gold.</figcaption>
+  </figure>
+  <h2>Recipes and blueprints
+  </h2>
+  <h3>All crafting recipes
+  </h3>
+  <p>The live crafting list is the fastest answer for "all crafting recipes" and German variants like "Rezepte." It separates workshop crafting from Fountain cooking, shows ingredient counts, and links every known material back to the item index.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Recipe</th><th>Confirmed Materials</th><th>Success Rate</th><th>Use Case</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/wiki/recipes/appendice-q">Appendice Q</a></td><td>2x Anivite EX, 10x Vetro, 1x Diamante</td><td>100%</td><td>Quirk correction for serious team tuning.</td></tr>
+      <tr><td><a href="/wiki/recipes/prismatipo">Prismatipo</a></td><td>2x Anivite EX, 10x Plastica, 30x Quarzo</td><td>100%</td><td>Hidden type planning and late coverage work.</td></tr>
+      <tr><td><a href="/wiki/recipes/bilia">Bilia</a></td><td>1x Vetro, 1x Metallo, 1x Anivite</td><td>80%</td><td>Early Bilia crafting when you can absorb failures.</td></tr>
+      <tr><td><a href="/wiki/recipes/bilia-a">Bilia + A</a></td><td>10x Vetro, 10x Metallo, 5x Anivite</td><td>50%</td><td>Risky upgrade route; do not craft from your last materials.</td></tr>
+      <tr><td><a href="/wiki/recipes/lampalite">Lampalite</a></td><td>1x Anivite EX, 1x Topazio, 30x Vetro</td><td>100%</td><td>Item route planning for specific evolution or utility checks.</td></tr>
+      <tr><td><a href="/wiki/recipes/potion">Potion</a></td><td>5x Papavero Viola, 1x Plastica, 1x Vetro, 1x Anivite</td><td>100%</td><td>Basic healing stock if shop access is awkward.</td></tr>
+    </tbody>
+  </table>
+  <p>Do not craft Bilia upgrade chains blindly. A 50% success rate on Bilia + A means the opportunity cost is real, especially before your route has stable Vetro and Anivite income.
+  </p>
+  <h3>Blueprint locations
+  </h3>
+  <p>Searches for "blueprints," "Bauplane," and "Bauanleitung" usually mean recipe unlocks or shop manuals. Current site data is strongest for completed recipes and material costs; exact blueprint pickup coordinates are more patch-sensitive.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Blueprint Intent</th><th>Where To Check First</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Find a missing recipe</td><td>Recent NPC dialogue and workshop bench</td><td>Some unlocks are progression flags, not loose map objects.</td></tr>
+      <tr><td>Buy a manual or blueprint</td><td>Town vendors after a new chapter or city</td><td>Vendor stock often expands after story progress.</td></tr>
+      <tr><td>Verify a material chain</td><td><a href="/wiki/crafting">Crafting table</a> and <a href="/wiki/items">item index</a></td><td>The recipe can be known before every source route is mapped.</td></tr>
+      <tr><td>Route a blocked quest craft</td><td><a href="/guides/lumentale-memories-of-trey-walkthrough">Walkthrough</a></td><td>Quest crafts may need dialogue before the bench updates.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>INFERRED:</strong> if a vendor does not sell the blueprint after you reach the right town, advance one story flag, sleep/reload if the game supports stock refresh, then check again. Do not farm random materials until the recipe is visible.
+  </p>
+  <h2>Where to buy materials
+  </h2>
+  <h3>Buy blueprints and ingredients
+  </h3>
+  <p>Use shops for stable low-tier materials, then save field routes for rare materials. This keeps Gold and inventory pressure predictable.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Material Group</th><th>Buy First?</th><th>Reason</th><th>Linked Check</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Vetro / Glass</td><td>Yes when stocked</td><td>Cheap at 50 and consumed by many recipes.</td><td><a href="/wiki/items/vetro">Vetro item page</a></td></tr>
+      <tr><td>Plastica / Plastic</td><td>Yes when stocked</td><td>Cheap at 50 and appears in Potion, Dispel, and Prismatipo chains.</td><td><a href="/wiki/items/plastica">Plastica item page</a></td></tr>
+      <tr><td>Anivite EX</td><td>Buy only if your route can afford it</td><td>Costs 1,200 and is burned by high-impact recipes.</td><td><a href="/guides/lumentale-memories-of-trey-anivite-ex-farming">Anivite EX guide</a></td></tr>
+      <tr><td>Quarzo / Quartz</td><td>Check price before bulk buying</td><td>High item value at 1,500; Prismatipo needs 30.</td><td><a href="/wiki/items/quarzo">Quarzo item page</a></td></tr>
+    </tbody>
+  </table>
+  <p>If you are buying for a build item, open the target recipe and buy only the missing amounts. Inventory hoarding feels safe, but it delays upgrades and starter evolution items.
+  </p>
+  <h3>Where to buy glass
+  </h3>
+  <p>Glass is listed in-game as <strong>Vetro</strong>. Current data confirms it as a MISC material with a 50 price and 999 max stack. If your shop does not show Vetro, search the item page first, then re-check later town stock after progression.
+  </p>
+  <ol>
+    <li><strong>Search Vetro, not Glass.</strong> The English intent maps to the Italian item name in the data.</li>
+    <li><strong>Check general material vendors first.</strong> Vetro is cheap enough that buying beats slow farming when stocked.</li>
+    <li><strong>Do not spend all Vetro on Bilia + A.</strong> The 50% success rate can drain early stock fast.</li>
+    <li><strong>Hold 10 Vetro for Appendice Q and 30 for Lampalite.</strong> Those thresholds matter more than extra basic Potion crafts.</li>
+  </ol>
+  <h2>FAQ
+  </h2>
+  <h3>Where do you get crafting recipes in Lumentale?
+  </h3>
+  <p>Use the workshop crafting table, recent NPC dialogue, town vendors, and quest bench checks. The recipe list is confirmed in the site data; exact blueprint pickup or shop timing can be patch-sensitive.
+  </p>
+  <h3>Where can you buy glass?
+  </h3>
+  <p>Look for Vetro. It is the Glass material, priced at 50 in current item data. If a vendor does not stock it yet, advance the route and re-check material shops.
+  </p>
+  <h3>Are blueprints and recipes the same thing?
+  </h3>
+  <p>Not always. A recipe is the craftable result and ingredient list. A blueprint or manual is the unlock path players are usually trying to find or buy.
+  </p>
+  <h2>Related Guides and Data Pages
+  </h2>
+  <ul>
+    <li><a href="/wiki/crafting">Crafting Recipes</a> - live table for all workshop recipes.</li>
+    <li><a href="/wiki/items">Items</a> - material prices, stack sizes, and item pages.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-anivite-ex-farming">Anivite EX Guide</a> - rare material routing before expensive crafts.</li>
+    <li><a href="/guides/lumentale-memories-of-trey-evolution-dex-guide">Evolution and Dex Guide</a> - check Lampalite and item routes before spending materials.</li>
+  </ul>`,
+  },
+
   // {
   //   id: 1,
   //   title: 'LumenTale Beginner Guide — Your First 5 Hours in Talea',
