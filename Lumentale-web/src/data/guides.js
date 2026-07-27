@@ -6,6 +6,236 @@
  */
 export default [
   {
+    id: 16,
+    title: "Lumentale: Memories of Trey Quirks and Skill Upgrade Guide: Trainer Rewards and Utility Animon",
+    h1: "Lumentale Quirks, Skill Upgrades, and Trainer Rewards Guide",
+    description: "Stats, quirk changes, skill upgrades, trainer rewards, and utility Animon checks for Lumentale without wasting rare items.",
+    tags: ["Stats", "Quirks", "Skills", "Trainers", "Animon"],
+    publishDate: "2026-07-27",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/lumentale-quirks-skills-battle-stats.jpg",
+    imageAlt: "Lumentale stats explained with skill costs and trainer battle reward checks",
+    seo: {
+      title: "Lumentale Quirks and Skill Upgrade Guide",
+      description: "Stats, quirk changes, skill upgrades, trainer rewards, and utility Animon checks for Lumentale without wasting rare items.",
+      keywords: "Lumentale quirks, skill upgrades, stats, trainer rewards, utility Animon",
+    },
+    addressBar: "lumentale-memories-of-trey-stats-quirks-skills",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>PATCH SENSITIVE</strong>. Item effects, trainer rewards, and utility prompts can move when Beehive changes balance data.
+  </p>
+  <p><strong>Fast answer:</strong> Lumentale stats are the normal six-combat-stat spread: HP, Attack, Defense, Sp. Atk, Sp. Def, and Speed. Quirk changes are not a free menu toggle; the current item data points to rare ability-changing items such as <a href="/wiki/items/appendice-q">Appendice Q</a>. Skill planning should start from <a href="/wiki/skills">skill type, category, power, and SP cost</a>, not from raw level alone. If you beat a trainer and do not see money, verify the result screen and wallet delta before assuming the fight bugged.
+  </p>
+  <figure>
+    <img src="/images/guides/lumentale-quirks-skills-battle-stats.jpg" alt="Lumentale stats explained guide showing battle skills SP cost and Animon team order" title="Lumentale stats explained and skill upgrade guide" loading="lazy">
+    <figcaption>Battle value is decided by stat spread, skill category, SP cost, and turn order. Do not judge an Animon from level alone.</figcaption>
+  </figure>
+  <h2>Stats and progression systems
+  </h2>
+  <h3>Stats explained
+  </h3>
+  <p>Use the stat sheet as a role check first. A fast Animon with weak bulk needs a different job than a slow wall with high defenses. The <a href="/animon">Animon dex</a> exposes the visible stat ranges, while the <a href="/affinities">affinity chart</a> tells you whether the matchup is worth taking.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Stat</th><th>What it controls</th><th>What to check before investing</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>HP</td><td>How much damage the Animon can take before fainting.</td><td>High HP matters only if Defense or Sp. Def is not collapsing first.</td></tr>
+      <tr><td>Attack</td><td>Damage for physical skills.</td><td>Pair it with physical skills; do not waste SP on special attacks if Attack is the only strong stat.</td></tr>
+      <tr><td>Defense</td><td>Physical damage mitigation.</td><td>Useful for contact-heavy fights and trainer teams with repeated physical pressure.</td></tr>
+      <tr><td>Sp. Atk</td><td>Damage for special skills.</td><td>Check the skill list before committing. Power without a usable SP cost is trap value.</td></tr>
+      <tr><td>Sp. Def</td><td>Special damage mitigation.</td><td>Important when a boss or trainer chain pressures your backline with special coverage.</td></tr>
+      <tr><td>Speed</td><td>Turn-order pressure and tempo.</td><td>Speed is strongest when it lets you act before a KO or status setup.</td></tr>
+    </tbody>
+  </table>
+  <p>If you are trying to optimize a full party, use this page with the <a href="/guides/lumentale-memories-of-trey-team-building-optimization">team-building guide</a> and the <a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP combat guide</a>. Stats pick the role. Skills decide whether the role actually works.
+  </p>
+  <h3>Quirk changes
+  </h3>
+  <p><strong>Can you change quirks in Lumentale?</strong> Yes, but treat it as an item-gated adjustment, not a free respec. The strongest current clue is <a href="/wiki/items/appendice-q">Appendice Q</a>, a 10,000-price AARI capsule whose item text says it can vary an Animon innate ability. That is the quirk-adjacent lane.
+  </p>
+  <p>Do not confuse this with <a href="/wiki/items/prismatipo">Prismatipo</a>. Prismatipo is a rare hidden-type influence item at 7,500 price. It is relevant to build tuning, but it is not the same question as changing a quirk or innate ability.
+  </p>
+  <p><strong>INFERRED:</strong> repeat use, exact unlock timing, and whether every Animon can accept the same quirk-change flow still need per-build verification. Before spending rare items, save first and record the old innate ability.
+  </p>
+  <h2>Skills, trainers, and rewards
+  </h2>
+  <h3>How to upgrade skills
+  </h3>
+  <p>When players search "how to upgrade skills in Lumentales", they usually mean one of three things: learning a better move, replacing a low-power move, or building around SP cost. The current <a href="/wiki/skills">skills table</a> is the clean starting point because every skill carries type, category, power, and cost.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Skill field</th><th>Why it matters</th><th>Bad upgrade habit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Type</td><td>Controls affinity interaction and route utility overlap.</td><td>Stacking one type and then losing to a single resistant trainer team.</td></tr>
+      <tr><td>Category</td><td>Physical skills scale from Attack; special skills scale from Sp. Atk.</td><td>Putting special moves on an Attack-heavy Animon because the power number looks high.</td></tr>
+      <tr><td>Power</td><td>Sets damage ceiling before matchup and stat checks.</td><td>Ignoring accuracy, status value, or SP strain.</td></tr>
+      <tr><td>Cost</td><td>Controls how long the rotation survives in multi-Animon fights.</td><td>Burning all shared SP before the second enemy phase.</td></tr>
+    </tbody>
+  </table>
+  <p>If the current build shows a direct skill-upgrade vendor or tutor in your save, test one low-value skill first. Until the route is fully mapped, do not spend scarce currency on a skill just because it has a bigger power number.
+  </p>
+  <h3>Trainer battle reward confusion
+  </h3>
+  <p>The search variant "I beat a trainer and I don't see how much mopney I got" points to a display problem, not a strategy problem. The local boss/trainer data includes money drops on trainer-style encounters; for example, multiple camp entries carry a <strong>386</strong> money drop value. That means the reward exists in data, but the UI may not make the wallet change obvious.
+  </p>
+  <ol>
+    <li>Check wallet amount before starting a trainer rematch or camp fight.</li>
+    <li>Finish the fight and wait through the full result screen.</li>
+    <li>Open the menu immediately after control returns and compare the wallet number.</li>
+    <li>If no change appears, reload once and repeat with a low-risk trainer before reporting the bug.</li>
+  </ol>
+  <p>The <a href="/wiki/bosses">boss and trainer table</a> is the faster route when you only need to confirm that a fight has a configured reward.
+  </p>
+  <h2>Element and utility Animon choices
+  </h2>
+  <h3>Geopower, wind, and aura Animon
+  </h3>
+  <p>Do not rank the entire dex when the problem is a field gate. For searches like "Lumentale Animon for Geopower", "wind power Animon", "windmill", or "aura Animon", solve the prompt first, then decide if the Animon also belongs on your combat team.
+  </p>
+  <figure>
+    <img src="/images/guides/lumentale-utility-animon-field-checks.jpg" alt="Lumentale utility Animon field route for Geopower wind power and aura checks" title="Lumentale utility Animon route checks" loading="lazy">
+    <figcaption>Utility Animon are route tools first. A weak combat pick can still be correct if it opens the field interaction you are stuck on.</figcaption>
+  </figure>
+  <table>
+    <thead>
+      <tr><th>Search intent</th><th>What to verify</th><th>Where to go next</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Geopower Animon</td><td>Look for GEO skills, route prompts, and field-interaction wording.</td><td><a href="/animon">Animon dex</a> and <a href="/wiki/skills">skills table</a>.</td></tr>
+      <tr><td>Wind power or windmill Animon</td><td>Check whether the obstacle asks for wind affinity, a specific field power, or story progress.</td><td><a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken powers guide</a>.</td></tr>
+      <tr><td>Aura Animon</td><td>Separate aura utility from combat typing before replacing a stable party member.</td><td><a href="/guides/lumentale-memories-of-trey-hidden-mechanics">hidden mechanics guide</a>.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>INFERRED:</strong> some field prompts may be story-locked even when you already own the right Animon. If the prompt does nothing, advance the local objective before changing your whole party.
+  </p>
+  <h2>FAQ
+  </h2>
+  <h3>Can you change quirks in Lumentale?
+  </h3>
+  <p>Yes, but not from a free always-available menu in the verified data. Use rare ability-changing items such as Appendice Q, save first, and confirm whether the current build allows repeat use on that Animon.
+  </p>
+  <h3>Why did I not see money after beating a trainer?
+  </h3>
+  <p>Check the result screen and wallet delta before replaying. The reward can exist in encounter data while the post-battle UI makes the money change easy to miss.
+  </p>`,
+  },
+  {
+    id: 15,
+    title: "Lumentale: Memories of Trey Card Sellers and Furniture Guide: Magnolia Cards, Aari Furniture, and Friend Requests",
+    h1: "Lumentale Card Sellers, Furniture, and Friend Requests Guide",
+    description: "Find card seller logic, Magnolia card checks, Aari furniture purpose, custom furniture quests, and friend request flow in Lumentale.",
+    tags: ["Cards", "Furniture", "Magnolia", "AARI", "Social"],
+    publishDate: "2026-07-27",
+    author: "LumenTale Fan Guide Team",
+    imageUrl: "/images/guides/lumentale-card-sellers-magnolia-route.jpg",
+    imageAlt: "Lumentale Magnolia card seller route with shop NPCs and card lookup checks",
+    seo: {
+      title: "Lumentale Card Sellers and Furniture Guide",
+      description: "Find card seller logic, Magnolia card checks, Aari furniture purpose, custom furniture quests, and friend request flow in Lumentale.",
+      keywords: "Lumentale card sellers, Magnolia cards, Aari furniture, friend request",
+    },
+    addressBar: "lumentale-memories-of-trey-card-sellers-furniture",
+    detailsHtml: `<p>By: Frontline Pathfinder | Lead Content Tester, GameguideHub
+  </p>
+  <p>Tested on Version: Current public build | Status: <strong>INFERRED WHERE MARKED</strong>. Card item data is structured. Magnolia seller routing, AARI furniture, and friend-request prompts still depend on story flags and local NPC state.
+  </p>
+  <p><strong>Fast answer:</strong> card searches should start with the item table, not random NPC guessing. Lumentale has standard card packs at <strong>2,000</strong>, card boxes at <strong>8,000</strong>, and special Kickstarter card items at higher prices. Magnolia card-seller and furniture searches are route/task questions: check the local vendor cluster, then confirm story progress if the expected prompt or stock does not appear.
+  </p>
+  <figure>
+    <img src="/images/guides/lumentale-card-sellers-magnolia-route.jpg" alt="Lumentale Magnolia card sellers guide with shop NPC route and card lookup path" title="Lumentale Magnolia card seller route" loading="lazy">
+    <figcaption>For seller queries, identify the town hub first, then test vendor stock after each local story flag. Wandering between maps without a flag check wastes time.</figcaption>
+  </figure>
+  <h2>Card seller lookup
+  </h2>
+  <h3>Magnolia card sellers
+  </h3>
+  <p>Project3 flagged "Lumentale Magnolia card sellers" because players are clearly looking for a vendor route, not a lore page. The hard limit: the current structured item data confirms card packs and boxes, but it does not expose a clean Magnolia seller coordinate table.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Check</th><th>What to do</th><th>Why it matters</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Town hub</td><td>Start at the Magnolia/Magnolia-linked vendor cluster or the nearest active market hub.</td><td>Card sellers are more likely to be vendor-stock gated than wild-drop gated.</td></tr>
+      <tr><td>Story flag</td><td>Clear local dialogue and objective prompts before assuming the seller is missing.</td><td>Some shops change stock after route progress.</td></tr>
+      <tr><td>Inventory category</td><td>Look under miscellaneous or card-pack style items, not medicine.</td><td>Card packs and boxes are MISC items in the current data.</td></tr>
+      <tr><td>Price check</td><td>Bring at least 2,000 for a pack and 8,000 for a box.</td><td>If you arrive broke, the seller lookup is solved but the purchase still fails.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>INFERRED:</strong> if the Magnolia seller has no card stock, the most likely blockers are story state, vendor refresh, or being at the wrong Magnolia-adjacent NPC. Do not treat this as a card drop farm until you have checked the shop route.
+  </p>
+  <h3>Card and card-seller typo variants
+  </h3>
+  <p>The typo search "Lumentale card selles" belongs here too. Use the table below when you only need the card item family and price range.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Current price</th><th>Use case</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/wiki/items/pacchetto-carte">Pacchetto Carte</a></td><td>2,000</td><td>Standard Animon TCG card pack.</td></tr>
+      <tr><td><a href="/wiki/items/box-carte">Box Carte</a></td><td>8,000</td><td>Bulk card opening when you are collecting many cards at once.</td></tr>
+      <tr><td><a href="/wiki/items/pacchetto-carte-logos">Pacchetto Carte Logos</a></td><td>2,000</td><td>Logos-themed card pack.</td></tr>
+      <tr><td><a href="/wiki/items/box-carte-logos">Box Carte Logos</a></td><td>8,000</td><td>Bulk Logos card opening.</td></tr>
+      <tr><td><a href="/wiki/items/pacchetto-carte-mythos">Pacchetto Carte Mythos</a></td><td>2,000</td><td>Mythos-themed card pack.</td></tr>
+      <tr><td><a href="/wiki/items/box-carte-mythos">Box Carte Mythos</a></td><td>8,000</td><td>Bulk Mythos card opening.</td></tr>
+      <tr><td><a href="/wiki/items/pacchetto-kickstarter">Pacchetto Kickstarter</a></td><td>9,000</td><td>Special card pack tied to Kickstarter contribution wording.</td></tr>
+      <tr><td><a href="/wiki/items/box-carte-kickstarter">Box Carte Kickstarter</a></td><td>10,000</td><td>High-price special card box.</td></tr>
+    </tbody>
+  </table>
+  <p>The broader <a href="/wiki/items">item index</a> is the fastest way to check whether a card entry changed price after a patch.
+  </p>
+  <h2>Furniture and social-system queries
+  </h2>
+  <h3>Aari furniture and furniture purpose
+  </h3>
+  <p>Furniture is not showing up as a clean combat-stat item class in the current local item data. That matters: do not buy AARI furniture because you expect a hidden Attack bonus unless the current build explicitly says so.
+  </p>
+  <figure>
+    <img src="/images/guides/lumentale-furniture-friend-request-room.jpg" alt="Lumentale Aari furniture purpose guide with custom room layout and social quest checks" title="Lumentale Aari furniture and custom room guide" loading="lazy">
+    <figcaption>The furniture layer reads like room customization and quest routing, not direct combat tuning. Spend after the quest asks for it.</figcaption>
+  </figure>
+  <table>
+    <thead>
+      <tr><th>Furniture intent</th><th>Current read</th><th>Practical move</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>AARI furniture</td><td><strong>INFERRED:</strong> tied to AARI-themed customization or a local task chain.</td><td>Check quest log text before buying multiples.</td></tr>
+      <tr><td>Furniture purpose</td><td><strong>INFERRED:</strong> customization, collection, or NPC request progress.</td><td>Do not route it like a combat upgrade.</td></tr>
+      <tr><td>Custom furniture quest</td><td>Likely asks for a specific furniture object or placement action.</td><td>Keep one save before purchase and verify objective completion immediately.</td></tr>
+    </tbody>
+  </table>
+  <p>If you are also short on materials or route unlocks, pair this with the <a href="/guides/lumentale-memories-of-trey-crafting-recipes-blueprints">crafting and blueprints guide</a> and the <a href="/guides/lumentale-memories-of-trey-walkthrough">walkthrough</a>.
+  </p>
+  <h3>Friend request intent
+  </h3>
+  <p>"Lumentale friend request" is a social-system query. Treat it like a prompt routing problem: check the social menu, mailbox-style UI, NPC dialogue, and active quest state before assuming the request failed.
+  </p>
+  <ol>
+    <li>Open the menu after the NPC interaction and look for a social or request notification.</li>
+    <li>Talk to the same NPC again if the first dialogue closed without a clear result.</li>
+    <li>Advance the local objective once if the prompt is absent.</li>
+    <li>Only reload if the same request disappears after a confirmed prompt.</li>
+  </ol>
+  <p><strong>INFERRED:</strong> friend-request acceptance may be gated by story progress or by the NPC's local quest state. I would not burn money on gifts or furniture until the request UI is visible.
+  </p>
+  <h2>FAQ
+  </h2>
+  <h3>Where are Magnolia card sellers in Lumentale?
+  </h3>
+  <p>Start with the Magnolia-linked vendor hub and check card-pack stock after local story progress. The current item data confirms card packs and boxes, but not a fixed seller coordinate table.
+  </p>
+  <h3>What is furniture for in Lumentale?
+  </h3>
+  <p>Use furniture for customization and quest/social progress unless the current build explicitly shows a combat effect. For AARI furniture and custom furniture quests, verify the active objective before buying duplicates.
+  </p>`,
+  },
+  {
     id: 14,
     title: "Lumentale Bugs and Internet Troubleshooting Guide",
     h1: "Lumentale: Memories of Trey Bugs and Internet Troubleshooting Guide",
@@ -1877,4 +2107,3 @@ export default [
   </ul>`,
   },
 ]
-
