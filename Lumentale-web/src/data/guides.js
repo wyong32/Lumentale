@@ -1,8 +1,8 @@
-/**
+﻿/**
  * Player walkthrough articles (Guides list + /guides/:slug detail).
  * Export an array of entries; leave empty until a guide is ready to publish.
  *
- * Field reference — uncomment and fill one object per guide:
+ * Field reference 鈥?uncomment and fill one object per guide:
  */
 export default [
   {
@@ -471,7 +471,7 @@ export default [
 
   // {
   //   id: 1,
-  //   title: 'LumenTale Beginner Guide — Your First 5 Hours in Talea',
+  //   title: 'LumenTale Beginner Guide 鈥?Your First 5 Hours in Talea',
   //   description: 'Short summary shown on the guides index and detail hero.',
   //   tags: ['Beginner', 'Combat', 'Exploration'],
   //   publishDate: '2026-05-26',
@@ -480,7 +480,7 @@ export default [
   //   imageAlt: 'Cover image alt text for accessibility',
   //   author: 'Author name or byline',
   //   seo: {
-  //     title: 'LumenTale | Page title for search (≤ ~60 chars)',
+  //     title: 'LumenTale | Page title for search (鈮?~60 chars)',
   //     description: 'Meta description for search and social previews.',
   //     keywords: 'comma, separated, keywords',
   //   },
@@ -738,6 +738,171 @@ export default [
   </ul>`,
   },
 
+  {
+    id: 17,
+    title: "Lumentale Secret Room Guide: Palace Secret Room and Hidden Passages",
+    description:
+      "Use this Lumentale secret room checklist to clear palace hidden rooms, test wall prompts, verify Holoken field checks, and avoid repeating the wrong passage loop.",
+    tags: ["Secret Room", "Palace", "Hidden Passage", "Holoken"],
+    publishDate: "2026-08-05",
+    updatedDate: "2026-08-05",
+    author: "Frontline Pathfinder",
+    imageUrl: "/images/guides/lumentale-secret-room-palace-guide.jpg",
+    imageAlt: "Lumentale secret room guide for palace hidden passages and wall checks",
+    seo: {
+      title: "Lumentale Secret Room Guide - Palace Route",
+      description:
+        "Clear Lumentale palace secret rooms with hidden wall checks, Holoken prerequisites, passage routing, rewards, and stuck-state fixes.",
+      keywords:
+        "Lumentale secret room, palace secret room, passage secret",
+    },
+    addressBar: "lumentale-secret-room-guide",
+    detailsHtml: `<p>Fast answer: the palace secret room task is a <strong>wall-check route</strong>, not a random search problem. Sweep Baza Palace room edges, test suspicious side walls before leaving the floor, and only commit to a passage after you have confirmed the needed Holoken field interaction. If a wall gives no prompt or feedback, treat that step as a locked state until the palace sequence advances.</p>
+  <figure>
+    <img src="/images/guides/lumentale-secret-room-palace-guide.jpg" alt="Lumentale secret room palace hidden passage route guide" title="Lumentale palace secret room and hidden passage route" loading="lazy">
+    <figcaption>Hidden-room searches are route checks. Clear the visible room, then test walls and field interactions before resetting the area.</figcaption>
+  </figure>
+  <h2>Direct answer for Secret Room Guide</h2>
+  <h3>Primary search intent</h3>
+  <p>Players searching for <strong>Lumentale secret room</strong> or <strong>Lumentale palace secret room</strong> usually need one thing: where to look after the obvious door route stops working. The known palace pattern is a hidden passage behind room-side geometry, followed by a second hidden-room check deeper in the same palace route.</p>
+  <p><strong>Working rule:</strong> search the room perimeter, not the center. If the room has a named NPC context, a bed, a gym/training space, or a wall that blocks a clean route line, check the left and rear walls first. Lumentale hides progression behind interaction prompts that are easy to miss if you sprint straight to the next door.</p>
+  <h3>Variants and typo terms to merge</h3>
+  <p><strong>Lumentale passage secret</strong>, <strong>Lumentale secret room palace</strong>, and typo searches for secret room all belong on this page. Do not split those into separate pages. The player intent is the same: locate the hidden palace passage, confirm the required field tool, and know when the route is complete.</p>
+  <table>
+    <thead>
+      <tr><th>Search wording</th><th>Player probably means</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>lumentale secret room</td><td>Any hidden palace room or passage</td><td>Start with the palace wall sweep.</td></tr>
+      <tr><td>lumentale palace secret room</td><td>Baza Palace hidden-room route</td><td>Check palace bedroom/training-room edges.</td></tr>
+      <tr><td>lumentale passage secret</td><td>Hidden wall or side passage</td><td>Test field interactions before leaving.</td></tr>
+    </tbody>
+  </table>
+  <h2>How to complete the hidden location task</h2>
+  <h3>Prerequisites and state checks</h3>
+  <p>Before you blame the game, verify the state. You need access to the palace interior, the current story sequence must allow room interaction, and your overworld toolkit should include the field powers used by palace obstacles. If the hidden wall does not respond, check your <a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken powers</a> before repeating the same scan.</p>
+  <ul>
+    <li><strong>Quest state:</strong> return after the palace objective points you inside; early visits may not expose the prompt.</li>
+    <li><strong>Field tools:</strong> Geo-style and Grass-style checks are the first tools to suspect when the passage looks physical rather than a normal door.</li>
+    <li><strong>Party state:</strong> bring route-capable Animon instead of a pure combat lineup if you are sweeping hidden rooms.</li>
+    <li><strong>Camera discipline:</strong> rotate at room corners. The prompt can sit on a side wall, not the visible front path.</li>
+  </ul>
+  <h3>Step-by-step action path</h3>
+  <ol>
+    <li>Enter the palace and clear the immediate room so enemy movement or dialogue cannot interrupt the wall check.</li>
+    <li>Walk the perimeter slowly. Do not sprint past side walls; stop at corners and face the wall directly.</li>
+    <li>Test the first suspicious wall near the bedroom-side route. If it opens, loot the room and mark it complete.</li>
+    <li>Move to the training or gym-side route and repeat the same wall test on the left-side boundary.</li>
+    <li>If the second room does not trigger, swap to the relevant Holoken field interaction and retest once. Repeated no-feedback attempts usually mean your story state or field tool is wrong.</li>
+    <li>After both checks are complete, return to the main palace objective instead of reloading the area. Hidden rooms in this cluster are reward/route checks, not an endless puzzle chain.</li>
+  </ol>
+  <h3>Result confirmation</h3>
+  <p>You are done when the hidden wall opens, the reward room is looted, and the palace route no longer presents a new blocked side passage. If you only found one secret room, do one more wall sweep on the gym/training-side section before moving on.</p>
+  <h2>Common mistakes and edge cases</h2>
+  <h3>Why the task appears stuck</h3>
+  <p>Most failures come from three causes: the player checks only normal doors, enters before the palace state is active, or forgets that Holoken powers are route tools. If the prompt never appears, leave the palace, advance the current objective, then return with a field-capable party. If the prompt appears but the wall stays closed, swap the field interaction and retest once.</p>
+  <table>
+    <thead>
+      <tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>No interaction prompt</td><td>Wrong room edge or story state</td><td>Recheck side walls after the palace objective updates.</td></tr>
+      <tr><td>Prompt appears but nothing changes</td><td>Missing field interaction</td><td>Check Holoken route powers and retest.</td></tr>
+      <tr><td>Only one room found</td><td>Second wall sweep skipped</td><td>Return to the gym/training-side route.</td></tr>
+      <tr><td>Reward already gone</td><td>Room previously cleared</td><td>Do not farm the same secret room; continue the palace task.</td></tr>
+    </tbody>
+  </table>
+  <h3>When to merge this with a broader guide</h3>
+  <p>This page should stay separate because the intent is narrow: <strong>find the secret room</strong>. Broader route prep belongs in the <a href="/map">Talea map</a>, <a href="/guides/lumentale-memories-of-trey-hidden-mechanics">Hidden Mechanics Guide</a>, or <a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken Powers Guide</a>. Link out when the blocker is a general traversal system; keep this page focused on the palace hidden-room task.</p>
+  <h2>FAQ</h2>
+  <h3>Is Secret Room Guide worth a separate Lumentale page?</h3>
+  <p>Yes. Palace secret room searches are task-shaped: players are stuck at a hidden wall or missed passage and need an exact checklist, not a full walkthrough.</p>
+  <h3>Which keywords should this page cover?</h3>
+  <p>Cover the parent query and close variants naturally: Lumentale secret room, palace secret room, passage secret, and secret room palace. Do not force typo variants into headings.</p>`,
+  },
+
+  {
+    id: 18,
+    title: "Lumentale Anivis Key Guide: Where to Use and How to Find It",
+    description:
+      "Find the Lumentale Anivis Key, understand the Memorenia temple barrier, clear the hidden cave relic route, and avoid the common stuck points.",
+    tags: ["Anivis Key", "Memorenia", "Temple", "Key Item"],
+    publishDate: "2026-08-05",
+    updatedDate: "2026-08-05",
+    author: "Frontline Pathfinder",
+    imageUrl: "/images/guides/lumentale-anivis-key-guide.jpg",
+    imageAlt: "Lumentale Anivis Key guide for Memorenia temple route and barrier checks",
+    seo: {
+      title: "Lumentale Anivis Key Guide - Where to Use It",
+      description:
+        "Find and use the Lumentale Anivis Key for the Memorenia temple barrier, hidden cave route, relic pieces, and fast travel unlock.",
+      keywords: "Lumentale Anivis Key, Memorenia temple, hidden cave",
+    },
+    addressBar: "lumentale-anivis-key-guide",
+    detailsHtml: `<p>Fast answer: the <strong>Anivis Key</strong> is tied to the Memorenia temple route. After the island climb and the Katamoss fight, Nada and Damame create the key. Read it, unlock the Memorenia Lumen Club fast-travel option, then use the hidden cave path because the main temple entrance is blocked by an Anivis barrier.</p>
+  <figure>
+    <img src="/images/guides/lumentale-anivis-key-guide.jpg" alt="Lumentale Anivis Key Memorenia temple hidden cave guide" title="Lumentale Anivis Key and Memorenia temple route" loading="lazy">
+    <figcaption>The key does not solve the whole temple route by itself. It moves you into the next state, then the hidden cave and relic pieces carry the route forward.</figcaption>
+  </figure>
+  <h2>Direct answer for Anivis Key Guide</h2>
+  <h3>Primary search intent</h3>
+  <p>If you searched <strong>Lumentale Anivis Key</strong>, you are probably in one of two states: you just received the key and do not know what changed, or you reached the temple and the Anivis barrier is still blocking the obvious entrance. The fix is not to force the front door. Use the key state, fast travel to Memorenia, then route through the hidden cave.</p>
+  <h3>Variants and typo terms to merge</h3>
+  <p>There are not many useful variants for this key item yet. Keep this page focused on <strong>where to find the Anivis Key</strong>, <strong>where to use the Anivis Key</strong>, and <strong>how the Memorenia temple barrier route works</strong>. Do not split "Anivis barrier" into a separate page unless Project3 later sees enough independent search demand.</p>
+  <table>
+    <thead>
+      <tr><th>Question</th><th>Short answer</th><th>Next action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Where do I get the Anivis Key?</td><td>After the island route and Katamoss fight.</td><td>Follow the climb north to the temple approach.</td></tr>
+      <tr><td>Who creates the Anivis Key?</td><td>Nada and Damame create it after the fight.</td><td>Read the key prompt instead of leaving immediately.</td></tr>
+      <tr><td>Where do I use it?</td><td>Use the unlocked state around Memorenia and the temple route.</td><td>Fast travel to the Lumen Club, then enter via hidden cave.</td></tr>
+    </tbody>
+  </table>
+  <h2>How to complete the key item task</h2>
+  <h3>Prerequisites and state checks</h3>
+  <p>Before chasing the key, confirm you are in the Memorenia route and can use the hoverboard over water. You also need access to the island climb that leads toward the temple approach. If you are still locked to earlier towns, this is not a pickup you can brute force from a shop or random chest.</p>
+  <ul>
+    <li><strong>Route:</strong> Memorenia / Aeolyc island sequence.</li>
+    <li><strong>Traversal:</strong> hoverboard movement over water.</li>
+    <li><strong>Field check:</strong> grass grapple point on the climb toward the temple.</li>
+    <li><strong>Combat check:</strong> Katamoss fight before the key is created.</li>
+  </ul>
+  <h3>Step-by-step action path</h3>
+  <ol>
+    <li>From the Memorenia route, head north toward the machines seen from the cliff.</li>
+    <li>Use the water route and stairs to move between the small island sections.</li>
+    <li>Look for the grass grapple point on the northern climb. This is the clean signal that you are on the correct temple approach.</li>
+    <li>Reach the temple approach and fight Katamoss. Bring Toxic pressure if your current team struggles; Katamoss resists or ignores several obvious lines.</li>
+    <li>After Katamoss is defeated, wait for the key scene. Nada and Damame create the Anivis Key here.</li>
+    <li>Read the key prompt. The important follow-up is the Memorenia Lumen Club fast-travel state.</li>
+    <li>Return to the port/beach and locate the hidden cave northeast of the port. The main temple is sealed by an Anivis barrier, so the cave is the real entrance route.</li>
+    <li>Inside the cave, collect the three circular relic pieces and return them to the gate. Once all pieces are joined, the gate opens and the temple route continues.</li>
+  </ol>
+  <h3>Result confirmation</h3>
+  <p>You have completed the Anivis Key task when the key scene has played, Memorenia fast travel is available, the hidden cave gate has accepted all three relic pieces, and the temple interior opens. If you only have the key but cannot enter the temple, you are missing the hidden cave relic sequence, not another key.</p>
+  <h2>Common mistakes and edge cases</h2>
+  <h3>Why the task appears stuck</h3>
+  <p>The most common mistake is treating the Anivis Key like a normal door key. It does not mean the temple front entrance becomes the correct path. The Anivis barrier still forces a route change. Go back to the beach/port area and search northeast for the hidden cave.</p>
+  <table>
+    <thead>
+      <tr><th>Stuck point</th><th>Cause</th><th>Fix</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>No Anivis Key yet</td><td>Katamoss fight not cleared</td><td>Finish the temple approach battle.</td></tr>
+      <tr><td>Key obtained, front door sealed</td><td>Anivis barrier still blocks direct entry</td><td>Use the hidden cave northeast of port.</td></tr>
+      <tr><td>Cave gate will not open</td><td>Missing one circular relic piece</td><td>Backtrack left and deeper through the cave.</td></tr>
+      <tr><td>Fast travel missing</td><td>Key prompt not read or state not saved</td><td>Reopen the key step before leaving Memorenia.</td></tr>
+    </tbody>
+  </table>
+  <h3>When to merge this with a broader guide</h3>
+  <p>Keep this as a standalone key-item task page. Related combat planning belongs in the <a href="/guides/lumentale-memories-of-trey-sp-combat-tp-guide">SP Combat Guide</a>; route power checks belong in the <a href="/guides/lumentale-memories-of-trey-holoken-powers-guide">Holoken Powers Guide</a>; item lookup belongs in <a href="/wiki/items">Items</a> and <a href="/wiki/crafting">Crafting</a>. This page should stay locked to the Anivis Key and Memorenia temple route.</p>
+  <h2>FAQ</h2>
+  <h3>Is Anivis Key Guide worth a separate Lumentale page?</h3>
+  <p>Yes. It is a distinct key-item task with a clear failure point: players get the key, see the Anivis barrier, and miss the hidden cave route.</p>
+  <h3>Which keywords should this page cover?</h3>
+  <p>The main keyword is Lumentale Anivis Key. Natural supporting terms are Memorenia temple, Anivis barrier, hidden cave, Katamoss, and relic pieces.</p>`,
+  },
   {
     id: 1,
     title: "Lumentale: Memories of Trey 鈥?Mid-Game Team Optimization &amp; Stat Tuning",
@@ -2107,3 +2272,7 @@ export default [
   </ul>`,
   },
 ]
+
+
+
+
