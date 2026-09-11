@@ -22,8 +22,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="data-section" aria-labelledby="wiki-about-title">
       <div class="container">
@@ -42,8 +41,7 @@
         </article>
       </div>
     </section>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
@@ -102,8 +100,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="3" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="guides-section" aria-labelledby="wiki-guides-title">
       <div class="container">
@@ -152,8 +149,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="data-section" aria-labelledby="wiki-tips-title">
       <div class="container">
@@ -191,8 +187,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
   </main>
 </template>
 

@@ -22,8 +22,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section v-if="animonFocus" class="data-section evo-focus-section">
       <div class="container">
@@ -55,8 +54,7 @@
         </article>
       </div>
     </section>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="evo-catalog-section" aria-labelledby="evo-catalog-title">
       <div class="container">
@@ -93,8 +91,7 @@
             </button>
           </div>
         </div>
-    <!-- <GptAdSlot unit="3" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
         <div v-for="section in displayGroups" :key="section.name" class="evo-group-block">
           <h3 v-if="!groupFilter" class="evo-group-title">{{ section.name }}</h3>
@@ -226,8 +223,7 @@
             </article>
           </div>
         </div>
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
         <p class="result-note">Showing {{ filtered.length }} of {{ rows.length }} evolution steps</p>
       </div>
@@ -269,8 +265,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
   </main>
 </template>
 

@@ -1,7 +1,6 @@
 <template>
   <main v-if="guide" class="page-main page-main--guide-detail">
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
     
     <section class="guide-detail-hero" aria-labelledby="guide-title">
       <div class="container">
@@ -44,8 +43,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="guide-detail-section">
       <div class="container">
@@ -53,8 +51,7 @@
           <article class="guide-detail-main">
 
             <div class="guide-detail-article guide-detail-content" v-html="prepared.html" />
-    <!-- <GptAdSlot unit="3" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
             <footer class="guide-detail-footer">
               <a class="btn-secondary" href="/guides">← All Guides</a>

@@ -29,8 +29,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="detail-section">
       <div class="container">
@@ -76,8 +75,7 @@
                 </div>
               </div>
             </div>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
             <div class="guide-block" style="margin-top: 28px">
               <h2>Related Pages</h2>
@@ -123,8 +121,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="3" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
   </main>
 
   <main v-else class="page-main">

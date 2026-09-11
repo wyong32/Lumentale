@@ -1,7 +1,6 @@
 <template>
   <main class="page-main page-main--guides">
-    <!-- <GptAdSlot unit="1" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="page-hero-section guides-hero" aria-labelledby="guides-title">
       <div class="container">
@@ -24,8 +23,7 @@
         </div>
       </div>
     </section>
-    <!-- <GptAdSlot unit="2" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
 
     <section class="guides-page-section" :aria-labelledby="hasGuides ? 'guides-catalog-title' : 'guides-fallback-title'">
       <div class="container">
@@ -120,8 +118,7 @@
         </template>
       </div>
     </section>
-    <!-- <GptAdSlot unit="3" /> -->
-    <AllianceAdSlot />
+    <AdPlaceholder />
   </main>
 </template>
 
