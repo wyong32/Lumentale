@@ -29,7 +29,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="detail-section">
       <div class="container">
@@ -75,7 +75,7 @@
                 </div>
               </div>
             </div>
-    <AdPlaceholder />
+    <AdSlot />
 
             <div class="guide-block" style="margin-top: 28px">
               <h2>Related Pages</h2>
@@ -121,7 +121,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 
   <main v-else class="page-main">

@@ -22,7 +22,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="map-section" aria-labelledby="map-art-title">
       <div class="container">
@@ -43,7 +43,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section" aria-labelledby="map-about-title">
       <div class="container">
@@ -63,7 +63,7 @@
         </article>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     
 
@@ -128,7 +128,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 

@@ -23,7 +23,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section" aria-labelledby="bosses-list-heading">
       <div class="container">
@@ -41,7 +41,7 @@
             <input v-model="query" type="search" placeholder="Search bosses…" aria-label="Search bosses" />
           </label>
         </div>
-    <AdPlaceholder />
+    <AdSlot />
     
         <div class="grid-cards">
           <article
@@ -101,7 +101,7 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} bosses ({{ bossList.length }} total)</p>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 

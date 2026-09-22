@@ -1,6 +1,6 @@
 <template>
   <main v-if="guide" class="page-main page-main--guide-detail">
-    <AdPlaceholder />
+    <AdSlot />
     
     <section class="guide-detail-hero" aria-labelledby="guide-title">
       <div class="container">
@@ -43,7 +43,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="guide-detail-section">
       <div class="container">
@@ -51,7 +51,7 @@
           <article class="guide-detail-main">
 
             <div class="guide-detail-article guide-detail-content" v-html="prepared.html" />
-    <AdPlaceholder />
+    <AdSlot />
 
             <footer class="guide-detail-footer">
               <a class="btn-secondary" href="/guides">← All Guides</a>

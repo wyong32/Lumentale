@@ -18,7 +18,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="dex-section">
       <div class="container">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section" aria-labelledby="starters-table-heading">
       <div class="container">
@@ -92,7 +92,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 

@@ -26,7 +26,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="detail-section">
       <div class="container">
@@ -116,7 +116,7 @@
                 <p class="detail-recipe-summary">{{ recipe.ingredientSummary }}</p>
               </div>
             </section>
-    <AdPlaceholder />
+    <AdSlot />
 
             <section v-if="resultItem" class="detail-panel detail-panel--primary" aria-labelledby="recipe-result-heading">
               <header class="detail-panel-head">
@@ -170,7 +170,7 @@
                 </div>
               </div>
             </section>
-    <AdPlaceholder />
+    <AdSlot />
 
             <section
               v-if="resultEffectEntries.length"
@@ -196,7 +196,7 @@
                 </ul>
               </div>
             </section>
-    <AdPlaceholder />
+    <AdSlot />
 
             <section v-if="resultUsedElsewhere.length" class="detail-panel" aria-labelledby="recipe-more-heading">
               <header class="detail-panel-head">
@@ -230,7 +230,7 @@
                 </div>
               </div>
             </section>
-    <AdPlaceholder />
+    <AdSlot />
 
             <aside class="detail-tip" aria-label="Player tip">
               <p>
@@ -260,7 +260,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 
   <main v-else class="page-main">

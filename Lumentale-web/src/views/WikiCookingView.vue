@@ -1,6 +1,6 @@
 <template>
   <main class="page-main">
-    <AdPlaceholder />
+    <AdSlot />
     
     <section class="page-hero-section" aria-labelledby="cooking-title">
       <div class="container">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <WikiRecipeListSection
       project-label="Cooking"
@@ -35,7 +35,7 @@
       search-placeholder="Search cooking recipes…"
       search-aria="Search cooking recipes"
     />
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section">
       <div class="container">

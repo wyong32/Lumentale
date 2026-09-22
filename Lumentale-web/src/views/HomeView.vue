@@ -21,14 +21,13 @@
             <a class="btn-secondary" href="/beginner">Beginner Route</a>
           </div>
         </div>
-        <form class="hero-search" role="search" aria-label="Search LumenTale wiki" @submit.prevent="goSearch">
+        <form class="hero-search" role="search" aria-label="Search LumenTale wiki" action="/search" method="get">
           <label class="filter-search filter-search--hero">
             <svg class="filter-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
               <path d="M20 20L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
             <input
-              v-model="searchQuery"
               type="search"
               name="q"
               placeholder="Search Animon, items, skills, recipes…"
@@ -40,7 +39,7 @@
         </form>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="stats-section" aria-label="Wiki coverage">
       <div class="container">
@@ -110,7 +109,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="guides-section" aria-labelledby="guides-title">
       <div class="container">
@@ -176,7 +175,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="combat-section" aria-labelledby="combat-title">
       <div class="container">
@@ -240,7 +239,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="wiki-section" aria-labelledby="wiki-db-title">
       <div class="container">
@@ -299,7 +298,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="faq-section" aria-labelledby="faq-title">
       <div class="container">
@@ -315,7 +314,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="disclaimer-section" aria-label="Site disclaimer">
       <div class="container">
@@ -331,8 +330,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import summary from '@/data/summary.json'
 import { getHomeFaqs } from '@/seo/homeSchema.js'
 import { typeIconSrc } from '@/lib/typeInfo'
@@ -352,14 +349,6 @@ const emotionalAffinities = EMOTION_ORDER.map((key) => ({
   name: key.charAt(0) + key.slice(1).toLowerCase(),
   desc: emotionalAffinityHomeCopy[key],
 }))
-
-const router = useRouter()
-const searchQuery = ref('')
-
-function goSearch() {
-  const q = searchQuery.value.trim()
-  router.push({ path: '/search', query: q ? { q } : {} })
-}
 
 const faqs = getHomeFaqs(summary.counts.animon)
 </script>

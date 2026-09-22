@@ -1,6 +1,6 @@
 <template>
   <main class="page-main page-main--guides">
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="page-hero-section guides-hero" aria-labelledby="guides-title">
       <div class="container">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="guides-page-section" :aria-labelledby="hasGuides ? 'guides-catalog-title' : 'guides-fallback-title'">
       <div class="container">
@@ -118,7 +118,7 @@
         </template>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 

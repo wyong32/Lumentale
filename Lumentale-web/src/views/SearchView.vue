@@ -11,7 +11,7 @@
           <p class="eyebrow">LumenTale Wiki</p>
           <h1 id="search-title">Search LumenTale Wiki &amp; Dex</h1>
           <p class="lead lead-center">Find Animon, skills, items, recipes, bosses, and guide pages across Memories of Trey.</p>
-          <form class="hero-search hero-search--page" role="search" @submit.prevent="submitSearch">
+          <form class="hero-search hero-search--page" role="search" action="/search" method="get">
             <label class="filter-search filter-search--hero">
               <svg class="filter-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
@@ -32,7 +32,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section v-if="!qValid" class="data-section">
       <div class="container">
@@ -177,18 +177,17 @@
         </div>
       </section>
     </template>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { imgSrc, routeHref } from '@/lib/data'
 import { searchSite } from '@/lib/search.js'
 
 const route = useRoute()
-const router = useRouter()
 const query = ref('')
 const inputRef = ref(null)
 
@@ -197,11 +196,6 @@ const results = computed(() => searchSite(query.value, 16))
 
 function syncFromRoute() {
   query.value = route.query.q ? String(route.query.q) : ''
-}
-
-function submitSearch() {
-  const q = query.value.trim()
-  router.replace({ path: '/search', query: q ? { q } : {} })
 }
 
 onMounted(() => {

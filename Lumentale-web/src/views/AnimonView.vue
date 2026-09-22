@@ -22,7 +22,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="dex-section" aria-labelledby="animon-list-heading">
       <div class="container">
@@ -111,7 +111,7 @@
             />
           </label>
         </div>
-    <AdPlaceholder />
+    <AdSlot />
 
         <div class="dex-content">
           <a
@@ -147,7 +147,7 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} Animon ({{ animon.length }} total)</p>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 

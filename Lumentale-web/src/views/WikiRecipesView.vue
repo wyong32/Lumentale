@@ -1,6 +1,6 @@
 <template>
   <main class="page-main">
-    <AdPlaceholder />
+    <AdSlot />
     
     <section class="page-hero-section" aria-labelledby="recipes-title">
       <div class="container">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section" aria-labelledby="recipes-list-heading">
       <div class="container">
@@ -162,7 +162,7 @@
         </p>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section" aria-labelledby="recipes-tips-title">
       <div class="container">

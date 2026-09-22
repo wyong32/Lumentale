@@ -1,6 +1,6 @@
 <template>
   <main class="page-main">
-    <AdPlaceholder />
+    <AdSlot />
     
     <section class="page-hero-section" aria-labelledby="items-title">
       <div class="container">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
 
     <section class="data-section" aria-labelledby="items-table-heading">
       <div class="container">
@@ -101,18 +101,17 @@
         <p class="result-note">Showing {{ visible.length }} of {{ filtered.length }} items ({{ items.length }} total)</p>
       </div>
     </section>
-    <AdPlaceholder />
+    <AdSlot />
   </main>
 </template>
 
 <script setup>
 import { computed, ref, toRef, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useInfiniteList } from '@/composables/useInfiniteList.js'
 import { imgSrc, itemBySlug, itemRoleLabel, itemTypes, items } from '@/lib/data'
 
 const route = useRoute()
-const router = useRouter()
 const query = ref('')
 const typeFilter = ref('')
 
@@ -123,7 +122,7 @@ function resolveQueryRedirect() {
   const byName = items.find((entry) => entry.name.toLowerCase() === q.toLowerCase())
   const match = bySlug || byName
   if (match) {
-    router.replace({ path: `/wiki/items/${match.slug}` })
+    window.location.replace(`/wiki/items/${match.slug}`)
     return
   }
   query.value = q
